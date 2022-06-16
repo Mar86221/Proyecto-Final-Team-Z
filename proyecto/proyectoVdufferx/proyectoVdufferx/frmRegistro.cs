@@ -21,6 +21,10 @@ namespace proyectoVdufferx
         {
             return Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
         }
+        public Boolean verificadorNumero(string numero)
+        {
+            return Regex.IsMatch(numero, @"\A[0-9]{7,10}\z");
+        }
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length > 0 &&
@@ -34,7 +38,15 @@ namespace proyectoVdufferx
                 u.nombre = txtNombre.Text;
                 u.direccion = txtDireccion.Text;
                 u.institucion = txtInstitucion.Text;
-                u.telefono = txtTelefono.Text;
+                if (verificadorNumero(txtTelefono.Text))
+                {
+                    u.telefono = txtTelefono.Text;
+                }
+                else
+                {
+                    errorNumero.SetError(pictureBox6, "Numero de telefono invalido");
+                }
+
                 if (verificadorCorrero(txtCorreo.Text))
                 {
                     u.correo = txtCorreo.Text;

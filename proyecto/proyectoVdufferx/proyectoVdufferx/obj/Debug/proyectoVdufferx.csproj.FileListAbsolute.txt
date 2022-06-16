@@ -22,3 +22,15 @@ C:\Users\DELL\Desktop\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proye
 C:\Users\DELL\Desktop\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Desktop\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
 C:\Users\DELL\Desktop\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe.config
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.pdb
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.Form1.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmRegistro.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.Properties.Resources.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb
