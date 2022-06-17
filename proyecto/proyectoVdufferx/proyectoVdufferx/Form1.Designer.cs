@@ -69,6 +69,7 @@
             this.picIngresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.picIngresar.TabIndex = 2;
             this.picIngresar.TabStop = false;
+            this.picIngresar.Click += new System.EventHandler(this.picIngresar_Click);
             // 
             // Form1
             // 
@@ -79,8 +80,10 @@
             this.Controls.Add(this.picIngresar);
             this.Controls.Add(this.picRegistrarme);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picIngresar)).EndInit();

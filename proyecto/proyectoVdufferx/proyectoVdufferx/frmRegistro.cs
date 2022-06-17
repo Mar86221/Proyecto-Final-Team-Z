@@ -1,5 +1,7 @@
 using System;
 using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -17,7 +19,7 @@ namespace proyectoVdufferx
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-        private Boolean verificadorCorrero(string correo)
+        private Boolean verificadorCorreo(string correo)
         {
             return Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
         }
@@ -44,10 +46,9 @@ namespace proyectoVdufferx
                 }
                 else
                 {
-                    errorNumero.SetError(pictureBox6, "Numero de telefono invalido");
+                   errorNumero.SetError(pictureBox6, "Numero de telefono invalido");
                 }
-
-                if (verificadorCorrero(txtCorreo.Text))
+                if (verificadorCorreo(txtCorreo.Text))
                 {
                     u.correo = txtCorreo.Text;
                 }
@@ -77,7 +78,20 @@ namespace proyectoVdufferx
                 if (usuarioDAO.CrearNuevo(u))
                 {
                     MessageBox.Show("Usuario registrado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    CarnetQR Datos = new CarnetQR();
+                    Datos.txtNombreQR.Text = txtNombre.Text;
+                    Datos.txtCorreoQR.Text = txtCorreo.Text;
+                    QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
+                    ASCIIEncoding ASSCII = new ASCIIEncoding();
+                    var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);
+                    QRCoder.PngByteQRCode png = new QRCoder.PngByteQRCode();
+                    png.SetQRCodeData(z);
+                    var arr = png.GetGraphic(10);
+                    MemoryStream ms = new MemoryStream();
+                    ms.Write(arr, 0, arr.Length);
+                    Bitmap b = new Bitmap(ms);
+                    Datos.picQR.Image = b;
+                    Datos.ShowDialog();
                     this.DialogResult = DialogResult.OK;
                     this.Close( );
                 }
@@ -92,6 +106,7 @@ namespace proyectoVdufferx
             {
                 MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void txtEnter(object sender, EventArgs e)

@@ -409,6 +409,8 @@ namespace proyectoVdufferx
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(376, 463);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmRegistro";
             this.Text = "frmRegistro";
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme2)).EndInit();
