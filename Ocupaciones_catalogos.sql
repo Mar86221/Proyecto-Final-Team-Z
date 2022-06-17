@@ -126,17 +126,9 @@ CREATE TABLE USUARIO (
     id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id)
 );
 
----FALTA CODIGO QR
---INSERT into USUARIO (nombre,direccion,institucion,telefono,correo,id_ocupacion)
-  --  VALUES ('Fernando','Santa Tecla','UCA','233455','fernando@gmail.com',1)
-
--- SELECT * FROM USUARIO
-
-
-
 CREATE TABLE FOTOGRAFIA (
-    id int primary key NOT NULL,
-    fotografia IMAGE NOT NULL,
+    id int IDENTITY(1,1) primary key NOT NULL,
+    fotografia VARCHAR(500) NOT NULL,
     id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
 );
 

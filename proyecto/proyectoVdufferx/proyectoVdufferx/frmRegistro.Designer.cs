@@ -63,6 +63,7 @@ namespace proyectoVdufferx
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbName = new System.Windows.Forms.PictureBox();
             this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorNumero = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,6 +80,7 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorNumero)).BeginInit();
             this.SuspendLayout();
             // 
             // picRegistrarme2
@@ -396,6 +398,10 @@ namespace proyectoVdufferx
             // 
             this.errorCorreo.ContainerControl = this;
             // 
+            // errorNumero
+            // 
+            this.errorNumero.ContainerControl = this;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,6 +409,8 @@ namespace proyectoVdufferx
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(376, 463);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmRegistro";
             this.Text = "frmRegistro";
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme2)).EndInit();
@@ -422,8 +430,11 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbName)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorNumero)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.ErrorProvider errorNumero;
 
         private System.Windows.Forms.ErrorProvider errorCorreo;
 

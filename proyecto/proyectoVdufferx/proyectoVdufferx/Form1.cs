@@ -22,5 +22,11 @@ namespace proyectoVdufferx
             frmRegistro otraventana = new frmRegistro();
             otraventana.ShowDialog();
         }
+
+        private void picIngresar_Click(object sender, EventArgs e)
+        {
+            frmIngresar otraventana = new frmIngresar();
+            otraventana.ShowDialog();
+        }
     }
 }
