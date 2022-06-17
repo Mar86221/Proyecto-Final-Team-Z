@@ -9,11 +9,14 @@ namespace proyectoVdufferx
         public static bool CrearNuevo(usuario u)
         {
             bool exito = true;
-            try {
+            try
+            {
                 string cadena = Resources.cadena_conexion;
-                using (SqlConnection connection = new SqlConnection(cadena)){
-                    string query = "INSERT INTO USUARIO (nombre,direccion,institucion,telefono,correo,id_ocupacion)VALUES" +
-                                   " (@nombre, @direccion, @institucion,@telefono,@correo,@id_ocupacion)";
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "INSERT INTO USUARIO (nombre,direccion,institucion,telefono,correo,id_ocupacion)VALUES" +
+                        " (@nombre, @direccion, @institucion,@telefono,@correo,@id_ocupacion)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", u.nombre);
                     command.Parameters.AddWithValue("@direccion", u.direccion);
@@ -21,17 +24,45 @@ namespace proyectoVdufferx
                     command.Parameters.AddWithValue("@telefono", u.telefono);
                     command.Parameters.AddWithValue("@correo", u.correo);
                     command.Parameters.AddWithValue("@id_ocupacion", u.id_ocupacion);
-                    
-                    
+
+
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 exito = false;
             }
+
             return exito;
         }
-    }
+
+        public static usuario BuscarCorreoU(string correo)
+        {
+            string cadena = Resources.cadena_conexion;
+            usuario u = null;
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT correo FROM USUARIO " + "WHERE correo = @correo";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@correo", correo);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        u = new usuario();
+                        u.correo = reader["correo"].ToString();
+                    }
+                }
+                connection.Close();
+            }
+
+            return u;
+        }
+}
 }
