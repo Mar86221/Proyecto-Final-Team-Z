@@ -123,14 +123,15 @@ CREATE TABLE USUARIO (
     institucion VARCHAR(50) NOT NULL,
     telefono VARCHAR(10) NOT NULL, 
     correo VARCHAR(60) NOT NULL,
-    id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id)
+    id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
+    fotografia VARCHAR(500) NOT NULL,
 );
-
+/*
 CREATE TABLE FOTOGRAFIA (
     id int IDENTITY(1,1) primary key NOT NULL,
     fotografia VARCHAR(500) NOT NULL,
     id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
-);
+);*/
 
 ----------------------------------------------------------
 CREATE TABLE PRESTA (
@@ -480,3 +481,4 @@ INSERT INTO EJEMPLARXAUTOR(id,id_ejemplar, id_autor)
 
 -------------------------------------------------------
 ------------------------------------------------------------------------------------
+SELECT * FROM USUARIO

@@ -27,19 +27,33 @@ namespace proyectoVdufferx
         {
             return Regex.IsMatch(numero, @"\A[0-9]{7,10}\z");
         }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos jpg (*.jpg)|*.jpg";
+            ofd.Title = "Abrir";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtFotografia.Text = ofd.FileName;
+            }
+            ofd.Dispose();
+
+        }
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length > 0 &&
                 txtDireccion.Text.Length > 0 &&
                 txtInstitucion.Text.Length > 0 &&
                 txtTelefono.Text.Length > 0 &&
-                txtCorreo.Text.Length > 0)
+                txtCorreo.Text.Length > 0 &&
+                txtFotografia.Text.Length > 0)
                 
             {
                 usuario u = new usuario();
                 u.nombre = txtNombre.Text;
                 u.direccion = txtDireccion.Text;
                 u.institucion = txtInstitucion.Text;
+                u.fotografia = txtFotografia.Text;
                 if (verificadorNumero(txtTelefono.Text))
                 {
                     u.telefono = txtTelefono.Text;
@@ -157,7 +171,5 @@ namespace proyectoVdufferx
                 }
             }
         }
-
-        
     }
 }

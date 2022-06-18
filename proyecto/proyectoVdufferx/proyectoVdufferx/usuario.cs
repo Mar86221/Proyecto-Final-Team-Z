@@ -10,5 +10,6 @@ namespace proyectoVdufferx
         public string institucion { get; set; }
         public string telefono { get; set; }
         public string correo { get; set; }
+        public string fotografia { get; set; }
     }
 }
