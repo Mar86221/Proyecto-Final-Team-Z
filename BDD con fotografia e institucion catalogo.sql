@@ -116,22 +116,23 @@ CREATE TABLE OCUPACION (
     ocupacion VARCHAR(50) NOT NULL,
 );
 
+CREATE TABLE INSTITUCION(
+	ID int primary key NOT NULL,
+	institucion VARCHAR(50) NOT NULL,
+);
+
 CREATE TABLE USUARIO (
     id int IDENTITY(1,1) primary key NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     direccion VARCHAR(70) NOT NULL,
-    institucion VARCHAR(50) NOT NULL,
+    --institucion VARCHAR(50) NOT NULL, SE QUITO Y SE AGREGO COMO CATALOGO POR LAS ALTERACIONES QUE SE HICIERON EN FORM PARA QUE FUNCIONE
     telefono VARCHAR(10) NOT NULL, 
     correo VARCHAR(60) NOT NULL,
     id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
+	id_institucion int NOT NULL FOREIGN KEY (id_institucion) REFERENCES INSTITUCION (id),
     fotografia VARCHAR(500) NOT NULL,
 );
-/*
-CREATE TABLE FOTOGRAFIA (
-    id int IDENTITY(1,1) primary key NOT NULL,
-    fotografia VARCHAR(500) NOT NULL,
-    id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
-);*/
+
 
 ----------------------------------------------------------
 CREATE TABLE PRESTA (
@@ -168,7 +169,11 @@ CREATE TABLE USUARIOXAREA (
 INSERT INTO OCUPACION (id,ocupacion)
     VALUES (1,'Estudiante'),
            (2,'Trabajador'),
-           (3,'Desempleado');       
+           (3,'Desempleado');    
+INSERT INTO INSTITUCION(id,institucion)
+    VALUES (1,'Instituto'),
+           (2,'Empresa'),
+           (3,'Otros');   
 ------------------------------------------------------------
 INSERT INTO EDITORIAL (id,editorial)
     VALUES (1,'MOLINO'),

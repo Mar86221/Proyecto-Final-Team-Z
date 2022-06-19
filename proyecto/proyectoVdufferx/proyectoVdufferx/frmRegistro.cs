@@ -43,16 +43,16 @@ namespace proyectoVdufferx
         {
             if (txtNombre.Text.Length > 0 &&
                 txtDireccion.Text.Length > 0 &&
-                txtInstitucion.Text.Length > 0 &&
                 txtTelefono.Text.Length > 0 &&
                 txtCorreo.Text.Length > 0 &&
+                cmbInstitucion.Text.Length > 0 &&
+                cmbOcupacion.Text.Length > 0 &&
                 txtFotografia.Text.Length > 0)
                 
             {
                 usuario u = new usuario();
                 u.nombre = txtNombre.Text;
                 u.direccion = txtDireccion.Text;
-                u.institucion = txtInstitucion.Text;
                 u.fotografia = txtFotografia.Text;
                 if (verificadorNumero(txtTelefono.Text))
                 {
@@ -60,7 +60,7 @@ namespace proyectoVdufferx
                 }
                 else
                 {
-                   errorNumero.SetError(pictureBox6, "Numero de telefono invalido");
+                   errorNumero.SetError(pbTel, "Numero de telefono invalido");
                 }
                 if (verificadorCorreo(txtCorreo.Text))
                 {
@@ -68,7 +68,7 @@ namespace proyectoVdufferx
                 }
                 else
                 {
-                    errorCorreo.SetError(pictureBox7,"Correo invalido");
+                    errorCorreo.SetError(pbCor,"Correo invalido");
                 }
                 
                 switch (cmbOcupacion.Text)
@@ -83,16 +83,35 @@ namespace proyectoVdufferx
                         u.id_ocupacion = 2;
                         break;
                     }
-                    case "Desempleado":
+                    case "Otros":
                         u.id_ocupacion = 3;
                         break;
 
                 }
 
+                switch (cmbInstitucion.Text)
+                {
+                    case "Instituto":
+                    {
+                        u.id_institucion = 1;
+                        break;
+                    }
+                    case "Empresa":
+                    {
+                        u.id_institucion = 2;
+                        break;
+                    }
+                    case "Otros":
+                    {
+                        u.id_institucion= 3;
+                        break;
+                    }
+                }
+
                 if (usuarioDAO.CrearNuevo(u))
                 {
                     MessageBox.Show("Usuario registrado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CarnetQR Datos = new CarnetQR();
+                    frmCarnetU Datos = new frmCarnetU();
                     Datos.txtNombreQR.Text = txtNombre.Text;
                     Datos.txtCorreoQR.Text = txtCorreo.Text;
                     QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();

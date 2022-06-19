@@ -31,6 +31,7 @@ namespace proyectoVdufferx
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresar));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCor = new System.Windows.Forms.Label();
@@ -41,11 +42,13 @@ namespace proyectoVdufferx
             this.label2 = new System.Windows.Forms.Label();
             this.bttIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbCor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.bttIngresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -77,6 +80,7 @@ namespace proyectoVdufferx
             this.txtCorreo.Size = new System.Drawing.Size(259, 19);
             this.txtCorreo.TabIndex = 59;
             this.txtCorreo.Tag = "Cor";
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // pictureBox7
             // 
@@ -139,6 +143,10 @@ namespace proyectoVdufferx
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // errorCorreo
+            // 
+            this.errorCorreo.ContainerControl = this;
+            // 
             // frmIngresar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,9 +171,12 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.pbCor)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.bttIngresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ErrorProvider errorCorreo;
 
         private System.Windows.Forms.PictureBox pictureBox2;
 

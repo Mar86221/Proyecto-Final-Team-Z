@@ -36,12 +36,12 @@ namespace proyectoVdufferx
             this.picRegistrarme2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbInstitucion = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFotografia = new System.Windows.Forms.Label();
             this.txtFotografia = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.cmbOcupacion = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCor = new System.Windows.Forms.Label();
@@ -53,7 +53,6 @@ namespace proyectoVdufferx
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pbTel = new System.Windows.Forms.PictureBox();
             this.lblInsti = new System.Windows.Forms.Label();
-            this.txtInstitucion = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pbInsti = new System.Windows.Forms.PictureBox();
             this.lblOcu = new System.Windows.Forms.Label();
@@ -118,12 +117,12 @@ namespace proyectoVdufferx
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cmbInstitucion);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.lblFotografia);
             this.panel1.Controls.Add(this.txtFotografia);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbOcupacion);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblCor);
@@ -135,7 +134,6 @@ namespace proyectoVdufferx
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pbTel);
             this.panel1.Controls.Add(this.lblInsti);
-            this.panel1.Controls.Add(this.txtInstitucion);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pbInsti);
             this.panel1.Controls.Add(this.lblOcu);
@@ -156,6 +154,18 @@ namespace proyectoVdufferx
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(376, 522);
             this.panel1.TabIndex = 29;
+            // 
+            // cmbInstitucion
+            // 
+            this.cmbInstitucion.BackColor = System.Drawing.Color.White;
+            this.cmbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInstitucion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.cmbInstitucion.FormattingEnabled = true;
+            this.cmbInstitucion.Items.AddRange(new object[] {"Instituto", "Empresa", "Otros"});
+            this.cmbInstitucion.Location = new System.Drawing.Point(160, 186);
+            this.cmbInstitucion.Name = "cmbInstitucion";
+            this.cmbInstitucion.Size = new System.Drawing.Size(162, 26);
+            this.cmbInstitucion.TabIndex = 71;
             // 
             // btnBuscar
             // 
@@ -185,7 +195,7 @@ namespace proyectoVdufferx
             this.txtFotografia.Name = "txtFotografia";
             this.txtFotografia.Size = new System.Drawing.Size(262, 19);
             this.txtFotografia.TabIndex = 68;
-            this.txtFotografia.Tag = "Cor";
+            this.txtFotografia.Tag = "Fot";
             // 
             // pictureBox8
             // 
@@ -204,22 +214,14 @@ namespace proyectoVdufferx
             this.pictureBox9.TabIndex = 67;
             this.pictureBox9.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(55, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 59;
-            // 
             // cmbOcupacion
             // 
             this.cmbOcupacion.BackColor = System.Drawing.Color.White;
             this.cmbOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOcupacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbOcupacion.FormattingEnabled = true;
-            this.cmbOcupacion.Items.AddRange(new object[] {"Estudiante", "Empleado", "Desempleado"});
-            this.cmbOcupacion.Location = new System.Drawing.Point(163, 247);
+            this.cmbOcupacion.Items.AddRange(new object[] {"Estudiante", "Empleado", "Otros"});
+            this.cmbOcupacion.Location = new System.Drawing.Point(160, 245);
             this.cmbOcupacion.Name = "cmbOcupacion";
             this.cmbOcupacion.Size = new System.Drawing.Size(162, 26);
             this.cmbOcupacion.TabIndex = 58;
@@ -320,18 +322,6 @@ namespace proyectoVdufferx
             this.lblInsti.Size = new System.Drawing.Size(98, 16);
             this.lblInsti.TabIndex = 48;
             this.lblInsti.Text = "Institucion:";
-            // 
-            // txtInstitucion
-            // 
-            this.txtInstitucion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInstitucion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtInstitucion.Location = new System.Drawing.Point(53, 193);
-            this.txtInstitucion.Name = "txtInstitucion";
-            this.txtInstitucion.Size = new System.Drawing.Size(263, 19);
-            this.txtInstitucion.TabIndex = 47;
-            this.txtInstitucion.Tag = "Insti";
-            this.txtInstitucion.Enter += new System.EventHandler(this.txtEnter);
-            this.txtInstitucion.Leave += new System.EventHandler(this.txtLeave);
             // 
             // pictureBox5
             // 
@@ -501,6 +491,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.ComboBox cmbInstitucion;
+
         private System.Windows.Forms.Button btnBuscar;
 
         private System.Windows.Forms.TextBox txtFotografia;
@@ -516,8 +508,6 @@ namespace proyectoVdufferx
         private System.Windows.Forms.ErrorProvider errorCorreo;
 
 
-        private System.Windows.Forms.Label label2;
-
         private System.Windows.Forms.ComboBox cmbOcupacion;
 
         private System.Windows.Forms.Label label1;
@@ -527,7 +517,6 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.TextBox txtCorreo;
 
-        private System.Windows.Forms.TextBox txtInstitucion;
         private System.Windows.Forms.Label lblInsti;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.PictureBox pbTel;
