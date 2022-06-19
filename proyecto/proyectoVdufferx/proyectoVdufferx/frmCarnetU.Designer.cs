@@ -44,6 +44,8 @@ namespace proyectoVdufferx
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.picQR = new System.Windows.Forms.PictureBox();
             this.picMain = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.picUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbCor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
@@ -52,6 +54,8 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCorreoQR
@@ -166,12 +170,32 @@ namespace proyectoVdufferx
             this.picMain.TabStop = false;
             this.picMain.Click += new System.EventHandler(this.picMain_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+            this.pictureBox6.Location = new System.Drawing.Point(12, 18);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(167, 150);
+            this.pictureBox6.TabIndex = 74;
+            this.pictureBox6.TabStop = false;
+            // 
+            // picUser
+            // 
+            this.picUser.Location = new System.Drawing.Point(14, 19);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(164, 147);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 75;
+            this.picUser.TabStop = false;
+            // 
             // frmCarnetU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(538, 292);
+            this.Controls.Add(this.picUser);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.picMain);
             this.Controls.Add(this.picQR);
             this.Controls.Add(this.pictureBox5);
@@ -198,9 +222,14 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.PictureBox picUser;
 
         private System.Windows.Forms.PictureBox picMain;
 

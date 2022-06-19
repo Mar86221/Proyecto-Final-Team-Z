@@ -501,7 +501,7 @@ namespace proyectoVdufferx
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
 
-        private System.Windows.Forms.OpenFileDialog opfImagen;
+        public System.Windows.Forms.OpenFileDialog opfImagen;
 
         private System.Windows.Forms.ErrorProvider errorNumero;
 

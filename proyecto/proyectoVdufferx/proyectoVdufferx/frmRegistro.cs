@@ -27,9 +27,11 @@ namespace proyectoVdufferx
         {
             return Regex.IsMatch(numero, @"\A[0-9]{7,10}\z");
         }
-        private void btnBuscar_Click(object sender, EventArgs e)
+        OpenFileDialog ofd = new OpenFileDialog();
+        public void btnBuscar_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            //OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = "Descargas";
             ofd.Filter = "Archivos jpg (*.jpg)|*.jpg";
             ofd.Title = "Abrir";
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -37,8 +39,8 @@ namespace proyectoVdufferx
                 txtFotografia.Text = ofd.FileName;
             }
             ofd.Dispose();
-
         }
+        
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length > 0 &&
@@ -114,6 +116,8 @@ namespace proyectoVdufferx
                     frmCarnetU Datos = new frmCarnetU();
                     Datos.txtNombreQR.Text = txtNombre.Text;
                     Datos.txtCorreoQR.Text = txtCorreo.Text;
+                    Datos.picUser.Image = Image.FromFile(ofd.FileName);
+                    //Datos.picQR.Image = Image.FromFile(ofd.FileName);
                     QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
                     ASCIIEncoding ASSCII = new ASCIIEncoding();
                     var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);
