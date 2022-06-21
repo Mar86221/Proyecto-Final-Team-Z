@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Documents;
 
 namespace proyectoVdufferx
 {
@@ -19,6 +20,8 @@ namespace proyectoVdufferx
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
         }
         private Boolean verificadorCorreo(string correo)
         {
@@ -128,8 +131,7 @@ namespace proyectoVdufferx
                     ms.Write(arr, 0, arr.Length);
                     Bitmap b = new Bitmap(ms);
                     Datos.picQR.Image = b;
-                    Datos.ShowDialog();
-                    this.DialogResult = DialogResult.OK;
+                    Datos.Show();
                     this.Close( );
                 }
                 else

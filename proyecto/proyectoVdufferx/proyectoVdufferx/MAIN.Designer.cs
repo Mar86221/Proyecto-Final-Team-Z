@@ -104,6 +104,7 @@ namespace proyectoVdufferx
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MAIN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAIN";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();

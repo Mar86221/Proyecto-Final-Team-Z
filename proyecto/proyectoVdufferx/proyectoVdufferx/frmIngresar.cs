@@ -25,9 +25,10 @@ namespace proyectoVdufferx
             }
             else
             {
-                this.Close();
+                
                 MAIN main = new MAIN();
-                main.ShowDialog();
+                main.Show();
+                this.Close();
             }
         }
 
@@ -35,6 +36,8 @@ namespace proyectoVdufferx
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
         }
 
 
@@ -52,9 +55,9 @@ namespace proyectoVdufferx
                 }
                 else
                 {
-                    this.Close();
                     MAIN main = new MAIN();
-                    main.ShowDialog();
+                    main.Show();
+                    this.Close();
                 }
             }
         }

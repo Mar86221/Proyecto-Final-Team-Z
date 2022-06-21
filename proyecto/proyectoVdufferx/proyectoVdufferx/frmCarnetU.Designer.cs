@@ -35,15 +35,15 @@ namespace proyectoVdufferx
             this.txtCorreoQR = new System.Windows.Forms.TextBox();
             this.picQR = new System.Windows.Forms.PictureBox();
             this.picMain = new System.Windows.Forms.PictureBox();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtNombreQR = new System.Windows.Forms.TextBox();
+            this.picUser = new proyectoVdufferx.PictureCircularBox();
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCorreoQR
@@ -51,7 +51,7 @@ namespace proyectoVdufferx
             this.txtCorreoQR.BackColor = System.Drawing.Color.White;
             this.txtCorreoQR.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreoQR.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtCorreoQR.Location = new System.Drawing.Point(107, 402);
+            this.txtCorreoQR.Location = new System.Drawing.Point(124, 402);
             this.txtCorreoQR.Name = "txtCorreoQR";
             this.txtCorreoQR.ReadOnly = true;
             this.txtCorreoQR.Size = new System.Drawing.Size(183, 19);
@@ -76,15 +76,6 @@ namespace proyectoVdufferx
             this.picMain.TabIndex = 72;
             this.picMain.TabStop = false;
             this.picMain.Click += new System.EventHandler(this.picMain_Click);
-            // 
-            // picUser
-            // 
-            this.picUser.Location = new System.Drawing.Point(139, 12);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(122, 122);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUser.TabIndex = 75;
-            this.picUser.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -117,16 +108,25 @@ namespace proyectoVdufferx
             this.txtNombreQR.Size = new System.Drawing.Size(159, 19);
             this.txtNombreQR.TabIndex = 78;
             // 
+            // picUser
+            // 
+            this.picUser.Location = new System.Drawing.Point(139, 36);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(132, 121);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUser.TabIndex = 79;
+            this.picUser.TabStop = false;
+            // 
             // frmCarnetU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(352, 465);
+            this.Controls.Add(this.picUser);
             this.Controls.Add(this.txtNombreQR);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.picUser);
             this.Controls.Add(this.picMain);
             this.Controls.Add(this.picQR);
             this.Controls.Add(this.txtCorreoQR);
@@ -138,19 +138,19 @@ namespace proyectoVdufferx
             this.Text = "Carnet_Usuario";
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public proyectoVdufferx.PictureCircularBox picUser;
 
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
         private System.Windows.Forms.PictureBox pictureBox1;
-
-        public System.Windows.Forms.PictureBox picUser;
 
         private System.Windows.Forms.PictureBox picMain;
 
