@@ -1,5 +1,8 @@
 using System;
+using System.Data.Odbc;
 using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -17,31 +20,57 @@ namespace proyectoVdufferx
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-        private Boolean verificadorCorrero(string correo)
+        private Boolean verificadorCorreo(string correo)
         {
             return Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
         }
+        public Boolean verificadorNumero(string numero)
+        {
+            return Regex.IsMatch(numero, @"\A[0-9]{7,10}\z");
+        }
+        OpenFileDialog ofd = new OpenFileDialog();
+        public void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = "Descargas";
+            ofd.Filter = "Archivos png (*.png)|*.png";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtFotografia.Text = ofd.FileName;
+            }
+            ofd.Dispose();
+        }
+        
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length > 0 &&
                 txtDireccion.Text.Length > 0 &&
-                txtInstitucion.Text.Length > 0 &&
                 txtTelefono.Text.Length > 0 &&
-                txtCorreo.Text.Length > 0)
+                txtCorreo.Text.Length > 0 &&
+                cmbInstitucion.Text.Length > 0 &&
+                cmbOcupacion.Text.Length > 0 &&
+                txtFotografia.Text.Length > 0)
                 
             {
                 usuario u = new usuario();
                 u.nombre = txtNombre.Text;
                 u.direccion = txtDireccion.Text;
-                u.institucion = txtInstitucion.Text;
-                u.telefono = txtTelefono.Text;
-                if (verificadorCorrero(txtCorreo.Text))
+                u.fotografia = txtFotografia.Text;
+                if (verificadorNumero(txtTelefono.Text))
+                {
+                    u.telefono = txtTelefono.Text;
+                }
+                else
+                {
+                   errorNumero.SetError(pbTel, "Numero de telefono invalido");
+                }
+                if (verificadorCorreo(txtCorreo.Text))
                 {
                     u.correo = txtCorreo.Text;
                 }
                 else
                 {
-                    errorCorreo.SetError(pictureBox7,"Correo invalido");
+                    errorCorreo.SetError(pbCor,"Correo invalido");
                 }
                 
                 switch (cmbOcupacion.Text)
@@ -56,16 +85,50 @@ namespace proyectoVdufferx
                         u.id_ocupacion = 2;
                         break;
                     }
-                    case "Desempleado":
+                    case "Otros":
                         u.id_ocupacion = 3;
                         break;
 
                 }
 
+                switch (cmbInstitucion.Text)
+                {
+                    case "Instituto":
+                    {
+                        u.id_institucion = 1;
+                        break;
+                    }
+                    case "Empresa":
+                    {
+                        u.id_institucion = 2;
+                        break;
+                    }
+                    case "Otros":
+                    {
+                        u.id_institucion= 3;
+                        break;
+                    }
+                }
+
                 if (usuarioDAO.CrearNuevo(u))
                 {
                     MessageBox.Show("Usuario registrado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    frmCarnetU Datos = new frmCarnetU();
+                    Datos.txtNombreQR.Text = txtNombre.Text;
+                    Datos.txtCorreoQR.Text = txtCorreo.Text;
+                    Datos.picUser.Image = Image.FromFile(ofd.FileName);
+                    //Datos.picQR.Image = Image.FromFile(ofd.FileName);
+                    QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
+                    ASCIIEncoding ASSCII = new ASCIIEncoding();
+                    var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);
+                    QRCoder.PngByteQRCode png = new QRCoder.PngByteQRCode();
+                    png.SetQRCodeData(z);
+                    var arr = png.GetGraphic(10);
+                    MemoryStream ms = new MemoryStream();
+                    ms.Write(arr, 0, arr.Length);
+                    Bitmap b = new Bitmap(ms);
+                    Datos.picQR.Image = b;
+                    Datos.ShowDialog();
                     this.DialogResult = DialogResult.OK;
                     this.Close( );
                 }
@@ -80,6 +143,7 @@ namespace proyectoVdufferx
             {
                 MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void txtEnter(object sender, EventArgs e)
@@ -130,7 +194,5 @@ namespace proyectoVdufferx
                 }
             }
         }
-
-        
     }
 }

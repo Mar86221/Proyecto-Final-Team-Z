@@ -31,6 +31,7 @@ namespace proyectoVdufferx
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresar));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCor = new System.Windows.Forms.Label();
@@ -39,11 +40,15 @@ namespace proyectoVdufferx
             this.pbCor = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.bttIngresar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorCorreo = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbCor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.bttIngresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -75,6 +80,7 @@ namespace proyectoVdufferx
             this.txtCorreo.Size = new System.Drawing.Size(259, 19);
             this.txtCorreo.TabIndex = 59;
             this.txtCorreo.Tag = "Cor";
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // pictureBox7
             // 
@@ -115,15 +121,31 @@ namespace proyectoVdufferx
             this.label2.Text = "Ingresa tu correo electrónico relacionado con tu cuenta.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bttIngresar
+            // 
+            this.bttIngresar.Image = ((System.Drawing.Image) (resources.GetObject("bttIngresar.Image")));
+            this.bttIngresar.Location = new System.Drawing.Point(92, 370);
+            this.bttIngresar.Name = "bttIngresar";
+            this.bttIngresar.Size = new System.Drawing.Size(137, 34);
+            this.bttIngresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.bttIngresar.TabIndex = 63;
+            this.bttIngresar.TabStop = false;
+            this.bttIngresar.Click += new System.EventHandler(this.bttIngresar_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(92, 370);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(137, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 63;
+            this.pictureBox2.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 64;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // errorCorreo
+            // 
+            this.errorCorreo.ContainerControl = this;
             // 
             // frmIngresar
             // 
@@ -132,6 +154,7 @@ namespace proyectoVdufferx
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(327, 427);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.bttIngresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCor);
@@ -139,17 +162,25 @@ namespace proyectoVdufferx
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pbCor);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmIngresar";
             this.Text = "frmIngresar";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbCor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.bttIngresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.errorCorreo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.ErrorProvider errorCorreo;
+
         private System.Windows.Forms.PictureBox pictureBox2;
+
+        private System.Windows.Forms.PictureBox bttIngresar;
 
         private System.Windows.Forms.Label label2;
 
