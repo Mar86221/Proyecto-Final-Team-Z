@@ -117,8 +117,10 @@ CREATE TABLE OCUPACION (
 );
 
 CREATE TABLE INSTITUCION(
-	ID int primary key NOT NULL,
+	ID int IDENTITY(1,1) primary key NOT NULL,
 	institucion VARCHAR(50) NOT NULL,
+    id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
+    
 );
 
 CREATE TABLE USUARIO (
@@ -128,7 +130,6 @@ CREATE TABLE USUARIO (
     --institucion VARCHAR(50) NOT NULL, SE QUITO Y SE AGREGO COMO CATALOGO POR LAS ALTERACIONES QUE SE HICIERON EN FORM PARA QUE FUNCIONE
     telefono VARCHAR(10) NOT NULL, 
     correo VARCHAR(60) NOT NULL,
-    id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
 	id_institucion int NOT NULL FOREIGN KEY (id_institucion) REFERENCES INSTITUCION (id),
     fotografia VARCHAR(500) NOT NULL,
 );
@@ -170,10 +171,13 @@ INSERT INTO OCUPACION (id,ocupacion)
     VALUES (1,'Estudiante'),
            (2,'Trabajador'),
            (3,'Desempleado');    
-INSERT INTO INSTITUCION(id,institucion)
-    VALUES (1,'Instituto'),
-           (2,'Empresa'),
-           (3,'Otros');   
+--------------------------------------------------------------
+INSERT INTO INSTITUCION (institucion,id_ocupacion)
+    VALUES ('UCA',1),
+           ('UES',1),
+           ('SIMAN',2),
+           ('FREUND',2),
+           ('Ninguno/a',3)
 ------------------------------------------------------------
 INSERT INTO EDITORIAL (id,editorial)
     VALUES (1,'MOLINO'),
@@ -486,4 +490,4 @@ INSERT INTO EJEMPLARXAUTOR(id,id_ejemplar, id_autor)
 
 -------------------------------------------------------
 ------------------------------------------------------------------------------------
-SELECT * FROM USUARIO
+SELECT * FROM INSTITUCION
