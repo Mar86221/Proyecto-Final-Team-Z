@@ -61,7 +61,6 @@ C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Everth\Proyecto-
 C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
 C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe.config
-C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.pdb
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.AssemblyReference.cache
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.SuggestedBindingRedirects.cache
@@ -109,3 +108,20 @@ C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z-Everth
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmCarnetU.resources
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmInicio.resources
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.MAIN.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe.config
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.exe
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.pdb
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\QRCoder.dll
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.AssemblyReference.cache
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.SuggestedBindingRedirects.cache
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmCarnetU.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmInicio.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmIngresar.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmRegistro.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.MAIN.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.Properties.Resources.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.GenerateResource.cache
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CoreCompileInputs.cache
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CopyComplete
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb

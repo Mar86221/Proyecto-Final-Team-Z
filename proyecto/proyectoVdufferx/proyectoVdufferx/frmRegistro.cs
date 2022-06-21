@@ -1,4 +1,5 @@
 using System;
+using System.Data.Odbc;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -32,8 +33,7 @@ namespace proyectoVdufferx
         {
             //OpenFileDialog ofd = new OpenFileDialog();
             ofd.InitialDirectory = "Descargas";
-            ofd.Filter = "Archivos jpg (*.jpg)|*.jpg";
-            ofd.Title = "Abrir";
+            ofd.Filter = "Archivos png (*.png)|*.png";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 txtFotografia.Text = ofd.FileName;

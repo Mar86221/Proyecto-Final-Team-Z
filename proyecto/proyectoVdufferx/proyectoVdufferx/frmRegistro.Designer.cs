@@ -193,6 +193,7 @@ namespace proyectoVdufferx
             this.txtFotografia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtFotografia.Location = new System.Drawing.Point(54, 434);
             this.txtFotografia.Name = "txtFotografia";
+            this.txtFotografia.ReadOnly = true;
             this.txtFotografia.Size = new System.Drawing.Size(262, 19);
             this.txtFotografia.TabIndex = 68;
             this.txtFotografia.Tag = "Fot";

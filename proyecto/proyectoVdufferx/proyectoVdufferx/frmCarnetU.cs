@@ -17,6 +17,7 @@ namespace proyectoVdufferx
             MAIN main = new MAIN();
             main.ShowDialog();
         }
-        
+
+
     }
 }
