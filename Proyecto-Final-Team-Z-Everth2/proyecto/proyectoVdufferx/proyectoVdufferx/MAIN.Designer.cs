@@ -64,7 +64,7 @@ namespace proyectoVdufferx
             // 
             this.btnEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjemplares.Image = ((System.Drawing.Image) (resources.GetObject("btnEjemplares.Image")));
-            this.btnEjemplares.Location = new System.Drawing.Point(64, 274);
+            this.btnEjemplares.Location = new System.Drawing.Point(115, 274);
             this.btnEjemplares.Name = "btnEjemplares";
             this.btnEjemplares.Size = new System.Drawing.Size(250, 80);
             this.btnEjemplares.TabIndex = 3;

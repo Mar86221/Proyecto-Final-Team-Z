@@ -48,12 +48,13 @@ namespace proyectoVdufferx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(901, 450);
             this.Controls.Add(this.DgvEjemplares);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmEjemplares";
-            this.Text = "frmEjemplares";
             this.Load += new System.EventHandler(this.frmEjemplares_Load);
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).EndInit();
             this.ResumeLayout(false);
