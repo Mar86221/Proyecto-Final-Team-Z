@@ -39,6 +39,7 @@ namespace proyectoVdufferx
             this.picTucuenta = new System.Windows.Forms.PictureBox();
             this.PicTuCuentaDatos = new System.Windows.Forms.PictureBox();
             this.grpTuCuenta = new System.Windows.Forms.GroupBox();
+            this.txtTucuentaFotografia = new System.Windows.Forms.TextBox();
             this.txtTucuentaTelefono = new System.Windows.Forms.TextBox();
             this.txtTucuentaCorreo = new System.Windows.Forms.TextBox();
             this.txtTucuentaNombre = new System.Windows.Forms.TextBox();
@@ -102,15 +103,17 @@ namespace proyectoVdufferx
             // 
             // PicTuCuentaDatos
             // 
-            this.PicTuCuentaDatos.BackColor = System.Drawing.Color.Silver;
-            this.PicTuCuentaDatos.Location = new System.Drawing.Point(74, 19);
+            this.PicTuCuentaDatos.BackColor = System.Drawing.Color.White;
+            this.PicTuCuentaDatos.Location = new System.Drawing.Point(57, 19);
             this.PicTuCuentaDatos.Name = "PicTuCuentaDatos";
-            this.PicTuCuentaDatos.Size = new System.Drawing.Size(80, 64);
+            this.PicTuCuentaDatos.Size = new System.Drawing.Size(126, 64);
+            this.PicTuCuentaDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicTuCuentaDatos.TabIndex = 7;
             this.PicTuCuentaDatos.TabStop = false;
             // 
             // grpTuCuenta
             // 
+            this.grpTuCuenta.Controls.Add(this.txtTucuentaFotografia);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaTelefono);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaCorreo);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaNombre);
@@ -120,6 +123,14 @@ namespace proyectoVdufferx
             this.grpTuCuenta.Size = new System.Drawing.Size(224, 189);
             this.grpTuCuenta.TabIndex = 8;
             this.grpTuCuenta.TabStop = false;
+            // 
+            // txtTucuentaFotografia
+            // 
+            this.txtTucuentaFotografia.Location = new System.Drawing.Point(210, 163);
+            this.txtTucuentaFotografia.Name = "txtTucuentaFotografia";
+            this.txtTucuentaFotografia.ReadOnly = true;
+            this.txtTucuentaFotografia.Size = new System.Drawing.Size(10, 20);
+            this.txtTucuentaFotografia.TabIndex = 10;
             // 
             // txtTucuentaTelefono
             // 
@@ -157,6 +168,8 @@ namespace proyectoVdufferx
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MAIN";
             this.Text = "MAIN";
             this.Load += new System.EventHandler(this.MAIN_Load);
@@ -169,6 +182,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public System.Windows.Forms.TextBox txtTucuentaFotografia;
 
         public System.Windows.Forms.TextBox txtTucuentaNombre;
         public System.Windows.Forms.TextBox txtTucuentaCorreo;

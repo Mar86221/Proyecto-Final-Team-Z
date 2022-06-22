@@ -18,7 +18,7 @@ namespace proyectoVdufferx
             string cadena = Resources.cadena_conexion;
             using (SqlConnection connection = new SqlConnection(cadena)) 
             {
-                string query = "SELECT nombre,telefono FROM USUARIO where correo = @correobuscado";
+                string query = "SELECT nombre,telefono,fotografia FROM USUARIO where correo = @correobuscado";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@correobuscado", Convert.ToString(txtTucuentaCorreo.Text));
                 
@@ -29,12 +29,15 @@ namespace proyectoVdufferx
                     {
                         string nombre = reader["nombre"].ToString();
                         string telefono = reader["telefono"].ToString();
-
+                        string fotografia = reader["fotografia"].ToString();
+                        
                         txtTucuentaNombre.AppendText(nombre);
                         txtTucuentaTelefono.AppendText(telefono);
+                        txtTucuentaFotografia.AppendText(fotografia);
                     }
                     connection.Close();
                 }
+                PicTuCuentaDatos.ImageLocation = txtTucuentaFotografia.Text;
             }
         }
         
@@ -42,6 +45,7 @@ namespace proyectoVdufferx
         public void MAIN_Load(object sender, EventArgs e)
         {
             grpTuCuenta.Hide();
+            txtTucuentaFotografia.Hide();
         }
         
     }
