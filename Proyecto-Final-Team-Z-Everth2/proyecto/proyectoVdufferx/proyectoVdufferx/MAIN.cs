@@ -47,6 +47,16 @@ namespace proyectoVdufferx
             grpTuCuenta.Hide();
             txtTucuentaFotografia.Hide();
         }
-        
+
+        private void btnEjemplares_Click(object sender, EventArgs e)
+        {
+            frmEjemplares otraventana = new frmEjemplares();
+            otraventana.ShowDialog();
+        }
+
+        private void picTucuenta_DoubleClick(object sender, EventArgs e)
+        {
+            grpTuCuenta.Hide();
+        }
     }
 }

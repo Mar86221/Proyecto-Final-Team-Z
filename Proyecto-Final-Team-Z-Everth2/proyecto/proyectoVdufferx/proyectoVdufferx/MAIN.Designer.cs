@@ -69,6 +69,7 @@ namespace proyectoVdufferx
             this.btnEjemplares.Size = new System.Drawing.Size(250, 80);
             this.btnEjemplares.TabIndex = 3;
             this.btnEjemplares.UseVisualStyleBackColor = true;
+            this.btnEjemplares.Click += new System.EventHandler(this.btnEjemplares_Click);
             // 
             // button1
             // 
@@ -100,6 +101,7 @@ namespace proyectoVdufferx
             this.picTucuenta.TabIndex = 6;
             this.picTucuenta.TabStop = false;
             this.picTucuenta.Click += new System.EventHandler(this.picTucuenta_Click);
+            this.picTucuenta.DoubleClick += new System.EventHandler(this.picTucuenta_DoubleClick);
             // 
             // PicTuCuentaDatos
             // 

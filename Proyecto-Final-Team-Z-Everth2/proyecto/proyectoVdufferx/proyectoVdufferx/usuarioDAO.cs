@@ -65,6 +65,5 @@ namespace proyectoVdufferx
 
             return u;
         }
-        
     }
 }

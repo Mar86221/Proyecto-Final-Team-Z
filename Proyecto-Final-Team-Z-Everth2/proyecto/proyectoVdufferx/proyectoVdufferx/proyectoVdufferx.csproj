@@ -56,11 +56,19 @@
         <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="ejemplar.cs" />
+        <Compile Include="ejemplarDAO.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="frmCarnetU.Designer.cs">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEjemplares.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEjemplares.Designer.cs">
+          <DependentUpon>frmEjemplares.cs</DependentUpon>
         </Compile>
         <Compile Include="frmInicio.cs">
             <SubType>Form</SubType>
@@ -93,6 +101,9 @@
         <Compile Include="usuarioDAO.cs" />
         <EmbeddedResource Include="frmCarnetU.resx">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmEjemplares.resx">
+          <DependentUpon>frmEjemplares.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmInicio.resx">
           <DependentUpon>frmInicio.cs</DependentUpon>

@@ -55,6 +55,7 @@ namespace proyectoVdufferx
                 {
                     this.Close();
                     MAIN main = new MAIN();
+                    main.txtTucuentaCorreo.Text = txtCorreo.Text;
                     main.ShowDialog();
                 }
             }
