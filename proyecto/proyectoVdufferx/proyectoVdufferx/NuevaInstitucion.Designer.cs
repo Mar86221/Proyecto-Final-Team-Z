@@ -38,6 +38,7 @@ namespace proyectoVdufferx
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbName = new System.Windows.Forms.PictureBox();
             this.pbOK = new System.Windows.Forms.PictureBox();
+            this.cmbOcupacion2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbOK)).BeginInit();
@@ -69,7 +70,7 @@ namespace proyectoVdufferx
             this.txtNovoInstitucion.BackColor = System.Drawing.Color.White;
             this.txtNovoInstitucion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNovoInstitucion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtNovoInstitucion.Location = new System.Drawing.Point(40, 106);
+            this.txtNovoInstitucion.Location = new System.Drawing.Point(42, 108);
             this.txtNovoInstitucion.Name = "txtNovoInstitucion";
             this.txtNovoInstitucion.Size = new System.Drawing.Size(262, 19);
             this.txtNovoInstitucion.TabIndex = 35;
@@ -78,7 +79,7 @@ namespace proyectoVdufferx
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 100);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 102);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(279, 30);
             this.pictureBox2.TabIndex = 33;
@@ -87,7 +88,7 @@ namespace proyectoVdufferx
             // pbName
             // 
             this.pbName.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-            this.pbName.Location = new System.Drawing.Point(31, 98);
+            this.pbName.Location = new System.Drawing.Point(33, 100);
             this.pbName.Name = "pbName";
             this.pbName.Size = new System.Drawing.Size(283, 34);
             this.pbName.TabIndex = 34;
@@ -96,7 +97,7 @@ namespace proyectoVdufferx
             // pbOK
             // 
             this.pbOK.Image = ((System.Drawing.Image) (resources.GetObject("pbOK.Image")));
-            this.pbOK.Location = new System.Drawing.Point(127, 147);
+            this.pbOK.Location = new System.Drawing.Point(122, 186);
             this.pbOK.Name = "pbOK";
             this.pbOK.Size = new System.Drawing.Size(80, 35);
             this.pbOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -104,12 +105,24 @@ namespace proyectoVdufferx
             this.pbOK.TabStop = false;
             this.pbOK.Click += new System.EventHandler(this.pbOK_Click);
             // 
+            // cmbOcupacion2
+            // 
+            this.cmbOcupacion2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOcupacion2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.cmbOcupacion2.FormattingEnabled = true;
+            this.cmbOcupacion2.Items.AddRange(new object[] {"Estudiante", "Trabajador", "Desempleado"});
+            this.cmbOcupacion2.Location = new System.Drawing.Point(106, 145);
+            this.cmbOcupacion2.Name = "cmbOcupacion2";
+            this.cmbOcupacion2.Size = new System.Drawing.Size(111, 26);
+            this.cmbOcupacion2.TabIndex = 37;
+            // 
             // NuevaInstitucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(342, 190);
+            this.ClientSize = new System.Drawing.Size(342, 233);
+            this.Controls.Add(this.cmbOcupacion2);
             this.Controls.Add(this.pbOK);
             this.Controls.Add(this.txtNovoInstitucion);
             this.Controls.Add(this.pictureBox2);
@@ -124,6 +137,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ComboBox cmbOcupacion2;
 
         private System.Windows.Forms.PictureBox pbOK;
 

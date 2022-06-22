@@ -1,4 +1,3 @@
-
 using System;
 using System.Data.SqlClient;
 using proyectoVdufferx.Properties;
@@ -7,7 +6,6 @@ namespace proyectoVdufferx
 {
     public static class institucionDAO
     {
-
         public static bool CrearNuevo(institucion i)
         {
             bool exito = true;

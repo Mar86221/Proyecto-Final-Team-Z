@@ -266,9 +266,8 @@ namespace proyectoVdufferx
 
         private void btnNuevaInstitucion_Click(object sender, EventArgs e)
         {
-            NuevaInstitucion ninstitucion = new NuevaInstitucion();
+           NuevaInstitucion ninstitucion = new NuevaInstitucion();
             ninstitucion.Show();
-            
-        }
+        } 
     }
 }

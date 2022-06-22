@@ -1,10 +1,13 @@
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace proyectoVdufferx
 {
     public partial class NuevaInstitucion : Form
     {
+        private SqlConnection connection =
+            new SqlConnection(@"Server=localhost;Database=BINAES_BDD;Trusted_Connection=True;");
         public NuevaInstitucion()
         {
             InitializeComponent();
@@ -13,11 +16,9 @@ namespace proyectoVdufferx
 
         private void pbOK_Click(object sender, EventArgs e)
         {
-            frmRegistro a = new frmRegistro();
             institucion i = new institucion();
-           txtNovoInstitucion.Text = i.ninstitucion;
-           i.id_ocupacion = 4;
-            /*switch (a.cmbOcupacion.Text)
+            i.ninstitucion = txtNovoInstitucion.Text;
+            switch (cmbOcupacion2.Text)
             {
                 case "Estudiante":
                 {
@@ -34,14 +35,14 @@ namespace proyectoVdufferx
                     i.id_ocupacion = 3;
                     break;
                 }
-               
+                
             }
-             */
-            this.Close();
+
 
             if (institucionDAO.CrearNuevo(i))
             {
                 MessageBox.Show("Institucion registrada existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
