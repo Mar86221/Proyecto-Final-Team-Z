@@ -127,7 +127,6 @@ namespace proyectoVdufferx
                     Datos.txtNombreQR.Text = txtNombre.Text;
                     Datos.txtCorreoQR.Text = txtCorreo.Text;
                     Datos.picUser.Image = Image.FromFile(ofd.FileName);
-                    //Datos.picQR.Image = Image.FromFile(ofd.FileName);
                     QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
                     ASCIIEncoding ASSCII = new ASCIIEncoding();
                     var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);
