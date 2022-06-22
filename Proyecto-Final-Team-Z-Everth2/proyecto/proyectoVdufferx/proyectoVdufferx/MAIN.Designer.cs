@@ -103,7 +103,7 @@ namespace proyectoVdufferx
             // PicTuCuentaDatos
             // 
             this.PicTuCuentaDatos.BackColor = System.Drawing.Color.Silver;
-            this.PicTuCuentaDatos.Location = new System.Drawing.Point(41, 19);
+            this.PicTuCuentaDatos.Location = new System.Drawing.Point(74, 19);
             this.PicTuCuentaDatos.Name = "PicTuCuentaDatos";
             this.PicTuCuentaDatos.Size = new System.Drawing.Size(80, 64);
             this.PicTuCuentaDatos.TabIndex = 7;
@@ -115,34 +115,34 @@ namespace proyectoVdufferx
             this.grpTuCuenta.Controls.Add(this.txtTucuentaCorreo);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaNombre);
             this.grpTuCuenta.Controls.Add(this.PicTuCuentaDatos);
-            this.grpTuCuenta.Location = new System.Drawing.Point(626, 46);
+            this.grpTuCuenta.Location = new System.Drawing.Point(564, 46);
             this.grpTuCuenta.Name = "grpTuCuenta";
-            this.grpTuCuenta.Size = new System.Drawing.Size(162, 189);
+            this.grpTuCuenta.Size = new System.Drawing.Size(224, 189);
             this.grpTuCuenta.TabIndex = 8;
             this.grpTuCuenta.TabStop = false;
             // 
             // txtTucuentaTelefono
             // 
-            this.txtTucuentaTelefono.Location = new System.Drawing.Point(17, 141);
+            this.txtTucuentaTelefono.Location = new System.Drawing.Point(28, 141);
             this.txtTucuentaTelefono.Name = "txtTucuentaTelefono";
             this.txtTucuentaTelefono.ReadOnly = true;
-            this.txtTucuentaTelefono.Size = new System.Drawing.Size(139, 20);
+            this.txtTucuentaTelefono.Size = new System.Drawing.Size(176, 20);
             this.txtTucuentaTelefono.TabIndex = 10;
             // 
             // txtTucuentaCorreo
             // 
-            this.txtTucuentaCorreo.Location = new System.Drawing.Point(17, 115);
+            this.txtTucuentaCorreo.Location = new System.Drawing.Point(28, 115);
             this.txtTucuentaCorreo.Name = "txtTucuentaCorreo";
             this.txtTucuentaCorreo.ReadOnly = true;
-            this.txtTucuentaCorreo.Size = new System.Drawing.Size(139, 20);
+            this.txtTucuentaCorreo.Size = new System.Drawing.Size(176, 20);
             this.txtTucuentaCorreo.TabIndex = 9;
             // 
             // txtTucuentaNombre
             // 
-            this.txtTucuentaNombre.Location = new System.Drawing.Point(17, 89);
+            this.txtTucuentaNombre.Location = new System.Drawing.Point(28, 89);
             this.txtTucuentaNombre.Name = "txtTucuentaNombre";
             this.txtTucuentaNombre.ReadOnly = true;
-            this.txtTucuentaNombre.Size = new System.Drawing.Size(139, 20);
+            this.txtTucuentaNombre.Size = new System.Drawing.Size(176, 20);
             this.txtTucuentaNombre.TabIndex = 8;
             // 
             // MAIN

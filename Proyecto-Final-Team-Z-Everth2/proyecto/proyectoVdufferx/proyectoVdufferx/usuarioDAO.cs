@@ -65,33 +65,6 @@ namespace proyectoVdufferx
 
             return u;
         }
-
-        public static usuario DatosUporcorreonombre(string correo)
-        {
-            string cadena = Resources.cadena_conexion;
-            usuario u = new usuario();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT nombre/*telefono*/" 
-                               + "FROM USUARIO where correo = @correo";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@correo",correo);
-                
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        usuario unombreporC = new usuario(); 
-                        unombreporC.nombre = reader["nombre"].ToString();
-                        // u.telefono = reader["telefono"].ToString();
-                    }
-                    
-                    connection.Close();
-                }
-                return u;
-            }
-        }
+        
     }
 }

@@ -28,7 +28,6 @@ namespace proyectoVdufferx
                 this.Close();
                 MAIN main = new MAIN();
                 main.txtTucuentaCorreo.Text = txtCorreo.Text;
-                usuarioDAO.DatosUporcorreonombre(correo);
                 main.ShowDialog();
             }
         }
