@@ -124,3 +124,4 @@ C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\pro
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CopyComplete
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.NuevaInstitucion.resources

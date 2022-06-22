@@ -15,15 +15,15 @@ namespace proyectoVdufferx
                 using (SqlConnection connection = new SqlConnection(cadena))
                 {
                     string query =
-                        "INSERT INTO USUARIO (nombre,direccion,id_institucion,telefono,correo,id_ocupacion, fotografia)VALUES" +
-                        " (@nombre, @direccion, @id_institucion,@telefono,@correo,@id_ocupacion,@fotografia)";
+                        "INSERT INTO USUARIO (nombre,direccion,id_institucion,telefono,correo, fotografia)VALUES" +
+                        " (@nombre, @direccion, @id_institucion,@telefono,@correo,@fotografia)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", u.nombre);
                     command.Parameters.AddWithValue("@direccion", u.direccion);
                     command.Parameters.AddWithValue("@id_institucion", u.id_institucion);
                     command.Parameters.AddWithValue("@telefono", u.telefono);
                     command.Parameters.AddWithValue("@correo", u.correo);
-                    command.Parameters.AddWithValue("@id_ocupacion", u.id_ocupacion);
+                    //command.Parameters.AddWithValue("@id_ocupacion", u.id_ocupacion);
                     command.Parameters.AddWithValue("fotografia", u.fotografia);
 
 

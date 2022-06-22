@@ -29,6 +29,7 @@ namespace proyectoVdufferx
             frmIngresar otraventana = new frmIngresar();
             otraventana.Show();
             this.Hide();
+            
         }
     }
 }
