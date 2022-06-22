@@ -162,9 +162,9 @@ namespace proyectoVdufferx
             this.cmbInstitucion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbInstitucion.FormattingEnabled = true;
             this.cmbInstitucion.Items.AddRange(new object[] {"Instituto", "Empresa", "Otros"});
-            this.cmbInstitucion.Location = new System.Drawing.Point(160, 186);
+            this.cmbInstitucion.Location = new System.Drawing.Point(156, 243);
             this.cmbInstitucion.Name = "cmbInstitucion";
-            this.cmbInstitucion.Size = new System.Drawing.Size(162, 26);
+            this.cmbInstitucion.Size = new System.Drawing.Size(170, 26);
             this.cmbInstitucion.TabIndex = 71;
             // 
             // btnBuscar
@@ -189,9 +189,10 @@ namespace proyectoVdufferx
             // 
             // txtFotografia
             // 
+            this.txtFotografia.BackColor = System.Drawing.Color.White;
             this.txtFotografia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFotografia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtFotografia.Location = new System.Drawing.Point(54, 434);
+            this.txtFotografia.Location = new System.Drawing.Point(56, 432);
             this.txtFotografia.Name = "txtFotografia";
             this.txtFotografia.ReadOnly = true;
             this.txtFotografia.Size = new System.Drawing.Size(262, 19);
@@ -222,15 +223,16 @@ namespace proyectoVdufferx
             this.cmbOcupacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbOcupacion.FormattingEnabled = true;
             this.cmbOcupacion.Items.AddRange(new object[] {"Estudiante", "Empleado", "Otros"});
-            this.cmbOcupacion.Location = new System.Drawing.Point(160, 245);
+            this.cmbOcupacion.Location = new System.Drawing.Point(156, 181);
             this.cmbOcupacion.Name = "cmbOcupacion";
-            this.cmbOcupacion.Size = new System.Drawing.Size(162, 26);
+            this.cmbOcupacion.Size = new System.Drawing.Size(169, 26);
             this.cmbOcupacion.TabIndex = 58;
+            this.cmbOcupacion.SelectedIndexChanged += new System.EventHandler(this.cmbOcupacion_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(120, 8);
+            this.label1.Location = new System.Drawing.Point(120, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 30);
             this.label1.TabIndex = 57;
@@ -318,27 +320,27 @@ namespace proyectoVdufferx
             // 
             this.lblInsti.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblInsti.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-            this.lblInsti.Location = new System.Drawing.Point(56, 176);
+            this.lblInsti.Location = new System.Drawing.Point(52, 233);
             this.lblInsti.Name = "lblInsti";
-            this.lblInsti.Size = new System.Drawing.Size(98, 16);
+            this.lblInsti.Size = new System.Drawing.Size(106, 16);
             this.lblInsti.TabIndex = 48;
             this.lblInsti.Text = "Institucion:";
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Location = new System.Drawing.Point(47, 186);
+            this.pictureBox5.Location = new System.Drawing.Point(47, 243);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(279, 29);
+            this.pictureBox5.Size = new System.Drawing.Size(283, 29);
             this.pictureBox5.TabIndex = 45;
             this.pictureBox5.TabStop = false;
             // 
             // pbInsti
             // 
             this.pbInsti.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-            this.pbInsti.Location = new System.Drawing.Point(45, 184);
+            this.pbInsti.Location = new System.Drawing.Point(45, 241);
             this.pbInsti.Name = "pbInsti";
-            this.pbInsti.Size = new System.Drawing.Size(283, 33);
+            this.pbInsti.Size = new System.Drawing.Size(287, 33);
             this.pbInsti.TabIndex = 46;
             this.pbInsti.TabStop = false;
             // 
@@ -346,26 +348,26 @@ namespace proyectoVdufferx
             // 
             this.lblOcu.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblOcu.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-            this.lblOcu.Location = new System.Drawing.Point(57, 235);
+            this.lblOcu.Location = new System.Drawing.Point(53, 171);
             this.lblOcu.Name = "lblOcu";
-            this.lblOcu.Size = new System.Drawing.Size(100, 20);
+            this.lblOcu.Size = new System.Drawing.Size(107, 20);
             this.lblOcu.TabIndex = 44;
             this.lblOcu.Text = "Ocupacion:";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(47, 245);
+            this.pictureBox4.Location = new System.Drawing.Point(47, 181);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(279, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(282, 30);
             this.pictureBox4.TabIndex = 41;
             this.pictureBox4.TabStop = false;
             // 
             // pbOcu
             // 
             this.pbOcu.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-            this.pbOcu.Location = new System.Drawing.Point(45, 243);
+            this.pbOcu.Location = new System.Drawing.Point(45, 179);
             this.pbOcu.Name = "pbOcu";
-            this.pbOcu.Size = new System.Drawing.Size(283, 34);
+            this.pbOcu.Size = new System.Drawing.Size(286, 34);
             this.pbOcu.TabIndex = 42;
             this.pbOcu.TabStop = false;
             // 
@@ -469,6 +471,7 @@ namespace proyectoVdufferx
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -492,7 +495,7 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.ComboBox cmbInstitucion;
+        public System.Windows.Forms.ComboBox cmbInstitucion;
 
         private System.Windows.Forms.Button btnBuscar;
 
@@ -509,7 +512,7 @@ namespace proyectoVdufferx
         private System.Windows.Forms.ErrorProvider errorCorreo;
 
 
-        private System.Windows.Forms.ComboBox cmbOcupacion;
+        public System.Windows.Forms.ComboBox cmbOcupacion;
 
         private System.Windows.Forms.Label label1;
 

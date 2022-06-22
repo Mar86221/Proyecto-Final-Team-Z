@@ -82,9 +82,10 @@
             this.Controls.Add(this.picRegistrarme);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmInicio";
-            this.Text = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picIngresar)).EndInit();

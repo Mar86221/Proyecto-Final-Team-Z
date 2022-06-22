@@ -1,24 +1,33 @@
 using System;
+using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Documents;
+using System.Data.SqlClient;
+using proyectoVdufferx.Properties;
 
 namespace proyectoVdufferx
 {
     public partial class frmRegistro : Form
     {
+        private SqlConnection connection =
+            new SqlConnection(@"Server=DESKTOP-IEPK5UL\SQLEXPRESS;Database=BINAES_BDD;Trusted_Connection=True;");
         public frmRegistro()
         {
             InitializeComponent();
+            cargar_ocupacion();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
         }
         private Boolean verificadorCorreo(string correo)
         {
@@ -40,6 +49,43 @@ namespace proyectoVdufferx
             }
             ofd.Dispose();
         }
+        public void cargar_ocupacion()
+        {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT id, ocupacion FROM OCUPACION",connection);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            connection.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["ocupacion"] = "Seleccione una ocupacion";
+            dt.Rows.InsertAt(fila,0);
+
+            cmbOcupacion.ValueMember = "id";
+            cmbOcupacion.DisplayMember = "ocupacion";
+            cmbOcupacion.DataSource = dt;
+        }
+
+        public void cargar_insittucion(string id_ocupacion)
+        {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT institucion from INSTITUCION WHERE id_ocupacion = @id_ocupacion",
+                connection);
+            cmd.Parameters.AddWithValue("id_ocupacion", id_ocupacion);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            connection.Close();
+
+            DataRow dr = dt.NewRow();
+            dr["Institucion"] = "Seleccione una institucion";
+            dt.Rows.InsertAt(dr,0);
+
+            cmbInstitucion.ValueMember = "id";
+            cmbInstitucion.DisplayMember = "institucion";
+            cmbInstitucion.DataSource = dt;
+        }
         
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
@@ -47,8 +93,8 @@ namespace proyectoVdufferx
                 txtDireccion.Text.Length > 0 &&
                 txtTelefono.Text.Length > 0 &&
                 txtCorreo.Text.Length > 0 &&
-                cmbInstitucion.Text.Length > 0 &&
-                cmbOcupacion.Text.Length > 0 &&
+                //cmbInstitucion.Text.Length > 0 &&
+                //cmbOcupacion.Text.Length > 0 &&
                 txtFotografia.Text.Length > 0)
                 
             {
@@ -73,43 +119,7 @@ namespace proyectoVdufferx
                     errorCorreo.SetError(pbCor,"Correo invalido");
                 }
                 
-                switch (cmbOcupacion.Text)
-                {
-                    case "Estudiante":
-                    {
-                        u.id_ocupacion = 1;
-                        break;
-                    }
-                    case "Empleado":
-                    {
-                        u.id_ocupacion = 2;
-                        break;
-                    }
-                    case "Otros":
-                        u.id_ocupacion = 3;
-                        break;
-
-                }
-
-                switch (cmbInstitucion.Text)
-                {
-                    case "Instituto":
-                    {
-                        u.id_institucion = 1;
-                        break;
-                    }
-                    case "Empresa":
-                    {
-                        u.id_institucion = 2;
-                        break;
-                    }
-                    case "Otros":
-                    {
-                        u.id_institucion= 3;
-                        break;
-                    }
-                }
-
+                
                 if (usuarioDAO.CrearNuevo(u))
                 {
                     MessageBox.Show("Usuario registrado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,8 +138,7 @@ namespace proyectoVdufferx
                     ms.Write(arr, 0, arr.Length);
                     Bitmap b = new Bitmap(ms);
                     Datos.picQR.Image = b;
-                    Datos.ShowDialog();
-                    this.DialogResult = DialogResult.OK;
+                    Datos.Show();
                     this.Close( );
                 }
                 else
@@ -192,6 +201,15 @@ namespace proyectoVdufferx
                         ctrl.ForeColor = Color.FromArgb(33,62,153);;
                     }
                 }
+            }
+        }
+
+        private void cmbOcupacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbOcupacion.SelectedValue.ToString() !=null)
+            {
+                string id = cmbOcupacion.SelectedValue.ToString();
+                cargar_insittucion(id);
             }
         }
     }

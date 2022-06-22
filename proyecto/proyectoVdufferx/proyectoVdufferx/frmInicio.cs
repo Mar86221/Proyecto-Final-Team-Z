@@ -20,13 +20,15 @@ namespace proyectoVdufferx
         private void picRegistrarme_Click(object sender, EventArgs e)
         {
             frmRegistro otraventana = new frmRegistro();
-            otraventana.ShowDialog();
+            otraventana.Show();
+            this.Hide();
         }
 
         private void picIngresar_Click(object sender, EventArgs e)
         {
             frmIngresar otraventana = new frmIngresar();
-            otraventana.ShowDialog();
+            otraventana.Show();
+            this.Hide();
         }
     }
 }
