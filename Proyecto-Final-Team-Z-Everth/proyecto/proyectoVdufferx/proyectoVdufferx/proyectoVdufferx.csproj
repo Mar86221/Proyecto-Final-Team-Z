@@ -59,6 +59,7 @@
         <Compile Include="autor.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
+        <Compile Include="formato.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
         </Compile>

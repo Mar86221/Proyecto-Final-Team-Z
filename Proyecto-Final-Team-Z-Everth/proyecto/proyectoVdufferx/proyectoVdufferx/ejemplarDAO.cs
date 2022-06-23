@@ -69,5 +69,35 @@ namespace proyectoVdufferx
             return lista;
 
         }
+        
+        public static List<formato> ObtenerFormatos()
+        {
+            string cadena = Resources.cadena_conexion;
+            List<formato> lista = new List<formato>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id,formato FROM FORMATO";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        formato formato = new formato();
+                        formato.id = Convert.ToInt32(reader["id"].ToString());
+                        formato.Formato = reader["formato"].ToString();
+                        lista.Add(formato);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
+
+        }
+
     }
 }

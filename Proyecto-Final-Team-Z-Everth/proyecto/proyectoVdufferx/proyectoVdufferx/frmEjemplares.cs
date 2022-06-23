@@ -12,6 +12,7 @@ namespace proyectoVdufferx
 
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
+            cmbFormato.Hide();
             cmbAutores.Hide();
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = ejemplarDAO.ObtenerTodos();
@@ -24,6 +25,15 @@ namespace proyectoVdufferx
             cmbAutores.ValueMember = "id";
             cmbAutores.DisplayMember = "nombre_autor";
             cmbAutores.DataSource = ejemplarDAO.ObtenerAutores();
+        }
+
+        private void btnFiltrarF_Click(object sender, EventArgs e)
+        {
+            cmbFormato.Show();
+            cmbFormato.DataSource = null;
+            cmbFormato.ValueMember = "id";
+            cmbFormato.DisplayMember = "formato";
+            cmbFormato.DataSource = ejemplarDAO.ObtenerFormatos();
         }
     }
 }
