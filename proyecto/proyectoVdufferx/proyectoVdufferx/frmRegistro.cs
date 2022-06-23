@@ -14,6 +14,7 @@ namespace proyectoVdufferx
 {
     public partial class frmRegistro : Form
     {
+        public usuario usuario { get; set; }
         private SqlConnection connection =
             new SqlConnection(@"Server=DESKTOP-IEPK5UL\SQLEXPRESS;Database=BINAES_BDD;Trusted_Connection=True;");
         public frmRegistro()
@@ -86,9 +87,57 @@ namespace proyectoVdufferx
             cmbInstitucion.DisplayMember = "institucion";
             cmbInstitucion.DataSource = dt;
         }
+
+        public int id_ocupacion(int id)
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id FROM INSTITUCION where institucion = @institucionbuscada";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@institucionbuscada", Convert.ToString(cmbInstitucion.Text));
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                         id = Convert.ToInt32(reader["id"]);
+                    }
+                    connection.Close();
+                }
+            }
+          return(id);
+        }
         
         private void picRegistrarme2_Click(object sender, EventArgs e)
         {
+           
+            institucion i = new institucion();
+            i.ninstitucion = cmbInstitucion.Text;
+
+            switch (cmbOcupacion.Text)
+            {
+                case "Estudiante":
+                {
+                    i.id_ocupacion = 1;
+                    break;
+                }
+                case "Trabajador":
+                {
+                    i.id_ocupacion = 2;
+                    break;
+                }
+                case "Desempleado":
+                {
+                    i.id_ocupacion = 3;
+                    break;
+                }
+                
+            }
+            
+           
+            
             if (txtNombre.Text.Length > 0 &&
                 txtDireccion.Text.Length > 0 &&
                 txtTelefono.Text.Length > 0 &&
@@ -96,12 +145,15 @@ namespace proyectoVdufferx
                 //cmbInstitucion.Text.Length > 0 &&
                 //cmbOcupacion.Text.Length > 0 &&
                 txtFotografia.Text.Length > 0)
-                
+
             {
+                
+                
                 usuario u = new usuario();
                 u.nombre = txtNombre.Text;
                 u.direccion = txtDireccion.Text;
                 u.fotografia = txtFotografia.Text;
+                u.id_institucion = id_ocupacion(2);
                 if (verificadorNumero(txtTelefono.Text))
                 {
                     u.telefono = txtTelefono.Text;
@@ -127,6 +179,14 @@ namespace proyectoVdufferx
                     Datos.txtNombreQR.Text = txtNombre.Text;
                     Datos.txtCorreoQR.Text = txtCorreo.Text;
                     Datos.picUser.Image = Image.FromFile(ofd.FileName);
+                    /*
+                    string correon = txtCorreo.Text;
+                    this.usuario  = usuarioDAO.BuscarCorreoU(correon);
+                    MAIN main = new MAIN();
+                    main.Show();
+                    main.txtTucuentaCorreo.Text = txtCorreo.Text;
+                    this.Close();
+                    */
                     QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
                     ASCIIEncoding ASSCII = new ASCIIEncoding();
                     var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);
@@ -211,5 +271,11 @@ namespace proyectoVdufferx
                 cargar_insittucion(id);
             }
         }
+
+        private void btnNuevaInstitucion_Click(object sender, EventArgs e)
+        {
+           NuevaInstitucion ninstitucion = new NuevaInstitucion();
+            ninstitucion.Show();
+        } 
     }
 }

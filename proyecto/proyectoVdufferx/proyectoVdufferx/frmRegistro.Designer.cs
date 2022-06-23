@@ -36,6 +36,7 @@ namespace proyectoVdufferx
             this.picRegistrarme2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNuevaInstitucion = new System.Windows.Forms.Button();
             this.cmbInstitucion = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFotografia = new System.Windows.Forms.Label();
@@ -117,6 +118,7 @@ namespace proyectoVdufferx
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnNuevaInstitucion);
             this.panel1.Controls.Add(this.cmbInstitucion);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.lblFotografia);
@@ -154,6 +156,16 @@ namespace proyectoVdufferx
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(376, 522);
             this.panel1.TabIndex = 29;
+            // 
+            // btnNuevaInstitucion
+            // 
+            this.btnNuevaInstitucion.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+            this.btnNuevaInstitucion.Location = new System.Drawing.Point(338, 240);
+            this.btnNuevaInstitucion.Name = "btnNuevaInstitucion";
+            this.btnNuevaInstitucion.Size = new System.Drawing.Size(31, 33);
+            this.btnNuevaInstitucion.TabIndex = 72;
+            this.btnNuevaInstitucion.UseVisualStyleBackColor = false;
+            this.btnNuevaInstitucion.Click += new System.EventHandler(this.btnNuevaInstitucion_Click);
             // 
             // cmbInstitucion
             // 
@@ -494,6 +506,8 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.errorNumero)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnNuevaInstitucion;
 
         public System.Windows.Forms.ComboBox cmbInstitucion;
 

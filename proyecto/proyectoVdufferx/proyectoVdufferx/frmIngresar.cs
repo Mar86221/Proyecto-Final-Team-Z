@@ -20,14 +20,13 @@ namespace proyectoVdufferx
             this.usuario  = usuarioDAO.BuscarCorreoU(correo);
             if (usuario == null)
             {
-                //MessageBox.Show("El correo no existe","BINAES",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 errorCorreo.SetError(pbCor, "El correo no existe");
             }
             else
             {
-                
                 MAIN main = new MAIN();
                 main.Show();
+                main.txtTucuentaCorreo.Text = txtCorreo.Text;
                 this.Close();
             }
         }
@@ -50,7 +49,7 @@ namespace proyectoVdufferx
                 this.usuario  = usuarioDAO.BuscarCorreoU(correo);
                 if (usuario == null)
                 {
-                    //MessageBox.Show("El correo no existe","BINAES",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    
                     errorCorreo.SetError(pbCor, "El correo no existe");
                 }
                 else
