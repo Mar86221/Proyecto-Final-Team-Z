@@ -16,7 +16,7 @@ namespace proyectoVdufferx
             {
                 string query = "SELECT * FROM EJEMPLAR";
                 SqlCommand command = new SqlCommand(query, connection);
-                
+
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -34,9 +34,70 @@ namespace proyectoVdufferx
                         lista.Add(ejemplar);
                     }
                 }
+
                 connection.Close();
             }
+
             return lista;
         }
+
+        public static List<autor> ObtenerAutores()
+        {
+            string cadena = Resources.cadena_conexion;
+            List<autor> lista = new List<autor>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id,nombre_autor FROM AUTOR";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        autor au = new autor();
+                        au.id = Convert.ToInt32(reader["id"].ToString());
+                        au.nombre_autor = reader["nombre_autor"].ToString();
+                        lista.Add(au);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
+
+        }
+        
+        public static List<formato> ObtenerFormatos()
+        {
+            string cadena = Resources.cadena_conexion;
+            List<formato> lista = new List<formato>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id,formato FROM FORMATO";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        formato formato = new formato();
+                        formato.id = Convert.ToInt32(reader["id"].ToString());
+                        formato.Formato = reader["formato"].ToString();
+                        lista.Add(formato);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
+
+        }
+
     }
 }

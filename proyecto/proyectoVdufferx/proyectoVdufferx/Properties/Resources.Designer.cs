@@ -61,7 +61,7 @@ namespace proyectoVdufferx.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Server=DESKTOP-IEPK5UL\SQLEXPRESS;Database=BINAES_BDD;Trusted_Connection=True;.
+        ///   Looks up a localized string similar to Server=localhost;Database=BINAES_BDD;Trusted_Connection=True;.
         /// </summary>
         internal static string cadena_conexion {
             get {

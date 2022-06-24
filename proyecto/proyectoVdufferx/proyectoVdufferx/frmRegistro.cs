@@ -16,7 +16,7 @@ namespace proyectoVdufferx
     {
         public usuario usuario { get; set; }
         private SqlConnection connection =
-            new SqlConnection(@"Server=DESKTOP-IEPK5UL\SQLEXPRESS;Database=BINAES_BDD;Trusted_Connection=True;");
+            new SqlConnection(@"Server=localhost;Database=BINAES_BDD;Trusted_Connection=True;");
         public frmRegistro()
         {
             InitializeComponent();
