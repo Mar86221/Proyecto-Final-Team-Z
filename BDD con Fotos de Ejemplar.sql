@@ -562,3 +562,22 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
 
 -------------------------------------------------------
 ------------------------------------------------------------------------------------
+SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor 
+FROM IMAGEN_EJEMPLAR 
+INNER JOIN EJEMPLAR 
+ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id
+INNER JOIN EJEMPLARXAUTOR 
+ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id
+INNER JOIN AUTOR 
+ON EJEMPLARXAUTOR.id_autor = AUTOR.id
+
+
+SELECT * FROM USUARIO
+
+
+
+
+
+SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor
+FROM EJEMPLAR, IMAGEN_EJEMPLAR, AUTOR, EJEMPLARXAUTOR
+WHERE IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id AND EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id AND EJEMPLARXAUTOR.id_autor = AUTOR.id

@@ -31,21 +31,16 @@ namespace proyectoVdufferx
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.btnFiltrarAu = new System.Windows.Forms.Button();
             this.cmbAutores = new System.Windows.Forms.ComboBox();
             this.btnFiltrarF = new System.Windows.Forms.Button();
             this.cmbFormato = new System.Windows.Forms.ComboBox();
+            this.DgvEjemplares = new System.Windows.Forms.DataGridView();
+            this.picImagen = new System.Windows.Forms.PictureBox();
+            this.txtImagen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DgvEjemplares
-            // 
-            this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvEjemplares.Location = new System.Drawing.Point(12, 177);
-            this.DgvEjemplares.Name = "DgvEjemplares";
-            this.DgvEjemplares.Size = new System.Drawing.Size(877, 261);
-            this.DgvEjemplares.TabIndex = 0;
             // 
             // btnFiltrarAu
             // 
@@ -85,11 +80,40 @@ namespace proyectoVdufferx
             this.cmbFormato.Size = new System.Drawing.Size(126, 21);
             this.cmbFormato.TabIndex = 7;
             // 
+            // DgvEjemplares
+            // 
+            this.DgvEjemplares.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEjemplares.Location = new System.Drawing.Point(12, 177);
+            this.DgvEjemplares.Name = "DgvEjemplares";
+            this.DgvEjemplares.ReadOnly = true;
+            this.DgvEjemplares.Size = new System.Drawing.Size(467, 491);
+            this.DgvEjemplares.TabIndex = 0;
+            this.DgvEjemplares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEjemplares_CellClick);
+            this.DgvEjemplares.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEjemplares_CellDoubleClick);
+            // 
+            // picImagen
+            // 
+            this.picImagen.Location = new System.Drawing.Point(505, 177);
+            this.picImagen.Name = "picImagen";
+            this.picImagen.Size = new System.Drawing.Size(384, 491);
+            this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImagen.TabIndex = 8;
+            this.picImagen.TabStop = false;
+            // 
+            // txtImagen
+            // 
+            this.txtImagen.Location = new System.Drawing.Point(685, 12);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(17, 20);
+            this.txtImagen.TabIndex = 9;
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 450);
+            this.ClientSize = new System.Drawing.Size(901, 759);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.picImagen);
             this.Controls.Add(this.cmbFormato);
             this.Controls.Add(this.btnFiltrarF);
             this.Controls.Add(this.cmbAutores);
@@ -101,8 +125,14 @@ namespace proyectoVdufferx
             this.Text = "frmEjemplares";
             this.Load += new System.EventHandler(this.frmEjemplares_Load);
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picImagen)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
+
+        private System.Windows.Forms.TextBox txtImagen;
+
+        private System.Windows.Forms.PictureBox picImagen;
 
         private System.Windows.Forms.Button btnFiltrarF;
         private System.Windows.Forms.ComboBox cmbFormato;
@@ -110,7 +140,7 @@ namespace proyectoVdufferx
         private System.Windows.Forms.Button btnFiltrarAu;
         private System.Windows.Forms.ComboBox cmbAutores;
 
-        private System.Windows.Forms.DataGridView DgvEjemplares;
+        public System.Windows.Forms.DataGridView DgvEjemplares;
 
         #endregion
     }

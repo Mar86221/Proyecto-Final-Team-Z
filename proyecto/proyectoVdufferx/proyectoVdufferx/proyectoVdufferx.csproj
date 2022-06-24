@@ -12,6 +12,7 @@
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
         <Deterministic>true</Deterministic>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -59,6 +60,8 @@
         <Compile Include="autor.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
+        <Compile Include="ejemplarmain.cs" />
+        <Compile Include="ejemplarxautor.cs" />
         <Compile Include="formato.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
@@ -90,6 +93,7 @@
         <Compile Include="frmRegistro.Designer.cs">
           <DependentUpon>frmRegistro.cs</DependentUpon>
         </Compile>
+        <Compile Include="imagenejemplar.cs" />
         <Compile Include="Imagen_ejemplar.cs" />
         <Compile Include="Imagen_ejemplarDAO.cs" />
         <Compile Include="institucion.cs" />
