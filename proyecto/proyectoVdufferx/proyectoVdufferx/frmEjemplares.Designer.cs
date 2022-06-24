@@ -38,6 +38,8 @@ namespace proyectoVdufferx
             this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.picImagen = new System.Windows.Forms.PictureBox();
             this.txtImagen = new System.Windows.Forms.TextBox();
+            this.txtBuscarNombreCompleto = new System.Windows.Forms.TextBox();
+            this.btnBuscarNombreCompleto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +88,7 @@ namespace proyectoVdufferx
             this.DgvEjemplares.Location = new System.Drawing.Point(12, 177);
             this.DgvEjemplares.Name = "DgvEjemplares";
             this.DgvEjemplares.ReadOnly = true;
-            this.DgvEjemplares.Size = new System.Drawing.Size(467, 491);
+            this.DgvEjemplares.Size = new System.Drawing.Size(487, 491);
             this.DgvEjemplares.TabIndex = 0;
             this.DgvEjemplares.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEjemplares_CellClick);
             this.DgvEjemplares.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEjemplares_CellDoubleClick);
@@ -107,11 +109,29 @@ namespace proyectoVdufferx
             this.txtImagen.Size = new System.Drawing.Size(17, 20);
             this.txtImagen.TabIndex = 9;
             // 
+            // txtBuscarNombreCompleto
+            // 
+            this.txtBuscarNombreCompleto.Location = new System.Drawing.Point(12, 30);
+            this.txtBuscarNombreCompleto.Name = "txtBuscarNombreCompleto";
+            this.txtBuscarNombreCompleto.Size = new System.Drawing.Size(243, 20);
+            this.txtBuscarNombreCompleto.TabIndex = 10;
+            // 
+            // btnBuscarNombreCompleto
+            // 
+            this.btnBuscarNombreCompleto.Location = new System.Drawing.Point(270, 28);
+            this.btnBuscarNombreCompleto.Name = "btnBuscarNombreCompleto";
+            this.btnBuscarNombreCompleto.Size = new System.Drawing.Size(121, 21);
+            this.btnBuscarNombreCompleto.TabIndex = 11;
+            this.btnBuscarNombreCompleto.Text = "button1";
+            this.btnBuscarNombreCompleto.UseVisualStyleBackColor = true;
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 759);
+            this.Controls.Add(this.btnBuscarNombreCompleto);
+            this.Controls.Add(this.txtBuscarNombreCompleto);
             this.Controls.Add(this.txtImagen);
             this.Controls.Add(this.picImagen);
             this.Controls.Add(this.cmbFormato);
@@ -130,15 +150,19 @@ namespace proyectoVdufferx
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.Button btnBuscarNombreCompleto;
+
+        public System.Windows.Forms.TextBox txtBuscarNombreCompleto;
+
         private System.Windows.Forms.TextBox txtImagen;
 
         private System.Windows.Forms.PictureBox picImagen;
 
-        private System.Windows.Forms.Button btnFiltrarF;
-        private System.Windows.Forms.ComboBox cmbFormato;
+        public System.Windows.Forms.Button btnFiltrarF;
+        public System.Windows.Forms.ComboBox cmbFormato;
 
-        private System.Windows.Forms.Button btnFiltrarAu;
-        private System.Windows.Forms.ComboBox cmbAutores;
+        public System.Windows.Forms.Button btnFiltrarAu;
+        public System.Windows.Forms.ComboBox cmbAutores;
 
         public System.Windows.Forms.DataGridView DgvEjemplares;
 

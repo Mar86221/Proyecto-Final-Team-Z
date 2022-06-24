@@ -37,8 +37,7 @@ namespace proyectoVdufferx
 
             return lista;
         }
-
-       
+        
         public static List<autor> ObtenerAutores()
         {
             string cadena = Resources.cadena_conexion;
