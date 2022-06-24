@@ -80,7 +80,7 @@ namespace proyectoVdufferx
             return lista;
         }
         
-        public static List<ejemplarmain> FiltrarNombreCompleto(string nombreC)
+        public static List<ejemplarmain> FiltrarTOT(string todo)
         {
             string cadena = Resources.cadena_conexion;
             List<ejemplarmain> lista = new List<ejemplarmain>();
@@ -88,9 +88,9 @@ namespace proyectoVdufferx
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string query =
-                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor  FROM IMAGEN_EJEMPLAR  INNER JOIN EJEMPLAR  ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id  INNER JOIN EJEMPLARXAUTOR  ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id  INNER JOIN AUTOR  ON EJEMPLARXAUTOR.id_autor = AUTOR.id  INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE EJEMPLAR.nombre = @nombreC";
+                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE EJEMPLAR.nombre LIKE '%' + @todo + '%' OR EJEMPLAR.nombre = '@todo' OR EJEMPLAR.Palabras_claves LIKE '%' + @todo + '%'";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@nombreC", Convert.ToString(nombreC));
+                command.Parameters.AddWithValue("@todo", Convert.ToString(todo));
 
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -111,6 +111,7 @@ namespace proyectoVdufferx
 
             return lista;
         }
+        
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
             txtImagen.Hide();
@@ -146,7 +147,14 @@ namespace proyectoVdufferx
         private void btnBuscarNombreCompleto_Click(object sender, EventArgs e)
         {
             DgvEjemplares.DataSource = null;
-            DgvEjemplares.DataSource = FiltrarNombreCompleto(Convert.ToString(txtBuscarNombreCompleto.Text));
+            DgvEjemplares.DataSource = FiltrarTOT(Convert.ToString(txtBuscarTo.Text));
+            DgvEjemplares.Columns[0].Visible = false;
+        }
+        
+        private void txtBuscarTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            DgvEjemplares.DataSource = null;
+            DgvEjemplares.DataSource = FiltrarTOT(Convert.ToString(txtBuscarTo.Text));
             DgvEjemplares.Columns[0].Visible = false;
         }
         
@@ -165,6 +173,6 @@ namespace proyectoVdufferx
            
         }
 
-        
+
     }
 }

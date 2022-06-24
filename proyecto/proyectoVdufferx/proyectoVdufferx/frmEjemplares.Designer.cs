@@ -38,8 +38,8 @@ namespace proyectoVdufferx
             this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.picImagen = new System.Windows.Forms.PictureBox();
             this.txtImagen = new System.Windows.Forms.TextBox();
-            this.txtBuscarNombreCompleto = new System.Windows.Forms.TextBox();
-            this.btnBuscarNombreCompleto = new System.Windows.Forms.Button();
+            this.txtBuscarTo = new System.Windows.Forms.TextBox();
+            this.btnBuscarTo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             this.SuspendLayout();
@@ -109,30 +109,30 @@ namespace proyectoVdufferx
             this.txtImagen.Size = new System.Drawing.Size(17, 20);
             this.txtImagen.TabIndex = 9;
             // 
-            // txtBuscarNombreCompleto
+            // txtBuscarTo
             // 
-            this.txtBuscarNombreCompleto.Location = new System.Drawing.Point(12, 30);
-            this.txtBuscarNombreCompleto.Name = "txtBuscarNombreCompleto";
-            this.txtBuscarNombreCompleto.Size = new System.Drawing.Size(243, 20);
-            this.txtBuscarNombreCompleto.TabIndex = 10;
+            this.txtBuscarTo.Location = new System.Drawing.Point(12, 39);
+            this.txtBuscarTo.Name = "txtBuscarTo";
+            this.txtBuscarTo.Size = new System.Drawing.Size(252, 20);
+            this.txtBuscarTo.TabIndex = 10;
             // 
-            // btnBuscarNombreCompleto
+            // btnBuscarTo
             // 
-            this.btnBuscarNombreCompleto.Location = new System.Drawing.Point(270, 28);
-            this.btnBuscarNombreCompleto.Name = "btnBuscarNombreCompleto";
-            this.btnBuscarNombreCompleto.Size = new System.Drawing.Size(121, 21);
-            this.btnBuscarNombreCompleto.TabIndex = 11;
-            this.btnBuscarNombreCompleto.Text = "Buscar por nombre completo";
-            this.btnBuscarNombreCompleto.UseVisualStyleBackColor = true;
-            this.btnBuscarNombreCompleto.Click += new System.EventHandler(this.btnBuscarNombreCompleto_Click);
+            this.btnBuscarTo.Location = new System.Drawing.Point(270, 38);
+            this.btnBuscarTo.Name = "btnBuscarTo";
+            this.btnBuscarTo.Size = new System.Drawing.Size(121, 21);
+            this.btnBuscarTo.TabIndex = 11;
+            this.btnBuscarTo.Text = "Buscar";
+            this.btnBuscarTo.UseVisualStyleBackColor = true;
+            this.btnBuscarTo.Click += new System.EventHandler(this.btnBuscarNombreCompleto_Click);
             // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 759);
-            this.Controls.Add(this.btnBuscarNombreCompleto);
-            this.Controls.Add(this.txtBuscarNombreCompleto);
+            this.Controls.Add(this.btnBuscarTo);
+            this.Controls.Add(this.txtBuscarTo);
             this.Controls.Add(this.txtImagen);
             this.Controls.Add(this.picImagen);
             this.Controls.Add(this.cmbFormato);
@@ -151,9 +151,9 @@ namespace proyectoVdufferx
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Button btnBuscarNombreCompleto;
+        private System.Windows.Forms.Button btnBuscarTo;
 
-        public System.Windows.Forms.TextBox txtBuscarNombreCompleto;
+        public System.Windows.Forms.TextBox txtBuscarTo;
 
         private System.Windows.Forms.TextBox txtImagen;
 

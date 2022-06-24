@@ -43,7 +43,7 @@ namespace proyectoVdufferx
         {
             //OpenFileDialog ofd = new OpenFileDialog();
             ofd.InitialDirectory = "Descargas";
-            ofd.Filter = "Archivos png (*.png)|*.png";
+            ofd.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 txtFotografia.Text = ofd.FileName;
