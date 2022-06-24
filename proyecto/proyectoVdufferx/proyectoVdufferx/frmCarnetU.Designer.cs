@@ -34,16 +34,16 @@ namespace proyectoVdufferx
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarnetU));
             this.txtCorreoQR = new System.Windows.Forms.TextBox();
             this.picQR = new System.Windows.Forms.PictureBox();
-            this.picMain = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtNombreQR = new System.Windows.Forms.TextBox();
             this.picUser = new proyectoVdufferx.PictureCircularBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.picMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCorreoQR
@@ -66,16 +66,6 @@ namespace proyectoVdufferx
             this.picQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picQR.TabIndex = 70;
             this.picQR.TabStop = false;
-            // 
-            // picMain
-            // 
-            this.picMain.Image = ((System.Drawing.Image) (resources.GetObject("picMain.Image")));
-            this.picMain.Location = new System.Drawing.Point(298, 424);
-            this.picMain.Name = "picMain";
-            this.picMain.Size = new System.Drawing.Size(42, 44);
-            this.picMain.TabIndex = 72;
-            this.picMain.TabStop = false;
-            this.picMain.Click += new System.EventHandler(this.picMain_Click);
             // 
             // pictureBox1
             // 
@@ -105,6 +95,7 @@ namespace proyectoVdufferx
             this.txtNombreQR.ForeColor = System.Drawing.Color.White;
             this.txtNombreQR.Location = new System.Drawing.Point(172, 224);
             this.txtNombreQR.Name = "txtNombreQR";
+            this.txtNombreQR.ReadOnly = true;
             this.txtNombreQR.Size = new System.Drawing.Size(159, 19);
             this.txtNombreQR.TabIndex = 78;
             // 
@@ -117,17 +108,28 @@ namespace proyectoVdufferx
             this.picUser.TabIndex = 79;
             this.picUser.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(282, 427);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 80;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // frmCarnetU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(352, 465);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.picUser);
             this.Controls.Add(this.txtNombreQR);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.picMain);
             this.Controls.Add(this.picQR);
             this.Controls.Add(this.txtCorreoQR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -137,13 +139,15 @@ namespace proyectoVdufferx
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carnet_Usuario";
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.picMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox3;
 
         public proyectoVdufferx.PictureCircularBox picUser;
 
@@ -151,8 +155,6 @@ namespace proyectoVdufferx
         private System.Windows.Forms.PictureBox pictureBox2;
 
         private System.Windows.Forms.PictureBox pictureBox1;
-
-        private System.Windows.Forms.PictureBox picMain;
 
         public System.Windows.Forms.PictureBox picQR;
 

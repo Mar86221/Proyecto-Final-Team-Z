@@ -23,7 +23,6 @@ namespace proyectoVdufferx
                     command.Parameters.AddWithValue("@id_institucion", u.id_institucion);
                     command.Parameters.AddWithValue("@telefono", u.telefono);
                     command.Parameters.AddWithValue("@correo", u.correo);
-                    //command.Parameters.AddWithValue("@id_ocupacion", u.id_ocupacion);
                     command.Parameters.AddWithValue("fotografia", u.fotografia);
 
 

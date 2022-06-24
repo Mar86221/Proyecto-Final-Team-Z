@@ -14,6 +14,7 @@ namespace proyectoVdufferx
 {
     public partial class frmRegistro : Form
     {
+        public usuario usuario { get; set; }
         private SqlConnection connection =
             new SqlConnection(@"Server=localhost;Database=BINAES_BDD;Trusted_Connection=True;");
         public frmRegistro()
@@ -178,7 +179,14 @@ namespace proyectoVdufferx
                     Datos.txtNombreQR.Text = txtNombre.Text;
                     Datos.txtCorreoQR.Text = txtCorreo.Text;
                     Datos.picUser.Image = Image.FromFile(ofd.FileName);
-                    //Datos.picQR.Image = Image.FromFile(ofd.FileName);
+                    /*
+                    string correon = txtCorreo.Text;
+                    this.usuario  = usuarioDAO.BuscarCorreoU(correon);
+                    MAIN main = new MAIN();
+                    main.Show();
+                    main.txtTucuentaCorreo.Text = txtCorreo.Text;
+                    this.Close();
+                    */
                     QRCoder.QRCodeGenerator QR = new QRCoder.QRCodeGenerator();
                     ASCIIEncoding ASSCII = new ASCIIEncoding();
                     var z = QR.CreateQrCode(ASSCII.GetBytes(Datos.txtCorreoQR.Text), QRCoder.QRCodeGenerator.ECCLevel.H);

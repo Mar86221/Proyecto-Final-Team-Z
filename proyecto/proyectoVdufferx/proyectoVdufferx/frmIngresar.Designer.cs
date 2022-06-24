@@ -188,7 +188,7 @@ namespace proyectoVdufferx
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Label lblCor;
-        private System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pbCor;
 

@@ -10,14 +10,11 @@ namespace proyectoVdufferx
             InitializeComponent();
         }
 
-
-        private void picMain_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
+            frmInicio init = new frmInicio();
+            init.Show();
             this.Close();
-            MAIN main = new MAIN();
-            main.ShowDialog();
         }
-
-
     }
 }

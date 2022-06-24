@@ -107,7 +107,7 @@ CREATE TABLE EJEMPLARXAUTOR (
 
 CREATE TABLE IMAGEN_EJEMPLAR (
     id int primary key NOT NULL,
-    imagen IMAGE NOT NULL,
+    imagen VARCHAR(25) NOT NULL,
     id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
 );
 ---------------------------------------------
@@ -122,6 +122,15 @@ CREATE TABLE INSTITUCION(
     id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
     
 );
+
+ CREATE TABLE IMAGEN (
+               id int IDENTITY (1,1) primary key NOT NULL,
+               nombre NVARCHAR(50),
+               imagen IMAGE
+           );
+
+           SELECT * FROM IMAGEN;
+
 
 CREATE TABLE USUARIO (
     id int IDENTITY(1,1) primary key NOT NULL,
@@ -487,7 +496,10 @@ INSERT INTO EJEMPLARXAUTOR(id,id_ejemplar, id_autor)
            (60,60,32),
            (61,61,33);
 
+          
 
 -------------------------------------------------------
 ------------------------------------------------------------------------------------
 SELECT * FROM INSTITUCION
+
+SELECT * FROM USUARIO;
