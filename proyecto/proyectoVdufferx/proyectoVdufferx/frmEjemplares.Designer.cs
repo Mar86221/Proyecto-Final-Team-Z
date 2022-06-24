@@ -122,8 +122,9 @@ namespace proyectoVdufferx
             this.btnBuscarNombreCompleto.Name = "btnBuscarNombreCompleto";
             this.btnBuscarNombreCompleto.Size = new System.Drawing.Size(121, 21);
             this.btnBuscarNombreCompleto.TabIndex = 11;
-            this.btnBuscarNombreCompleto.Text = "button1";
+            this.btnBuscarNombreCompleto.Text = "Buscar por nombre completo";
             this.btnBuscarNombreCompleto.UseVisualStyleBackColor = true;
+            this.btnBuscarNombreCompleto.Click += new System.EventHandler(this.btnBuscarNombreCompleto_Click);
             // 
             // frmEjemplares
             // 

@@ -79,6 +79,38 @@ namespace proyectoVdufferx
 
             return lista;
         }
+        
+        public static List<ejemplarmain> FiltrarNombreCompleto(string nombreC)
+        {
+            string cadena = Resources.cadena_conexion;
+            List<ejemplarmain> lista = new List<ejemplarmain>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query =
+                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor  FROM IMAGEN_EJEMPLAR  INNER JOIN EJEMPLAR  ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id  INNER JOIN EJEMPLARXAUTOR  ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id  INNER JOIN AUTOR  ON EJEMPLARXAUTOR.id_autor = AUTOR.id  INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE EJEMPLAR.nombre = @nombreC";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombreC", Convert.ToString(nombreC));
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    { 
+                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
+                        ejemplarmain ejemplarm = new ejemplarmain();
+                        ejemplarm.imagen = ruta;
+                        ejemplarm.nombre = reader["nombre"].ToString();
+                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
+                        lista.Add(ejemplarm);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
+        }
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
             txtImagen.Hide();
@@ -111,7 +143,13 @@ namespace proyectoVdufferx
             DgvEjemplares.Columns[0].Visible = false;
         }
 
-       
+        private void btnBuscarNombreCompleto_Click(object sender, EventArgs e)
+        {
+            DgvEjemplares.DataSource = null;
+            DgvEjemplares.DataSource = FiltrarNombreCompleto(Convert.ToString(txtBuscarNombreCompleto.Text));
+            DgvEjemplares.Columns[0].Visible = false;
+        }
+        
         int renglon;
         private void DgvEjemplares_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,5 +164,7 @@ namespace proyectoVdufferx
         {
            
         }
+
+        
     }
 }
