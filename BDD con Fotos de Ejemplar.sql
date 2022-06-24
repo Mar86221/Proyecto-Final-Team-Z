@@ -2,6 +2,7 @@ CREATE DATABASE BINAES_BDD
 USE BINAES_BDD;
 DROP DATABASE BINAES_BDD
 ---------------------------------------
+---------------------------------------
 CREATE TABLE EVENTO  (
 	id int primary key NOT NULL,
 	titulo VARCHAR(200) NOT NULL,	
@@ -106,8 +107,8 @@ CREATE TABLE EJEMPLARXAUTOR (
 );
 
 CREATE TABLE IMAGEN_EJEMPLAR (
-    id int primary key NOT NULL,
-    imagen VARCHAR(25) NOT NULL,
+    id int IDENTITY(1,1) primary key NOT NULL,
+    imagen VARCHAR(100) NOT NULL,
     id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
 );
 ---------------------------------------------
@@ -129,14 +130,13 @@ CREATE TABLE INSTITUCION(
                imagen IMAGE
            );
 
-           SELECT * FROM IMAGEN;
+        
 
 
 CREATE TABLE USUARIO (
     id int IDENTITY(1,1) primary key NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     direccion VARCHAR(70) NOT NULL,
-    --institucion VARCHAR(50) NOT NULL, SE QUITO Y SE AGREGO COMO CATALOGO POR LAS ALTERACIONES QUE SE HICIERON EN FORM PARA QUE FUNCIONE
     telefono VARCHAR(10) NOT NULL, 
     correo VARCHAR(60) NOT NULL,
 	id_institucion int NOT NULL FOREIGN KEY (id_institucion) REFERENCES INSTITUCION (id),
@@ -496,10 +496,69 @@ INSERT INTO EJEMPLARXAUTOR(id,id_ejemplar, id_autor)
            (60,60,32),
            (61,61,33);
 
+INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
+    VALUES ('DIARIO DE GREG 16. EL NUMERO 1.jpg',1),
+           ('DIARIO DE GREG 15. TOCADO Y HUNDIDO.jpg',2),
+           ('DIARIO DE GREG 13. FRIO FATAL.jpg',3),
+           ('CARRETERA MALDITA.jpg',4),
+           ('YO ANTES DE TI.jpg',5),
+           ('BELLAS DURMIENTES.jpg',6),
+           ('FIN DE GUARDIA.jpg',7),
+           ('A BRIEF HISTORY OF TIME.jpg',8),
+           ('LA ZONA MUERTA.jpg',9),
+           ('EL VIENTO POR LA CERRADURA.jpg',10),
+           ('LA DOS DESPUES DE LA MEDIANOCHE.jpg',11),
+           ('PERCY JACKSON Y LOS HEROES GRIEGOS.jpg',12),
+           ('A HOMBROS DE GIGANTE.jpg',13),
+           ('HARRY POTTER Y LA ORDEN DEL FENIX.jpg',14),
+           ('HARRY POTTER Y EL MISTERIO DEL PRINCIPE.jpg',15),
+           ('CINCUENTAS SOMBRAS DE GREY.jpg',16),
+           ('ADVENTURES OF SHERLOCK HOLMES AND THE MEMOIRS OF SHERLOCK HOLMES.jpg',17),
+           ('AYAX.jpg',18),
+           ('AURORA.jpg',19),
+           ('ALICIA A TRAVES DEL ESPEJO.jpg',20),
+           ('ALICIA.jpg',21),
+           ('EL GATO NEGRO Y OTROS CUENTROS.jpg',21),
+           ('ALICIA EN EL PAIS DE LAS MARAVILLAS.jpg',23),
+           ('WIGETTA UN VIAJE MÁGICO.jpg',24),
+           ('LA CARTA ROBADA Y OTROS CUENTROS.jpg',25),
+           ('AVENTURAS DE ARTURO GORDON PYM.jpg',26),
+           ('MANIFIESTO COMUNISTA.jpg',27),
+           ('EL ESCARABAJO DE ORO Y OTROS CUENTOS.jpg',28),
+           ('WIGETTA Y LOS GUSANOS GUASONES.jpg',29),
+           ('ILIADA.jpg',30),
+           ('WIGETTA Y LA FERIA FANTASMA.jpg',31),
+           ('LA DIVINA COMEDIA.jpg',32),
+           ('WIGETTA Y EL ANTIDOTO SECRETO.jpg',33),
+           ('EL PRINCIPITO.jpg',34),
+           ('DRACULA.jpg',35),
+           ('WIGETTA Y EL CUENTO JAMAS CONTADO.jpg',36),
+           ('WIGETTA Y EL BACULO DORADA.jpg',37),
+           ('WIGETTA EN EL PLANETA MIMISIKÚ.jpg',38),
+           ('WIGETTA Y LA ISLA DE MUMUCHUMU.jpg',39),
+           ('FRANKENSTEIN.jpg',40),
+           ('UNIVERSO WIGETTA 3 EL CORAZON OSCURO.jpg',41),
+           ('WIGETTA Y EL TESORO DE CHOCATUSPALMAS.jpg',42),
+           ('DON QUIJOTE DE LA MANCHA.jpg',43),
+           ('MAZE RUNNER PRUEBA DE FUEGO.jpg',44),
+           ('ADVENTURES OF TOM SAWYER.jpg',45),
+           ('MAZE RUNNER LA CURA MORTAL.jpg',46),
+           ('MAZE RUNNER CORRER O MORIR.jpg',47),
+           ('METAMORFOSIS.jpg',48),
+           ('MUJERCITAS.jpg',49),
+           ('FANTASMA DE LA OPERA.jpg',50),
+           ('HUNGER GAMES 2 CATCHING FIRE.jpg',51),
+           ('ROMEO Y JULIETA.jpg',52),
+           ('HAMLET.jpg',53),
+           ('HUNGER GAMES 3 MOCKINGJAY.jpg',54),
+           ('1984.jpg',55),
+           ('ORGULLO Y PREJUCIO.jpg',56),
+           ('MOBY DICK.jpg',57),
+           ('MISERABLES.jpg',58),
+           ('ANTIGONA.jpg',59),
+           ('EL DIARIO DE ANNE FRANK.jpg',60),
+           ('GRAN GATSBY.jpg',61);
           
 
 -------------------------------------------------------
 ------------------------------------------------------------------------------------
-SELECT * FROM INSTITUCION
-
-SELECT * FROM USUARIO;
