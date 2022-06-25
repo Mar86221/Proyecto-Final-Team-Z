@@ -52,7 +52,7 @@ namespace proyectoVdufferx
             }
 
         }
-        
+
         private void MAIN_Load(object sender, EventArgs e)
         {
             grpTuPrestamo.Hide();
@@ -74,10 +74,11 @@ namespace proyectoVdufferx
 
         private void MAIN_Click(object sender, EventArgs e)
         {
+            grpTuPrestamo.Hide();
             grpTuCuenta.Hide();
         }
 
-        private void picTuPrestamo_Click(object sender, EventArgs e)
+        private void picTuprestamo_Click(object sender, EventArgs e)
         {
             grpTuPrestamo.Show();
             string cadena = Resources.cadena_conexion;
@@ -87,7 +88,7 @@ namespace proyectoVdufferx
                     "SELECT EJEMPLAR.nombre,PRESTA.fecha_devolucion,PRESTA.fecha_prestamo FROM USUARIO INNER JOIN PRESTA ON USUARIO.id = PRESTA.id_usuario INNER JOIN EJEMPLAR ON EJEMPLAR.id = PRESTA.id_ejemplar WHERE USUARIO.correo = @correobuscado2";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@correobuscado2", Convert.ToString(txtTucuentaCorreo.Text));
-                
+
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -96,11 +97,12 @@ namespace proyectoVdufferx
                         string nombre_ejemplar = reader["nombre"].ToString();
                         string fecha_prestamo = reader["fecha_prestamo"].ToString();
                         string fecha_devolucion = reader["fecha_devolucion"].ToString();
-                        
+
                         txtTuprestamoNombreE.AppendText(nombre_ejemplar);
                         txtTuprestamoFechaP.AppendText(fecha_prestamo);
                         txtTuprestamoFechaD.AppendText(fecha_devolucion);
                     }
+
                     connection.Close();
                 }
             }
