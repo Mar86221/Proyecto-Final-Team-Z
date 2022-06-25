@@ -46,27 +46,4 @@ public partial class frmPrestar : Form
         panel1.Hide();
         panel2.Hide();
     }
-
-   /* using (SqlConnection connection = new SqlConnection(cadena))
-    {
-        string query = "SELECT nombre,telefono,fotografia FROM USUARIO where correo = @correobuscado";
-        SqlCommand command = new SqlCommand(query, connection);
-        command.Parameters.AddWithValue("@correobuscado", Convert.ToString(txtTucuentaCorreo.Text));
-
-        connection.Open();
-        using (SqlDataReader reader = command.ExecuteReader())
-        {
-            while (reader.Read())
-            {
-                string nombre = reader["nombre"].ToString();
-                string telefono = reader["telefono"].ToString();
-                string fotografia = reader["fotografia"].ToString();
-
-                txtTucuentaNombre.AppendText(nombre);
-                txtTucuentaTelefono.AppendText(telefono);
-                txtTucuentaFotografia.AppendText(fotografia);
-            }
-
-            connection.Close();
-        }*/
 }

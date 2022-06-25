@@ -35,7 +35,7 @@ namespace proyectoVdufferx
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEjemplares = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picTuPrestamo = new System.Windows.Forms.PictureBox();
             this.picTucuenta = new System.Windows.Forms.PictureBox();
             this.grpTuCuenta = new System.Windows.Forms.GroupBox();
             this.PicTuCuentaDatos = new proyectoVdufferx.PictureCircularBox();
@@ -43,11 +43,16 @@ namespace proyectoVdufferx
             this.txtTucuentaTelefono = new System.Windows.Forms.TextBox();
             this.txtTucuentaCorreo = new System.Windows.Forms.TextBox();
             this.txtTucuentaNombre = new System.Windows.Forms.TextBox();
+            this.grpTuPrestamo = new System.Windows.Forms.GroupBox();
+            this.txtTuprestamoFechaD = new System.Windows.Forms.TextBox();
+            this.txtTuprestamoFechaP = new System.Windows.Forms.TextBox();
+            this.txtTuprestamoNombreE = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picTuPrestamo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picTucuenta)).BeginInit();
             this.grpTuCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).BeginInit();
+            this.grpTuPrestamo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -81,15 +86,16 @@ namespace proyectoVdufferx
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // picTuPrestamo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(544, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.picTuPrestamo.Image = ((System.Drawing.Image) (resources.GetObject("picTuPrestamo.Image")));
+            this.picTuPrestamo.Location = new System.Drawing.Point(544, 0);
+            this.picTuPrestamo.Name = "picTuPrestamo";
+            this.picTuPrestamo.Size = new System.Drawing.Size(127, 40);
+            this.picTuPrestamo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picTuPrestamo.TabIndex = 5;
+            this.picTuPrestamo.TabStop = false;
+            this.picTuPrestamo.Click += new System.EventHandler(this.picTuPrestamo_Click);
             // 
             // picTucuenta
             // 
@@ -156,15 +162,51 @@ namespace proyectoVdufferx
             this.txtTucuentaNombre.Size = new System.Drawing.Size(194, 20);
             this.txtTucuentaNombre.TabIndex = 1;
             // 
+            // grpTuPrestamo
+            // 
+            this.grpTuPrestamo.Controls.Add(this.txtTuprestamoFechaD);
+            this.grpTuPrestamo.Controls.Add(this.txtTuprestamoFechaP);
+            this.grpTuPrestamo.Controls.Add(this.txtTuprestamoNombreE);
+            this.grpTuPrestamo.Location = new System.Drawing.Point(310, 57);
+            this.grpTuPrestamo.Name = "grpTuPrestamo";
+            this.grpTuPrestamo.Size = new System.Drawing.Size(223, 110);
+            this.grpTuPrestamo.TabIndex = 8;
+            this.grpTuPrestamo.TabStop = false;
+            // 
+            // txtTuprestamoFechaD
+            // 
+            this.txtTuprestamoFechaD.Location = new System.Drawing.Point(6, 71);
+            this.txtTuprestamoFechaD.Name = "txtTuprestamoFechaD";
+            this.txtTuprestamoFechaD.ReadOnly = true;
+            this.txtTuprestamoFechaD.Size = new System.Drawing.Size(206, 20);
+            this.txtTuprestamoFechaD.TabIndex = 11;
+            // 
+            // txtTuprestamoFechaP
+            // 
+            this.txtTuprestamoFechaP.Location = new System.Drawing.Point(6, 45);
+            this.txtTuprestamoFechaP.Name = "txtTuprestamoFechaP";
+            this.txtTuprestamoFechaP.ReadOnly = true;
+            this.txtTuprestamoFechaP.Size = new System.Drawing.Size(206, 20);
+            this.txtTuprestamoFechaP.TabIndex = 10;
+            // 
+            // txtTuprestamoNombreE
+            // 
+            this.txtTuprestamoNombreE.Location = new System.Drawing.Point(6, 19);
+            this.txtTuprestamoNombreE.Name = "txtTuprestamoNombreE";
+            this.txtTuprestamoNombreE.ReadOnly = true;
+            this.txtTuprestamoNombreE.Size = new System.Drawing.Size(206, 20);
+            this.txtTuprestamoNombreE.TabIndex = 9;
+            // 
             // MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.grpTuPrestamo);
             this.Controls.Add(this.grpTuCuenta);
             this.Controls.Add(this.picTucuenta);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picTuPrestamo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
@@ -174,14 +216,23 @@ namespace proyectoVdufferx
             this.Load += new System.EventHandler(this.MAIN_Load);
             this.Click += new System.EventHandler(this.MAIN_Click);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picTuPrestamo)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picTucuenta)).EndInit();
             this.grpTuCuenta.ResumeLayout(false);
             this.grpTuCuenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).EndInit();
+            this.grpTuPrestamo.ResumeLayout(false);
+            this.grpTuPrestamo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public System.Windows.Forms.TextBox txtTuprestamoFechaP;
+        public System.Windows.Forms.TextBox txtTuprestamoFechaD;
+
+        public System.Windows.Forms.TextBox txtTuprestamoNombreE;
+
+        private System.Windows.Forms.GroupBox grpTuPrestamo;
 
         private proyectoVdufferx.PictureCircularBox PicTuCuentaDatos;
 
@@ -195,7 +246,7 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.GroupBox grpTuCuenta;
 
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picTuPrestamo;
 
         private System.Windows.Forms.Button btnEjemplares;
 
