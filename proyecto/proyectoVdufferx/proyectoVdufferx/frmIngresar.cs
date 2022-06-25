@@ -38,27 +38,6 @@ namespace proyectoVdufferx
             frmInicio frmInicio = new frmInicio();
             frmInicio.Show();
         }
-
-
-        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int) Keys.Enter)
-            {
-                string correo = txtCorreo.Text;
-
-                this.usuario  = usuarioDAO.BuscarCorreoU(correo);
-                if (usuario == null)
-                {
-                    
-                    errorCorreo.SetError(pbCor, "El correo no existe");
-                }
-                else
-                {
-                    MAIN main = new MAIN();
-                    main.Show();
-                    this.Close();
-                }
-            }
-        }
+        
     }
 }

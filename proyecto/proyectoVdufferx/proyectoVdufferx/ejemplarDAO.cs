@@ -3,35 +3,32 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using proyectoVdufferx.Properties;
 
+
 namespace proyectoVdufferx
 {
     public class ejemplarDAO
     {
-        public static List<ejemplar> ObtenerTodos()
+        public static List<ejemplarmain> ObtenerTodos()
         {
             string cadena = Resources.cadena_conexion;
-            List<ejemplar> lista = new List<ejemplar>();
+            List<ejemplarmain> lista = new List<ejemplarmain>();
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = "SELECT * FROM EJEMPLAR";
+                string query =
+                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor  FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id";
                 SqlCommand command = new SqlCommand(query, connection);
-
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
-                    {
-                        ejemplar ejemplar = new ejemplar();
-                        ejemplar.etiqueta = reader["etiqueta"].ToString();
-                        ejemplar.nombre = reader["nombre"].ToString();
-                        ejemplar.Palabras_claves = reader["Palabras_claves"].ToString();
-                        ejemplar.fecha_publicacion = reader["fecha_publicacion"].ToString();
-                        ejemplar.id_coleccion = Convert.ToInt32(reader["id_coleccion"].ToString());
-                        ejemplar.id_editorial = Convert.ToInt32(reader["id_editorial"].ToString());
-                        ejemplar.id_idioma = Convert.ToInt32(reader["id_idioma"].ToString());
-                        ejemplar.id_formato = Convert.ToInt32(reader["id_formato"].ToString());
-                        lista.Add(ejemplar);
+                    { 
+                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
+                        ejemplarmain ejemplarm = new ejemplarmain();
+                        ejemplarm.imagen = ruta;
+                        ejemplarm.nombre = reader["nombre"].ToString();
+                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
+                        lista.Add(ejemplarm);
                     }
                 }
 
@@ -40,7 +37,7 @@ namespace proyectoVdufferx
 
             return lista;
         }
-
+        
         public static List<autor> ObtenerAutores()
         {
             string cadena = Resources.cadena_conexion;
