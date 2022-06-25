@@ -18,102 +18,6 @@ namespace proyectoVdufferx
             InitializeComponent();
         }
         
-        public static List<ejemplarmain> Caso1(string autor)
-        {
-            string cadena = Resources.cadena_conexion;
-            List<ejemplarmain> lista = new List<ejemplarmain>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query =
-                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE AUTOR.nombre_autor = '@autor'";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@autor", Convert.ToString(autor));
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    { 
-                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
-                        ejemplarmain ejemplarm = new ejemplarmain();
-                        ejemplarm.imagen = ruta;
-                        ejemplarm.nombre = reader["nombre"].ToString();
-                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
-                        lista.Add(ejemplarm);
-                    }
-                }
-
-                connection.Close();
-            }
-
-            return lista;
-        }
-        
-        public static List<ejemplarmain> Caso2(string formato)
-        {
-            string cadena = Resources.cadena_conexion;
-            List<ejemplarmain> lista = new List<ejemplarmain>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query =
-                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR  ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE FORMATO.formato = '@formato' ";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@formato", Convert.ToString(formato));
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    { 
-                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
-                        ejemplarmain ejemplarm = new ejemplarmain();
-                        ejemplarm.imagen = ruta;
-                        ejemplarm.nombre = reader["nombre"].ToString();
-                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
-                        lista.Add(ejemplarm);
-                    }
-                }
-
-                connection.Close();
-            }
-
-            return lista;
-        }
-        
-        public static List<ejemplarmain> Caso3(string formato, string autor)
-        {
-            string cadena = Resources.cadena_conexion;
-            List<ejemplarmain> lista = new List<ejemplarmain>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query =
-                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR  ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE AUTOR.nombre_autor = '@autor' AND FORMATO.formato = '@formato'";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@formato", Convert.ToString(formato));
-                command.Parameters.AddWithValue("@autor", Convert.ToString(autor));
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    { 
-                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
-                        ejemplarmain ejemplarm = new ejemplarmain();
-                        ejemplarm.imagen = ruta;
-                        ejemplarm.nombre = reader["nombre"].ToString();
-                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
-                        lista.Add(ejemplarm);
-                    }
-                }
-
-                connection.Close();
-            }
-
-            return lista;
-        }
         
         public static List<ejemplarmain> FiltrarTOT(string todo)
         {
@@ -126,6 +30,38 @@ namespace proyectoVdufferx
                     "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor FROM IMAGEN_EJEMPLAR INNER JOIN EJEMPLAR ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE EJEMPLAR.nombre LIKE '%' + @todo + '%' OR EJEMPLAR.nombre = '@todo' OR EJEMPLAR.Palabras_claves LIKE '%' + @todo + '%'";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@todo", Convert.ToString(todo));
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    { 
+                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
+                        ejemplarmain ejemplarm = new ejemplarmain();
+                        ejemplarm.imagen = ruta;
+                        ejemplarm.nombre = reader["nombre"].ToString();
+                        ejemplarm.nombre_autor = reader["nombre_autor"].ToString();
+                        lista.Add(ejemplarm);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
+        }
+        public static List<ejemplarmain> Filtros(string autor, string formato)
+        {
+            string cadena = Resources.cadena_conexion;
+            List<ejemplarmain> lista = new List<ejemplarmain>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query =
+                    "SELECT IMAGEN_EJEMPLAR.imagen, EJEMPLAR.nombre, AUTOR.nombre_autor  FROM IMAGEN_EJEMPLAR  INNER JOIN EJEMPLAR  ON IMAGEN_EJEMPLAR.id_ejemplar = EJEMPLAR.id INNER JOIN EJEMPLARXAUTOR  ON EJEMPLARXAUTOR.id_ejemplar = EJEMPLAR.id INNER JOIN AUTOR  ON EJEMPLARXAUTOR.id_autor = AUTOR.id INNER JOIN FORMATO ON EJEMPLAR.id_formato = FORMATO.id WHERE  AUTOR.nombre_autor = @autor and FORMATO.formato = @formato";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@autor", Convert.ToString(autor));
+                command.Parameters.AddWithValue("@formato", Convert.ToString(formato));
 
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -166,27 +102,10 @@ namespace proyectoVdufferx
         }
         
         private void btnFiltrarF_Click(object sender, EventArgs e)
-        {
-            if (chbAutores.Checked)
-            {
+        {   
                 DgvEjemplares.DataSource = null;
-                DgvEjemplares.DataSource = Caso1(Convert.ToString(cmbAutores.Text));
+                DgvEjemplares.DataSource = Filtros(Convert.ToString(cmbAutores.Text), Convert.ToString(cmbFormato.Text));
                 DgvEjemplares.Columns[0].Visible = false;
-            }
-            if (chbFormato.Checked)
-            {
-                DgvEjemplares.DataSource = null;
-                DgvEjemplares.DataSource = Caso2(Convert.ToString(cmbFormato.Text));
-                DgvEjemplares.Columns[0].Visible = false;
-            }
-
-            if (chbFormato.Checked && chbAutores.Checked)
-            {
-                DgvEjemplares.DataSource = null;
-                DgvEjemplares.DataSource = Caso3(Convert.ToString(cmbFormato.Text), Convert.ToString(cmbAutores.Text));
-                DgvEjemplares.Columns[0].Visible = false;
-            }
-           
         }
 
         private void btnBuscarNombreCompleto_Click(object sender, EventArgs e)
