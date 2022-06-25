@@ -89,6 +89,8 @@ namespace proyectoVdufferx
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = ejemplarDAO.ObtenerTodos();
             DgvEjemplares.Columns[0].Visible = false;
+            DgvEjemplares.AutoResizeColumns();
+
             ////
             cmbAutores.DataSource = null;
             cmbAutores.ValueMember = "id";
@@ -101,14 +103,14 @@ namespace proyectoVdufferx
             cmbFormato.DataSource = ejemplarDAO.ObtenerFormatos();
         }
         
-        private void btnFiltrarF_Click(object sender, EventArgs e)
-        {   
-                DgvEjemplares.DataSource = null;
-                DgvEjemplares.DataSource = Filtros(Convert.ToString(cmbAutores.Text), Convert.ToString(cmbFormato.Text));
-                DgvEjemplares.Columns[0].Visible = false;
+        private void picFiltrar_Click(object sender, EventArgs e)
+        {
+            DgvEjemplares.DataSource = null;
+            DgvEjemplares.DataSource = Filtros(Convert.ToString(cmbAutores.Text), Convert.ToString(cmbFormato.Text));
+            DgvEjemplares.Columns[0].Visible = false;
         }
 
-        private void btnBuscarNombreCompleto_Click(object sender, EventArgs e)
+        private void picBuscarTo_Click(object sender, EventArgs e)
         {
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = FiltrarTOT(Convert.ToString(txtBuscarTo.Text));
@@ -129,6 +131,5 @@ namespace proyectoVdufferx
         {
            
         }
-        
     }
 }
