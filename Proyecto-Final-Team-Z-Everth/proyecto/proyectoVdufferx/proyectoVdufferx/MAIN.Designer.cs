@@ -38,11 +38,11 @@ namespace proyectoVdufferx
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picTucuenta = new System.Windows.Forms.PictureBox();
             this.grpTuCuenta = new System.Windows.Forms.GroupBox();
+            this.PicTuCuentaDatos = new proyectoVdufferx.PictureCircularBox();
             this.txtTucuentaFotografia = new System.Windows.Forms.TextBox();
             this.txtTucuentaTelefono = new System.Windows.Forms.TextBox();
             this.txtTucuentaCorreo = new System.Windows.Forms.TextBox();
             this.txtTucuentaNombre = new System.Windows.Forms.TextBox();
-            this.PicTuCuentaDatos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picTucuenta)).BeginInit();
@@ -105,16 +105,25 @@ namespace proyectoVdufferx
             // 
             // grpTuCuenta
             // 
+            this.grpTuCuenta.Controls.Add(this.PicTuCuentaDatos);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaFotografia);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaTelefono);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaCorreo);
             this.grpTuCuenta.Controls.Add(this.txtTucuentaNombre);
-            this.grpTuCuenta.Controls.Add(this.PicTuCuentaDatos);
             this.grpTuCuenta.Location = new System.Drawing.Point(577, 46);
             this.grpTuCuenta.Name = "grpTuCuenta";
             this.grpTuCuenta.Size = new System.Drawing.Size(211, 214);
             this.grpTuCuenta.TabIndex = 7;
             this.grpTuCuenta.TabStop = false;
+            // 
+            // PicTuCuentaDatos
+            // 
+            this.PicTuCuentaDatos.Location = new System.Drawing.Point(58, 19);
+            this.PicTuCuentaDatos.Name = "PicTuCuentaDatos";
+            this.PicTuCuentaDatos.Size = new System.Drawing.Size(112, 90);
+            this.PicTuCuentaDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicTuCuentaDatos.TabIndex = 9;
+            this.PicTuCuentaDatos.TabStop = false;
             // 
             // txtTucuentaFotografia
             // 
@@ -147,15 +156,6 @@ namespace proyectoVdufferx
             this.txtTucuentaNombre.Size = new System.Drawing.Size(194, 20);
             this.txtTucuentaNombre.TabIndex = 1;
             // 
-            // PicTuCuentaDatos
-            // 
-            this.PicTuCuentaDatos.Location = new System.Drawing.Point(60, 19);
-            this.PicTuCuentaDatos.Name = "PicTuCuentaDatos";
-            this.PicTuCuentaDatos.Size = new System.Drawing.Size(92, 83);
-            this.PicTuCuentaDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicTuCuentaDatos.TabIndex = 0;
-            this.PicTuCuentaDatos.TabStop = false;
-            // 
             // MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +183,8 @@ namespace proyectoVdufferx
             this.PerformLayout();
         }
 
+        private proyectoVdufferx.PictureCircularBox PicTuCuentaDatos;
+
         public System.Windows.Forms.TextBox txtTucuentaFotografia;
 
         public System.Windows.Forms.TextBox txtTucuentaTelefono;
@@ -190,8 +192,6 @@ namespace proyectoVdufferx
         public System.Windows.Forms.TextBox txtTucuentaCorreo;
 
         public System.Windows.Forms.TextBox txtTucuentaNombre;
-
-        public System.Windows.Forms.PictureBox PicTuCuentaDatos;
 
         private System.Windows.Forms.GroupBox grpTuCuenta;
 
