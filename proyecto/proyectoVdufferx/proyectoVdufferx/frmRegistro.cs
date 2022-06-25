@@ -39,17 +39,6 @@ namespace proyectoVdufferx
             return Regex.IsMatch(numero, @"\A[0-9]{7,10}\z");
         }
         OpenFileDialog ofd = new OpenFileDialog();
-        public void btnBuscar_Click(object sender, EventArgs e)
-        {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = "Descargas";
-            ofd.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)|*.jpg";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                txtFotografia.Text = ofd.FileName;
-            }
-            ofd.Dispose();
-        }
         public void cargar_ocupacion()
         {
             connection.Open();
@@ -271,11 +260,23 @@ namespace proyectoVdufferx
                 cargar_insittucion(id);
             }
         }
-
-        private void btnNuevaInstitucion_Click(object sender, EventArgs e)
+        
+        private void picNuevaIsntitucion_Click(object sender, EventArgs e)
         {
-           NuevaInstitucion ninstitucion = new NuevaInstitucion();
+            NuevaInstitucion ninstitucion = new NuevaInstitucion();
             ninstitucion.Show();
-        } 
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            //OpenFileDialog ofd = new OpenFileDialog();
+            ofd.InitialDirectory = "Descargas";
+            ofd.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)|*.jpg";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtFotografia.Text = ofd.FileName;
+            }
+            ofd.Dispose();
+        }
     }
 }

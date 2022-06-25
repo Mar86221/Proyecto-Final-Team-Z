@@ -87,6 +87,12 @@
         <Compile Include="frmIngresar.Designer.cs">
           <DependentUpon>frmIngresar.cs</DependentUpon>
         </Compile>
+        <Compile Include="frmPrestar.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmPrestar.Designer.cs">
+          <DependentUpon>frmPrestar.cs</DependentUpon>
+        </Compile>
         <Compile Include="frmRegistro.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -126,6 +132,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmIngresar.resx">
           <DependentUpon>frmIngresar.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmPrestar.resx">
+          <DependentUpon>frmPrestar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmRegistro.resx">
           <DependentUpon>frmRegistro.cs</DependentUpon>
