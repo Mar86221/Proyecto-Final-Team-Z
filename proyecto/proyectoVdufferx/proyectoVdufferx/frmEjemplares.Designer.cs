@@ -53,6 +53,9 @@ namespace proyectoVdufferx
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtPrestar = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -65,6 +68,8 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picBuscarTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvEjemplares
@@ -108,6 +113,13 @@ namespace proyectoVdufferx
             this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagen.TabIndex = 8;
             this.picImagen.TabStop = false;
+            // 
+            // btnBuscarTo
+            // 
+            this.btnBuscarTo.Location = new System.Drawing.Point(0, 0);
+            this.btnBuscarTo.Name = "btnBuscarTo";
+            this.btnBuscarTo.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarTo.TabIndex = 88;
             // 
             // txtImagen
             // 
@@ -268,12 +280,45 @@ namespace proyectoVdufferx
             this.label2.Text = "AUTORES";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtPrestar
+            // 
+            this.txtPrestar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrestar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtPrestar.Location = new System.Drawing.Point(483, 562);
+            this.txtPrestar.Name = "txtPrestar";
+            this.txtPrestar.Size = new System.Drawing.Size(10, 19);
+            this.txtPrestar.TabIndex = 89;
+            this.txtPrestar.Tag = "Cor";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(101, 622);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(113, 35);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 90;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(276, 622);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(113, 35);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 91;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(933, 640);
+            this.ClientSize = new System.Drawing.Size(933, 696);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.txtPrestar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox10);
@@ -310,9 +355,17 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picBuscarTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox6;
+
+        private System.Windows.Forms.PictureBox pictureBox4;
+
+        public System.Windows.Forms.TextBox txtPrestar;
 
         private System.Windows.Forms.Label label2;
 
@@ -336,7 +389,7 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.PictureBox pictureBox2;
 
-        private System.Windows.Forms.TextBox txtImagen;
+        public System.Windows.Forms.TextBox txtImagen;
 
         private System.Windows.Forms.Button btnBuscarTo;
 

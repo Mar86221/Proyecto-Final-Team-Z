@@ -61,6 +61,7 @@
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
         <Compile Include="ejemplarmain.cs" />
+        <Compile Include="ejemplarprestar.cs" />
         <Compile Include="ejemplarxautor.cs" />
         <Compile Include="formato.cs" />
         <Compile Include="frmCarnetU.cs">
@@ -117,8 +118,12 @@
           <DependentUpon>NuevaInstitucion.cs</DependentUpon>
         </Compile>
         <Compile Include="PictureCircularBox.cs" />
+        <Compile Include="prestamo.cs" />
+        <Compile Include="prestamoDAO.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="reserva.cs" />
+        <Compile Include="reservaDAO.cs" />
         <Compile Include="usuario.cs" />
         <Compile Include="usuarioDAO.cs" />
         <EmbeddedResource Include="frmCarnetU.resx">

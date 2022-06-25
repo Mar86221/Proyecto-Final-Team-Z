@@ -36,6 +36,8 @@ partial class frmPrestar
         this.pbPrestar = new System.Windows.Forms.PictureBox();
         this.pbReservar = new System.Windows.Forms.PictureBox();
         this.panel1 = new System.Windows.Forms.Panel();
+        this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+        this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
         this.label2 = new System.Windows.Forms.Label();
         this.label1 = new System.Windows.Forms.Label();
         this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -43,6 +45,8 @@ partial class frmPrestar
         this.pictureBox2 = new System.Windows.Forms.PictureBox();
         this.pictureBox1 = new System.Windows.Forms.PictureBox();
         this.panel2 = new System.Windows.Forms.Panel();
+        this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+        this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
         this.label3 = new System.Windows.Forms.Label();
         this.label4 = new System.Windows.Forms.Label();
         this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -69,10 +73,6 @@ partial class frmPrestar
         this.txtIsbm = new System.Windows.Forms.TextBox();
         this.pictureBox16 = new System.Windows.Forms.PictureBox();
         this.pictureBox17 = new System.Windows.Forms.PictureBox();
-        this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-        this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-        this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-        this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).BeginInit();
@@ -103,6 +103,7 @@ partial class frmPrestar
         this.pbPortada.Location = new System.Drawing.Point(12, 38);
         this.pbPortada.Name = "pbPortada";
         this.pbPortada.Size = new System.Drawing.Size(238, 291);
+        this.pbPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
         this.pbPortada.TabIndex = 0;
         this.pbPortada.TabStop = false;
         // 
@@ -119,7 +120,7 @@ partial class frmPrestar
         // pbReservar
         // 
         this.pbReservar.Image = ((System.Drawing.Image) (resources.GetObject("pbReservar.Image")));
-        this.pbReservar.Location = new System.Drawing.Point(409, 295);
+        this.pbReservar.Location = new System.Drawing.Point(458, 295);
         this.pbReservar.Name = "pbReservar";
         this.pbReservar.Size = new System.Drawing.Size(111, 34);
         this.pbReservar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -138,8 +139,22 @@ partial class frmPrestar
         this.panel1.Controls.Add(this.pictureBox1);
         this.panel1.Location = new System.Drawing.Point(18, 335);
         this.panel1.Name = "panel1";
-        this.panel1.Size = new System.Drawing.Size(502, 69);
+        this.panel1.Size = new System.Drawing.Size(567, 69);
         this.panel1.TabIndex = 3;
+        // 
+        // dateTimePicker2
+        // 
+        this.dateTimePicker2.Location = new System.Drawing.Point(281, 23);
+        this.dateTimePicker2.Name = "dateTimePicker2";
+        this.dateTimePicker2.Size = new System.Drawing.Size(217, 20);
+        this.dateTimePicker2.TabIndex = 8;
+        // 
+        // dateTimePicker1
+        // 
+        this.dateTimePicker1.Location = new System.Drawing.Point(14, 25);
+        this.dateTimePicker1.Name = "dateTimePicker1";
+        this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
+        this.dateTimePicker1.TabIndex = 7;
         // 
         // label2
         // 
@@ -209,8 +224,22 @@ partial class frmPrestar
         this.panel2.Controls.Add(this.pictureBox8);
         this.panel2.Location = new System.Drawing.Point(18, 410);
         this.panel2.Name = "panel2";
-        this.panel2.Size = new System.Drawing.Size(502, 69);
+        this.panel2.Size = new System.Drawing.Size(565, 69);
         this.panel2.TabIndex = 7;
+        // 
+        // dateTimePicker4
+        // 
+        this.dateTimePicker4.Location = new System.Drawing.Point(283, 25);
+        this.dateTimePicker4.Name = "dateTimePicker4";
+        this.dateTimePicker4.Size = new System.Drawing.Size(214, 20);
+        this.dateTimePicker4.TabIndex = 8;
+        // 
+        // dateTimePicker3
+        // 
+        this.dateTimePicker3.Location = new System.Drawing.Point(17, 25);
+        this.dateTimePicker3.Name = "dateTimePicker3";
+        this.dateTimePicker3.Size = new System.Drawing.Size(211, 20);
+        this.dateTimePicker3.TabIndex = 7;
         // 
         // label3
         // 
@@ -275,7 +304,7 @@ partial class frmPrestar
         this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.lblName.Location = new System.Drawing.Point(277, 28);
         this.lblName.Name = "lblName";
-        this.lblName.Size = new System.Drawing.Size(77, 16);
+        this.lblName.Size = new System.Drawing.Size(84, 16);
         this.lblName.TabIndex = 36;
         this.lblName.Text = "Nombre:";
         // 
@@ -287,7 +316,7 @@ partial class frmPrestar
         this.txtNombreEjemplar.Location = new System.Drawing.Point(270, 47);
         this.txtNombreEjemplar.Name = "txtNombreEjemplar";
         this.txtNombreEjemplar.ReadOnly = true;
-        this.txtNombreEjemplar.Size = new System.Drawing.Size(262, 19);
+        this.txtNombreEjemplar.Size = new System.Drawing.Size(299, 19);
         this.txtNombreEjemplar.TabIndex = 35;
         this.txtNombreEjemplar.Tag = "Name";
         // 
@@ -296,7 +325,7 @@ partial class frmPrestar
         this.pictureBox9.BackColor = System.Drawing.Color.White;
         this.pictureBox9.Location = new System.Drawing.Point(263, 38);
         this.pictureBox9.Name = "pictureBox9";
-        this.pictureBox9.Size = new System.Drawing.Size(279, 30);
+        this.pictureBox9.Size = new System.Drawing.Size(316, 30);
         this.pictureBox9.TabIndex = 33;
         this.pictureBox9.TabStop = false;
         // 
@@ -305,7 +334,7 @@ partial class frmPrestar
         this.pbName.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pbName.Location = new System.Drawing.Point(261, 36);
         this.pbName.Name = "pbName";
-        this.pbName.Size = new System.Drawing.Size(283, 34);
+        this.pbName.Size = new System.Drawing.Size(320, 34);
         this.pbName.TabIndex = 34;
         this.pbName.TabStop = false;
         // 
@@ -316,7 +345,7 @@ partial class frmPrestar
         this.label5.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label5.Location = new System.Drawing.Point(275, 79);
         this.label5.Name = "label5";
-        this.label5.Size = new System.Drawing.Size(61, 16);
+        this.label5.Size = new System.Drawing.Size(62, 16);
         this.label5.TabIndex = 40;
         this.label5.Text = "Autor:";
         // 
@@ -328,7 +357,7 @@ partial class frmPrestar
         this.txtAutorEjemplar.Location = new System.Drawing.Point(272, 98);
         this.txtAutorEjemplar.Name = "txtAutorEjemplar";
         this.txtAutorEjemplar.ReadOnly = true;
-        this.txtAutorEjemplar.Size = new System.Drawing.Size(262, 19);
+        this.txtAutorEjemplar.Size = new System.Drawing.Size(299, 19);
         this.txtAutorEjemplar.TabIndex = 39;
         this.txtAutorEjemplar.Tag = "Name";
         // 
@@ -337,7 +366,7 @@ partial class frmPrestar
         this.pictureBox10.BackColor = System.Drawing.Color.White;
         this.pictureBox10.Location = new System.Drawing.Point(265, 89);
         this.pictureBox10.Name = "pictureBox10";
-        this.pictureBox10.Size = new System.Drawing.Size(279, 30);
+        this.pictureBox10.Size = new System.Drawing.Size(316, 30);
         this.pictureBox10.TabIndex = 37;
         this.pictureBox10.TabStop = false;
         // 
@@ -346,7 +375,7 @@ partial class frmPrestar
         this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pictureBox11.Location = new System.Drawing.Point(263, 87);
         this.pictureBox11.Name = "pictureBox11";
-        this.pictureBox11.Size = new System.Drawing.Size(283, 34);
+        this.pictureBox11.Size = new System.Drawing.Size(320, 34);
         this.pictureBox11.TabIndex = 38;
         this.pictureBox11.TabStop = false;
         // 
@@ -357,7 +386,7 @@ partial class frmPrestar
         this.label6.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label6.Location = new System.Drawing.Point(279, 127);
         this.label6.Name = "label6";
-        this.label6.Size = new System.Drawing.Size(85, 16);
+        this.label6.Size = new System.Drawing.Size(82, 16);
         this.label6.TabIndex = 44;
         this.label6.Text = "Editorial:";
         // 
@@ -369,7 +398,7 @@ partial class frmPrestar
         this.txtEditorial.Location = new System.Drawing.Point(272, 146);
         this.txtEditorial.Name = "txtEditorial";
         this.txtEditorial.ReadOnly = true;
-        this.txtEditorial.Size = new System.Drawing.Size(262, 19);
+        this.txtEditorial.Size = new System.Drawing.Size(299, 19);
         this.txtEditorial.TabIndex = 43;
         this.txtEditorial.Tag = "Name";
         // 
@@ -378,7 +407,7 @@ partial class frmPrestar
         this.pictureBox12.BackColor = System.Drawing.Color.White;
         this.pictureBox12.Location = new System.Drawing.Point(265, 137);
         this.pictureBox12.Name = "pictureBox12";
-        this.pictureBox12.Size = new System.Drawing.Size(279, 30);
+        this.pictureBox12.Size = new System.Drawing.Size(316, 30);
         this.pictureBox12.TabIndex = 41;
         this.pictureBox12.TabStop = false;
         // 
@@ -387,7 +416,7 @@ partial class frmPrestar
         this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pictureBox13.Location = new System.Drawing.Point(263, 135);
         this.pictureBox13.Name = "pictureBox13";
-        this.pictureBox13.Size = new System.Drawing.Size(283, 34);
+        this.pictureBox13.Size = new System.Drawing.Size(320, 34);
         this.pictureBox13.TabIndex = 42;
         this.pictureBox13.TabStop = false;
         // 
@@ -398,7 +427,7 @@ partial class frmPrestar
         this.label7.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label7.Location = new System.Drawing.Point(281, 176);
         this.label7.Name = "label7";
-        this.label7.Size = new System.Drawing.Size(94, 16);
+        this.label7.Size = new System.Drawing.Size(99, 16);
         this.label7.TabIndex = 48;
         this.label7.Text = "Colección:";
         // 
@@ -410,7 +439,7 @@ partial class frmPrestar
         this.txtColeccionEjemplar.Location = new System.Drawing.Point(274, 195);
         this.txtColeccionEjemplar.Name = "txtColeccionEjemplar";
         this.txtColeccionEjemplar.ReadOnly = true;
-        this.txtColeccionEjemplar.Size = new System.Drawing.Size(262, 19);
+        this.txtColeccionEjemplar.Size = new System.Drawing.Size(299, 19);
         this.txtColeccionEjemplar.TabIndex = 47;
         this.txtColeccionEjemplar.Tag = "Name";
         // 
@@ -419,7 +448,7 @@ partial class frmPrestar
         this.pictureBox14.BackColor = System.Drawing.Color.White;
         this.pictureBox14.Location = new System.Drawing.Point(267, 186);
         this.pictureBox14.Name = "pictureBox14";
-        this.pictureBox14.Size = new System.Drawing.Size(279, 30);
+        this.pictureBox14.Size = new System.Drawing.Size(316, 30);
         this.pictureBox14.TabIndex = 45;
         this.pictureBox14.TabStop = false;
         // 
@@ -428,7 +457,7 @@ partial class frmPrestar
         this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pictureBox15.Location = new System.Drawing.Point(265, 184);
         this.pictureBox15.Name = "pictureBox15";
-        this.pictureBox15.Size = new System.Drawing.Size(283, 34);
+        this.pictureBox15.Size = new System.Drawing.Size(320, 34);
         this.pictureBox15.TabIndex = 46;
         this.pictureBox15.TabStop = false;
         // 
@@ -437,9 +466,9 @@ partial class frmPrestar
         this.label8.BackColor = System.Drawing.Color.Transparent;
         this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label8.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label8.Location = new System.Drawing.Point(281, 223);
+        this.label8.Location = new System.Drawing.Point(288, 223);
         this.label8.Name = "label8";
-        this.label8.Size = new System.Drawing.Size(55, 16);
+        this.label8.Size = new System.Drawing.Size(61, 16);
         this.label8.TabIndex = 52;
         this.label8.Text = "ISBM:";
         // 
@@ -451,7 +480,7 @@ partial class frmPrestar
         this.txtIsbm.Location = new System.Drawing.Point(274, 242);
         this.txtIsbm.Name = "txtIsbm";
         this.txtIsbm.ReadOnly = true;
-        this.txtIsbm.Size = new System.Drawing.Size(262, 19);
+        this.txtIsbm.Size = new System.Drawing.Size(299, 19);
         this.txtIsbm.TabIndex = 51;
         this.txtIsbm.Tag = "Name";
         // 
@@ -460,7 +489,7 @@ partial class frmPrestar
         this.pictureBox16.BackColor = System.Drawing.Color.White;
         this.pictureBox16.Location = new System.Drawing.Point(267, 233);
         this.pictureBox16.Name = "pictureBox16";
-        this.pictureBox16.Size = new System.Drawing.Size(279, 30);
+        this.pictureBox16.Size = new System.Drawing.Size(316, 30);
         this.pictureBox16.TabIndex = 49;
         this.pictureBox16.TabStop = false;
         // 
@@ -469,44 +498,16 @@ partial class frmPrestar
         this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pictureBox17.Location = new System.Drawing.Point(265, 231);
         this.pictureBox17.Name = "pictureBox17";
-        this.pictureBox17.Size = new System.Drawing.Size(283, 34);
+        this.pictureBox17.Size = new System.Drawing.Size(320, 34);
         this.pictureBox17.TabIndex = 50;
         this.pictureBox17.TabStop = false;
-        // 
-        // dateTimePicker1
-        // 
-        this.dateTimePicker1.Location = new System.Drawing.Point(14, 25);
-        this.dateTimePicker1.Name = "dateTimePicker1";
-        this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-        this.dateTimePicker1.TabIndex = 7;
-        // 
-        // dateTimePicker2
-        // 
-        this.dateTimePicker2.Location = new System.Drawing.Point(281, 23);
-        this.dateTimePicker2.Name = "dateTimePicker2";
-        this.dateTimePicker2.Size = new System.Drawing.Size(217, 20);
-        this.dateTimePicker2.TabIndex = 8;
-        // 
-        // dateTimePicker3
-        // 
-        this.dateTimePicker3.Location = new System.Drawing.Point(17, 25);
-        this.dateTimePicker3.Name = "dateTimePicker3";
-        this.dateTimePicker3.Size = new System.Drawing.Size(211, 20);
-        this.dateTimePicker3.TabIndex = 7;
-        // 
-        // dateTimePicker4
-        // 
-        this.dateTimePicker4.Location = new System.Drawing.Point(283, 25);
-        this.dateTimePicker4.Name = "dateTimePicker4";
-        this.dateTimePicker4.Size = new System.Drawing.Size(214, 20);
-        this.dateTimePicker4.TabIndex = 8;
         // 
         // frmPrestar
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(554, 488);
+        this.ClientSize = new System.Drawing.Size(606, 488);
         this.Controls.Add(this.label8);
         this.Controls.Add(this.txtIsbm);
         this.Controls.Add(this.pictureBox16);
@@ -534,6 +535,7 @@ partial class frmPrestar
         this.Controls.Add(this.pbPortada);
         this.Name = "frmPrestar";
         this.Text = "frmPrestar";
+        this.Load += new System.EventHandler(this.frmPrestar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).EndInit();
@@ -572,7 +574,7 @@ partial class frmPrestar
     private System.Windows.Forms.PictureBox pictureBox17;
 
     private System.Windows.Forms.Label lblName;
-    private System.Windows.Forms.TextBox txtNombreEjemplar;
+    public System.Windows.Forms.TextBox txtNombreEjemplar;
     private System.Windows.Forms.PictureBox pictureBox9;
     private System.Windows.Forms.PictureBox pbName;
     private System.Windows.Forms.Label label5;
