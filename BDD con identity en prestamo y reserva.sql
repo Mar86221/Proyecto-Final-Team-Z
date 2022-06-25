@@ -149,21 +149,16 @@ CREATE TABLE PRESTA (
 	id int primary key NOT NULL,
 	id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
 	id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
-    hora_prestamo DATE NOT NULL,
-    fecha_devolucion DATE NOT NULL,
-    hora_devolucion DATE NOT NULL,
-    fecha_prestamo DATE NOT NULL,
+    fecha_devolucion DATETIME NOT NULL,
+    fecha_prestamo DATETIME NOT NULL,
 		);
 
 CREATE TABLE RESERVA (
 	id int primary key NOT NULL,
 	id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
 	id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
-    fecha_prestamo DATE NOT NULL,
-    fecha_reserva DATE NOT NULL,
-    hora_reserva DATE NOT NULL,
-    hora_devolucion DATE NOT NULL,
-    fecha_devolucion DATE NOT NULL,
+    fecha_reserva DATETIME NOT NULL,
+    fecha_devolucion DATETIME NOT NULL,
 		);
 --------------------------------------------------------
 CREATE TABLE USUARIOXAREA (
@@ -230,10 +225,10 @@ INSERT INTO AUTOR (id,nombre_autor)
             (14,'HOMERO'),
             (15, 'VEGETTA777'),
             (16, 'DANTE ALIGHIERI'),
-            (17,'ANTOINE DE SAINT EXUPERY'),
+            (17,'ANTOINE SAINT EXUPERY'),
             (18,'BRAM STOKER'),
             (19,'MARY SHELLEY'),
-            (20,'MIGUEL DE CERVANTES DE SAAVEDRA'),
+            (20,'MIGUEL DE CERVANTES'),
             (21,'MARK TWAIN'),
             (22, 'JAMES DASHNER'),
             (23,'FRANZ KAFKA'),
@@ -387,7 +382,7 @@ INSERT INTO EJEMPLAR (id, nombre, Palabras_claves, fecha_publicacion, id_colecci
             (14,'HARRY POTTER Y LA ORDEN DEL FENIX','HARRY POTTER, ORDEN DEL FENIX',CONVERT(DATE,'21/6/2003',103),6,5,1,1,'9788418173141'),
             (15,'HARRY POTTER Y EL MISTERIO DEL PRINCIPE','HARRY POTTER, MISTERIO DEL PRINCIPE',CONVERT(DATE,'16/7/2005',103),6,5,1,1,'9788418173158'),
             (16,'CINCUENTAS SOMBRAS DE GREY','CINCUENTAS SOMBRAS, GREY',CONVERT(DATE,'25/5/2011',103),7,3,1,1,'9788490623749'),
-            (17,'ADVENTURES OF SHERLOCK HOLMES AND THE MEMOIRS OF SHERLOCK HOLMES','SHERLOCK HOLMES, MEMOIRS OF SHERLOCK HOLMES',CONVERT(DATE,'1/1/1894',103),8,7,2,1,'9780140437713'),
+            (17,'ADVENTURES OF SHERLOCK HOLMES','SHERLOCK HOLMES, MEMOIRS OF SHERLOCK HOLMES',CONVERT(DATE,'1/1/1894',103),8,7,2,1,'9780140437713'),
             (18,'AYAX','AYAX',NULL,10,8,1,1,'9788424939595'),
             (19,'AURORA','AURORA',CONVERT(DATE,'1/01/1881',103),10,11,1,1,'9788430970827'),
             (20,'ALICIA A TRAVES DEL ESPEJO','ALICIA, ESPEJO, A TRAVES',CONVERT(DATE,'27/12/1871',103),11,10,1,1,'9788417230429'),
@@ -629,3 +624,11 @@ ON EJEMPLAR.id_formato = FORMATO.id
 WHERE AUTOR.nombre_autor = 'VEGETTA777' AND FORMATO.formato = 'Digital' OR AUTOR.nombre_autor = 'VEGETTA777' AND FORMATO.formato = '' 
 
 
+SELECT * FROM USUARIO
+
+SELECT id_ejemplar FROM RESERVA INNER JOIN EJEMPLAR ON RESERVA.id_ejemplar = EJEMPLAR.id
+SELECT id from EJEMPLAR where EJEMPLAR.nombre = 'WIGETTA Y EL BACULO DORADA'
+
+
+
+INSERT INTO RESERVA(id, id_usuario, id_ejemplar, fecha_reserva, fecha_devolucion) VALUES(1,1,1, '06/25/2022 11:55', '06/30/2022 11:55')

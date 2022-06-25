@@ -85,6 +85,7 @@ namespace proyectoVdufferx
         
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
+            txtPrestar.Hide();
             txtImagen.Hide();
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = ejemplarDAO.ObtenerTodos();
@@ -101,6 +102,8 @@ namespace proyectoVdufferx
             cmbFormato.ValueMember = "id";
             cmbFormato.DisplayMember = "formato";
             cmbFormato.DataSource = ejemplarDAO.ObtenerFormatos();
+            ///
+            
         }
         
         private void picFiltrar_Click(object sender, EventArgs e)
@@ -127,8 +130,22 @@ namespace proyectoVdufferx
             picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
         }
 
+        int renglonprestar;
         private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            renglonprestar = e.RowIndex;
+            string nombreprestar;
+            nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
+            txtPrestar.Text = nombreprestar;
+            frmPrestar frmp = new frmPrestar();
+            frmp.txtNombreEjemplar.Text = nombreprestar;
+            renglon = e.RowIndex;
+            string nombre;
+            nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
+            txtImagen.Text = nombre;
+            picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+            frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+            frmp.ShowDialog();
            
         }
     }

@@ -43,11 +43,15 @@ namespace proyectoVdufferx
             this.txtTucuentaTelefono = new System.Windows.Forms.TextBox();
             this.txtTucuentaCorreo = new System.Windows.Forms.TextBox();
             this.txtTucuentaNombre = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picTucuenta)).BeginInit();
             this.grpTuCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -75,7 +79,7 @@ namespace proyectoVdufferx
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image) (resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(497, 274);
+            this.button1.Location = new System.Drawing.Point(482, 274);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 80);
             this.button1.TabIndex = 4;
@@ -156,12 +160,34 @@ namespace proyectoVdufferx
             this.txtTucuentaNombre.Size = new System.Drawing.Size(194, 20);
             this.txtTucuentaNombre.TabIndex = 1;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(164, 360);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(588, 360);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.grpTuCuenta);
             this.Controls.Add(this.picTucuenta);
             this.Controls.Add(this.pictureBox2);
@@ -179,9 +205,15 @@ namespace proyectoVdufferx
             this.grpTuCuenta.ResumeLayout(false);
             this.grpTuCuenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox4;
+
+        private System.Windows.Forms.PictureBox pictureBox3;
 
         private proyectoVdufferx.PictureCircularBox PicTuCuentaDatos;
 
