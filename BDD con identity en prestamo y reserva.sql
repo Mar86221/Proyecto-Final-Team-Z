@@ -632,3 +632,6 @@ SELECT id from EJEMPLAR where EJEMPLAR.nombre = 'WIGETTA Y EL BACULO DORADA'
 
 
 INSERT INTO RESERVA(id, id_usuario, id_ejemplar, fecha_reserva, fecha_devolucion) VALUES(1,1,1, '06/25/2022 11:55', '06/30/2022 11:55')
+INSERT INTO PRESTA(id, id_usuario, id_ejemplar, fecha_prestamo, fecha_devolucion) VALUES(1,1,1, '06/25/2022 11:55', '06/30/2022 11:55')
+
+XXXX

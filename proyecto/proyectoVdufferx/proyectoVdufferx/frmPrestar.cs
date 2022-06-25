@@ -8,6 +8,7 @@ namespace proyectoVdufferx;
 
 public partial class frmPrestar : Form
 {
+    public prestamo Prestamo{ get; set;}
     public frmPrestar()
     {
         InitializeComponent();
@@ -15,11 +16,6 @@ public partial class frmPrestar : Form
 
     private void frmPrestar_Load(object sender, EventArgs e)
     {
-        pbReservar.Hide();
-        txtID.Hide(); 
-        int idejem = Convert.ToInt32(txtID.Text);
-        id_prestamo(idejem);
-
         string cadena = Resources.cadena_conexion;
         using (SqlConnection connection = new SqlConnection(cadena))
         {
@@ -51,6 +47,17 @@ public partial class frmPrestar : Form
         }
         panel1.Hide();
         panel2.Hide();
+        txtID.Hide();
+        int idem = Convert.ToInt32(txtID.Text);
+        this.Prestamo = prestamoDAO.id_prestamo(Convert.ToInt32(txtID.Text));
+        if (Prestamo == null)
+        {
+            pbReservar.Hide();
+        }
+        else
+        {
+            pbPrestar.Hide();
+        }
     }
 
    /* using (SqlConnection connection = new SqlConnection(cadena))
@@ -76,32 +83,19 @@ public partial class frmPrestar : Form
             connection.Close();
         }*/
    
-      public static prestamo id_prestamo(int id)
-           {
-               string cadena = Resources.cadena_conexion;
-               prestamo p = null;
-               using (SqlConnection connection = new SqlConnection(cadena))
-               {
-                   string query = "SELECT id_ejemplar FROM PRESTA INNER JOIN EJEMPLAR ON PRESTA.id_ejemplar = @idejemplar";
-                   SqlCommand command = new SqlCommand(query, connection);
-                   command.Parameters.AddWithValue("@idejemplar", id);
-   
-                   connection.Open();
-                   using (SqlDataReader reader = command.ExecuteReader())
-                   {
-                       while (reader.Read())
-                       {
-                           p = new prestamo();
-                           p.id_ejemplar = Convert.ToInt32(reader["id_ejemplar"]);
-                       }
-                       connection.Close();
-                   }
-               }
-               return p;
-           }
-
    private void pbPrestar_Click(object sender, EventArgs e)
    {
-       
+       panel1.Show();
+   }
+
+   private void pbReservar_Click(object sender, EventArgs e)
+   {
+       panel2.Show();
+   }
+
+   private void button1_Click(object sender, EventArgs e)
+   {
+       textBox1.Text = dtpPrestamo.Text;
    }
 }
+

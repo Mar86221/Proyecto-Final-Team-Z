@@ -37,7 +37,7 @@ partial class frmPrestar
         this.pbReservar = new System.Windows.Forms.PictureBox();
         this.panel1 = new System.Windows.Forms.Panel();
         this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-        this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+        this.dtpPrestamo = new System.Windows.Forms.DateTimePicker();
         this.label2 = new System.Windows.Forms.Label();
         this.label1 = new System.Windows.Forms.Label();
         this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -74,6 +74,8 @@ partial class frmPrestar
         this.pictureBox16 = new System.Windows.Forms.PictureBox();
         this.pictureBox17 = new System.Windows.Forms.PictureBox();
         this.txtID = new System.Windows.Forms.TextBox();
+        this.button1 = new System.Windows.Forms.Button();
+        this.textBox1 = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).BeginInit();
@@ -128,11 +130,12 @@ partial class frmPrestar
         this.pbReservar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
         this.pbReservar.TabIndex = 2;
         this.pbReservar.TabStop = false;
+        this.pbReservar.Click += new System.EventHandler(this.pbReservar_Click);
         // 
         // panel1
         // 
         this.panel1.Controls.Add(this.dateTimePicker2);
-        this.panel1.Controls.Add(this.dateTimePicker1);
+        this.panel1.Controls.Add(this.dtpPrestamo);
         this.panel1.Controls.Add(this.label2);
         this.panel1.Controls.Add(this.label1);
         this.panel1.Controls.Add(this.pictureBox4);
@@ -146,17 +149,22 @@ partial class frmPrestar
         // 
         // dateTimePicker2
         // 
+        this.dateTimePicker2.CustomFormat = "mm/dd/yy                            hh:mm:ss";
+        this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
         this.dateTimePicker2.Location = new System.Drawing.Point(281, 23);
         this.dateTimePicker2.Name = "dateTimePicker2";
         this.dateTimePicker2.Size = new System.Drawing.Size(217, 20);
         this.dateTimePicker2.TabIndex = 8;
         // 
-        // dateTimePicker1
+        // dtpPrestamo
         // 
-        this.dateTimePicker1.Location = new System.Drawing.Point(14, 25);
-        this.dateTimePicker1.Name = "dateTimePicker1";
-        this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-        this.dateTimePicker1.TabIndex = 7;
+        this.dtpPrestamo.CustomFormat = "mm/dd/yy                            hh:mm:ss";
+        this.dtpPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpPrestamo.Location = new System.Drawing.Point(14, 25);
+        this.dtpPrestamo.Name = "dtpPrestamo";
+        this.dtpPrestamo.Size = new System.Drawing.Size(218, 20);
+        this.dtpPrestamo.TabIndex = 7;
+        this.dtpPrestamo.Value = new System.DateTime(2022, 6, 25, 16, 4, 42, 0);
         // 
         // label2
         // 
@@ -231,6 +239,8 @@ partial class frmPrestar
         // 
         // dateTimePicker4
         // 
+        this.dateTimePicker4.CustomFormat = "mm/dd/yy                            hh:mm:ss";
+        this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
         this.dateTimePicker4.Location = new System.Drawing.Point(283, 25);
         this.dateTimePicker4.Name = "dateTimePicker4";
         this.dateTimePicker4.Size = new System.Drawing.Size(214, 20);
@@ -238,6 +248,8 @@ partial class frmPrestar
         // 
         // dateTimePicker3
         // 
+        this.dateTimePicker3.CustomFormat = "mm/dd/yy                            hh:mm:ss";
+        this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
         this.dateTimePicker3.Location = new System.Drawing.Point(17, 25);
         this.dateTimePicker3.Name = "dateTimePicker3";
         this.dateTimePicker3.Size = new System.Drawing.Size(211, 20);
@@ -511,12 +523,32 @@ partial class frmPrestar
         this.txtID.Size = new System.Drawing.Size(10, 20);
         this.txtID.TabIndex = 53;
         // 
+        // button1
+        // 
+        this.button1.Location = new System.Drawing.Point(661, 72);
+        this.button1.Name = "button1";
+        this.button1.Size = new System.Drawing.Size(75, 23);
+        this.button1.TabIndex = 54;
+        this.button1.Text = "button1";
+        this.button1.UseVisualStyleBackColor = true;
+        this.button1.Click += new System.EventHandler(this.button1_Click);
+        // 
+        // textBox1
+        // 
+        this.textBox1.Location = new System.Drawing.Point(589, 101);
+        this.textBox1.Multiline = true;
+        this.textBox1.Name = "textBox1";
+        this.textBox1.Size = new System.Drawing.Size(221, 100);
+        this.textBox1.TabIndex = 55;
+        // 
         // frmPrestar
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(606, 488);
+        this.ClientSize = new System.Drawing.Size(822, 488);
+        this.Controls.Add(this.textBox1);
+        this.Controls.Add(this.button1);
         this.Controls.Add(this.txtID);
         this.Controls.Add(this.label8);
         this.Controls.Add(this.txtIsbm);
@@ -573,9 +605,12 @@ partial class frmPrestar
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.TextBox textBox1;
+
     public System.Windows.Forms.TextBox txtID;
 
-    private System.Windows.Forms.DateTimePicker dateTimePicker1;
+    private System.Windows.Forms.DateTimePicker dtpPrestamo;
     private System.Windows.Forms.DateTimePicker dateTimePicker2;
     private System.Windows.Forms.DateTimePicker dateTimePicker3;
     private System.Windows.Forms.DateTimePicker dateTimePicker4;
