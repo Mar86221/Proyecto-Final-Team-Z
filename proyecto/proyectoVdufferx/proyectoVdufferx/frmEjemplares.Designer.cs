@@ -31,53 +31,46 @@ namespace proyectoVdufferx
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFiltrarAu = new System.Windows.Forms.Button();
             this.cmbAutores = new System.Windows.Forms.ComboBox();
-            this.btnFiltrarF = new System.Windows.Forms.Button();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             this.cmbFormato = new System.Windows.Forms.ComboBox();
             this.DgvEjemplares = new System.Windows.Forms.DataGridView();
             this.picImagen = new System.Windows.Forms.PictureBox();
-            this.txtImagen = new System.Windows.Forms.TextBox();
             this.txtBuscarTo = new System.Windows.Forms.TextBox();
             this.btnBuscarTo = new System.Windows.Forms.Button();
+            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.grbFiltros = new System.Windows.Forms.GroupBox();
+            this.chbFormato = new System.Windows.Forms.CheckBox();
+            this.chbAutores = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
+            this.grbFiltros.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnFiltrarAu
-            // 
-            this.btnFiltrarAu.Location = new System.Drawing.Point(12, 124);
-            this.btnFiltrarAu.Name = "btnFiltrarAu";
-            this.btnFiltrarAu.Size = new System.Drawing.Size(120, 37);
-            this.btnFiltrarAu.TabIndex = 1;
-            this.btnFiltrarAu.Text = "Filtrar por autor";
-            this.btnFiltrarAu.UseVisualStyleBackColor = true;
-            this.btnFiltrarAu.Click += new System.EventHandler(this.btnFiltrarAu_Click);
             // 
             // cmbAutores
             // 
             this.cmbAutores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAutores.FormattingEnabled = true;
-            this.cmbAutores.Location = new System.Drawing.Point(138, 133);
+            this.cmbAutores.Location = new System.Drawing.Point(110, 19);
             this.cmbAutores.Name = "cmbAutores";
             this.cmbAutores.Size = new System.Drawing.Size(126, 21);
             this.cmbAutores.TabIndex = 2;
             // 
-            // btnFiltrarF
+            // btnFiltrar
             // 
-            this.btnFiltrarF.Location = new System.Drawing.Point(12, 81);
-            this.btnFiltrarF.Name = "btnFiltrarF";
-            this.btnFiltrarF.Size = new System.Drawing.Size(120, 37);
-            this.btnFiltrarF.TabIndex = 3;
-            this.btnFiltrarF.Text = "Filtrar por formato";
-            this.btnFiltrarF.UseVisualStyleBackColor = true;
-            this.btnFiltrarF.Click += new System.EventHandler(this.btnFiltrarF_Click);
+            this.btnFiltrar.Location = new System.Drawing.Point(373, 19);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(120, 21);
+            this.btnFiltrar.TabIndex = 3;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrarF_Click);
             // 
             // cmbFormato
             // 
             this.cmbFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFormato.FormattingEnabled = true;
-            this.cmbFormato.Location = new System.Drawing.Point(138, 90);
+            this.cmbFormato.Location = new System.Drawing.Point(242, 19);
             this.cmbFormato.Name = "cmbFormato";
             this.cmbFormato.Size = new System.Drawing.Size(126, 21);
             this.cmbFormato.TabIndex = 7;
@@ -102,13 +95,6 @@ namespace proyectoVdufferx
             this.picImagen.TabIndex = 8;
             this.picImagen.TabStop = false;
             // 
-            // txtImagen
-            // 
-            this.txtImagen.Location = new System.Drawing.Point(685, 12);
-            this.txtImagen.Name = "txtImagen";
-            this.txtImagen.Size = new System.Drawing.Size(17, 20);
-            this.txtImagen.TabIndex = 9;
-            // 
             // txtBuscarTo
             // 
             this.txtBuscarTo.Location = new System.Drawing.Point(12, 39);
@@ -126,43 +112,84 @@ namespace proyectoVdufferx
             this.btnBuscarTo.UseVisualStyleBackColor = true;
             this.btnBuscarTo.Click += new System.EventHandler(this.btnBuscarNombreCompleto_Click);
             // 
+            // txtImagen
+            // 
+            this.txtImagen.Location = new System.Drawing.Point(876, 122);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(10, 20);
+            this.txtImagen.TabIndex = 12;
+            // 
+            // grbFiltros
+            // 
+            this.grbFiltros.Controls.Add(this.chbFormato);
+            this.grbFiltros.Controls.Add(this.chbAutores);
+            this.grbFiltros.Controls.Add(this.cmbAutores);
+            this.grbFiltros.Controls.Add(this.cmbFormato);
+            this.grbFiltros.Controls.Add(this.btnFiltrar);
+            this.grbFiltros.Location = new System.Drawing.Point(6, 65);
+            this.grbFiltros.Name = "grbFiltros";
+            this.grbFiltros.Size = new System.Drawing.Size(502, 77);
+            this.grbFiltros.TabIndex = 13;
+            this.grbFiltros.TabStop = false;
+            // 
+            // chbFormato
+            // 
+            this.chbFormato.Location = new System.Drawing.Point(6, 46);
+            this.chbFormato.Name = "chbFormato";
+            this.chbFormato.Size = new System.Drawing.Size(104, 24);
+            this.chbFormato.TabIndex = 1;
+            this.chbFormato.Text = "Formato";
+            this.chbFormato.UseVisualStyleBackColor = true;
+            // 
+            // chbAutores
+            // 
+            this.chbAutores.Location = new System.Drawing.Point(6, 16);
+            this.chbAutores.Name = "chbAutores";
+            this.chbAutores.Size = new System.Drawing.Size(104, 24);
+            this.chbAutores.TabIndex = 0;
+            this.chbAutores.Text = "Autores";
+            this.chbAutores.UseVisualStyleBackColor = true;
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(901, 759);
+            this.Controls.Add(this.grbFiltros);
+            this.Controls.Add(this.txtImagen);
             this.Controls.Add(this.btnBuscarTo);
             this.Controls.Add(this.txtBuscarTo);
-            this.Controls.Add(this.txtImagen);
             this.Controls.Add(this.picImagen);
-            this.Controls.Add(this.cmbFormato);
-            this.Controls.Add(this.btnFiltrarF);
-            this.Controls.Add(this.cmbAutores);
-            this.Controls.Add(this.btnFiltrarAu);
             this.Controls.Add(this.DgvEjemplares);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmEjemplares";
-            this.Text = "frmEjemplares";
             this.Load += new System.EventHandler(this.frmEjemplares_Load);
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).EndInit();
+            this.grbFiltros.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.CheckBox chbAutores;
+        private System.Windows.Forms.CheckBox chbFormato;
+
+        private System.Windows.Forms.GroupBox grbFiltros;
+
+        private System.Windows.Forms.TextBox txtImagen;
 
         private System.Windows.Forms.Button btnBuscarTo;
 
         public System.Windows.Forms.TextBox txtBuscarTo;
 
-        private System.Windows.Forms.TextBox txtImagen;
-
         private System.Windows.Forms.PictureBox picImagen;
 
-        public System.Windows.Forms.Button btnFiltrarF;
+        public System.Windows.Forms.Button btnFiltrar;
         public System.Windows.Forms.ComboBox cmbFormato;
 
-        public System.Windows.Forms.Button btnFiltrarAu;
         public System.Windows.Forms.ComboBox cmbAutores;
 
         public System.Windows.Forms.DataGridView DgvEjemplares;

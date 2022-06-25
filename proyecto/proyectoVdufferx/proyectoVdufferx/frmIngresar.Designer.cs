@@ -80,7 +80,6 @@ namespace proyectoVdufferx
             this.txtCorreo.Size = new System.Drawing.Size(259, 19);
             this.txtCorreo.TabIndex = 59;
             this.txtCorreo.Tag = "Cor";
-            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // pictureBox7
             // 
