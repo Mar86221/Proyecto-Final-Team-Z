@@ -663,8 +663,9 @@ INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, 
 
 SELECT id, nombre FROM AREA
 
+DELETE EVENTO FROM EVENTO WHERE EVENTO.titulo = 's'
 
-ddd
+SELECT * FROM USUARIO
 
 
 

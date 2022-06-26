@@ -35,6 +35,8 @@ partial class frmEventos
         this.picImagen = new System.Windows.Forms.PictureBox();
         this.txtImagen = new System.Windows.Forms.TextBox();
         this.btnInsertar = new System.Windows.Forms.Button();
+        this.txtTituloEliminar = new System.Windows.Forms.TextBox();
+        this.btnEliminar = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
         this.SuspendLayout();
@@ -74,11 +76,30 @@ partial class frmEventos
         this.btnInsertar.UseVisualStyleBackColor = true;
         this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
         // 
+        // txtTituloEliminar
+        // 
+        this.txtTituloEliminar.Location = new System.Drawing.Point(644, 432);
+        this.txtTituloEliminar.Name = "txtTituloEliminar";
+        this.txtTituloEliminar.Size = new System.Drawing.Size(10, 20);
+        this.txtTituloEliminar.TabIndex = 5;
+        // 
+        // btnEliminar
+        // 
+        this.btnEliminar.Location = new System.Drawing.Point(184, 45);
+        this.btnEliminar.Name = "btnEliminar";
+        this.btnEliminar.Size = new System.Drawing.Size(101, 20);
+        this.btnEliminar.TabIndex = 6;
+        this.btnEliminar.Text = "Eliminar";
+        this.btnEliminar.UseVisualStyleBackColor = true;
+        this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+        // 
         // frmEventos
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(936, 480);
+        this.Controls.Add(this.btnEliminar);
+        this.Controls.Add(this.txtTituloEliminar);
         this.Controls.Add(this.btnInsertar);
         this.Controls.Add(this.txtImagen);
         this.Controls.Add(this.picImagen);
@@ -91,6 +112,10 @@ partial class frmEventos
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnEliminar;
+
+    public System.Windows.Forms.TextBox txtTituloEliminar;
 
     private System.Windows.Forms.Button btnInsertar;
 
