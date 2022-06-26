@@ -12,7 +12,6 @@ public partial class frmEjemplarEditar : Form
         InitializeComponent();
     }
 
-
     private void picEditarEjemplar_Click(object sender, EventArgs e)
     {
         static bool ActualizarEjemplar(ejemplar ejemplar)
@@ -45,17 +44,17 @@ public partial class frmEjemplarEditar : Form
         }
 
         ejemplar ejemplar = new ejemplar();
-        ejemplar.id = Convert.ToInt32(txtIdEjemplarEditar.Text);
+        ejemplar.id = Convert.ToInt32(txtIdEliminarE.Text);
         ejemplar.nombre = txtNombreE.Text;
         ejemplar.Palabras_claves = TxtPalabrasClavesE.Text;
 
-        if (ActualizarEjemplar(ejemplar))
-        {
-            MessageBox.Show("Actualizada con exito");
-        }
-        else
-        {
-            MessageBox.Show("Ha ocurrido un error");
-        }
+        ActualizarEjemplar(ejemplar);
+        /*  {
+              MessageBox.Show("Actualizada con exito");
+          }
+          else
+          {
+              MessageBox.Show("Ha ocurrido un error");
+          }*/
     }
 }

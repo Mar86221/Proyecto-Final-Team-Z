@@ -34,7 +34,7 @@ namespace proyectoVdufferx
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEjemplares = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEventos = new System.Windows.Forms.Button();
             this.picTuprestamo = new System.Windows.Forms.PictureBox();
             this.picTucuenta = new System.Windows.Forms.PictureBox();
             this.grpTuCuenta = new System.Windows.Forms.GroupBox();
@@ -86,15 +86,16 @@ namespace proyectoVdufferx
             this.btnEjemplares.UseVisualStyleBackColor = true;
             this.btnEjemplares.Click += new System.EventHandler(this.btnEjemplares_Click);
             // 
-            // button1
+            // btnEventos
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image) (resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(481, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 80);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.Image = ((System.Drawing.Image) (resources.GetObject("btnEventos.Image")));
+            this.btnEventos.Location = new System.Drawing.Point(481, 292);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(250, 80);
+            this.btnEventos.TabIndex = 4;
+            this.btnEventos.UseVisualStyleBackColor = true;
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
             // picTuprestamo
             // 
@@ -247,9 +248,9 @@ namespace proyectoVdufferx
             this.grpTuPrestamo.Controls.Add(this.txtTuprestamoFechaP);
             this.grpTuPrestamo.Controls.Add(this.txtTuprestamoNombreE);
             this.grpTuPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpTuPrestamo.Location = new System.Drawing.Point(208, 46);
+            this.grpTuPrestamo.Location = new System.Drawing.Point(294, 46);
             this.grpTuPrestamo.Name = "grpTuPrestamo";
-            this.grpTuPrestamo.Size = new System.Drawing.Size(339, 230);
+            this.grpTuPrestamo.Size = new System.Drawing.Size(261, 265);
             this.grpTuPrestamo.TabIndex = 10;
             this.grpTuPrestamo.TabStop = false;
             // 
@@ -257,7 +258,7 @@ namespace proyectoVdufferx
             // 
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(11, 158);
+            this.label6.Location = new System.Drawing.Point(12, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 14);
             this.label6.TabIndex = 15;
@@ -267,7 +268,7 @@ namespace proyectoVdufferx
             // 
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(11, 84);
+            this.label5.Location = new System.Drawing.Point(12, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 14);
             this.label5.TabIndex = 14;
@@ -288,12 +289,12 @@ namespace proyectoVdufferx
             this.txtTuprestamoFechaD.BackColor = System.Drawing.SystemColors.Window;
             this.txtTuprestamoFechaD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTuprestamoFechaD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtTuprestamoFechaD.Location = new System.Drawing.Point(6, 176);
+            this.txtTuprestamoFechaD.Location = new System.Drawing.Point(12, 200);
             this.txtTuprestamoFechaD.Multiline = true;
             this.txtTuprestamoFechaD.Name = "txtTuprestamoFechaD";
             this.txtTuprestamoFechaD.ReadOnly = true;
             this.txtTuprestamoFechaD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTuprestamoFechaD.Size = new System.Drawing.Size(327, 44);
+            this.txtTuprestamoFechaD.Size = new System.Drawing.Size(243, 54);
             this.txtTuprestamoFechaD.TabIndex = 10;
             // 
             // txtTuprestamoFechaP
@@ -301,12 +302,12 @@ namespace proyectoVdufferx
             this.txtTuprestamoFechaP.BackColor = System.Drawing.SystemColors.Window;
             this.txtTuprestamoFechaP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTuprestamoFechaP.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtTuprestamoFechaP.Location = new System.Drawing.Point(12, 101);
+            this.txtTuprestamoFechaP.Location = new System.Drawing.Point(12, 115);
             this.txtTuprestamoFechaP.Multiline = true;
             this.txtTuprestamoFechaP.Name = "txtTuprestamoFechaP";
             this.txtTuprestamoFechaP.ReadOnly = true;
             this.txtTuprestamoFechaP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTuprestamoFechaP.Size = new System.Drawing.Size(321, 51);
+            this.txtTuprestamoFechaP.Size = new System.Drawing.Size(243, 48);
             this.txtTuprestamoFechaP.TabIndex = 10;
             // 
             // txtTuprestamoNombreE
@@ -319,7 +320,7 @@ namespace proyectoVdufferx
             this.txtTuprestamoNombreE.Name = "txtTuprestamoNombreE";
             this.txtTuprestamoNombreE.ReadOnly = true;
             this.txtTuprestamoNombreE.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTuprestamoNombreE.Size = new System.Drawing.Size(321, 46);
+            this.txtTuprestamoNombreE.Size = new System.Drawing.Size(243, 63);
             this.txtTuprestamoNombreE.TabIndex = 10;
             // 
             // MAIN
@@ -334,7 +335,7 @@ namespace proyectoVdufferx
             this.Controls.Add(this.grpTuCuenta);
             this.Controls.Add(this.picTucuenta);
             this.Controls.Add(this.picTuprestamo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEventos);
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MAIN";
@@ -391,7 +392,7 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.Button btnEjemplares;
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEventos;
 
         private System.Windows.Forms.PictureBox picTucuenta;
 

@@ -120,5 +120,12 @@ namespace proyectoVdufferx
         {
             grpTuPrestamo.Show();
         }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            frmEventos frev = new frmEventos();
+            frev.ShowDialog();
+            
+        }
     }
 }
