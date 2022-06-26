@@ -34,7 +34,7 @@ namespace proyectoVdufferx
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEjemplares = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEventos = new System.Windows.Forms.Button();
             this.picTuprestamo = new System.Windows.Forms.PictureBox();
             this.picTucuenta = new System.Windows.Forms.PictureBox();
             this.grpTuCuenta = new System.Windows.Forms.GroupBox();
@@ -86,15 +86,16 @@ namespace proyectoVdufferx
             this.btnEjemplares.UseVisualStyleBackColor = true;
             this.btnEjemplares.Click += new System.EventHandler(this.btnEjemplares_Click);
             // 
-            // button1
+            // btnEventos
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image) (resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(481, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 80);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventos.Image = ((System.Drawing.Image) (resources.GetObject("btnEventos.Image")));
+            this.btnEventos.Location = new System.Drawing.Point(481, 292);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(250, 80);
+            this.btnEventos.TabIndex = 4;
+            this.btnEventos.UseVisualStyleBackColor = true;
+            this.btnEventos.Click += new System.EventHandler(this.btnEventos_Click);
             // 
             // picTuprestamo
             // 
@@ -334,7 +335,7 @@ namespace proyectoVdufferx
             this.Controls.Add(this.grpTuCuenta);
             this.Controls.Add(this.picTucuenta);
             this.Controls.Add(this.picTuprestamo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEventos);
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MAIN";
@@ -391,7 +392,7 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.Button btnEjemplares;
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEventos;
 
         private System.Windows.Forms.PictureBox picTucuenta;
 

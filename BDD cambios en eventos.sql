@@ -4,13 +4,12 @@ DROP DATABASE BINAES_BDD
 ---------------------------------------
 ---------------------------------------
 CREATE TABLE EVENTO  (
-	id int primary key NOT NULL,
+	id int IDENTITY(1,1) primary key NOT NULL,
+	imagen VARCHAR(200) NOT NULL,
 	titulo VARCHAR(200) NOT NULL,	
-	hora_inicio TIME  NOT NULL,
-	hora_finalizacion TIME NOT NULL,
 	cant_asistentes INT NOT NULL,
-	fecha_inicio DATE NOT NULL,
-	fecha_final DATE NOT NULL
+	fecha_inicio DATETIME NOT NULL,
+	fecha_final DATETIME NOT NULL
 		);
 
 CREATE TABLE IMAGEN_EVENTO (
@@ -42,7 +41,7 @@ CREATE TABLE AREA (
 CREATE TABLE AREAXEVENTO (
 	id int primary key NOT NULL,
 	id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
-	id_evento int NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id)
+	id_evento int IDENTITY(1,1) NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id)
 		);
 -------------------------------------------------------
 CREATE TABLE GENERO (
@@ -403,7 +402,7 @@ INSERT INTO EJEMPLAR (id, nombre, Palabras_claves, fecha_publicacion, id_colecci
             (34,'EL PRINCIPITO','PRINCIPITO',CONVERT(DATE,'6/4/1943',103),16,5,1,1,'9788418174193'),
             (35,'DRACULA','DRACULA',CONVERT(DATE,'26/5/1897',103),16,17,1,1,'9780593203385'),
             (36, 'WIGETTA Y EL CUENTO JAMAS CONTADO ', 'VEGETA, WILLY, CUENTO, JAMAS, CONTADO, WIGETTA',CONVERT(DATE, '23/10/2018',103),14,14,1,1,'9786070745607'),
-            (37,'WIGETTA Y EL BACULO DORADA','WIGETTA, BACULO, DORADO,',CONVERT(DATE,'9/2/2016',103),14,14,1,2,'9786070731556'),
+            (37,'WIGETTA Y EL BACULO DORADA','WIGETTA, BACULO, DORADO',CONVERT(DATE,'9/2/2016',103),14,14,1,2,'9786070731556'),
             (38,'WIGETTA EN EL PLANETA MIMISIKÚ ', 'VEGETA, WILLY, PLANETA, MIMISIKÚ, WIGETTA',CONVERT(DATE, '15/3/2017',103),14,14,1,2,'9786070740169'),
             (39,'WIGETTA Y LA ISLA DE MUMUCHUMU','WIGETTA,ISLA,DE,MUMUCHUMU',CONVERT(DATE,'18/12/2018',103),14,14,1,2,'9786070754692'),
             (40,'FRANKENSTEIN','FRANKENSTEIN',CONVERT(DATE, '1/1/1918',103),16,16,1,1,'9788418145155'),
@@ -628,7 +627,7 @@ WHERE AUTOR.nombre_autor = 'VEGETTA777' AND FORMATO.formato = 'Digital' OR AUTOR
 SELECT * FROM USUARIO
 
 SELECT id_ejemplar FROM RESERVA INNER JOIN EJEMPLAR ON RESERVA.id_ejemplar = EJEMPLAR.id
-SELECT id from EJEMPLAR where EJEMPLAR.nombre = 'WIGETTA Y EL BACULO DORADA'
+SELECT * from EJEMPLAR where EJEMPLAR.nombre = 'WIGETTA Y EL BACULO DORADAS'
 
 
 
@@ -644,3 +643,19 @@ SELECT * FROM PRESTA
 
 SELECT * FROM RESERVA
 
+UPDATE EJEMPLAR 
+SET nombre = 'WIGETTA Y EL BACULO DORADAS' , palabras_claves = 'WIGETTA, BACULO, DORADO, VEGETA', id_idioma = 1, id_formato = 1
+WHERE EJEMPLAR.id = 37
+
+SELECT id
+FROM COLECCION
+
+SELECT * FROM EVENTO
+
+INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final) VALUES (@imagen, @titulo, @cant_asistentes, @fecha_inicio, @fecha_final)
+
+SELECT EVENTO.imagen, EVENTO.titulo, EVENTO.cant_asistentes, EVENTO.fecha_inicio, EVENTO.fecha_final, AREA.nombre  FROM EVENTO INNER JOIN AREAXEVENTO ON AREAXEVENTO.id_evento = EVENTO.id INNER JOIN AREA ON AREAXEVENTO.id_area = AREA.id
+
+INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final) VALUES ('test', 'test', 3,'06/25/2022', '06/30/2022')
+
+INSERT INTO AREAXEVENTO (id, id_area) VALUES (1,1)
