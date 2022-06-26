@@ -27,4 +27,11 @@ public partial class frmEventos : Form
         txtImagen.Text = nombre;
         picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
     }
+    
+    private void btnInsertar_Click(object sender, EventArgs e)
+    {
+        frmNuevoEvento frnuev = new frmNuevoEvento();
+        frnuev.Show();
+        this.Close();
+    }
 }

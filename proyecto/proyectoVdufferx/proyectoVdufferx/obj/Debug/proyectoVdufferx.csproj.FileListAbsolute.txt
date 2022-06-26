@@ -231,3 +231,7 @@ C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\p
 C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CopyComplete
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEventos.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEventos.resources
+C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEventos.resources
+C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources

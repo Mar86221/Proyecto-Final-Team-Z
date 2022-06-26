@@ -57,6 +57,8 @@
         <Reference Include="WindowsBase" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="area.cs" />
+        <Compile Include="areaDAO.cs" />
         <Compile Include="autor.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
@@ -72,6 +74,12 @@
         </Compile>
         <Compile Include="frmCarnetU.Designer.cs">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEjemplarEditar.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEjemplarEditar.Designer.cs">
+          <DependentUpon>frmEjemplarEditar.cs</DependentUpon>
         </Compile>
         <Compile Include="frmEjemplares.cs">
           <SubType>Form</SubType>
@@ -96,6 +104,12 @@
         </Compile>
         <Compile Include="frmIngresar.Designer.cs">
           <DependentUpon>frmIngresar.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmNuevoEvento.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmNuevoEvento.Designer.cs">
+          <DependentUpon>frmNuevoEvento.cs</DependentUpon>
         </Compile>
         <Compile Include="frmPrestar.cs">
           <SubType>Form</SubType>
@@ -138,6 +152,9 @@
         <EmbeddedResource Include="frmCarnetU.resx">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="frmEjemplarEditar.resx">
+          <DependentUpon>frmEjemplarEditar.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
         </EmbeddedResource>
@@ -149,6 +166,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmIngresar.resx">
           <DependentUpon>frmIngresar.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmNuevoEvento.resx">
+          <DependentUpon>frmNuevoEvento.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmPrestar.resx">
           <DependentUpon>frmPrestar.cs</DependentUpon>

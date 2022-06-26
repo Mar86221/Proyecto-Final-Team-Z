@@ -31,12 +31,12 @@ CREATE TABLE EVENTO  (
 	fecha_final DATETIME NOT NULL,
 	id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
 		);
-
+/*
 CREATE TABLE IMAGEN_EVENTO (
 	id int primary key NOT NULL,
 	imagen IMAGE NOT NULL,
 	id_evento int NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id),
-		);
+		);*/
 ----------------------------------------------
 
 ----------------------------------------------------
@@ -660,6 +660,11 @@ INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, 
 SELECT EVENTO.imagen, EVENTO.titulo, EVENTO.cant_asistentes, EVENTO.fecha_inicio, EVENTO.fecha_final, AREA.nombre  FROM EVENTO INNER JOIN AREA ON EVENTO.id_area = AREA.id
 
 INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, id_area) VALUES ('Braile.png', 'Braile', 2, '06/25/2022', '06/25/2022', 1)
+
+SELECT id, nombre FROM AREA
+
+
+ddd
 
 
 

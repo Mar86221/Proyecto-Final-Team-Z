@@ -85,6 +85,8 @@ namespace proyectoVdufferx
         
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
+          //  txtIdEjemplarEliminar.Hide();
+          //  txtEliminarEJemplar.Hide();
             txtCorreoEj.Hide();
             txtPrestar.Hide();
             txtImagen.Hide();
@@ -129,6 +131,10 @@ namespace proyectoVdufferx
             nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
             txtImagen.Text = nombre;
             picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+            ///
+            string nombreejemplar;
+            nombreejemplar = DgvEjemplares.Rows[renglon].Cells["nombre"].Value.ToString();
+            txtEliminarEJemplar.Text = nombreejemplar;
         }
 
         int renglonprestar;
@@ -151,6 +157,185 @@ namespace proyectoVdufferx
             frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
             frmp.ShowDialog();
            
+        }
+
+        private void picEliminarEjemplar_Click(object sender, EventArgs e)
+        {
+            if (txtIdEjemplarEliminar.Text.Length > 0)
+            {
+                
+            }
+            else
+            {
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "SELECT id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @iduser";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@iduser", Convert.ToString(txtEliminarEJemplar.Text));
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int idu = Convert.ToInt32(reader["id"].ToString());
+                            txtIdEjemplarEliminar.AppendText(idu.ToString());
+                        }
+                    }
+
+                    connection.Close();
+                }
+            }
+        }
+
+        private void picEliminarEjemplar_DoubleClick(object sender, EventArgs e)
+        {
+            static bool eliminarEjemplarxatuor(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query =
+                            "DELETE EJEMPLARXAUTOR FROM EJEMPLARXAUTOR WHERE EJEMPLARXAUTOR.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarImagenEjemplar(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query =
+                            "DELETE IMAGEN_EJEMPLAR FROM IMAGEN_EJEMPLAR WHERE IMAGEN_EJEMPLAR.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarEjemplarPresta(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query = "DELETE PRESTA FROM PRESTA WHERE PRESTA.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarEjemplar(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query = "DELETE EJEMPLAR FROM EJEMPLAR WHERE EJEMPLAR.id = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+            
+            eliminarEjemplarxatuor(Convert.ToInt32(txtIdEjemplarEliminar.Text));
+            eliminarImagenEjemplar(Convert.ToInt32(txtIdEjemplarEliminar.Text));
+            eliminarEjemplarPresta(Convert.ToInt32(txtIdEjemplarEliminar.Text));
+            eliminarEjemplar(Convert.ToInt32(txtIdEjemplarEliminar.Text));
+
+            MessageBox.Show("Eliminado con exito");
+        }
+
+        private void picEditarEjemplar_Click(object sender, EventArgs e)
+        {
+            if (txtIdEjemplarEliminar.Text.Length > 0)
+            {
+               
+            }
+            else
+            {
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "SELECT id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @iduser";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@iduser", Convert.ToString(txtEliminarEJemplar.Text));
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int idu = Convert.ToInt32(reader["id"].ToString());
+                            txtIdEjemplarEliminar.AppendText(idu.ToString());
+                        }
+                    }
+
+                    connection.Close();
+                }
+                
+                frmEjemplarEditar otraventana = new frmEjemplarEditar();
+                otraventana.Show();
+                otraventana.txtIdEliminarE.Text = txtIdEjemplarEliminar.Text;
+            }
+            
         }
     }
 }

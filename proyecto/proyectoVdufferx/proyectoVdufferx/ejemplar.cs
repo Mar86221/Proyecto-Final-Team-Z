@@ -2,6 +2,7 @@ namespace proyectoVdufferx
 {
     public class ejemplar
     {
+        public int id { get; set; }
         public string etiqueta { get; set; }     
         public string nombre { get; set; }
         public string Palabras_claves { get; set; }
