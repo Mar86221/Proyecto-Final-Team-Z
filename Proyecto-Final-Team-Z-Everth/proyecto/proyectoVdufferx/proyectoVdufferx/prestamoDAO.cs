@@ -7,8 +7,6 @@ namespace proyectoVdufferx;
 
 public class prestamoDAO
 {
-    
-    
     public static bool CrearNuevo(prestamo p)
     {
         bool exito = true;

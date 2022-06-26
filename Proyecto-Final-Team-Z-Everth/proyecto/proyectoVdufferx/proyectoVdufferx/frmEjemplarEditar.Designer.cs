@@ -117,6 +117,7 @@ partial class frmEjemplarEditar
         this.Controls.Add(this.label4);
         this.Controls.Add(this.TxtPalabrasClavesE);
         this.Controls.Add(this.txtNombreE);
+        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         this.MaximizeBox = false;
         this.Name = "frmEjemplarEditar";
         this.Text = "frmEjemplarEditar";

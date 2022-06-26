@@ -58,6 +58,8 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="autor.cs" />
+        <Compile Include="Coleccion.cs" />
+        <Compile Include="Editorial.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
         <Compile Include="ejemplarmain.cs" />
@@ -84,6 +86,12 @@
         </Compile>
         <Compile Include="frmEjemplares.Designer.cs">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEjemplarInsertar.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEjemplarInsertar.Designer.cs">
+          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
         </Compile>
         <Compile Include="frmEventos.cs">
           <SubType>Form</SubType>
@@ -115,6 +123,7 @@
         <Compile Include="frmRegistro.Designer.cs">
           <DependentUpon>frmRegistro.cs</DependentUpon>
         </Compile>
+        <Compile Include="Idioma.cs" />
         <Compile Include="imagenejemplar.cs" />
         <Compile Include="Imagen_ejemplar.cs" />
         <Compile Include="Imagen_ejemplarDAO.cs" />
@@ -149,6 +158,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmEjemplarInsertar.resx">
+          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEventos.resx">
           <DependentUpon>frmEventos.cs</DependentUpon>

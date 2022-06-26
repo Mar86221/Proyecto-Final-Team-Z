@@ -337,5 +337,11 @@ namespace proyectoVdufferx
             }
             
         }
+
+        private void PicInsertarE_Click(object sender, EventArgs e)
+        {
+            frmEjemplarInsertar otraventana = new frmEjemplarInsertar();
+            otraventana.Show();
+        }
     }
 }
