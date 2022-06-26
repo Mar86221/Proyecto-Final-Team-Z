@@ -53,9 +53,9 @@ public class eventosDAO
             {
                 while (reader.Read())
                 { 
-                    string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Eventos\" + reader["imagen"].ToString();
+                    //string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Eventos\" + reader["imagen"].ToString();
                     eventomain evento = new eventomain();
-                    evento.imagen = ruta;
+                    evento.imagen = reader["imagen"].ToString();
                     evento.titulo = reader["titulo"].ToString();
                     evento.cant_asistentes = Convert.ToInt32(reader["cant_asistentes"].ToString());
                     evento.fecha_inicio = Convert.ToDateTime(reader["fecha_inicio"].ToString());

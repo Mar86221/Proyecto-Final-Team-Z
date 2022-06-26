@@ -54,9 +54,12 @@ namespace proyectoVdufferx
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrestar = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.picEditarEjemplar = new System.Windows.Forms.PictureBox();
+            this.picEliminarEjemplar = new System.Windows.Forms.PictureBox();
             this.txtCorreoEj = new System.Windows.Forms.TextBox();
+            this.txtEliminarEJemplar = new System.Windows.Forms.TextBox();
+            this.txtIdEjemplarEliminar = new System.Windows.Forms.TextBox();
+            this.PicInsertarE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -69,8 +72,8 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picBuscarTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEditarEjemplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEliminarEjemplar)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvEjemplares
@@ -291,25 +294,28 @@ namespace proyectoVdufferx
             this.txtPrestar.TabIndex = 89;
             this.txtPrestar.Tag = "Cor";
             // 
-            // pictureBox4
+            // picEditarEjemplar
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(101, 622);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(113, 35);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 90;
-            this.pictureBox4.TabStop = false;
+            this.picEditarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("picEditarEjemplar.Image")));
+            this.picEditarEjemplar.Location = new System.Drawing.Point(214, 622);
+            this.picEditarEjemplar.Name = "picEditarEjemplar";
+            this.picEditarEjemplar.Size = new System.Drawing.Size(113, 35);
+            this.picEditarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picEditarEjemplar.TabIndex = 90;
+            this.picEditarEjemplar.TabStop = false;
+            this.picEditarEjemplar.Click += new System.EventHandler(this.picEditarEjemplar_Click);
             // 
-            // pictureBox6
+            // picEliminarEjemplar
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(276, 622);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(113, 35);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 91;
-            this.pictureBox6.TabStop = false;
+            this.picEliminarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("picEliminarEjemplar.Image")));
+            this.picEliminarEjemplar.Location = new System.Drawing.Point(351, 622);
+            this.picEliminarEjemplar.Name = "picEliminarEjemplar";
+            this.picEliminarEjemplar.Size = new System.Drawing.Size(113, 35);
+            this.picEliminarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picEliminarEjemplar.TabIndex = 91;
+            this.picEliminarEjemplar.TabStop = false;
+            this.picEliminarEjemplar.Click += new System.EventHandler(this.picEliminarEjemplar_Click);
+            this.picEliminarEjemplar.DoubleClick += new System.EventHandler(this.picEliminarEjemplar_DoubleClick);
             // 
             // txtCorreoEj
             // 
@@ -318,15 +324,43 @@ namespace proyectoVdufferx
             this.txtCorreoEj.Size = new System.Drawing.Size(177, 20);
             this.txtCorreoEj.TabIndex = 92;
             // 
+            // txtEliminarEJemplar
+            // 
+            this.txtEliminarEJemplar.Location = new System.Drawing.Point(596, 613);
+            this.txtEliminarEJemplar.Name = "txtEliminarEJemplar";
+            this.txtEliminarEJemplar.Size = new System.Drawing.Size(83, 20);
+            this.txtEliminarEJemplar.TabIndex = 93;
+            this.txtEliminarEJemplar.Text = "FSDFSDF";
+            // 
+            // txtIdEjemplarEliminar
+            // 
+            this.txtIdEjemplarEliminar.Location = new System.Drawing.Point(685, 613);
+            this.txtIdEjemplarEliminar.Name = "txtIdEjemplarEliminar";
+            this.txtIdEjemplarEliminar.Size = new System.Drawing.Size(83, 20);
+            this.txtIdEjemplarEliminar.TabIndex = 94;
+            // 
+            // PicInsertarE
+            // 
+            this.PicInsertarE.Location = new System.Drawing.Point(59, 623);
+            this.PicInsertarE.Name = "PicInsertarE";
+            this.PicInsertarE.Size = new System.Drawing.Size(121, 34);
+            this.PicInsertarE.TabIndex = 95;
+            this.PicInsertarE.Text = "Insertar";
+            this.PicInsertarE.UseVisualStyleBackColor = true;
+            this.PicInsertarE.Click += new System.EventHandler(this.PicInsertarE_Click);
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 696);
+            this.Controls.Add(this.PicInsertarE);
+            this.Controls.Add(this.txtIdEjemplarEliminar);
+            this.Controls.Add(this.txtEliminarEJemplar);
             this.Controls.Add(this.txtCorreoEj);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.picEliminarEjemplar);
+            this.Controls.Add(this.picEditarEjemplar);
             this.Controls.Add(this.txtPrestar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -364,17 +398,23 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picBuscarTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEditarEjemplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEliminarEjemplar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.Button PicInsertarE;
+
+        public System.Windows.Forms.TextBox txtIdEjemplarEliminar;
+
+        public System.Windows.Forms.TextBox txtEliminarEJemplar;
+
         public System.Windows.Forms.TextBox txtCorreoEj;
 
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox picEliminarEjemplar;
 
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picEditarEjemplar;
 
         public System.Windows.Forms.TextBox txtPrestar;
 
