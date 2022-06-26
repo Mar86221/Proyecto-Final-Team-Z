@@ -99,5 +99,33 @@ namespace proyectoVdufferx
 
         }
 
+        public static bool Actualizarejemplar(ejemplar ejemplar)
+        {
+            bool exito = true;
+            try
+            {
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "UPDATE EJEMPLAR" +
+                                   "SET nombre = @nuevonombre, Palabras_claves = @nuevaspalabrasclaves" +
+                                   "WHERE EJEMPLAR.id = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@nuevonombre", ejemplar.nombre);
+                    command.Parameters.AddWithValue("@nuevaspalabrasclaves", ejemplar.Palabras_claves);
+                    command.Parameters.AddWithValue("id", ejemplar.id);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ee)
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
     }
 }

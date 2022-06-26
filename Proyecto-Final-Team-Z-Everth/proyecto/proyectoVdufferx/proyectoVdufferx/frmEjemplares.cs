@@ -10,15 +10,17 @@ using Image = System.Windows.Controls.Image;
 
 namespace proyectoVdufferx
 {
-    
+
     public partial class frmEjemplares : Form
     {
+        public ejemplar ejemplar { get; set; }
+
         public frmEjemplares()
         {
             InitializeComponent();
         }
-        
-        
+
+
         public static List<ejemplarmain> FiltrarTOT(string todo)
         {
             string cadena = Resources.cadena_conexion;
@@ -35,8 +37,9 @@ namespace proyectoVdufferx
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
-                    { 
-                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
+                    {
+                        string ruta = System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" +
+                                      reader["imagen"].ToString();
                         ejemplarmain ejemplarm = new ejemplarmain();
                         ejemplarm.imagen = ruta;
                         ejemplarm.nombre = reader["nombre"].ToString();
@@ -50,6 +53,7 @@ namespace proyectoVdufferx
 
             return lista;
         }
+
         public static List<ejemplarmain> Filtros(string autor, string formato)
         {
             string cadena = Resources.cadena_conexion;
@@ -67,8 +71,9 @@ namespace proyectoVdufferx
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
-                    { 
-                        string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + reader["imagen"].ToString();
+                    {
+                        string ruta = System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" +
+                                      reader["imagen"].ToString();
                         ejemplarmain ejemplarm = new ejemplarmain();
                         ejemplarm.imagen = ruta;
                         ejemplarm.nombre = reader["nombre"].ToString();
@@ -82,9 +87,12 @@ namespace proyectoVdufferx
 
             return lista;
         }
-        
+
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
+            txtIdEjemplar.Hide();
+            txtEjemplarEliminar.Hide();
+            txtCorreoEj.Hide();
             txtPrestar.Hide();
             txtImagen.Hide();
             DgvEjemplares.DataSource = null;
@@ -103,9 +111,8 @@ namespace proyectoVdufferx
             cmbFormato.DisplayMember = "formato";
             cmbFormato.DataSource = ejemplarDAO.ObtenerFormatos();
             ///
-            
         }
-        
+
         private void picFiltrar_Click(object sender, EventArgs e)
         {
             DgvEjemplares.DataSource = null;
@@ -121,6 +128,8 @@ namespace proyectoVdufferx
         }
 
         int renglon;
+        int rengloneliminar;
+
         private void DgvEjemplares_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             renglon = e.RowIndex;
@@ -128,9 +137,15 @@ namespace proyectoVdufferx
             nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
             txtImagen.Text = nombre;
             picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+            ///
+            rengloneliminar = e.RowIndex;
+            string nombreejemplar;
+            nombreejemplar = DgvEjemplares.Rows[renglon].Cells["nombre"].Value.ToString();
+            txtEjemplarEliminar.Text = nombreejemplar;
         }
 
         int renglonprestar;
+
         private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             renglonprestar = e.RowIndex;
@@ -139,6 +154,7 @@ namespace proyectoVdufferx
             txtPrestar.Text = nombreprestar;
             frmPrestar frmp = new frmPrestar();
             frmp.txtNombreEjemplar.Text = nombreprestar;
+            frmp.txtCorreoU.Text = txtCorreoEj.Text; /////////////////////////////////
             renglon = e.RowIndex;
             string nombre;
             nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
@@ -146,7 +162,166 @@ namespace proyectoVdufferx
             picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
             frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
             frmp.ShowDialog();
-           
+        }
+
+        private void PicEliminarE_Click(object sender, EventArgs e)
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query =
+                    "SELECT id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @iduser";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@iduser", Convert.ToString(txtEjemplarEliminar.Text));
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int idu = Convert.ToInt32(reader["id"].ToString());
+                        txtIdEjemplar.AppendText(idu.ToString());
+                    }
+                }
+
+                connection.Close();
+            }
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "DELETE PRESTA FROM PRESTA WHERE PRESTA.id_ejemplar = @idejemplarbuscado";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@idejemplarbuscado", txtIdEjemplar.Text);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            
+        }
+
+        private void PicEliminarE_DoubleClick(object sender, EventArgs e)
+        {
+            static bool eliminarEjemplarxatuor(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query =
+                            "DELETE EJEMPLARXAUTOR FROM EJEMPLARXAUTOR WHERE EJEMPLARXAUTOR.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarImagenEjemplar(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query =
+                            "DELETE IMAGEN_EJEMPLAR FROM IMAGEN_EJEMPLAR WHERE IMAGEN_EJEMPLAR.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarEjemplarPresta(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query = "DELETE PRESTA FROM PRESTA WHERE PRESTA.id_ejemplar = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+
+            static bool eliminarEjemplar(int id)
+            {
+                bool exito = true;
+                try
+                {
+                    string cadena = Resources.cadena_conexion;
+                    using (SqlConnection connection = new SqlConnection(cadena))
+                    {
+                        string query = "DELETE EJEMPLAR FROM EJEMPLAR WHERE EJEMPLAR.id = @idejemplarbuscado";
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@idejemplarbuscado", id);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+                catch (Exception e)
+                {
+                    exito = false;
+                }
+
+                return exito;
+            }
+            
+            eliminarEjemplarxatuor(Convert.ToInt32(txtIdEjemplar.Text));
+            eliminarImagenEjemplar(Convert.ToInt32(txtIdEjemplar.Text));
+            eliminarEjemplarPresta(Convert.ToInt32(txtIdEjemplar.Text));
+            eliminarEjemplar(Convert.ToInt32(txtIdEjemplar.Text));
+
+            MessageBox.Show("Eliminado con exito");
+        }
+
+
+        private void picEditarEjemplar_Click(object sender, EventArgs e)
+        {
+            frmEjemplarEditar otraventana = new frmEjemplarEditar();
+            otraventana.Show();
+            otraventana.txtIdEjemplarEditar.Text = txtIdEjemplar.Text;
         }
     }
 }
+
+    
+

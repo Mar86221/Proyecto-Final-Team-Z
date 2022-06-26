@@ -229,3 +229,5 @@ C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\p
 C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\proyectoVdufferx.pdb
 C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\bin\Debug\QRCoder.dll
 C:\Users\Groot\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.CopyComplete
+C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmPrestar.resources
+C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources

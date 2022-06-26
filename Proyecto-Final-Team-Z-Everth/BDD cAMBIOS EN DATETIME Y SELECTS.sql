@@ -146,15 +146,16 @@ CREATE TABLE USUARIO (
 
 ----------------------------------------------------------
 CREATE TABLE PRESTA (
-	id int primary key NOT NULL,
+	id int IDENTITY(1,1) primary key NOT NULL,
 	id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
 	id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
+	fecha_prestamo DATETIME NOT NULL,
     fecha_devolucion DATETIME NOT NULL,
-    fecha_prestamo DATETIME NOT NULL,
+    
 		);
 
 CREATE TABLE RESERVA (
-	id int primary key NOT NULL,
+	id int IDENTITY(1,1) primary key NOT NULL,
 	id_usuario int NOT NULL FOREIGN KEY (id_usuario) REFERENCES USUARIO (id),
 	id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
     fecha_reserva DATETIME NOT NULL,
@@ -631,7 +632,15 @@ SELECT id from EJEMPLAR where EJEMPLAR.nombre = 'WIGETTA Y EL BACULO DORADA'
 
 
 
-INSERT INTO RESERVA(id, id_usuario, id_ejemplar, fecha_reserva, fecha_devolucion) VALUES(1,1,1, '06/25/2022 11:55', '06/30/2022 11:55')
+INSERT INTO RESERVA(id_usuario, id_ejemplar, fecha_reserva, fecha_devolucion) VALUES(1,1, '06/25/2022 11:55', '06/30/2022 11:55')
+INSERT INTO PRESTA(id_usuario, id_ejemplar, fecha_prestamo, fecha_devolucion) VALUES(1,1, CONVERT(DATETIME,'25/06/2022 11:55',100), CONVERT(DATETIME,'25/06/2022 11:55',100))
 INSERT INTO PRESTA(id, id_usuario, id_ejemplar, fecha_prestamo, fecha_devolucion) VALUES(1,1,1, '06/25/2022 11:55', '06/30/2022 11:55')
 
-XXXX
+SELECT id FROM USUARIO WHERE USUARIO.correo = '00086221@uca.edu.sv'
+
+SELECT id FROM USUARIO WHERE USUARIO.correo = '00086221@uca.edu.sv'
+
+SELECT * FROM PRESTA
+
+SELECT * FROM RESERVA
+

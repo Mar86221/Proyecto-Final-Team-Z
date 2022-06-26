@@ -36,6 +36,7 @@ partial class frmPrestar
         this.pbPrestar = new System.Windows.Forms.PictureBox();
         this.pbReservar = new System.Windows.Forms.PictureBox();
         this.panel1 = new System.Windows.Forms.Panel();
+        this.picOkPrestar = new System.Windows.Forms.PictureBox();
         this.cmbMinDevPrest = new System.Windows.Forms.ComboBox();
         this.cmbHorDevPrestamo = new System.Windows.Forms.ComboBox();
         this.dtpDevolucionPrestamo = new System.Windows.Forms.DateTimePicker();
@@ -49,6 +50,7 @@ partial class frmPrestar
         this.pictureBox2 = new System.Windows.Forms.PictureBox();
         this.pictureBox1 = new System.Windows.Forms.PictureBox();
         this.panel2 = new System.Windows.Forms.Panel();
+        this.picOKReservar = new System.Windows.Forms.PictureBox();
         this.cmbMinDevReserva = new System.Windows.Forms.ComboBox();
         this.cmbHoradevReserva = new System.Windows.Forms.ComboBox();
         this.dtpFechadevolucion = new System.Windows.Forms.DateTimePicker();
@@ -82,17 +84,19 @@ partial class frmPrestar
         this.pictureBox16 = new System.Windows.Forms.PictureBox();
         this.pictureBox17 = new System.Windows.Forms.PictureBox();
         this.txtID = new System.Windows.Forms.TextBox();
-        this.button1 = new System.Windows.Forms.Button();
-        this.textBox1 = new System.Windows.Forms.TextBox();
+        this.txtIDu = new System.Windows.Forms.TextBox();
+        this.txtCorreoU = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).BeginInit();
         this.panel1.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize) (this.picOkPrestar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
         this.panel2.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize) (this.picOKReservar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
@@ -142,6 +146,7 @@ partial class frmPrestar
         // 
         // panel1
         // 
+        this.panel1.Controls.Add(this.picOkPrestar);
         this.panel1.Controls.Add(this.cmbMinDevPrest);
         this.panel1.Controls.Add(this.cmbHorDevPrestamo);
         this.panel1.Controls.Add(this.dtpDevolucionPrestamo);
@@ -159,12 +164,23 @@ partial class frmPrestar
         this.panel1.Size = new System.Drawing.Size(561, 69);
         this.panel1.TabIndex = 3;
         // 
+        // picOkPrestar
+        // 
+        this.picOkPrestar.Image = ((System.Drawing.Image) (resources.GetObject("picOkPrestar.Image")));
+        this.picOkPrestar.Location = new System.Drawing.Point(475, 15);
+        this.picOkPrestar.Name = "picOkPrestar";
+        this.picOkPrestar.Size = new System.Drawing.Size(80, 35);
+        this.picOkPrestar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+        this.picOkPrestar.TabIndex = 14;
+        this.picOkPrestar.TabStop = false;
+        this.picOkPrestar.Click += new System.EventHandler(this.picOkPrestar_Click);
+        // 
         // cmbMinDevPrest
         // 
         this.cmbMinDevPrest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbMinDevPrest.FormattingEnabled = true;
         this.cmbMinDevPrest.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
-        this.cmbMinDevPrest.Location = new System.Drawing.Point(498, 21);
+        this.cmbMinDevPrest.Location = new System.Drawing.Point(405, 20);
         this.cmbMinDevPrest.Name = "cmbMinDevPrest";
         this.cmbMinDevPrest.Size = new System.Drawing.Size(55, 21);
         this.cmbMinDevPrest.TabIndex = 13;
@@ -174,16 +190,16 @@ partial class frmPrestar
         this.cmbHorDevPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHorDevPrestamo.FormattingEnabled = true;
         this.cmbHorDevPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
-        this.cmbHorDevPrestamo.Location = new System.Drawing.Point(437, 21);
+        this.cmbHorDevPrestamo.Location = new System.Drawing.Point(344, 20);
         this.cmbHorDevPrestamo.Name = "cmbHorDevPrestamo";
         this.cmbHorDevPrestamo.Size = new System.Drawing.Size(55, 21);
         this.cmbHorDevPrestamo.TabIndex = 12;
         // 
         // dtpDevolucionPrestamo
         // 
-        this.dtpDevolucionPrestamo.CustomFormat = "mm/dd/yy";
-        this.dtpDevolucionPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        this.dtpDevolucionPrestamo.Location = new System.Drawing.Point(339, 22);
+        this.dtpDevolucionPrestamo.CustomFormat = "";
+        this.dtpDevolucionPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        this.dtpDevolucionPrestamo.Location = new System.Drawing.Point(246, 21);
         this.dtpDevolucionPrestamo.Name = "dtpDevolucionPrestamo";
         this.dtpDevolucionPrestamo.Size = new System.Drawing.Size(73, 20);
         this.dtpDevolucionPrestamo.TabIndex = 11;
@@ -211,8 +227,8 @@ partial class frmPrestar
         // 
         // dtpPrestamo
         // 
-        this.dtpPrestamo.CustomFormat = "mm/dd/yy";
-        this.dtpPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpPrestamo.CustomFormat = "";
+        this.dtpPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpPrestamo.Location = new System.Drawing.Point(23, 21);
         this.dtpPrestamo.Name = "dtpPrestamo";
         this.dtpPrestamo.Size = new System.Drawing.Size(73, 20);
@@ -223,7 +239,7 @@ partial class frmPrestar
         // 
         this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label2.Location = new System.Drawing.Point(346, 6);
+        this.label2.Location = new System.Drawing.Point(253, 5);
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(109, 16);
         this.label2.TabIndex = 6;
@@ -242,7 +258,7 @@ partial class frmPrestar
         // pictureBox4
         // 
         this.pictureBox4.BackColor = System.Drawing.Color.White;
-        this.pictureBox4.Location = new System.Drawing.Point(333, 13);
+        this.pictureBox4.Location = new System.Drawing.Point(240, 12);
         this.pictureBox4.Name = "pictureBox4";
         this.pictureBox4.Size = new System.Drawing.Size(222, 38);
         this.pictureBox4.TabIndex = 3;
@@ -260,7 +276,7 @@ partial class frmPrestar
         // pictureBox2
         // 
         this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox2.Location = new System.Drawing.Point(332, 12);
+        this.pictureBox2.Location = new System.Drawing.Point(239, 11);
         this.pictureBox2.Name = "pictureBox2";
         this.pictureBox2.Size = new System.Drawing.Size(224, 40);
         this.pictureBox2.TabIndex = 1;
@@ -277,6 +293,7 @@ partial class frmPrestar
         // 
         // panel2
         // 
+        this.panel2.Controls.Add(this.picOKReservar);
         this.panel2.Controls.Add(this.cmbMinDevReserva);
         this.panel2.Controls.Add(this.cmbHoradevReserva);
         this.panel2.Controls.Add(this.dtpFechadevolucion);
@@ -294,12 +311,23 @@ partial class frmPrestar
         this.panel2.Size = new System.Drawing.Size(561, 69);
         this.panel2.TabIndex = 7;
         // 
+        // picOKReservar
+        // 
+        this.picOKReservar.Image = ((System.Drawing.Image) (resources.GetObject("picOKReservar.Image")));
+        this.picOKReservar.Location = new System.Drawing.Point(473, 16);
+        this.picOKReservar.Name = "picOKReservar";
+        this.picOKReservar.Size = new System.Drawing.Size(80, 35);
+        this.picOKReservar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+        this.picOKReservar.TabIndex = 15;
+        this.picOKReservar.TabStop = false;
+        this.picOKReservar.Click += new System.EventHandler(this.picOKReservar_Click);
+        // 
         // cmbMinDevReserva
         // 
         this.cmbMinDevReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbMinDevReserva.FormattingEnabled = true;
         this.cmbMinDevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
-        this.cmbMinDevReserva.Location = new System.Drawing.Point(496, 24);
+        this.cmbMinDevReserva.Location = new System.Drawing.Point(403, 23);
         this.cmbMinDevReserva.Name = "cmbMinDevReserva";
         this.cmbMinDevReserva.Size = new System.Drawing.Size(55, 21);
         this.cmbMinDevReserva.TabIndex = 14;
@@ -309,7 +337,7 @@ partial class frmPrestar
         this.cmbHoradevReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHoradevReserva.FormattingEnabled = true;
         this.cmbHoradevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
-        this.cmbHoradevReserva.Location = new System.Drawing.Point(435, 24);
+        this.cmbHoradevReserva.Location = new System.Drawing.Point(342, 23);
         this.cmbHoradevReserva.Name = "cmbHoradevReserva";
         this.cmbHoradevReserva.Size = new System.Drawing.Size(55, 21);
         this.cmbHoradevReserva.TabIndex = 14;
@@ -317,8 +345,8 @@ partial class frmPrestar
         // dtpFechadevolucion
         // 
         this.dtpFechadevolucion.CustomFormat = "mm/dd/yy";
-        this.dtpFechadevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        this.dtpFechadevolucion.Location = new System.Drawing.Point(339, 25);
+        this.dtpFechadevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+        this.dtpFechadevolucion.Location = new System.Drawing.Point(246, 24);
         this.dtpFechadevolucion.Name = "dtpFechadevolucion";
         this.dtpFechadevolucion.Size = new System.Drawing.Size(73, 20);
         this.dtpFechadevolucion.TabIndex = 14;
@@ -347,7 +375,7 @@ partial class frmPrestar
         // dtpReserva
         // 
         this.dtpReserva.CustomFormat = "mm/dd/yy";
-        this.dtpReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpReserva.Location = new System.Drawing.Point(21, 25);
         this.dtpReserva.Name = "dtpReserva";
         this.dtpReserva.Size = new System.Drawing.Size(73, 20);
@@ -358,7 +386,7 @@ partial class frmPrestar
         // 
         this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label3.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label3.Location = new System.Drawing.Point(346, 7);
+        this.label3.Location = new System.Drawing.Point(253, 6);
         this.label3.Name = "label3";
         this.label3.Size = new System.Drawing.Size(109, 16);
         this.label3.TabIndex = 6;
@@ -377,7 +405,7 @@ partial class frmPrestar
         // pictureBox5
         // 
         this.pictureBox5.BackColor = System.Drawing.Color.White;
-        this.pictureBox5.Location = new System.Drawing.Point(333, 14);
+        this.pictureBox5.Location = new System.Drawing.Point(240, 13);
         this.pictureBox5.Name = "pictureBox5";
         this.pictureBox5.Size = new System.Drawing.Size(222, 38);
         this.pictureBox5.TabIndex = 3;
@@ -395,7 +423,7 @@ partial class frmPrestar
         // pictureBox7
         // 
         this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox7.Location = new System.Drawing.Point(332, 13);
+        this.pictureBox7.Location = new System.Drawing.Point(239, 12);
         this.pictureBox7.Name = "pictureBox7";
         this.pictureBox7.Size = new System.Drawing.Size(224, 40);
         this.pictureBox7.TabIndex = 1;
@@ -619,35 +647,34 @@ partial class frmPrestar
         // 
         this.txtID.Location = new System.Drawing.Point(267, 267);
         this.txtID.Name = "txtID";
+        this.txtID.ReadOnly = true;
         this.txtID.Size = new System.Drawing.Size(10, 20);
         this.txtID.TabIndex = 53;
         // 
-        // button1
+        // txtIDu
         // 
-        this.button1.Location = new System.Drawing.Point(661, 72);
-        this.button1.Name = "button1";
-        this.button1.Size = new System.Drawing.Size(75, 23);
-        this.button1.TabIndex = 54;
-        this.button1.Text = "button1";
-        this.button1.UseVisualStyleBackColor = true;
-        this.button1.Click += new System.EventHandler(this.button1_Click);
+        this.txtIDu.Location = new System.Drawing.Point(283, 267);
+        this.txtIDu.Name = "txtIDu";
+        this.txtIDu.ReadOnly = true;
+        this.txtIDu.Size = new System.Drawing.Size(10, 20);
+        this.txtIDu.TabIndex = 54;
         // 
-        // textBox1
+        // txtCorreoU
         // 
-        this.textBox1.Location = new System.Drawing.Point(589, 101);
-        this.textBox1.Multiline = true;
-        this.textBox1.Name = "textBox1";
-        this.textBox1.Size = new System.Drawing.Size(221, 100);
-        this.textBox1.TabIndex = 55;
+        this.txtCorreoU.Location = new System.Drawing.Point(299, 267);
+        this.txtCorreoU.Name = "txtCorreoU";
+        this.txtCorreoU.ReadOnly = true;
+        this.txtCorreoU.Size = new System.Drawing.Size(131, 20);
+        this.txtCorreoU.TabIndex = 55;
         // 
         // frmPrestar
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(822, 488);
-        this.Controls.Add(this.textBox1);
-        this.Controls.Add(this.button1);
+        this.ClientSize = new System.Drawing.Size(600, 488);
+        this.Controls.Add(this.txtCorreoU);
+        this.Controls.Add(this.txtIDu);
         this.Controls.Add(this.txtID);
         this.Controls.Add(this.label8);
         this.Controls.Add(this.txtIsbm);
@@ -681,11 +708,15 @@ partial class frmPrestar
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).EndInit();
         this.panel1.ResumeLayout(false);
+        this.panel1.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize) (this.picOkPrestar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
         this.panel2.ResumeLayout(false);
+        this.panel2.PerformLayout();
+        ((System.ComponentModel.ISupportInitialize) (this.picOKReservar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).EndInit();
@@ -704,6 +735,14 @@ partial class frmPrestar
         this.PerformLayout();
     }
 
+    private System.Windows.Forms.PictureBox picOkPrestar;
+
+    private System.Windows.Forms.PictureBox picOKReservar;
+
+    public System.Windows.Forms.TextBox txtCorreoU;
+
+    public System.Windows.Forms.TextBox txtIDu;
+
     private System.Windows.Forms.DateTimePicker dtpDevolucionPrestamo;
     private System.Windows.Forms.ComboBox cmbHorDevPrestamo;
     private System.Windows.Forms.ComboBox cmbMinDevPrest;
@@ -714,9 +753,6 @@ partial class frmPrestar
 
     private System.Windows.Forms.ComboBox cmbHorasPrestamo;
     private System.Windows.Forms.ComboBox cmbMinPrestamo;
-
-    private System.Windows.Forms.Button button1;
-    private System.Windows.Forms.TextBox textBox1;
 
     public System.Windows.Forms.TextBox txtID;
 
