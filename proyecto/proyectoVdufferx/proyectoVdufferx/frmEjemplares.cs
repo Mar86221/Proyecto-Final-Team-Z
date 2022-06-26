@@ -85,6 +85,7 @@ namespace proyectoVdufferx
         
         private void frmEjemplares_Load(object sender, EventArgs e)
         {
+            txtCorreoEj.Hide();
             txtPrestar.Hide();
             txtImagen.Hide();
             DgvEjemplares.DataSource = null;
@@ -133,12 +134,15 @@ namespace proyectoVdufferx
         int renglonprestar;
         private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            
             renglonprestar = e.RowIndex;
             string nombreprestar;
             nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
             txtPrestar.Text = nombreprestar;
             frmPrestar frmp = new frmPrestar();
             frmp.txtNombreEjemplar.Text = nombreprestar;
+            frmp.txtCorreoU.Text = txtCorreoEj.Text;/////////////////////////////////
             renglon = e.RowIndex;
             string nombre;
             nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();

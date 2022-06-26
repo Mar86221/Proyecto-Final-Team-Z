@@ -45,9 +45,30 @@ public partial class frmPrestar : Form
 
             connection.Close();
         }
+        using (SqlConnection connection = new SqlConnection(cadena))
+        {
+            string query =
+                "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreoU.Text));
+            connection.Open();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    int idu = Convert.ToInt32(reader["id"].ToString());
+                    txtIDu.AppendText(idu.ToString());
+                }
+            }
+
+            connection.Close();
+        }
         panel1.Hide();
         panel2.Hide();
         txtID.Hide();
+        txtIDu.Hide();
+        txtCorreoU.Hide();
         int idem = Convert.ToInt32(txtID.Text);
         this.Prestamo = prestamoDAO.id_prestamo(Convert.ToInt32(txtID.Text));
         if (Prestamo == null)
@@ -93,9 +114,25 @@ public partial class frmPrestar : Form
        panel2.Show();
    }
 
-   private void button1_Click(object sender, EventArgs e)
+   private void picOkPrestar_Click(object sender, EventArgs e)
    {
-       textBox1.Text = dtpPrestamo.Text;
+       prestamo p = new prestamo();
+       p.id_usuario = Convert.ToInt32(txtIDu.Text);
+       p.id_ejemplar = Convert.ToInt32(txtID.Text);
+       p.fecha_prestamo = Convert.ToString("06/25/2022 11:55");
+       p.fecha_devolucion = Convert.ToString("06/30/2022 11:55");
+       //p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
+       //p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
+       ////'06/25/2022 11:55'
+       if (prestamoDAO.CrearNuevo(p))
+       {
+           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+       }
+       else
+       {
+           MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+       }
+       
    }
 }
 
