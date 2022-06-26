@@ -104,9 +104,9 @@ namespace proyectoVdufferx
                             string fecha_prestamo = reader["fecha_prestamo"].ToString();
                             string fecha_devolucion = reader["fecha_devolucion"].ToString();
 
-                            txtTuprestamoNombreE.AppendText(nombre_ejemplar);
-                            txtTuprestamoFechaP.AppendText(fecha_prestamo);
-                            txtTuprestamoFechaD.AppendText(fecha_devolucion);
+                            txtTuprestamoNombreE.AppendText(nombre_ejemplar + " :" );
+                            txtTuprestamoFechaP.AppendText(fecha_prestamo + " :");
+                            txtTuprestamoFechaD.AppendText(fecha_devolucion + " :");
                         }
 
                         connection.Close();

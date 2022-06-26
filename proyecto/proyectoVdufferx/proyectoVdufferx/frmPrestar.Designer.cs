@@ -197,8 +197,8 @@ partial class frmPrestar
         // 
         // dtpDevolucionPrestamo
         // 
-        this.dtpDevolucionPrestamo.CustomFormat = "mm/dd/yy";
-        this.dtpDevolucionPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpDevolucionPrestamo.CustomFormat = "";
+        this.dtpDevolucionPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpDevolucionPrestamo.Location = new System.Drawing.Point(246, 21);
         this.dtpDevolucionPrestamo.Name = "dtpDevolucionPrestamo";
         this.dtpDevolucionPrestamo.Size = new System.Drawing.Size(73, 20);
@@ -227,8 +227,8 @@ partial class frmPrestar
         // 
         // dtpPrestamo
         // 
-        this.dtpPrestamo.CustomFormat = "mm/dd/yy";
-        this.dtpPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpPrestamo.CustomFormat = "";
+        this.dtpPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpPrestamo.Location = new System.Drawing.Point(23, 21);
         this.dtpPrestamo.Name = "dtpPrestamo";
         this.dtpPrestamo.Size = new System.Drawing.Size(73, 20);
@@ -320,6 +320,7 @@ partial class frmPrestar
         this.picOKReservar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
         this.picOKReservar.TabIndex = 15;
         this.picOKReservar.TabStop = false;
+        this.picOKReservar.Click += new System.EventHandler(this.picOKReservar_Click);
         // 
         // cmbMinDevReserva
         // 
@@ -344,7 +345,7 @@ partial class frmPrestar
         // dtpFechadevolucion
         // 
         this.dtpFechadevolucion.CustomFormat = "mm/dd/yy";
-        this.dtpFechadevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpFechadevolucion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpFechadevolucion.Location = new System.Drawing.Point(246, 24);
         this.dtpFechadevolucion.Name = "dtpFechadevolucion";
         this.dtpFechadevolucion.Size = new System.Drawing.Size(73, 20);
@@ -374,7 +375,7 @@ partial class frmPrestar
         // dtpReserva
         // 
         this.dtpReserva.CustomFormat = "mm/dd/yy";
-        this.dtpReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+        this.dtpReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
         this.dtpReserva.Location = new System.Drawing.Point(21, 25);
         this.dtpReserva.Name = "dtpReserva";
         this.dtpReserva.Size = new System.Drawing.Size(73, 20);

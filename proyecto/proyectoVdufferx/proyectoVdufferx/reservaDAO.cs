@@ -19,7 +19,7 @@ public class reservaDAO
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@id_usuario", r.id_usuario);
                 command.Parameters.AddWithValue("@id_ejemplar", r.id_ejemplar);
-                command.Parameters.AddWithValue("@fecha_prestamo", r.fecha_reserva);
+                command.Parameters.AddWithValue("@fecha_reserva", r.fecha_reserva);
                 command.Parameters.AddWithValue("@fecha_devolucion", r.fecha_devolucion);
                 
                 connection.Open();

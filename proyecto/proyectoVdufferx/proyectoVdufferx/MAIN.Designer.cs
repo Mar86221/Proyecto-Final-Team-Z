@@ -249,7 +249,7 @@ namespace proyectoVdufferx
             this.grpTuPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grpTuPrestamo.Location = new System.Drawing.Point(294, 46);
             this.grpTuPrestamo.Name = "grpTuPrestamo";
-            this.grpTuPrestamo.Size = new System.Drawing.Size(261, 172);
+            this.grpTuPrestamo.Size = new System.Drawing.Size(261, 265);
             this.grpTuPrestamo.TabIndex = 10;
             this.grpTuPrestamo.TabStop = false;
             // 
@@ -257,7 +257,7 @@ namespace proyectoVdufferx
             // 
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(12, 104);
+            this.label6.Location = new System.Drawing.Point(12, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 14);
             this.label6.TabIndex = 15;
@@ -267,7 +267,7 @@ namespace proyectoVdufferx
             // 
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(12, 62);
+            this.label5.Location = new System.Drawing.Point(12, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 14);
             this.label5.TabIndex = 14;
@@ -288,10 +288,12 @@ namespace proyectoVdufferx
             this.txtTuprestamoFechaD.BackColor = System.Drawing.SystemColors.Window;
             this.txtTuprestamoFechaD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTuprestamoFechaD.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtTuprestamoFechaD.Location = new System.Drawing.Point(12, 118);
+            this.txtTuprestamoFechaD.Location = new System.Drawing.Point(12, 200);
+            this.txtTuprestamoFechaD.Multiline = true;
             this.txtTuprestamoFechaD.Name = "txtTuprestamoFechaD";
             this.txtTuprestamoFechaD.ReadOnly = true;
-            this.txtTuprestamoFechaD.Size = new System.Drawing.Size(243, 20);
+            this.txtTuprestamoFechaD.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTuprestamoFechaD.Size = new System.Drawing.Size(243, 54);
             this.txtTuprestamoFechaD.TabIndex = 10;
             // 
             // txtTuprestamoFechaP
@@ -299,10 +301,12 @@ namespace proyectoVdufferx
             this.txtTuprestamoFechaP.BackColor = System.Drawing.SystemColors.Window;
             this.txtTuprestamoFechaP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTuprestamoFechaP.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.txtTuprestamoFechaP.Location = new System.Drawing.Point(12, 76);
+            this.txtTuprestamoFechaP.Location = new System.Drawing.Point(12, 115);
+            this.txtTuprestamoFechaP.Multiline = true;
             this.txtTuprestamoFechaP.Name = "txtTuprestamoFechaP";
             this.txtTuprestamoFechaP.ReadOnly = true;
-            this.txtTuprestamoFechaP.Size = new System.Drawing.Size(243, 20);
+            this.txtTuprestamoFechaP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTuprestamoFechaP.Size = new System.Drawing.Size(243, 48);
             this.txtTuprestamoFechaP.TabIndex = 10;
             // 
             // txtTuprestamoNombreE
@@ -311,9 +315,11 @@ namespace proyectoVdufferx
             this.txtTuprestamoNombreE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTuprestamoNombreE.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtTuprestamoNombreE.Location = new System.Drawing.Point(12, 35);
+            this.txtTuprestamoNombreE.Multiline = true;
             this.txtTuprestamoNombreE.Name = "txtTuprestamoNombreE";
             this.txtTuprestamoNombreE.ReadOnly = true;
-            this.txtTuprestamoNombreE.Size = new System.Drawing.Size(243, 20);
+            this.txtTuprestamoNombreE.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTuprestamoNombreE.Size = new System.Drawing.Size(243, 63);
             this.txtTuprestamoNombreE.TabIndex = 10;
             // 
             // MAIN

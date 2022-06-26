@@ -9,6 +9,7 @@ namespace proyectoVdufferx;
 public partial class frmPrestar : Form
 {
     public prestamo Prestamo{ get; set;}
+    public reserva Reserva { get; set; }
     public frmPrestar()
     {
         InitializeComponent();
@@ -119,10 +120,8 @@ public partial class frmPrestar : Form
        prestamo p = new prestamo();
        p.id_usuario = Convert.ToInt32(txtIDu.Text);
        p.id_ejemplar = Convert.ToInt32(txtID.Text);
-       p.fecha_prestamo = Convert.ToString("06/25/2022 11:55");
-       p.fecha_devolucion = Convert.ToString("06/30/2022 11:55");
-       //p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
-       //p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
+       p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
+       p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
        ////'06/25/2022 11:55'
        if (prestamoDAO.CrearNuevo(p))
        {
@@ -133,6 +132,23 @@ public partial class frmPrestar : Form
            MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
        }
        
+   }
+
+   private void picOKReservar_Click(object sender, EventArgs e)
+   {
+       reserva r = new reserva();
+       r.id_usuario = Convert.ToInt32(txtIDu.Text);
+       r.id_ejemplar = Convert.ToInt32(txtID.Text);
+       r.fecha_reserva = Convert.ToDateTime(dtpReserva.Text + " " + cmbHoraReserva.Text + ":" + cmbMinReserva.Text);
+       r.fecha_devolucion = Convert.ToDateTime(dtpFechadevolucion.Text + " " + cmbHoradevReserva.Text + ":" + cmbMinDevReserva.Text);
+       if (reservaDAO.CrearNuevo(r))
+       {
+           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+       }
+       else
+       {
+           MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+       }
    }
 }
 

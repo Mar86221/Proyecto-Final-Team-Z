@@ -15,7 +15,7 @@ public class prestamoDAO
         try
         {
             string cadena = Resources.cadena_conexion;
-            using (SqlConnection connection = new SqlConnection())
+            using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string query = "INSERT INTO PRESTA (id_usuario, id_ejemplar, fecha_prestamo, fecha_devolucion)VALUES" +
                                "(@id_usuario, @id_ejemplar, @fecha_prestamo, @fecha_devolucion)";
