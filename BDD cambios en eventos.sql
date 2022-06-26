@@ -3,21 +3,7 @@ USE BINAES_BDD;
 DROP DATABASE BINAES_BDD
 ---------------------------------------
 ---------------------------------------
-CREATE TABLE EVENTO  (
-	id int IDENTITY(1,1) primary key NOT NULL,
-	imagen VARCHAR(200) NOT NULL,
-	titulo VARCHAR(200) NOT NULL,	
-	cant_asistentes INT NOT NULL,
-	fecha_inicio DATETIME NOT NULL,
-	fecha_final DATETIME NOT NULL
-		);
 
-CREATE TABLE IMAGEN_EVENTO (
-	id int primary key NOT NULL,
-	imagen IMAGE NOT NULL,
-	id_evento int NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id),
-		);
-----------------------------------------------
 CREATE TABLE HORARIO (
 	id int primary key NOT NULL,
 	hora_apertura TIME NOT NULL,
@@ -38,11 +24,24 @@ CREATE TABLE AREA (
 		);
 ----------------------------------------------------
 
-CREATE TABLE AREAXEVENTO (
-	id int primary key NOT NULL,
-	id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
-	id_evento int IDENTITY(1,1) NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id)
+
+CREATE TABLE EVENTO  (
+	id int IDENTITY(1,1) primary key NOT NULL,
+	imagen VARCHAR(200) NOT NULL,
+	titulo VARCHAR(200) NOT NULL,	
+	cant_asistentes INT NOT NULL,
+	fecha_inicio DATETIME NOT NULL,
+	fecha_final DATETIME NOT NULL,
+    id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
 		);
+
+CREATE TABLE IMAGEN_EVENTO (
+	id int primary key NOT NULL,
+	imagen IMAGE NOT NULL,
+	id_evento int NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id),
+		);
+----------------------------------------------
+
 -------------------------------------------------------
 CREATE TABLE GENERO (
     id INT PRIMARY KEY NOT NULL,
@@ -659,3 +658,5 @@ SELECT EVENTO.imagen, EVENTO.titulo, EVENTO.cant_asistentes, EVENTO.fecha_inicio
 INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final) VALUES ('test', 'test', 3,'06/25/2022', '06/30/2022')
 
 INSERT INTO AREAXEVENTO (id, id_area) VALUES (1,1)
+INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, id_area) 
+    VALUES ('Cine.png', 'Noche de Cine', 2, '06/25/2022', '06/30/2022', 2)
