@@ -3,7 +3,6 @@ USE BINAES_BDD;
 DROP DATABASE BINAES_BDD
 ---------------------------------------
 ---------------------------------------
-
 CREATE TABLE HORARIO (
 	id int primary key NOT NULL,
 	hora_apertura TIME NOT NULL,
@@ -22,17 +21,15 @@ CREATE TABLE AREA (
 	id_piso	int NOT NULL FOREIGN KEY (id_piso) REFERENCES PISO (id),
     id_horario int NOT NULL FOREIGN KEY (id_horario) REFERENCES HORARIO (id),
 		);
-----------------------------------------------------
-
 
 CREATE TABLE EVENTO  (
 	id int IDENTITY(1,1) primary key NOT NULL,
-	imagen VARCHAR(200) NOT NULL,
+	imagen VARCHAR(300) NOT NULL,
 	titulo VARCHAR(200) NOT NULL,	
 	cant_asistentes INT NOT NULL,
 	fecha_inicio DATETIME NOT NULL,
 	fecha_final DATETIME NOT NULL,
-    id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
+	id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
 		);
 
 CREATE TABLE IMAGEN_EVENTO (
@@ -42,6 +39,13 @@ CREATE TABLE IMAGEN_EVENTO (
 		);
 ----------------------------------------------
 
+----------------------------------------------------
+/*
+CREATE TABLE AREAXEVENTO (
+	id int IDENTITY(1,1) primary key NOT NULL,
+	id_area int NOT NULL FOREIGN KEY (id_area) REFERENCES AREA (id),
+	id_evento int IDENTITY(1,1) NOT NULL FOREIGN KEY (id_evento) REFERENCES EVENTO (id)
+		);*/
 -------------------------------------------------------
 CREATE TABLE GENERO (
     id INT PRIMARY KEY NOT NULL,
@@ -651,12 +655,11 @@ FROM COLECCION
 
 SELECT * FROM EVENTO
 
-INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final) VALUES (@imagen, @titulo, @cant_asistentes, @fecha_inicio, @fecha_final)
+INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, id) VALUES (@imagen, @titulo, @cant_asistentes, @fecha_inicio, @fecha_final, @id_area)
 
-SELECT EVENTO.imagen, EVENTO.titulo, EVENTO.cant_asistentes, EVENTO.fecha_inicio, EVENTO.fecha_final, AREA.nombre  FROM EVENTO INNER JOIN AREAXEVENTO ON AREAXEVENTO.id_evento = EVENTO.id INNER JOIN AREA ON AREAXEVENTO.id_area = AREA.id
+SELECT EVENTO.imagen, EVENTO.titulo, EVENTO.cant_asistentes, EVENTO.fecha_inicio, EVENTO.fecha_final, AREA.nombre  FROM EVENTO INNER JOIN AREA ON EVENTO.id_area = AREA.id
 
-INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final) VALUES ('test', 'test', 3,'06/25/2022', '06/30/2022')
+INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, id_area) VALUES ('Braile.png', 'Braile', 2, '06/25/2022', '06/25/2022', 1)
 
-INSERT INTO AREAXEVENTO (id, id_area) VALUES (1,1)
-INSERT INTO EVENTO (imagen, titulo, cant_asistentes, fecha_inicio, fecha_final, id_area) 
-    VALUES ('Cine.png', 'Noche de Cine', 2, '06/25/2022', '06/30/2022', 2)
+
+

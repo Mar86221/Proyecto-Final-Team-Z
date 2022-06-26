@@ -18,4 +18,13 @@ public partial class frmEventos : Form
         dgvEventos.Columns[0].Visible = false;
         dgvEventos.AutoResizeColumns();
     }
+    int renglon;
+    private void dgvEventos_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        renglon = e.RowIndex;
+        string nombre;
+        nombre = dgvEventos.Rows[renglon].Cells["imagen"].Value.ToString();
+        txtImagen.Text = nombre;
+        picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+    }
 }
