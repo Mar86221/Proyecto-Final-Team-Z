@@ -9,4 +9,5 @@ public class eventos
     public int cant_asistentes { get; set; }
     public DateTime fecha_inicio { get; set; }
     public DateTime fecha_final { get; set; }
+    public int id_area { get; set; }
 }

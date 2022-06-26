@@ -9,12 +9,22 @@ public partial class frmEventos : Form
     {
         InitializeComponent();
     }
+    
 
-    private void frmEventos_Load(object sender, EventArgs e)
+    private void frmEventos_Load_1(object sender, EventArgs e)
     {
         dgvEventos.DataSource = null;
         dgvEventos.DataSource = eventosDAO.ObtenerTodos();
-        dgvEventos.Columns[0].Visible = false;
+        //dgvEventos.Columns[0].Visible = false;
         dgvEventos.AutoResizeColumns();
+    }
+    int renglon;
+    private void dgvEventos_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        renglon = e.RowIndex;
+        string nombre;
+        nombre = dgvEventos.Rows[renglon].Cells["imagen"].Value.ToString();
+        txtImagen.Text = nombre;
+        picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
     }
 }

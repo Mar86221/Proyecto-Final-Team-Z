@@ -32,28 +32,56 @@ partial class frmEventos
     private void InitializeComponent()
     {
         this.dgvEventos = new System.Windows.Forms.DataGridView();
+        this.picImagen = new System.Windows.Forms.PictureBox();
+        this.txtImagen = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
         this.SuspendLayout();
         // 
         // dgvEventos
         // 
         this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.dgvEventos.Location = new System.Drawing.Point(12, 115);
+        this.dgvEventos.Location = new System.Drawing.Point(12, 65);
         this.dgvEventos.Name = "dgvEventos";
-        this.dgvEventos.Size = new System.Drawing.Size(595, 323);
+        this.dgvEventos.Size = new System.Drawing.Size(526, 373);
         this.dgvEventos.TabIndex = 0;
+        this.dgvEventos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventos_CellClick);
+        // 
+        // picImagen
+        // 
+        this.picImagen.Location = new System.Drawing.Point(565, 65);
+        this.picImagen.Name = "picImagen";
+        this.picImagen.Size = new System.Drawing.Size(259, 373);
+        this.picImagen.TabIndex = 1;
+        this.picImagen.TabStop = false;
+        // 
+        // txtImagen
+        // 
+        this.txtImagen.Location = new System.Drawing.Point(617, 20);
+        this.txtImagen.Name = "txtImagen";
+        this.txtImagen.Size = new System.Drawing.Size(69, 20);
+        this.txtImagen.TabIndex = 2;
         // 
         // frmEventos
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(836, 450);
+        this.Controls.Add(this.txtImagen);
+        this.Controls.Add(this.picImagen);
         this.Controls.Add(this.dgvEventos);
         this.Name = "frmEventos";
         this.Text = "frmEventos";
+        this.Load += new System.EventHandler(this.frmEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.picImagen)).EndInit();
         this.ResumeLayout(false);
+        this.PerformLayout();
     }
+
+    private System.Windows.Forms.TextBox txtImagen;
+
+    public System.Windows.Forms.PictureBox picImagen;
 
     private System.Windows.Forms.DataGridView dgvEventos;
 
