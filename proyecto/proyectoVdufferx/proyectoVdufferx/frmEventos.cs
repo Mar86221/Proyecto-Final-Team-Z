@@ -15,11 +15,17 @@ public partial class frmEventos : Form
 
     private void frmEventos_Load_1(object sender, EventArgs e)
     {
+        if (txtCuentaU.Text != "MHRSbz5meUQ@admin.com")
+        {
+            btnInsertar.Hide();
+            btnEliminar.Hide();
+        }
         dgvEventos.DataSource = null;
         dgvEventos.DataSource = eventosDAO.ObtenerTodos();
         dgvEventos.Columns[0].Visible = false;
         dgvEventos.AutoResizeColumns();
         txtImagen.Hide();
+        txtCuentaU.Hide();
         txtTituloEliminar.Hide();
     }
     int renglon;

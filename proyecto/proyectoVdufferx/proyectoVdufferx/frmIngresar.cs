@@ -24,10 +24,17 @@ namespace proyectoVdufferx
             }
             else
             {
-                MAIN main = new MAIN();
-                main.Show();
-                main.txtTucuentaCorreo.Text = txtCorreo.Text;
-                this.Close();
+                if (txtCorreo.Text == "MHRSbz5meUQ@admin.com")
+                {
+                    pbIngresar2.Show();
+                    pbRegistrarUsuario.Show();
+
+                }
+                else
+                {
+                    pbIngresar2.Show();
+                }
+                
             }
         }
 
@@ -38,6 +45,26 @@ namespace proyectoVdufferx
             frmInicio frmInicio = new frmInicio();
             frmInicio.Show();
         }
-        
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MAIN main = new MAIN();
+            main.Show();
+            main.txtTucuentaCorreo.Text = txtCorreo.Text;
+            
+            this.Close();
+        }
+
+        private void pbRegistrarUsuario_Click(object sender, EventArgs e)
+        {
+            frmRegistro registro = new frmRegistro();
+            registro.Show();
+        }
+
+        private void frmIngresar_Load(object sender, EventArgs e)
+        {
+            pbIngresar2.Hide();
+            pbRegistrarUsuario.Hide();
+        }
     }
 }

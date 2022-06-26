@@ -58,6 +58,10 @@ namespace proyectoVdufferx
             grpTuPrestamo.Hide();
             grpTuCuenta.Hide();
             txtTucuentaFotografia.Hide();
+            
+           
+            
+          
         }
 
 
@@ -124,6 +128,7 @@ namespace proyectoVdufferx
         private void btnEventos_Click(object sender, EventArgs e)
         {
             frmEventos frev = new frmEventos();
+            frev.txtCuentaU.Text = txtTucuentaCorreo.Text;
             frev.ShowDialog();
             
         }

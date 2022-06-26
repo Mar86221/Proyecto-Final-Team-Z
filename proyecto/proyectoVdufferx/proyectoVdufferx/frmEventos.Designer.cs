@@ -46,6 +46,7 @@ partial class frmEventos
         this.label3 = new System.Windows.Forms.Label();
         this.label4 = new System.Windows.Forms.Label();
         this.label5 = new System.Windows.Forms.Label();
+        this.txtCuentaU = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.btnInsertar)).BeginInit();
@@ -121,7 +122,7 @@ partial class frmEventos
         // 
         // txtTituloEliminar
         // 
-        this.txtTituloEliminar.Location = new System.Drawing.Point(349, 432);
+        this.txtTituloEliminar.Location = new System.Drawing.Point(586, 417);
         this.txtTituloEliminar.Name = "txtTituloEliminar";
         this.txtTituloEliminar.Size = new System.Drawing.Size(114, 20);
         this.txtTituloEliminar.TabIndex = 5;
@@ -195,12 +196,20 @@ partial class frmEventos
         this.label5.Text = "AREA";
         this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
+        // txtCuentaU
+        // 
+        this.txtCuentaU.Location = new System.Drawing.Point(527, 366);
+        this.txtCuentaU.Name = "txtCuentaU";
+        this.txtCuentaU.Size = new System.Drawing.Size(26, 20);
+        this.txtCuentaU.TabIndex = 94;
+        // 
         // frmEventos
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.SystemColors.Window;
         this.ClientSize = new System.Drawing.Size(828, 480);
+        this.Controls.Add(this.txtCuentaU);
         this.Controls.Add(this.label5);
         this.Controls.Add(this.label4);
         this.Controls.Add(this.label3);
@@ -224,6 +233,8 @@ partial class frmEventos
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    public System.Windows.Forms.TextBox txtCuentaU;
 
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;

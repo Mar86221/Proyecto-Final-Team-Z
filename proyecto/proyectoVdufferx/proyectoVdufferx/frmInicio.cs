@@ -31,5 +31,10 @@ namespace proyectoVdufferx
             this.Hide();
             
         }
+
+        private void frmInicio_Load(object sender, EventArgs e)
+        {
+            picRegistrarme.Hide();
+        }
     }
 }

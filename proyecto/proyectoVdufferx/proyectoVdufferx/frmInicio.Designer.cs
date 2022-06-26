@@ -86,6 +86,7 @@
             this.MaximizeBox = false;
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmInicio_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picRegistrarme)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picIngresar)).EndInit();
@@ -95,7 +96,7 @@
 
         private System.Windows.Forms.PictureBox picIngresar;
 
-        private System.Windows.Forms.PictureBox picRegistrarme;
+        public System.Windows.Forms.PictureBox picRegistrarme;
 
         private System.Windows.Forms.PictureBox pictureBox1;
 

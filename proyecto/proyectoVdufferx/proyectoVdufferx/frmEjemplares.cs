@@ -87,6 +87,12 @@ namespace proyectoVdufferx
         {
           //  txtIdEjemplarEliminar.Hide();
           //  txtEliminarEJemplar.Hide();
+          if (txtCorreoEj.Text != "MHRSbz5meUQ@admin.com")
+          {
+              picEliminarEjemplar.Hide();
+              picEditarEjemplar.Hide();
+              PicInsertarE.Hide();
+          }
             txtCorreoEj.Hide();
             txtPrestar.Hide();
             txtImagen.Hide();
