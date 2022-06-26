@@ -1050,7 +1050,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEventos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPoAAABQCAYAAAAwa2i1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAAo3VJREFUeF6N/Xd4Xdd17Q3z7++9N7GtLvbeCZBgAwiS6ARIgL2DBAkWSRR7770X
@@ -1753,7 +1753,7 @@
         kKGfaU1H1ZuusfskGjcB9IsO9HwBvdfUi9Z+9H5rrrLVZGCN/f8BZ3J01HdHjfMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picTuprestamo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAH8AAAAoCAYAAADXNiVcAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         xAAADsQBlSsOGwAADa9JREFUeF7tWgl0TkkWjrZzjmVaG3vbl2m7pLW9jRFtbD3dmEZsY2cwaEu0pRuH

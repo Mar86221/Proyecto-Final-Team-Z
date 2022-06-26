@@ -52,9 +52,10 @@ namespace proyectoVdufferx
             }
 
         }
-        
+
         private void MAIN_Load(object sender, EventArgs e)
         {
+            grpTuPrestamo.Hide();
             grpTuCuenta.Hide();
             txtTucuentaFotografia.Hide();
         }
@@ -63,6 +64,7 @@ namespace proyectoVdufferx
         private void btnEjemplares_Click(object sender, EventArgs e)
         {
             frmEjemplares otraventana = new frmEjemplares();
+            otraventana.txtCorreoEj.Text = txtTucuentaCorreo.Text;//////////////////////////////////
             otraventana.ShowDialog();
         }
 
@@ -73,8 +75,57 @@ namespace proyectoVdufferx
 
         private void MAIN_Click(object sender, EventArgs e)
         {
+            grpTuPrestamo.Hide();
             grpTuCuenta.Hide();
         }
-        
+
+        private void picTuprestamo_Click(object sender, EventArgs e)
+        {
+            if (txtTuprestamoNombreE.Text.Length > 0)
+            {
+                grpTuPrestamo.Show();
+            }
+            else{
+                grpTuPrestamo.Show();
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "SELECT EJEMPLAR.nombre,PRESTA.fecha_devolucion,PRESTA.fecha_prestamo FROM USUARIO INNER JOIN PRESTA ON USUARIO.id = PRESTA.id_usuario INNER JOIN EJEMPLAR ON EJEMPLAR.id = PRESTA.id_ejemplar WHERE USUARIO.correo = @correobuscado2";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@correobuscado2", Convert.ToString(txtTucuentaCorreo.Text));
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string nombre_ejemplar = reader["nombre"].ToString();
+                            string fecha_prestamo = reader["fecha_prestamo"].ToString();
+                            string fecha_devolucion = reader["fecha_devolucion"].ToString();
+
+                            txtTuprestamoNombreE.AppendText(nombre_ejemplar + " :" );
+                            txtTuprestamoFechaP.AppendText(fecha_prestamo + " :");
+                            txtTuprestamoFechaD.AppendText(fecha_devolucion + " :");
+                        }
+
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
+
+        private void picTuprestamo_DoubleClick(object sender, EventArgs e)
+        {
+            grpTuPrestamo.Show();
+        }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            frmEventos frev = new frmEventos();
+            frev.ShowDialog();
+            
+        }
     }
 }

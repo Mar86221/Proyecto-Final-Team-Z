@@ -12,7 +12,7 @@ namespace proyectoVdufferx
         {
             InitializeComponent();
         }
-
+        
         private void bttIngresar_Click(object sender, EventArgs e)
         {
             string correo = txtCorreo.Text;

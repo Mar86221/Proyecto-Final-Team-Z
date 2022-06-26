@@ -63,6 +63,9 @@
         <Compile Include="ejemplarmain.cs" />
         <Compile Include="ejemplarprestar.cs" />
         <Compile Include="ejemplarxautor.cs" />
+        <Compile Include="eventomain.cs" />
+        <Compile Include="eventos.cs" />
+        <Compile Include="eventosDAO.cs" />
         <Compile Include="formato.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
@@ -75,6 +78,12 @@
         </Compile>
         <Compile Include="frmEjemplares.Designer.cs">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEventos.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEventos.Designer.cs">
+          <DependentUpon>frmEventos.cs</DependentUpon>
         </Compile>
         <Compile Include="frmInicio.cs">
             <SubType>Form</SubType>
@@ -131,6 +140,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmEventos.resx">
+          <DependentUpon>frmEventos.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmInicio.resx">
           <DependentUpon>frmInicio.cs</DependentUpon>

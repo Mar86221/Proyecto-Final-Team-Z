@@ -56,6 +56,7 @@ namespace proyectoVdufferx
             this.txtPrestar = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtCorreoEj = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -310,12 +311,20 @@ namespace proyectoVdufferx
             this.pictureBox6.TabIndex = 91;
             this.pictureBox6.TabStop = false;
             // 
+            // txtCorreoEj
+            // 
+            this.txtCorreoEj.Location = new System.Drawing.Point(335, 12);
+            this.txtCorreoEj.Name = "txtCorreoEj";
+            this.txtCorreoEj.Size = new System.Drawing.Size(177, 20);
+            this.txtCorreoEj.TabIndex = 92;
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 696);
+            this.Controls.Add(this.txtCorreoEj);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtPrestar);
@@ -360,6 +369,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public System.Windows.Forms.TextBox txtCorreoEj;
 
         private System.Windows.Forms.PictureBox pictureBox6;
 
