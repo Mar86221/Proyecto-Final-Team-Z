@@ -112,11 +112,7 @@ CREATE TABLE INSTITUCION(
     
 );
 
- CREATE TABLE IMAGEN (
-               id int IDENTITY (1,1) primary key NOT NULL,
-               nombre NVARCHAR(50),
-               imagen IMAGE
-           );
+
 
         
 

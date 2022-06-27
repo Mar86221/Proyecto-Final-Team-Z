@@ -84,14 +84,15 @@ namespace proyectoVdufferx
         }
         
         private void frmEjemplares_Load(object sender, EventArgs e)
+        
         {
-          //  txtIdEjemplarEliminar.Hide();
-          //  txtEliminarEJemplar.Hide();
-          if (txtCorreoEj.Text != "MHRSbz5meUQ@admin.com")
+            txtEliminarEJemplar.Hide();
+            txtIdEjemplarEliminar.Hide();
+            if (txtCorreoEj.Text != "MHRSbz5meUQ@admin.com")
           {
               picEliminarEjemplar.Hide();
-              picEditarEjemplar.Hide();
-              PicInsertarE.Hide();
+              txtEliminarEJemplar.Hide();
+              txtIdEjemplarEliminar.Hide();
           }
             txtCorreoEj.Hide();
             txtPrestar.Hide();
@@ -120,6 +121,7 @@ namespace proyectoVdufferx
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = Filtros(Convert.ToString(cmbAutores.Text), Convert.ToString(cmbFormato.Text));
             DgvEjemplares.Columns[0].Visible = false;
+            DgvEjemplares.AutoResizeColumns();
         }
 
         private void picBuscarTo_Click(object sender, EventArgs e)
@@ -127,6 +129,8 @@ namespace proyectoVdufferx
             DgvEjemplares.DataSource = null;
             DgvEjemplares.DataSource = FiltrarTOT(Convert.ToString(txtBuscarTo.Text));
             DgvEjemplares.Columns[0].Visible = false;
+            DgvEjemplares.AutoResizeColumns();
+
         }
 
         int renglon;
@@ -308,51 +312,6 @@ namespace proyectoVdufferx
             this.Close();
         }
 
-        private void picEditarEjemplar_Click(object sender, EventArgs e)
-        {
-            if (txtIdEjemplarEliminar.Text.Length > 0)
-            {
-               
-            }
-            else
-            {
-                string cadena = Resources.cadena_conexion;
-                using (SqlConnection connection = new SqlConnection(cadena))
-                {
-                    string query =
-                        "SELECT id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @iduser";
 
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@iduser", Convert.ToString(txtEliminarEJemplar.Text));
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            int idu = Convert.ToInt32(reader["id"].ToString());
-                            txtIdEjemplarEliminar.AppendText(idu.ToString());
-                        }
-                    }
-
-                    connection.Close();
-                }
-                
-                frmEjemplarEditar otraventana = new frmEjemplarEditar();
-                otraventana.Show();
-                otraventana.txtIdEliminarE.Text = txtIdEjemplarEliminar.Text;
-            }
-        }
-
-        private void picEliminarEjemplar_DoubleClick(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void PicInsertarE_Click(object sender, EventArgs e)
-        {
-            frmEjemplarInsertar otraventana = new frmEjemplarInsertar();
-            otraventana.Show();
-        }
     }
 }

@@ -77,6 +77,12 @@
         <Compile Include="frmCarnetU.Designer.cs">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
         </Compile>
+        <Compile Include="frmEditarEventos.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEditarEventos.Designer.cs">
+          <DependentUpon>frmEditarEventos.cs</DependentUpon>
+        </Compile>
         <Compile Include="frmEjemplarEditar.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -88,12 +94,6 @@
         </Compile>
         <Compile Include="frmEjemplares.Designer.cs">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
-        </Compile>
-        <Compile Include="frmEjemplarInsertar.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="frmEjemplarInsertar.Designer.cs">
-          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
         </Compile>
         <Compile Include="frmEventos.cs">
           <SubType>Form</SubType>
@@ -160,14 +160,14 @@
         <EmbeddedResource Include="frmCarnetU.resx">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="frmEditarEventos.resx">
+          <DependentUpon>frmEditarEventos.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplarEditar.resx">
           <DependentUpon>frmEjemplarEditar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="frmEjemplarInsertar.resx">
-          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEventos.resx">
           <DependentUpon>frmEventos.cs</DependentUpon>

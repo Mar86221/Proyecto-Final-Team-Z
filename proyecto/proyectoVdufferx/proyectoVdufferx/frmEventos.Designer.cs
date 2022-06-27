@@ -47,11 +47,13 @@ partial class frmEventos
         this.label4 = new System.Windows.Forms.Label();
         this.label5 = new System.Windows.Forms.Label();
         this.txtCuentaU = new System.Windows.Forms.TextBox();
+        this.picEditar = new System.Windows.Forms.PictureBox();
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.btnInsertar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.btnEliminar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.picEditar)).BeginInit();
         this.SuspendLayout();
         // 
         // dgvEventos
@@ -68,6 +70,7 @@ partial class frmEventos
         dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
         this.dgvEventos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
         this.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.dgvEventos.Cursor = System.Windows.Forms.Cursors.Hand;
         dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
         dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
         dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -100,8 +103,9 @@ partial class frmEventos
         // 
         // btnInsertar
         // 
+        this.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
         this.btnInsertar.Image = ((System.Drawing.Image) (resources.GetObject("btnInsertar.Image")));
-        this.btnInsertar.Location = new System.Drawing.Point(12, 417);
+        this.btnInsertar.Location = new System.Drawing.Point(26, 418);
         this.btnInsertar.Name = "btnInsertar";
         this.btnInsertar.Size = new System.Drawing.Size(154, 36);
         this.btnInsertar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -111,8 +115,9 @@ partial class frmEventos
         // 
         // btnEliminar
         // 
+        this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
         this.btnEliminar.Image = ((System.Drawing.Image) (resources.GetObject("btnEliminar.Image")));
-        this.btnEliminar.Location = new System.Drawing.Point(192, 417);
+        this.btnEliminar.Location = new System.Drawing.Point(242, 418);
         this.btnEliminar.Name = "btnEliminar";
         this.btnEliminar.Size = new System.Drawing.Size(113, 35);
         this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -203,12 +208,25 @@ partial class frmEventos
         this.txtCuentaU.Size = new System.Drawing.Size(26, 20);
         this.txtCuentaU.TabIndex = 94;
         // 
+        // picEditar
+        // 
+        this.picEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+        this.picEditar.Image = ((System.Drawing.Image) (resources.GetObject("picEditar.Image")));
+        this.picEditar.Location = new System.Drawing.Point(424, 417);
+        this.picEditar.Name = "picEditar";
+        this.picEditar.Size = new System.Drawing.Size(113, 35);
+        this.picEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+        this.picEditar.TabIndex = 95;
+        this.picEditar.TabStop = false;
+        this.picEditar.Click += new System.EventHandler(this.pictureBox1_Click);
+        // 
         // frmEventos
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.SystemColors.Window;
         this.ClientSize = new System.Drawing.Size(828, 480);
+        this.Controls.Add(this.picEditar);
         this.Controls.Add(this.txtCuentaU);
         this.Controls.Add(this.label5);
         this.Controls.Add(this.label4);
@@ -222,17 +240,23 @@ partial class frmEventos
         this.Controls.Add(this.txtImagen);
         this.Controls.Add(this.picImagen);
         this.Controls.Add(this.dgvEventos);
+        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.MaximizeBox = false;
         this.Name = "frmEventos";
-        this.Text = "frmEventos";
+        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+        this.Text = "EVENTOS";
         this.Load += new System.EventHandler(this.frmEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.picImagen)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.btnInsertar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.btnEliminar)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.picEditar)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.PictureBox picEditar;
 
     public System.Windows.Forms.TextBox txtCuentaU;
 
@@ -244,7 +268,7 @@ partial class frmEventos
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.PictureBox pictureBox10;
 
-    private System.Windows.Forms.TextBox txtTituloEliminar;
+    public System.Windows.Forms.TextBox txtTituloEliminar;
 
     private System.Windows.Forms.PictureBox btnEliminar;
 

@@ -19,11 +19,7 @@ public partial class frmNuevoEvento : Form
     {
         InitializeComponent();
     }
-
-
-
-
-
+    
 
     private void pictureBox12_Click(object sender, EventArgs e)
     {
@@ -55,22 +51,34 @@ public partial class frmNuevoEvento : Form
                 }
                 eventos r = new eventos();
                 string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Eventos\" + txtImagen.Text;
-                //string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Eventos\" + "Torneo.png";
-                
-                r.imagen = ruta;
-                r.titulo = txtNombreE.Text;
-                r.cant_asistentes = Convert.ToInt32(txtAsistentes.Text);
-                r.fecha_inicio = Convert.ToDateTime(dtpInicio.Text + " " + cmbHoraInicio.Text + ":" + cmbMinInicio.Text);
-                r.fecha_final = Convert.ToDateTime(dtpFinal.Text + " " + cmbHoraFinal.Text + ":" + cmbMinFinal.Text);
-                r.id_area = Convert.ToInt32(txtNombre.Text);
-                if (eventosDAO.CrearNuevo(r))
+                if (txtNombreE.Text.Length>0 &&
+                    txtAsistentes.Text.Length >0 &&
+                    cmbHoraFinal.Text.Length > 0 &&
+                    cmbHoraInicio.Text.Length >0 &&
+                    cmbMinFinal.Text.Length >0 &&
+                    cmbMinInicio.Text.Length >0)
                 {
-                    MessageBox.Show("Evento creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-                }else
-                {
-                    MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    r.imagen = ruta;
+                    r.titulo = txtNombreE.Text;
+                    r.cant_asistentes = Convert.ToInt32(txtAsistentes.Text);
+                    r.fecha_inicio = Convert.ToDateTime(dtpInicio.Text + " " + cmbHoraInicio.Text + ":" + cmbMinInicio.Text);
+                    r.fecha_final = Convert.ToDateTime(dtpFinal.Text + " " + cmbHoraFinal.Text + ":" + cmbMinFinal.Text);
+                    r.id_area = Convert.ToInt32(txtNombre.Text);
+                    if (eventosDAO.CrearNuevo(r))
+                    {
+                        MessageBox.Show("Evento creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                        this.Close();  
+                    }else
+                    {
+                        MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    
                 }
-        this.Close();  
+                else
+                {
+                    MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                
     }
 
     private void frmNuevoEvento_Load_1(object sender, EventArgs e)
@@ -84,7 +92,6 @@ public partial class frmNuevoEvento : Form
 
     private void picBuscar_Click(object sender, EventArgs e)
     {
-        //OpenFileDialog ofd = new OpenFileDialog();
         ofdi.InitialDirectory = "Eventos";
         ofdi.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)|*.jpg";
         if (ofdi.ShowDialog() == DialogResult.OK)

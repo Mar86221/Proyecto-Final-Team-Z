@@ -184,6 +184,7 @@ partial class frmNuevoEvento
         // 
         // picBuscar
         // 
+        this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
         this.picBuscar.Image = ((System.Drawing.Image) (resources.GetObject("picBuscar.Image")));
         this.picBuscar.Location = new System.Drawing.Point(278, 149);
         this.picBuscar.Name = "picBuscar";
@@ -358,13 +359,14 @@ partial class frmNuevoEvento
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(147, 318);
+        this.txtNombre.Location = new System.Drawing.Point(313, 261);
         this.txtNombre.Name = "txtNombre";
-        this.txtNombre.Size = new System.Drawing.Size(51, 20);
+        this.txtNombre.Size = new System.Drawing.Size(10, 20);
         this.txtNombre.TabIndex = 105;
         // 
         // pictureBox12
         // 
+        this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
         this.pictureBox12.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox12.Image")));
         this.pictureBox12.Location = new System.Drawing.Point(231, 307);
         this.pictureBox12.Name = "pictureBox12";
@@ -411,8 +413,10 @@ partial class frmNuevoEvento
         this.Controls.Add(this.lblInsti);
         this.Controls.Add(this.pictureBox5);
         this.Controls.Add(this.pbInsti);
+        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.MaximizeBox = false;
         this.Name = "frmNuevoEvento";
-        this.Text = "frmNuevoEvento";
+        this.Text = "Nuevo Evento";
         this.Load += new System.EventHandler(this.frmNuevoEvento_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbInsti)).EndInit();

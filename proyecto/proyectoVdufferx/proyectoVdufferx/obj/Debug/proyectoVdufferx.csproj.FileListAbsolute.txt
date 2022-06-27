@@ -241,3 +241,10 @@ C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z-Everth
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z-Everth\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarInsertar.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z-Everth\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEventos.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Everth\Proyecto-Final-Team-Z-Everth\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarInsertar.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources
+C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources

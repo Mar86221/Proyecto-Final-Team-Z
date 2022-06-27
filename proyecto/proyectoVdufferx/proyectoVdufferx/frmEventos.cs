@@ -41,38 +41,6 @@ public partial class frmEventos : Form
         txtTituloEliminar.Text = nombreliminar;
         
     }
-    
-
-    private void btnEliminar_Click(object sender, EventArgs e)
-    {
-        static bool eliminarEvento(string titulo)
-        {
-            bool exito = true;
-            try
-            {
-                string cadena = Resources.cadena_conexion;
-                using (SqlConnection connection = new SqlConnection(cadena))
-                {
-                    string query = "DELETE EVENTO FROM EVENTO WHERE EVENTO.titulo = @titulo";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@titulo", titulo);
-
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                exito = false;
-            }
-
-            return exito;
-        }
-        eliminarEvento(txtTituloEliminar.Text);
-        MessageBox.Show("Eliminado con exito");
-    }
-
     private void btnInsertar_Click_1(object sender, EventArgs e)
     {
         frmNuevoEvento frnuev = new frmNuevoEvento();
@@ -112,4 +80,11 @@ public partial class frmEventos : Form
     }
 
 
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
+        frmEditarEventos free = new frmEditarEventos();
+        free.txtNombre.Text = txtTituloEliminar.Text;
+        free.Show();
+        this.Close();
+    }
 }

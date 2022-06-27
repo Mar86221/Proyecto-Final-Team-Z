@@ -16,13 +16,7 @@ namespace proyectoVdufferx
         {
             InitializeComponent();
         }
-
-        private void picRegistrarme_Click(object sender, EventArgs e)
-        {
-            frmRegistro otraventana = new frmRegistro();
-            otraventana.Show();
-            this.Hide();
-        }
+        
 
         private void picIngresar_Click(object sender, EventArgs e)
         {
@@ -32,9 +26,5 @@ namespace proyectoVdufferx
             
         }
 
-        private void frmInicio_Load(object sender, EventArgs e)
-        {
-            picRegistrarme.Hide();
-        }
     }
 }

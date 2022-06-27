@@ -47,25 +47,7 @@ public partial class frmPrestar : Form
 
             connection.Close();
         }
-        using (SqlConnection connection = new SqlConnection(cadena))
-        {
-            string query =
-                "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
 
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
-            connection.Open();
-            using (SqlDataReader reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    int idu = Convert.ToInt32(reader["id"].ToString());
-                    txtIDu.AppendText(idu.ToString());
-                }
-            }
-
-            connection.Close();
-        }
         panel1.Hide();
         panel2.Hide();
         txtID.Hide();
@@ -121,7 +103,6 @@ public partial class frmPrestar : Form
    private void picOkPrestar_Click(object sender, EventArgs e)
    {
        string cadena = Resources.cadena_conexion;
-       
        using (SqlConnection connection = new SqlConnection(cadena))
        {
            string query =
@@ -141,25 +122,60 @@ public partial class frmPrestar : Form
 
            connection.Close();
        }
-       prestamo p = new prestamo();
-       p.id_usuario = Convert.ToInt32(txtIDu.Text);
-       p.id_ejemplar = Convert.ToInt32(txtID.Text);
-       p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
-       p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
-       ////'06/25/2022 11:55'
-       if (prestamoDAO.CrearNuevo(p))
+
+       if (cmbHorasPrestamo.Text.Length > 0 &&
+           cmbMinPrestamo.Text.Length > 0 &&
+           cmbHorDevPrestamo.Text.Length > 0 &&
+           cmbMinDevPrest.Text.Length > 0 &&
+           txtCorreousuario.Text.Length > 0) 
        {
-           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           prestamo p = new prestamo();
+           p.id_usuario = Convert.ToInt32(txtIDu.Text);
+           p.id_ejemplar = Convert.ToInt32(txtID.Text);
+           p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
+           p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
+           ////'06/25/2022 11:55'
+           if (prestamoDAO.CrearNuevo(p))
+           {
+               MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               this.Close();
+           }
+           else
+           {
+               MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
        }
+
        else
        {
-           MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
        }
+       
        
    }
 
    private void picOKReservar_Click(object sender, EventArgs e)
    {
+       string cadena = Resources.cadena_conexion;
+       using (SqlConnection connection = new SqlConnection(cadena))
+       {
+           string query =
+               "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
+
+           SqlCommand command = new SqlCommand(query, connection);
+           command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
+           connection.Open();
+           using (SqlDataReader reader = command.ExecuteReader())
+           {
+               while (reader.Read())
+               {
+                   int idu = Convert.ToInt32(reader["id"].ToString());
+                   txtIDu.AppendText(idu.ToString());
+               }
+           }
+
+           connection.Close();
+       }
        reserva r = new reserva();
        r.id_usuario = Convert.ToInt32(txtIDu.Text);
        r.id_ejemplar = Convert.ToInt32(txtID.Text);
@@ -167,7 +183,8 @@ public partial class frmPrestar : Form
        r.fecha_devolucion = Convert.ToDateTime(dtpFechadevolucion.Text + " " + cmbHoradevReserva.Text + ":" + cmbMinDevReserva.Text);
        if (reservaDAO.CrearNuevo(r))
        {
-           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           MessageBox.Show("Reserva realizada existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           this.Close();
        }
        else
        {
