@@ -146,22 +146,25 @@ namespace proyectoVdufferx
         int renglonprestar;
         private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (txtCorreoEj.Text == "MHRSbz5meUQ@admin.com")
+            {
+                renglonprestar = e.RowIndex;
+                string nombreprestar;
+                nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
+                txtPrestar.Text = nombreprestar;
+                frmPrestar frmp = new frmPrestar();
+                frmp.txtNombreEjemplar.Text = nombreprestar;
+                frmp.txtCorreoU.Text = txtCorreoEj.Text;/////////////////////////////////
+                renglon = e.RowIndex;
+                string nombre;
+                nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
+                txtImagen.Text = nombre;
+                picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+                frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+                frmp.ShowDialog();
+            }
             
-            
-            renglonprestar = e.RowIndex;
-            string nombreprestar;
-            nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
-            txtPrestar.Text = nombreprestar;
-            frmPrestar frmp = new frmPrestar();
-            frmp.txtNombreEjemplar.Text = nombreprestar;
-            frmp.txtCorreoU.Text = txtCorreoEj.Text;/////////////////////////////////
-            renglon = e.RowIndex;
-            string nombre;
-            nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
-            txtImagen.Text = nombre;
-            picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
-            frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
-            frmp.ShowDialog();
+           
            
         }
 

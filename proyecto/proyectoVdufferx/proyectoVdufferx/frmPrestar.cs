@@ -17,6 +17,7 @@ public partial class frmPrestar : Form
 
     private void frmPrestar_Load(object sender, EventArgs e)
     {
+        panelcorreo.Hide();
         string cadena = Resources.cadena_conexion;
         using (SqlConnection connection = new SqlConnection(cadena))
         {
@@ -52,7 +53,7 @@ public partial class frmPrestar : Form
                 "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreoU.Text));
+            command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
             connection.Open();
             using (SqlDataReader reader = command.ExecuteReader())
             {
@@ -108,11 +109,13 @@ public partial class frmPrestar : Form
    private void pbPrestar_Click(object sender, EventArgs e)
    {
        panel1.Show();
+       panelcorreo.Show();
    }
 
    private void pbReservar_Click(object sender, EventArgs e)
    {
        panel2.Show();
+       panelcorreo.Show();
    }
 
    private void picOkPrestar_Click(object sender, EventArgs e)
