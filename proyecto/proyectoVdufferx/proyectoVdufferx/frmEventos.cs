@@ -15,11 +15,17 @@ public partial class frmEventos : Form
 
     private void frmEventos_Load_1(object sender, EventArgs e)
     {
+        if (txtCuentaU.Text != "MHRSbz5meUQ@admin.com")
+        {
+            btnInsertar.Hide();
+            btnEliminar.Hide();
+        }
         dgvEventos.DataSource = null;
         dgvEventos.DataSource = eventosDAO.ObtenerTodos();
         dgvEventos.Columns[0].Visible = false;
         dgvEventos.AutoResizeColumns();
         txtImagen.Hide();
+        txtCuentaU.Hide();
         txtTituloEliminar.Hide();
     }
     int renglon;
@@ -35,15 +41,14 @@ public partial class frmEventos : Form
         txtTituloEliminar.Text = nombreliminar;
         
     }
-    
-    private void btnInsertar_Click(object sender, EventArgs e)
+    private void btnInsertar_Click_1(object sender, EventArgs e)
     {
         frmNuevoEvento frnuev = new frmNuevoEvento();
         frnuev.Show();
         this.Close();
     }
 
-    private void btnEliminar_Click(object sender, EventArgs e)
+    private void btnEliminar_Click_1(object sender, EventArgs e)
     {
         static bool eliminarEvento(string titulo)
         {
@@ -71,5 +76,14 @@ public partial class frmEventos : Form
         }
         eliminarEvento(txtTituloEliminar.Text);
         MessageBox.Show("Eliminado con exito");
+        this.Close();
+    }
+
+
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
+        frmEditarEventos free = new frmEditarEventos();
+        free.Show();
+        this.Close();
     }
 }

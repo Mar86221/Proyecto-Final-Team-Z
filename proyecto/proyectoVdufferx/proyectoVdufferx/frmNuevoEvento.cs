@@ -19,32 +19,9 @@ public partial class frmNuevoEvento : Form
     {
         InitializeComponent();
     }
+    
 
-    private void frmNuevoEvento_Load(object sender, EventArgs e)
-    {
-        cmbArea.DataSource = null;
-        cmbArea.ValueMember = "id";
-        cmbArea.DisplayMember = "nombre";
-        cmbArea.DataSource = areaDAO.ObtenerTodos();
-        txtNombre.Hide();
-    }
-
-
-    private void picImagen_Click(object sender, EventArgs e)
-    {
-
-        //OpenFileDialog ofd = new OpenFileDialog();
-        ofdi.InitialDirectory = "Eventos";
-        ofdi.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)|*.jpg";
-        if (ofdi.ShowDialog() == DialogResult.OK)
-        {
-            txtImagen.Text = ofdi.SafeFileName;
-        }
-
-        ofdi.Dispose();
-
-    }
-    private void picOkPrestar_Click(object sender, EventArgs e)
+    private void pictureBox12_Click(object sender, EventArgs e)
     {
         if (txtNombre.Text.Length > 0)
                 {
@@ -90,6 +67,28 @@ public partial class frmNuevoEvento : Form
                     MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
         this.Close();  
+    }
+
+    private void frmNuevoEvento_Load_1(object sender, EventArgs e)
+    {
+        cmbArea.DataSource = null;
+        cmbArea.ValueMember = "id";
+        cmbArea.DisplayMember = "nombre";
+        cmbArea.DataSource = areaDAO.ObtenerTodos();
+        txtNombre.Hide();
+    }
+
+    private void picBuscar_Click(object sender, EventArgs e)
+    {
+        //OpenFileDialog ofd = new OpenFileDialog();
+        ofdi.InitialDirectory = "Eventos";
+        ofdi.Filter = "Archivos png (*.png)|*.png|Archivos jpg (*.jpg)|*.jpg";
+        if (ofdi.ShowDialog() == DialogResult.OK)
+        {
+            txtImagen.Text = ofdi.SafeFileName;
+        }
+
+        ofdi.Dispose();
     }
 }
     

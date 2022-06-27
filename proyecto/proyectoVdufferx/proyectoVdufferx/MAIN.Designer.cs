@@ -46,8 +46,6 @@ namespace proyectoVdufferx
             this.txtTucuentaTelefono = new System.Windows.Forms.TextBox();
             this.txtTucuentaCorreo = new System.Windows.Forms.TextBox();
             this.txtTucuentaNombre = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.grpTuPrestamo = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,8 +58,6 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picTucuenta)).BeginInit();
             this.grpTuCuenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).BeginInit();
             this.grpTuPrestamo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -217,26 +213,6 @@ namespace proyectoVdufferx
             this.txtTucuentaNombre.Size = new System.Drawing.Size(194, 20);
             this.txtTucuentaNombre.TabIndex = 1;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(163, 378);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 46);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(588, 378);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 46);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
             // grpTuPrestamo
             // 
             this.grpTuPrestamo.BackColor = System.Drawing.Color.AliceBlue;
@@ -330,8 +306,6 @@ namespace proyectoVdufferx
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.grpTuPrestamo);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.grpTuCuenta);
             this.Controls.Add(this.picTucuenta);
             this.Controls.Add(this.picTuprestamo);
@@ -349,8 +323,6 @@ namespace proyectoVdufferx
             this.grpTuCuenta.ResumeLayout(false);
             this.grpTuCuenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.PicTuCuentaDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox4)).EndInit();
             this.grpTuPrestamo.ResumeLayout(false);
             this.grpTuPrestamo.PerformLayout();
             this.ResumeLayout(false);
@@ -372,11 +344,7 @@ namespace proyectoVdufferx
 
         private System.Windows.Forms.GroupBox grpTuPrestamo;
 
-        private System.Windows.Forms.PictureBox pictureBox4;
-
-        private System.Windows.Forms.PictureBox pictureBox3;
-
-        private proyectoVdufferx.PictureCircularBox PicTuCuentaDatos;
+        public proyectoVdufferx.PictureCircularBox PicTuCuentaDatos;
 
         public System.Windows.Forms.TextBox txtTucuentaFotografia;
 

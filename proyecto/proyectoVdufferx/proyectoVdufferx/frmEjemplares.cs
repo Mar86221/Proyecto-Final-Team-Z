@@ -87,6 +87,12 @@ namespace proyectoVdufferx
         {
           //  txtIdEjemplarEliminar.Hide();
           //  txtEliminarEJemplar.Hide();
+          if (txtCorreoEj.Text != "MHRSbz5meUQ@admin.com")
+          {
+              picEliminarEjemplar.Hide();
+              picEditarEjemplar.Hide();
+              PicInsertarE.Hide();
+          }
             txtCorreoEj.Hide();
             txtPrestar.Hide();
             txtImagen.Hide();
@@ -140,22 +146,25 @@ namespace proyectoVdufferx
         int renglonprestar;
         private void DgvEjemplares_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (txtCorreoEj.Text == "MHRSbz5meUQ@admin.com")
+            {
+                renglonprestar = e.RowIndex;
+                string nombreprestar;
+                nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
+                txtPrestar.Text = nombreprestar;
+                frmPrestar frmp = new frmPrestar();
+                frmp.txtNombreEjemplar.Text = nombreprestar;
+                frmp.txtCorreoU.Text = txtCorreoEj.Text;/////////////////////////////////
+                renglon = e.RowIndex;
+                string nombre;
+                nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
+                txtImagen.Text = nombre;
+                picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+                frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
+                frmp.ShowDialog();
+            }
             
-            
-            renglonprestar = e.RowIndex;
-            string nombreprestar;
-            nombreprestar = DgvEjemplares.Rows[renglonprestar].Cells["nombre"].Value.ToString();
-            txtPrestar.Text = nombreprestar;
-            frmPrestar frmp = new frmPrestar();
-            frmp.txtNombreEjemplar.Text = nombreprestar;
-            frmp.txtCorreoU.Text = txtCorreoEj.Text;/////////////////////////////////
-            renglon = e.RowIndex;
-            string nombre;
-            nombre = DgvEjemplares.Rows[renglon].Cells["imagen"].Value.ToString();
-            txtImagen.Text = nombre;
-            picImagen.Image = System.Drawing.Image.FromFile(txtImagen.Text);
-            frmp.pbPortada.Image = System.Drawing.Image.FromFile(txtImagen.Text);
-            frmp.ShowDialog();
+           
            
         }
 
@@ -188,10 +197,6 @@ namespace proyectoVdufferx
                     connection.Close();
                 }
             }
-        }
-
-        private void picEliminarEjemplar_DoubleClick(object sender, EventArgs e)
-        {
             static bool eliminarEjemplarxatuor(int id)
             {
                 bool exito = true;
@@ -299,7 +304,8 @@ namespace proyectoVdufferx
             eliminarEjemplarPresta(Convert.ToInt32(txtIdEjemplarEliminar.Text));
             eliminarEjemplar(Convert.ToInt32(txtIdEjemplarEliminar.Text));
 
-            MessageBox.Show("Eliminado con exito");
+            MessageBox.Show("Eliminado con exito", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void picEditarEjemplar_Click(object sender, EventArgs e)
@@ -335,7 +341,18 @@ namespace proyectoVdufferx
                 otraventana.Show();
                 otraventana.txtIdEliminarE.Text = txtIdEjemplarEliminar.Text;
             }
+        }
+
+        private void picEliminarEjemplar_DoubleClick(object sender, EventArgs e)
+        {
             
+            
+        }
+
+        private void PicInsertarE_Click(object sender, EventArgs e)
+        {
+            frmEjemplarInsertar otraventana = new frmEjemplarInsertar();
+            otraventana.Show();
         }
     }
 }

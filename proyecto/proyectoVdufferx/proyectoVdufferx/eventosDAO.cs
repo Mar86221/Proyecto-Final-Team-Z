@@ -70,5 +70,31 @@ public class eventosDAO
 
         return listaev;
     }
+    
+    public static bool Actualizar(eventos e)
+    {
+        bool exito = true;
+        try {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena)){
+                string query = "UPDATE EVENTO SET imagen = @imagen, titulo = @titulo, cant_asistentes = @cant_asistentes, fecha_inicio = @fecha_inicio, fecha_final = @fecha_final WHERE titulo = @titulobuscado";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("imagen", e.imagen);
+                command.Parameters.AddWithValue("@titulo", e.titulo);
+                command.Parameters.AddWithValue("@cant_asistentes", e.cant_asistentes);
+                command.Parameters.AddWithValue("@fecha_inicio", e.fecha_inicio);
+                command.Parameters.AddWithValue("@fecha_final", e.fecha_final);
+                command.Parameters.AddWithValue("@titulobuscado", e.titulobuscado);
+               
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+        catch (Exception) {
+            exito = false;
+        }
+        return exito;
+    }
 
 }

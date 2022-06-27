@@ -86,6 +86,11 @@ partial class frmPrestar
         this.txtID = new System.Windows.Forms.TextBox();
         this.txtIDu = new System.Windows.Forms.TextBox();
         this.txtCorreoU = new System.Windows.Forms.TextBox();
+        this.lblCor = new System.Windows.Forms.Label();
+        this.txtCorreousuario = new System.Windows.Forms.TextBox();
+        this.pictureBox18 = new System.Windows.Forms.PictureBox();
+        this.pbCor = new System.Windows.Forms.PictureBox();
+        this.panelcorreo = new System.Windows.Forms.Panel();
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbReservar)).BeginInit();
@@ -111,6 +116,9 @@ partial class frmPrestar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox15)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pbCor)).BeginInit();
+        this.panelcorreo.SuspendLayout();
         this.SuspendLayout();
         // 
         // pbPortada
@@ -661,18 +669,68 @@ partial class frmPrestar
         // 
         // txtCorreoU
         // 
-        this.txtCorreoU.Location = new System.Drawing.Point(299, 267);
+        this.txtCorreoU.Location = new System.Drawing.Point(389, 267);
         this.txtCorreoU.Name = "txtCorreoU";
         this.txtCorreoU.ReadOnly = true;
-        this.txtCorreoU.Size = new System.Drawing.Size(131, 20);
+        this.txtCorreoU.Size = new System.Drawing.Size(171, 20);
         this.txtCorreoU.TabIndex = 55;
+        this.txtCorreoU.Text = "dsd";
+        // 
+        // lblCor
+        // 
+        this.lblCor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+        this.lblCor.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.lblCor.Location = new System.Drawing.Point(22, 2);
+        this.lblCor.Name = "lblCor";
+        this.lblCor.Size = new System.Drawing.Size(70, 16);
+        this.lblCor.TabIndex = 60;
+        this.lblCor.Text = "Correo:";
+        // 
+        // txtCorreousuario
+        // 
+        this.txtCorreousuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+        this.txtCorreousuario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+        this.txtCorreousuario.Location = new System.Drawing.Point(19, 19);
+        this.txtCorreousuario.Name = "txtCorreousuario";
+        this.txtCorreousuario.Size = new System.Drawing.Size(262, 19);
+        this.txtCorreousuario.TabIndex = 59;
+        this.txtCorreousuario.Tag = "Cor";
+        // 
+        // pictureBox18
+        // 
+        this.pictureBox18.Location = new System.Drawing.Point(13, 12);
+        this.pictureBox18.Name = "pictureBox18";
+        this.pictureBox18.Size = new System.Drawing.Size(279, 29);
+        this.pictureBox18.TabIndex = 57;
+        this.pictureBox18.TabStop = false;
+        // 
+        // pbCor
+        // 
+        this.pbCor.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.pbCor.Location = new System.Drawing.Point(11, 10);
+        this.pbCor.Name = "pbCor";
+        this.pbCor.Size = new System.Drawing.Size(283, 33);
+        this.pbCor.TabIndex = 58;
+        this.pbCor.TabStop = false;
+        // 
+        // panelcorreo
+        // 
+        this.panelcorreo.Controls.Add(this.lblCor);
+        this.panelcorreo.Controls.Add(this.txtCorreousuario);
+        this.panelcorreo.Controls.Add(this.pictureBox18);
+        this.panelcorreo.Controls.Add(this.pbCor);
+        this.panelcorreo.Location = new System.Drawing.Point(22, 487);
+        this.panelcorreo.Name = "panelcorreo";
+        this.panelcorreo.Size = new System.Drawing.Size(304, 54);
+        this.panelcorreo.TabIndex = 61;
         // 
         // frmPrestar
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(600, 488);
+        this.ClientSize = new System.Drawing.Size(697, 556);
+        this.Controls.Add(this.panelcorreo);
         this.Controls.Add(this.txtCorreoU);
         this.Controls.Add(this.txtIDu);
         this.Controls.Add(this.txtID);
@@ -731,9 +789,20 @@ partial class frmPrestar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox15)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pbCor)).EndInit();
+        this.panelcorreo.ResumeLayout(false);
+        this.panelcorreo.PerformLayout();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.Panel panelcorreo;
+
+    private System.Windows.Forms.Label lblCor;
+    private System.Windows.Forms.TextBox txtCorreousuario;
+    private System.Windows.Forms.PictureBox pictureBox18;
+    private System.Windows.Forms.PictureBox pbCor;
 
     private System.Windows.Forms.PictureBox picOkPrestar;
 

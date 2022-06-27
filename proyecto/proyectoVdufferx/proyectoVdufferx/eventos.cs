@@ -10,4 +10,5 @@ public class eventos
     public DateTime fecha_inicio { get; set; }
     public DateTime fecha_final { get; set; }
     public int id_area { get; set; }
+    public string titulobuscado { get; set; }
 }

@@ -17,6 +17,7 @@ public partial class frmPrestar : Form
 
     private void frmPrestar_Load(object sender, EventArgs e)
     {
+        panelcorreo.Hide();
         string cadena = Resources.cadena_conexion;
         using (SqlConnection connection = new SqlConnection(cadena))
         {
@@ -46,25 +47,7 @@ public partial class frmPrestar : Form
 
             connection.Close();
         }
-        using (SqlConnection connection = new SqlConnection(cadena))
-        {
-            string query =
-                "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
 
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreoU.Text));
-            connection.Open();
-            using (SqlDataReader reader = command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    int idu = Convert.ToInt32(reader["id"].ToString());
-                    txtIDu.AppendText(idu.ToString());
-                }
-            }
-
-            connection.Close();
-        }
         panel1.Hide();
         panel2.Hide();
         txtID.Hide();
@@ -108,15 +91,37 @@ public partial class frmPrestar : Form
    private void pbPrestar_Click(object sender, EventArgs e)
    {
        panel1.Show();
+       panelcorreo.Show();
    }
 
    private void pbReservar_Click(object sender, EventArgs e)
    {
        panel2.Show();
+       panelcorreo.Show();
    }
 
    private void picOkPrestar_Click(object sender, EventArgs e)
    {
+       string cadena = Resources.cadena_conexion;
+       using (SqlConnection connection = new SqlConnection(cadena))
+       {
+           string query =
+               "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
+
+           SqlCommand command = new SqlCommand(query, connection);
+           command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
+           connection.Open();
+           using (SqlDataReader reader = command.ExecuteReader())
+           {
+               while (reader.Read())
+               {
+                   int idu = Convert.ToInt32(reader["id"].ToString());
+                   txtIDu.AppendText(idu.ToString());
+               }
+           }
+
+           connection.Close();
+       }
        prestamo p = new prestamo();
        p.id_usuario = Convert.ToInt32(txtIDu.Text);
        p.id_ejemplar = Convert.ToInt32(txtID.Text);
@@ -136,6 +141,26 @@ public partial class frmPrestar : Form
 
    private void picOKReservar_Click(object sender, EventArgs e)
    {
+       string cadena = Resources.cadena_conexion;
+       using (SqlConnection connection = new SqlConnection(cadena))
+       {
+           string query =
+               "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
+
+           SqlCommand command = new SqlCommand(query, connection);
+           command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
+           connection.Open();
+           using (SqlDataReader reader = command.ExecuteReader())
+           {
+               while (reader.Read())
+               {
+                   int idu = Convert.ToInt32(reader["id"].ToString());
+                   txtIDu.AppendText(idu.ToString());
+               }
+           }
+
+           connection.Close();
+       }
        reserva r = new reserva();
        r.id_usuario = Convert.ToInt32(txtIDu.Text);
        r.id_ejemplar = Convert.ToInt32(txtID.Text);

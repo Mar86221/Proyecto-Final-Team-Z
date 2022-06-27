@@ -59,6 +59,7 @@ namespace proyectoVdufferx
             this.txtCorreoEj = new System.Windows.Forms.TextBox();
             this.txtEliminarEJemplar = new System.Windows.Forms.TextBox();
             this.txtIdEjemplarEliminar = new System.Windows.Forms.TextBox();
+            this.PicInsertarE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -296,7 +297,7 @@ namespace proyectoVdufferx
             // picEditarEjemplar
             // 
             this.picEditarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("picEditarEjemplar.Image")));
-            this.picEditarEjemplar.Location = new System.Drawing.Point(101, 622);
+            this.picEditarEjemplar.Location = new System.Drawing.Point(214, 622);
             this.picEditarEjemplar.Name = "picEditarEjemplar";
             this.picEditarEjemplar.Size = new System.Drawing.Size(113, 35);
             this.picEditarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -307,7 +308,7 @@ namespace proyectoVdufferx
             // picEliminarEjemplar
             // 
             this.picEliminarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("picEliminarEjemplar.Image")));
-            this.picEliminarEjemplar.Location = new System.Drawing.Point(276, 622);
+            this.picEliminarEjemplar.Location = new System.Drawing.Point(351, 622);
             this.picEliminarEjemplar.Name = "picEliminarEjemplar";
             this.picEliminarEjemplar.Size = new System.Drawing.Size(113, 35);
             this.picEliminarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -325,17 +326,28 @@ namespace proyectoVdufferx
             // 
             // txtEliminarEJemplar
             // 
-            this.txtEliminarEJemplar.Location = new System.Drawing.Point(442, 637);
+            this.txtEliminarEJemplar.Location = new System.Drawing.Point(596, 613);
             this.txtEliminarEJemplar.Name = "txtEliminarEJemplar";
             this.txtEliminarEJemplar.Size = new System.Drawing.Size(83, 20);
             this.txtEliminarEJemplar.TabIndex = 93;
+            this.txtEliminarEJemplar.Text = "FSDFSDF";
             // 
             // txtIdEjemplarEliminar
             // 
-            this.txtIdEjemplarEliminar.Location = new System.Drawing.Point(442, 664);
+            this.txtIdEjemplarEliminar.Location = new System.Drawing.Point(685, 613);
             this.txtIdEjemplarEliminar.Name = "txtIdEjemplarEliminar";
             this.txtIdEjemplarEliminar.Size = new System.Drawing.Size(83, 20);
             this.txtIdEjemplarEliminar.TabIndex = 94;
+            // 
+            // PicInsertarE
+            // 
+            this.PicInsertarE.Location = new System.Drawing.Point(59, 623);
+            this.PicInsertarE.Name = "PicInsertarE";
+            this.PicInsertarE.Size = new System.Drawing.Size(121, 34);
+            this.PicInsertarE.TabIndex = 95;
+            this.PicInsertarE.Text = "Insertar";
+            this.PicInsertarE.UseVisualStyleBackColor = true;
+            this.PicInsertarE.Click += new System.EventHandler(this.PicInsertarE_Click);
             // 
             // frmEjemplares
             // 
@@ -343,6 +355,7 @@ namespace proyectoVdufferx
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 696);
+            this.Controls.Add(this.PicInsertarE);
             this.Controls.Add(this.txtIdEjemplarEliminar);
             this.Controls.Add(this.txtEliminarEJemplar);
             this.Controls.Add(this.txtCorreoEj);
@@ -390,6 +403,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button PicInsertarE;
 
         public System.Windows.Forms.TextBox txtIdEjemplarEliminar;
 
