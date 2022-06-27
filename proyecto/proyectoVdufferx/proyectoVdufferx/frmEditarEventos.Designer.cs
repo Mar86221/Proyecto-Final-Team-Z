@@ -76,6 +76,7 @@ partial class frmEditarEventos
         // 
         // picOked
         // 
+        this.picOked.Cursor = System.Windows.Forms.Cursors.Hand;
         this.picOked.Image = ((System.Drawing.Image) (resources.GetObject("picOked.Image")));
         this.picOked.Location = new System.Drawing.Point(220, 242);
         this.picOked.Name = "picOked";
@@ -211,6 +212,7 @@ partial class frmEditarEventos
         // 
         // picBuscaredit
         // 
+        this.picBuscaredit.Cursor = System.Windows.Forms.Cursors.Hand;
         this.picBuscaredit.Image = ((System.Drawing.Image) (resources.GetObject("picBuscaredit.Image")));
         this.picBuscaredit.Location = new System.Drawing.Point(267, 84);
         this.picBuscaredit.Name = "picBuscaredit";
@@ -367,8 +369,10 @@ partial class frmEditarEventos
         this.Controls.Add(this.label1);
         this.Controls.Add(this.pictureBox1);
         this.Controls.Add(this.pictureBox2);
+        this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.MaximizeBox = false;
         this.Name = "frmEditarEventos";
-        this.Text = "frmEditarEventos";
+        this.Text = "Editar Evento";
         this.Load += new System.EventHandler(this.frmEditarEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.picOked)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();

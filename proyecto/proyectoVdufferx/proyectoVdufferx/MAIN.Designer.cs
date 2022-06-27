@@ -73,6 +73,7 @@ namespace proyectoVdufferx
             // 
             // btnEjemplares
             // 
+            this.btnEjemplares.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjemplares.Image = ((System.Drawing.Image) (resources.GetObject("btnEjemplares.Image")));
             this.btnEjemplares.Location = new System.Drawing.Point(64, 292);
@@ -84,6 +85,7 @@ namespace proyectoVdufferx
             // 
             // btnEventos
             // 
+            this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEventos.Image = ((System.Drawing.Image) (resources.GetObject("btnEventos.Image")));
             this.btnEventos.Location = new System.Drawing.Point(481, 292);
@@ -95,6 +97,7 @@ namespace proyectoVdufferx
             // 
             // picTuprestamo
             // 
+            this.picTuprestamo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picTuprestamo.Image = ((System.Drawing.Image) (resources.GetObject("picTuprestamo.Image")));
             this.picTuprestamo.Location = new System.Drawing.Point(559, 0);
             this.picTuprestamo.Name = "picTuprestamo";
@@ -106,6 +109,7 @@ namespace proyectoVdufferx
             // 
             // picTucuenta
             // 
+            this.picTucuenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picTucuenta.Image = ((System.Drawing.Image) (resources.GetObject("picTucuenta.Image")));
             this.picTucuenta.Location = new System.Drawing.Point(692, 0);
             this.picTucuenta.Name = "picTucuenta";
@@ -303,6 +307,7 @@ namespace proyectoVdufferx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.grpTuPrestamo);
@@ -312,6 +317,8 @@ namespace proyectoVdufferx
             this.Controls.Add(this.btnEventos);
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MAIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MAIN";

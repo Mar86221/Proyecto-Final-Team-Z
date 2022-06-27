@@ -179,39 +179,7 @@ namespace proyectoVdufferx
             return lista;
         }
 
-        public static bool CrearnuevoEjemplar(ejemplar ejemplar)
-        {
-            bool exito = true;
-            try
-            {
-                string cadena = Resources.cadena_conexion;
-                using (SqlConnection connection = new SqlConnection(cadena))
-                {
-                    string query =
-                        "INSERT INTO EJEMPLAR (etiqueta,nombre,Palabras_claves,fecha_publicacion,id_coleccion,id_editorial,id_idioma,id_formato)" +
-                        "VALUES (@nuevaetiqueta,@nuevonombre,@nuevapalabrasclaves,@fecha_publicacion,@idcoleccion,@id_editorial,@id_idioma,@id_formato)";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@nuevaetiqueta", ejemplar.etiqueta);
-                    command.Parameters.AddWithValue("@nuevonombre", ejemplar.nombre);
-                    command.Parameters.AddWithValue("@nuevapalabrasclaves", ejemplar.Palabras_claves);
-                    command.Parameters.AddWithValue("@fecha_publicacion", ejemplar.fecha_publicacion);
-                    command.Parameters.AddWithValue("@id_coleccion", ejemplar.id_coleccion);
-                    command.Parameters.AddWithValue("@id_editorial", ejemplar.id_editorial);
-                    command.Parameters.AddWithValue("@id_idioma", ejemplar.id_idioma);
-                    command.Parameters.AddWithValue("@id_formato", ejemplar.id_formato);
-                    
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    connection.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                exito = false;
-            }
-
-            return exito;
-        }
+       
 
     }
 }

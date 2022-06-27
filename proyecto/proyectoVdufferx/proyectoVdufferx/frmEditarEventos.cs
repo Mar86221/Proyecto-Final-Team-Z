@@ -28,21 +28,37 @@ public partial class frmEditarEventos : Form
         eventos r = new eventos();
         string ruta =System.AppDomain.CurrentDomain.BaseDirectory + @"Eventos\" + txtImagenedit.Text;
 
-        r.imagen = ruta;
-        r.titulo = txtNombreEdit.Text;
-        r.cant_asistentes = Convert.ToInt32(txtAsistentesrdit.Text);
-        r.fecha_inicio = Convert.ToDateTime(dtpInicioed.Text + " " + cmbHoraInicioed.Text + ":" + cmbMinInicioed.Text);
-        r.fecha_final = Convert.ToDateTime(dtpFinaled.Text + " " + cmbHoraFinaled.Text + ":" + cmbMinFinaled.Text);
-        r.titulobuscado = txtNombre.Text;
-        if (eventosDAO.Actualizar(r))
+        if (txtNombreEdit.Text.Length > 0 &&
+            txtAsistentesrdit.Text.Length > 0 &&
+            cmbHoraInicioed.Text.Length >0 &&
+            cmbMinInicioed.Text.Length >0 &&
+            cmbHoraFinaled.Text.Length >0 &&
+            cmbMinFinaled.Text.Length >0)
         {
-            MessageBox.Show("Evento modificado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-        }else
+            r.imagen = ruta;
+            r.titulo = txtNombreEdit.Text;
+            r.cant_asistentes = Convert.ToInt32(txtAsistentesrdit.Text);
+            r.fecha_inicio = Convert.ToDateTime(dtpInicioed.Text + " " + cmbHoraInicioed.Text + ":" + cmbMinInicioed.Text);
+            r.fecha_final = Convert.ToDateTime(dtpFinaled.Text + " " + cmbHoraFinaled.Text + ":" + cmbMinFinaled.Text);
+            r.titulobuscado = txtNombre.Text;
+            if (eventosDAO.Actualizar(r))
+            {
+                MessageBox.Show("Evento modificado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                this.Close();
+            }else
+            {
+                MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
+           
+          }
+        else
         {
-            MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
-        this.Close();
-    }
+        }
+
+     
 
     private void frmEditarEventos_Load_1(object sender, EventArgs e)
     {

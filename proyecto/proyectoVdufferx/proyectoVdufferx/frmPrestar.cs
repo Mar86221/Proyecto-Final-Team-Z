@@ -122,20 +122,35 @@ public partial class frmPrestar : Form
 
            connection.Close();
        }
-       prestamo p = new prestamo();
-       p.id_usuario = Convert.ToInt32(txtIDu.Text);
-       p.id_ejemplar = Convert.ToInt32(txtID.Text);
-       p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
-       p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
-       ////'06/25/2022 11:55'
-       if (prestamoDAO.CrearNuevo(p))
+
+       if (cmbHorasPrestamo.Text.Length > 0 &&
+           cmbMinPrestamo.Text.Length > 0 &&
+           cmbHorDevPrestamo.Text.Length > 0 &&
+           cmbMinDevPrest.Text.Length > 0 &&
+           txtCorreousuario.Text.Length > 0) 
        {
-           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           prestamo p = new prestamo();
+           p.id_usuario = Convert.ToInt32(txtIDu.Text);
+           p.id_ejemplar = Convert.ToInt32(txtID.Text);
+           p.fecha_prestamo = Convert.ToDateTime(dtpPrestamo.Text + " " + cmbHorasPrestamo.Text + ":" + cmbMinPrestamo.Text);
+           p.fecha_devolucion = Convert.ToDateTime(dtpDevolucionPrestamo.Text + " " + cmbHorDevPrestamo.Text + ":" + cmbMinDevPrest.Text);
+           ////'06/25/2022 11:55'
+           if (prestamoDAO.CrearNuevo(p))
+           {
+               MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               this.Close();
+           }
+           else
+           {
+               MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           }
        }
+
        else
        {
-           MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
        }
+       
        
    }
 
@@ -168,7 +183,8 @@ public partial class frmPrestar : Form
        r.fecha_devolucion = Convert.ToDateTime(dtpFechadevolucion.Text + " " + cmbHoradevReserva.Text + ":" + cmbMinDevReserva.Text);
        if (reservaDAO.CrearNuevo(r))
        {
-           MessageBox.Show("Prestamo realizado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           MessageBox.Show("Reserva realizada existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           this.Close();
        }
        else
        {

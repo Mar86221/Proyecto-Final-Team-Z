@@ -112,11 +112,10 @@ CREATE TABLE INSTITUCION(
     
 );
 
- CREATE TABLE IMAGEN (
-               id int IDENTITY (1,1) primary key NOT NULL,
-               nombre NVARCHAR(50),
-               imagen IMAGE
-           );
+
+
+        
+
 
 CREATE TABLE USUARIO (
     id int IDENTITY(1,1) primary key NOT NULL,
@@ -503,7 +502,7 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('AURORA.jpg',19),
            ('ALICIA A TRAVES DEL ESPEJO.jpg',20),
            ('ALICIA.jpg',21),
-           ('EL GATO NEGRO Y OTROS CUENTROS.jpg',21),
+           ('EL GATO NEGRO Y OTROS CUENTROS.jpg',22),
            ('ALICIA EN EL PAIS DE LAS MARAVILLAS.jpg',23),
            ('WIGETTA UN VIAJE MÁGICO.jpg',24),
            ('LA CARTA ROBADA Y OTROS CUENTROS.jpg',25),
@@ -543,7 +542,3 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('ANTIGONA.jpg',59),
            ('EL DIARIO DE ANNE FRANK.jpg',60),
            ('GRAN GATSBY.jpg',61);
-
-
-
-

@@ -126,6 +126,7 @@ namespace proyectoVdufferx
             // 
             // bttIngresar
             // 
+            this.bttIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttIngresar.Image = ((System.Drawing.Image) (resources.GetObject("bttIngresar.Image")));
             this.bttIngresar.Location = new System.Drawing.Point(133, 340);
             this.bttIngresar.Name = "bttIngresar";
@@ -137,6 +138,7 @@ namespace proyectoVdufferx
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 12);
             this.pictureBox2.Name = "pictureBox2";
@@ -152,6 +154,7 @@ namespace proyectoVdufferx
             // 
             // pbIngresar2
             // 
+            this.pbIngresar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbIngresar2.Image = ((System.Drawing.Image) (resources.GetObject("pbIngresar2.Image")));
             this.pbIngresar2.Location = new System.Drawing.Point(198, 404);
             this.pbIngresar2.Name = "pbIngresar2";
@@ -163,6 +166,7 @@ namespace proyectoVdufferx
             // 
             // pbRegistrarUsuario
             // 
+            this.pbRegistrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbRegistrarUsuario.Image = ((System.Drawing.Image) (resources.GetObject("pbRegistrarUsuario.Image")));
             this.pbRegistrarUsuario.Location = new System.Drawing.Point(3, 404);
             this.pbRegistrarUsuario.Name = "pbRegistrarUsuario";

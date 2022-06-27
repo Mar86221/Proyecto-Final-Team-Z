@@ -1854,32 +1854,6 @@
         w65gSDgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="picRegistrarme.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAUoAAAAsCAYAAAAD8/H2AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEZklE
-        QVR4Xu2asYolRRSGJ5pc8AV8D/Ehll2fYM03EB/AwFh2NjEw0EwTjURkQUzEQKMVV8RlNVhcdIxkVkzm
-        Wt/d/oeib3fXrN4Z6FvfB4e+XXXqdHXD/Th9Z45ERERERERE5NrZbDYvnZ+f3yxxUuKLEj+UeFri1DAM
-        4wDijxJPSuA2HIfrbuK+QYPzlKTjknynxM/ls4hIV+A+HFg+Hg9a3KUknDxPFxHpF1w4aHGXMvlsyBMR
-        6RZcOGhxF0UpItIW5dmQJyLSLbhw0OIuilJERFGKiDRRlCIiDRSliEgDRSki0kBRyrVydvbP5vfTv4Yz
-        kXWgKDvnm29/2Xzy2YOLuP/VT5vvH/62Fdq+oearNz7YvPLae9triKwFRdk5b7z56VZc40Bo+5YZorxx
-        +6Nt7ce//jmMLoPI2eM77345jIhcP4qycyJKRJSuMmMIbaqzXHp1/q+dKOum6rIf9sKelpi6LmOX2c9S
-        zniuVdOfFQ4TRdk5kSJCCnzZGSPSVSKHe+9/fTFOcB5Y89bbn1/Mffjxd1v58pnXeaBG5tNRUj97IJBz
-        9sL6vKonqFXXITc5Edh4L0T2urR2bo4umJq5H4L6uR7HpWcj60dRds5lRRnxIA0kwLEWQi07PiOZiCa1
-        axEhSs6Tg4SolXOuexlRErlWxJW9sY+6BvtYWlvPMZb7qMdSm8h9tZ6NrB9F2TkRHELhi09kLAJBavU5
-        1DLld8R8jliZj2QilFpE1ExdgnxgjBo5Zy3z7CnUdcYyYo712QekBvfYWpu5dMH1vWVP1OGcY+vZZEzW
-        jaLsnEhxHHRFkU1kgQzITyQ3ImJNTTqtOVFC3aGlI5uS3JwoU6eGedYhMvaQa4xFOV47NRcREoGfFTin
-        XuvZTO1P1oei7Jx8qSOoyI1joLuKDJDEOP6PKOm+uHYtTCId3YuKkrl0sqxBZrnHqxBl69lQU9aPouyc
-        SCQyQ5YRQzq7yAIZ1DBP1DIZryHmRIkkUyPzyId5jvCiooy4atEjrNRcWjs1V99HqOtlfu7ZyGGgKDtn
-        LEpIJ1jLKXkcEUVy0kXmPDkc09nNibKWEDXJS2eZNfVvhFwD+SzJrs6nUyVyfhWihNazkfWjKDsnX/Ja
-        lLUcEA/Q/dUyJFibP3AgGcSBHBEE9TgnL7WnRMRchJpAbjX1dclfkh3UcmQvOb8qUbaejawfRdk5yIEY
-        MzfOlx951BIgD4FFiCESzu+NMFeXmsTUHIzXzdUJzEV2cNm1U3NzY2Omno0cBopS9kJemZEjHVwkSbc4
-        JRWRNaEoZS/QReXVO4LkddTuSg4BRSl7xw5SDg1FKSLSQFGKiDRQlCIiDRSliEgDRSki0kBRiog0aIny
-        7yFPRKRbigufDVrcpUz638Ii0j0tUd4d8kREuqW48N6gxV3K/HFJuFPi0fN0EZF+wH04sHw8HrQ4T0l6
-        ucStsuCkxP0SP5Z4WuLUMAzjQAKn4TYch+tex32DBkVERERERETkujg6+hf+wgeqnEGTOwAAAABJRU5E
-        rkJggg==
-</value>
-  </data>
   <data name="picIngresar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUkAAAApCAYAAAC4CdtGAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1

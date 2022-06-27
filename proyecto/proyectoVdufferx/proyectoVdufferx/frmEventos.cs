@@ -19,6 +19,7 @@ public partial class frmEventos : Form
         {
             btnInsertar.Hide();
             btnEliminar.Hide();
+            picEditar.Hide();
         }
         dgvEventos.DataSource = null;
         dgvEventos.DataSource = eventosDAO.ObtenerTodos();

@@ -95,12 +95,6 @@
         <Compile Include="frmEjemplares.Designer.cs">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
         </Compile>
-        <Compile Include="frmEjemplarInsertar.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="frmEjemplarInsertar.Designer.cs">
-          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
-        </Compile>
         <Compile Include="frmEventos.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -174,9 +168,6 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="frmEjemplarInsertar.resx">
-          <DependentUpon>frmEjemplarInsertar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEventos.resx">
           <DependentUpon>frmEventos.cs</DependentUpon>
