@@ -800,7 +800,7 @@ partial class frmPrestar
     private System.Windows.Forms.Panel panelcorreo;
 
     private System.Windows.Forms.Label lblCor;
-    private System.Windows.Forms.TextBox txtCorreousuario;
+    public System.Windows.Forms.TextBox txtCorreousuario;
     private System.Windows.Forms.PictureBox pictureBox18;
     private System.Windows.Forms.PictureBox pbCor;
 

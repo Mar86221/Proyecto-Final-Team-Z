@@ -120,6 +120,27 @@ public partial class frmPrestar : Form
 
    private void picOkPrestar_Click(object sender, EventArgs e)
    {
+       string cadena = Resources.cadena_conexion;
+       
+       using (SqlConnection connection = new SqlConnection(cadena))
+       {
+           string query =
+               "SELECT id FROM USUARIO WHERE USUARIO.correo = @iduser";
+
+           SqlCommand command = new SqlCommand(query, connection);
+           command.Parameters.AddWithValue("@iduser", Convert.ToString(txtCorreousuario.Text));
+           connection.Open();
+           using (SqlDataReader reader = command.ExecuteReader())
+           {
+               while (reader.Read())
+               {
+                   int idu = Convert.ToInt32(reader["id"].ToString());
+                   txtIDu.AppendText(idu.ToString());
+               }
+           }
+
+           connection.Close();
+       }
        prestamo p = new prestamo();
        p.id_usuario = Convert.ToInt32(txtIDu.Text);
        p.id_ejemplar = Convert.ToInt32(txtID.Text);
