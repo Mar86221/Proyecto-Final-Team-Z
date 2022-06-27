@@ -369,7 +369,7 @@ partial class frmEditarEventos
         this.Controls.Add(this.pictureBox2);
         this.Name = "frmEditarEventos";
         this.Text = "frmEditarEventos";
-        this.Load += new System.EventHandler(this.frmEditarEventos_Load);
+        this.Load += new System.EventHandler(this.frmEditarEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.picOked)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox11)).EndInit();

@@ -83,6 +83,7 @@ public partial class frmEventos : Form
     private void pictureBox1_Click(object sender, EventArgs e)
     {
         frmEditarEventos free = new frmEditarEventos();
+        free.txtNombre.Text = txtTituloEliminar.Text;
         free.Show();
         this.Close();
     }

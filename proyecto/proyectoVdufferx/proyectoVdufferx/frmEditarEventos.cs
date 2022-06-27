@@ -36,16 +36,16 @@ public partial class frmEditarEventos : Form
         r.titulobuscado = txtNombre.Text;
         if (eventosDAO.Actualizar(r))
         {
-            MessageBox.Show("Evento creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            MessageBox.Show("Evento modificado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }else
         {
             MessageBox.Show("Error de la base de datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+        this.Close();
     }
 
-    private void frmEditarEventos_Load(object sender, EventArgs e)
+    private void frmEditarEventos_Load_1(object sender, EventArgs e)
     {
-        frmEventos frmev = new frmEventos();
-        frmev.txtTituloEliminar.Text = txtNombre.Text;
+        txtNombre.Hide();
     }
 }

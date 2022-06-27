@@ -118,9 +118,6 @@ CREATE TABLE INSTITUCION(
                imagen IMAGE
            );
 
-        
-
-
 CREATE TABLE USUARIO (
     id int IDENTITY(1,1) primary key NOT NULL,
     nombre VARCHAR(50) NOT NULL,
@@ -546,3 +543,7 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('ANTIGONA.jpg',59),
            ('EL DIARIO DE ANNE FRANK.jpg',60),
            ('GRAN GATSBY.jpg',61);
+
+
+
+
