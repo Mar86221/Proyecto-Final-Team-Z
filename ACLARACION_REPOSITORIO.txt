@@ -1,0 +1,4 @@
+ACLARACION
+Nuestro equipo trabajo en un repositorio aparte donde se pueden observar 
+todos los push, merge y branch que hemos heco a lo largo de la realizacion del 
+proyecto, este es el link: https://github.com/Mar86221/Proyecto-Final-Team-Z.git
