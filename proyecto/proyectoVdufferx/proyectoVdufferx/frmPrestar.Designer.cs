@@ -759,8 +759,8 @@ partial class frmPrestar
         this.Controls.Add(this.pbReservar);
         this.Controls.Add(this.pbPrestar);
         this.Controls.Add(this.pbPortada);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Name = "frmPrestar";
-        this.Text = "frmPrestar";
         this.Load += new System.EventHandler(this.frmPrestar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).EndInit();

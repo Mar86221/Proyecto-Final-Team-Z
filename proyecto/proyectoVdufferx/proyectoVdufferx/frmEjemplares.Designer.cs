@@ -58,6 +58,7 @@ namespace proyectoVdufferx
             this.txtCorreoEj = new System.Windows.Forms.TextBox();
             this.txtIdEjemplarEliminar = new System.Windows.Forms.TextBox();
             this.txtEliminarEJemplar = new System.Windows.Forms.TextBox();
+            this.btnNuevColec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -323,12 +324,23 @@ namespace proyectoVdufferx
             this.txtEliminarEJemplar.Size = new System.Drawing.Size(83, 20);
             this.txtEliminarEJemplar.TabIndex = 93;
             // 
+            // btnNuevColec
+            // 
+            this.btnNuevColec.Location = new System.Drawing.Point(499, 613);
+            this.btnNuevColec.Name = "btnNuevColec";
+            this.btnNuevColec.Size = new System.Drawing.Size(128, 30);
+            this.btnNuevColec.TabIndex = 95;
+            this.btnNuevColec.Text = "Nueva Coleccion";
+            this.btnNuevColec.UseVisualStyleBackColor = true;
+            this.btnNuevColec.Click += new System.EventHandler(this.btnNuevColec_Click);
+            // 
             // frmEjemplares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 654);
+            this.Controls.Add(this.btnNuevColec);
             this.Controls.Add(this.txtIdEjemplarEliminar);
             this.Controls.Add(this.txtEliminarEJemplar);
             this.Controls.Add(this.txtCorreoEj);
@@ -354,6 +366,7 @@ namespace proyectoVdufferx
             this.Controls.Add(this.picImagen);
             this.Controls.Add(this.DgvEjemplares);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -376,6 +389,8 @@ namespace proyectoVdufferx
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        public System.Windows.Forms.Button btnNuevColec;
 
         public System.Windows.Forms.TextBox txtIdEjemplarEliminar;
         public System.Windows.Forms.TextBox txtEliminarEJemplar;

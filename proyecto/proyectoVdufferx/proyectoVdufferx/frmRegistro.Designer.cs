@@ -484,6 +484,7 @@ namespace proyectoVdufferx
             this.ClientSize = new System.Drawing.Size(376, 585);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmRegistro";

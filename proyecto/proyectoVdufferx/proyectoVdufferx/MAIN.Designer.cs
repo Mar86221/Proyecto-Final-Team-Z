@@ -228,7 +228,7 @@ namespace proyectoVdufferx
             this.grpTuPrestamo.Controls.Add(this.txtTuprestamoFechaP);
             this.grpTuPrestamo.Controls.Add(this.txtTuprestamoNombreE);
             this.grpTuPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpTuPrestamo.Location = new System.Drawing.Point(294, 46);
+            this.grpTuPrestamo.Location = new System.Drawing.Point(292, 46);
             this.grpTuPrestamo.Name = "grpTuPrestamo";
             this.grpTuPrestamo.Size = new System.Drawing.Size(261, 265);
             this.grpTuPrestamo.TabIndex = 10;
@@ -318,10 +318,10 @@ namespace proyectoVdufferx
             this.Controls.Add(this.btnEjemplares);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MAIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MAIN";
             this.Load += new System.EventHandler(this.MAIN_Load);
             this.Click += new System.EventHandler(this.MAIN_Click);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();

@@ -414,9 +414,9 @@ partial class frmNuevoEvento
         this.Controls.Add(this.pictureBox5);
         this.Controls.Add(this.pbInsti);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.MaximizeBox = false;
         this.Name = "frmNuevoEvento";
-        this.Text = "Nuevo Evento";
         this.Load += new System.EventHandler(this.frmNuevoEvento_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbInsti)).EndInit();

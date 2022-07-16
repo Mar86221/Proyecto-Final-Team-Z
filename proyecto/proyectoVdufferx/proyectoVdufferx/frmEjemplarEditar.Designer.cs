@@ -118,9 +118,9 @@ partial class frmEjemplarEditar
         this.Controls.Add(this.TxtPalabrasClavesE);
         this.Controls.Add(this.txtNombreE);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.MaximizeBox = false;
         this.Name = "frmEjemplarEditar";
-        this.Text = "frmEjemplarEditar";
         ((System.ComponentModel.ISupportInitialize) (this.picEditarEjemplar)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();

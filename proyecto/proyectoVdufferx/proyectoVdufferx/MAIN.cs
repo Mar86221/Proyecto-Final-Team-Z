@@ -69,7 +69,7 @@ namespace proyectoVdufferx
         {
             frmEjemplares otraventana = new frmEjemplares();
             otraventana.txtCorreoEj.Text = txtTucuentaCorreo.Text;//////////////////////////////////
-            otraventana.ShowDialog();
+            otraventana.Show();
         }
 
         private void picTucuenta_DoubleClick(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace proyectoVdufferx
         {
             frmEventos frev = new frmEventos();
             frev.txtCuentaU.Text = txtTucuentaCorreo.Text;
-            frev.ShowDialog();
-            
+            frev.Show();
+
         }
     }
 }
