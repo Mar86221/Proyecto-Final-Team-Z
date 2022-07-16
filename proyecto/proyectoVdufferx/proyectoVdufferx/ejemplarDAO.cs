@@ -97,7 +97,7 @@ namespace proyectoVdufferx
             return lista;
 
         }
-        
+        /*
         public static List<Coleccion> ObtenerColecciones()
         {
             string cadena = Resources.cadena_conexion;
@@ -178,7 +178,7 @@ namespace proyectoVdufferx
             }
             return lista;
         }
-
+        */
        
 
     }

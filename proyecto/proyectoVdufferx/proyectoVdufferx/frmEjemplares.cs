@@ -314,5 +314,11 @@ namespace proyectoVdufferx
         }
 
 
+        private void btnNuevColec_Click(object sender, EventArgs e)
+        {
+            frmNuevaColeccion ne = new frmNuevaColeccion();
+            ne.ShowDialog();
+            this.Close();
+        }
     }
 }
