@@ -241,10 +241,10 @@ partial class frmEventos
         this.Controls.Add(this.picImagen);
         this.Controls.Add(this.dgvEventos);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.MaximizeBox = false;
         this.Name = "frmEventos";
         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-        this.Text = "EVENTOS";
         this.Load += new System.EventHandler(this.frmEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.dgvEventos)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.picImagen)).EndInit();

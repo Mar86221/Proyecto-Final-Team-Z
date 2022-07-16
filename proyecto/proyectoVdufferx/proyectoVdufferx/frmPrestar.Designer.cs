@@ -197,7 +197,7 @@ partial class frmPrestar
         // 
         this.cmbHorDevPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHorDevPrestamo.FormattingEnabled = true;
-        this.cmbHorDevPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
+        this.cmbHorDevPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHorDevPrestamo.Location = new System.Drawing.Point(344, 20);
         this.cmbHorDevPrestamo.Name = "cmbHorDevPrestamo";
         this.cmbHorDevPrestamo.Size = new System.Drawing.Size(55, 21);
@@ -227,7 +227,7 @@ partial class frmPrestar
         // 
         this.cmbHorasPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHorasPrestamo.FormattingEnabled = true;
-        this.cmbHorasPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
+        this.cmbHorasPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHorasPrestamo.Location = new System.Drawing.Point(116, 21);
         this.cmbHorasPrestamo.Name = "cmbHorasPrestamo";
         this.cmbHorasPrestamo.Size = new System.Drawing.Size(55, 21);
@@ -344,7 +344,7 @@ partial class frmPrestar
         // 
         this.cmbHoradevReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHoradevReserva.FormattingEnabled = true;
-        this.cmbHoradevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
+        this.cmbHoradevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHoradevReserva.Location = new System.Drawing.Point(342, 23);
         this.cmbHoradevReserva.Name = "cmbHoradevReserva";
         this.cmbHoradevReserva.Size = new System.Drawing.Size(55, 21);
@@ -374,7 +374,7 @@ partial class frmPrestar
         // 
         this.cmbHoraReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
         this.cmbHoraReserva.FormattingEnabled = true;
-        this.cmbHoraReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
+        this.cmbHoraReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHoraReserva.Location = new System.Drawing.Point(116, 24);
         this.cmbHoraReserva.Name = "cmbHoraReserva";
         this.cmbHoraReserva.Size = new System.Drawing.Size(55, 21);
@@ -759,8 +759,8 @@ partial class frmPrestar
         this.Controls.Add(this.pbReservar);
         this.Controls.Add(this.pbPrestar);
         this.Controls.Add(this.pbPortada);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Name = "frmPrestar";
-        this.Text = "frmPrestar";
         this.Load += new System.EventHandler(this.frmPrestar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbPortada)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbPrestar)).EndInit();
@@ -820,7 +820,7 @@ partial class frmPrestar
     private System.Windows.Forms.ComboBox cmbHoradevReserva;
     private System.Windows.Forms.ComboBox cmbMinDevReserva;
 
-    private System.Windows.Forms.ComboBox cmbHorasPrestamo;
+    public System.Windows.Forms.ComboBox cmbHorasPrestamo;
     private System.Windows.Forms.ComboBox cmbMinPrestamo;
 
     public System.Windows.Forms.TextBox txtID;

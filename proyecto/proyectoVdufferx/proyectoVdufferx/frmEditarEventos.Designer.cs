@@ -370,9 +370,9 @@ partial class frmEditarEventos
         this.Controls.Add(this.pictureBox1);
         this.Controls.Add(this.pictureBox2);
         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.MaximizeBox = false;
         this.Name = "frmEditarEventos";
-        this.Text = "Editar Evento";
         this.Load += new System.EventHandler(this.frmEditarEventos_Load_1);
         ((System.ComponentModel.ISupportInitialize) (this.picOked)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();

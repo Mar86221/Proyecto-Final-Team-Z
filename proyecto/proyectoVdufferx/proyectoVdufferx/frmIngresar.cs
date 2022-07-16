@@ -51,7 +51,6 @@ namespace proyectoVdufferx
             MAIN main = new MAIN();
             main.Show();
             main.txtTucuentaCorreo.Text = txtCorreo.Text;
-            
             this.Close();
         }
 
@@ -59,6 +58,7 @@ namespace proyectoVdufferx
         {
             frmRegistro registro = new frmRegistro();
             registro.Show();
+            this.Close();
         }
 
         private void frmIngresar_Load(object sender, EventArgs e)

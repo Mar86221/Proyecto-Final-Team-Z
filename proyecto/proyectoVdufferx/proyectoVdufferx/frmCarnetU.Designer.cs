@@ -133,11 +133,11 @@ namespace proyectoVdufferx
             this.Controls.Add(this.picQR);
             this.Controls.Add(this.txtCorreoQR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.MaximizeBox = false;
             this.Name = "frmCarnetU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Carnet_Usuario";
             ((System.ComponentModel.ISupportInitialize) (this.picQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();

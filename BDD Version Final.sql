@@ -502,7 +502,7 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('AURORA.jpg',19),
            ('ALICIA A TRAVES DEL ESPEJO.jpg',20),
            ('ALICIA.jpg',21),
-           ('EL GATO NEGRO Y OTROS CUENTROS.jpg',21),
+           ('EL GATO NEGRO Y OTROS CUENTROS.jpg',22),
            ('ALICIA EN EL PAIS DE LAS MARAVILLAS.jpg',23),
            ('WIGETTA UN VIAJE MÁGICO.jpg',24),
            ('LA CARTA ROBADA Y OTROS CUENTROS.jpg',25),

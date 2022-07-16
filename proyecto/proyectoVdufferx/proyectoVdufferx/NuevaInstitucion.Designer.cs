@@ -129,8 +129,10 @@ namespace proyectoVdufferx
             this.Controls.Add(this.pbName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "NuevaInstitucion";
-            this.Text = "NuevaInstitucion";
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbName)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pbOK)).EndInit();

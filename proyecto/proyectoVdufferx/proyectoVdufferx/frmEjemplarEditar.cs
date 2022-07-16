@@ -49,12 +49,6 @@ public partial class frmEjemplarEditar : Form
         ejemplar.Palabras_claves = TxtPalabrasClavesE.Text;
 
         ActualizarEjemplar(ejemplar);
-        /*  {
-              MessageBox.Show("Actualizada con exito");
-          }
-          else
-          {
-              MessageBox.Show("Ha ocurrido un error");
-          }*/
+       
     }
 }

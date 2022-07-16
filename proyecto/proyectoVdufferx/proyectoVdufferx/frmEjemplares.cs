@@ -309,6 +309,7 @@ namespace proyectoVdufferx
             eliminarEjemplar(Convert.ToInt32(txtIdEjemplarEliminar.Text));
 
             MessageBox.Show("Eliminado con exito", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             this.Close();
         }
 
