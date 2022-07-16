@@ -322,3 +322,4 @@ C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\p
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.exe
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.pdb
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevaColeccion.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevaColeccion.resources

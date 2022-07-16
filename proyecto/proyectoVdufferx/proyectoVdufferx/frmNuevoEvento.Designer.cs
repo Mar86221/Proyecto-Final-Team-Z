@@ -359,9 +359,9 @@ partial class frmNuevoEvento
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(313, 261);
+        this.txtNombre.Location = new System.Drawing.Point(67, 318);
         this.txtNombre.Name = "txtNombre";
-        this.txtNombre.Size = new System.Drawing.Size(10, 20);
+        this.txtNombre.Size = new System.Drawing.Size(72, 20);
         this.txtNombre.TabIndex = 105;
         // 
         // pictureBox12

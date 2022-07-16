@@ -87,7 +87,7 @@ public partial class frmNuevoEvento : Form
         cmbArea.ValueMember = "id";
         cmbArea.DisplayMember = "nombre";
         cmbArea.DataSource = areaDAO.ObtenerTodos();
-        txtNombre.Hide();
+        //txtNombre.Hide();
     }
 
     private void picBuscar_Click(object sender, EventArgs e)
