@@ -75,16 +75,16 @@ partial class frmNuevaColeccion
         // 
         // textBox1
         // 
-        this.textBox1.Location = new System.Drawing.Point(245, 19);
+        this.textBox1.Location = new System.Drawing.Point(236, 19);
         this.textBox1.Name = "textBox1";
-        this.textBox1.Size = new System.Drawing.Size(8, 20);
+        this.textBox1.Size = new System.Drawing.Size(17, 20);
         this.textBox1.TabIndex = 4;
         // 
         // textBox2
         // 
         this.textBox2.Location = new System.Drawing.Point(259, 19);
         this.textBox2.Name = "textBox2";
-        this.textBox2.Size = new System.Drawing.Size(8, 20);
+        this.textBox2.Size = new System.Drawing.Size(18, 20);
         this.textBox2.TabIndex = 5;
         // 
         // frmNuevaColeccion
@@ -105,7 +105,7 @@ partial class frmNuevaColeccion
         this.PerformLayout();
     }
 
-    private System.Windows.Forms.TextBox textBox1;
+    public System.Windows.Forms.TextBox textBox1;
     private System.Windows.Forms.TextBox textBox2;
 
     private System.Windows.Forms.Button button1;

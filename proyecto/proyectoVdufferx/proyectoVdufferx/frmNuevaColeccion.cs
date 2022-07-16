@@ -56,24 +56,6 @@ public partial class frmNuevaColeccion : Form
                     connection.Close();
                 }
             }
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT id FROM TIPO WHERE TIPO.tipo = @tipo";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@tipo", cmbTipo.Text);
-        
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        int a = Convert.ToInt32(reader["id"].ToString());
-                        textBox2.AppendText(a.ToString());
-                    }
-        
-                    connection.Close();
-                }
-            }
         }
     }
 }
