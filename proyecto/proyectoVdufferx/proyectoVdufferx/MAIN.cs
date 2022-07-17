@@ -16,9 +16,13 @@ namespace proyectoVdufferx
 
         public void picTucuenta_Click(object sender, EventArgs e)
         {
+            grpTuPrestamo.Hide();
+            
             if (txtTucuentaNombre.Text.Length > 0)
             {
+                
                 grpTuCuenta.Show();
+                
             }
             else
             {
@@ -85,6 +89,7 @@ namespace proyectoVdufferx
 
         private void picTuprestamo_Click(object sender, EventArgs e)
         {
+            grpTuCuenta.Hide();
             if (txtTuprestamoNombreE.Text.Length > 0)
             {
                 grpTuPrestamo.Show();
@@ -131,6 +136,12 @@ namespace proyectoVdufferx
             frev.txtCuentaU.Text = txtTucuentaCorreo.Text;
             frev.Show();
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            grpTuPrestamo.Hide();
+            grpTuCuenta.Hide();
         }
     }
 }

@@ -149,7 +149,7 @@ partial class frmNuevoEvento
         // txtNombreE
         // 
         this.txtNombreE.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-        this.txtNombreE.Location = new System.Drawing.Point(28, 36);
+        this.txtNombreE.Location = new System.Drawing.Point(28, 34);
         this.txtNombreE.Name = "txtNombreE";
         this.txtNombreE.Size = new System.Drawing.Size(278, 26);
         this.txtNombreE.TabIndex = 81;
