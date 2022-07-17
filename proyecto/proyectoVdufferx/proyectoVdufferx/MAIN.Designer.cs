@@ -78,7 +78,7 @@ namespace proyectoVdufferx
             this.btnEjemplares.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEjemplares.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjemplares.Image = ((System.Drawing.Image) (resources.GetObject("btnEjemplares.Image")));
-            this.btnEjemplares.Location = new System.Drawing.Point(67, 340);
+            this.btnEjemplares.Location = new System.Drawing.Point(67, 326);
             this.btnEjemplares.Name = "btnEjemplares";
             this.btnEjemplares.Size = new System.Drawing.Size(250, 80);
             this.btnEjemplares.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace proyectoVdufferx
             this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEventos.Image = ((System.Drawing.Image) (resources.GetObject("btnEventos.Image")));
-            this.btnEventos.Location = new System.Drawing.Point(496, 340);
+            this.btnEventos.Location = new System.Drawing.Point(496, 326);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.Size = new System.Drawing.Size(250, 80);
             this.btnEventos.TabIndex = 4;

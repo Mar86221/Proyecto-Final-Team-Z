@@ -58,7 +58,9 @@ namespace proyectoVdufferx
             this.txtCorreoEj = new System.Windows.Forms.TextBox();
             this.txtIdEjemplarEliminar = new System.Windows.Forms.TextBox();
             this.txtEliminarEJemplar = new System.Windows.Forms.TextBox();
-            this.btnNuevColec = new System.Windows.Forms.Button();
+            this.pbEditarEjemplar = new System.Windows.Forms.PictureBox();
+            this.pbNuevoEjemplar = new System.Windows.Forms.PictureBox();
+            this.pbColecciones = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.DgvEjemplares)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
@@ -72,6 +74,9 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.picEliminarEjemplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbEditarEjemplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbNuevoEjemplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbColecciones)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvEjemplares
@@ -171,6 +176,7 @@ namespace proyectoVdufferx
             // 
             this.cmbAutores.BackColor = System.Drawing.Color.White;
             this.cmbAutores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbAutores.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbAutores.FormattingEnabled = true;
             this.cmbAutores.Items.AddRange(new object[] {"Instituto", "Empresa", "Otros"});
@@ -201,6 +207,7 @@ namespace proyectoVdufferx
             // 
             this.cmbFormato.BackColor = System.Drawing.Color.White;
             this.cmbFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbFormato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbFormato.FormattingEnabled = true;
             this.cmbFormato.Items.AddRange(new object[] {"Instituto", "Empresa", "Otros"});
@@ -295,7 +302,7 @@ namespace proyectoVdufferx
             // picEliminarEjemplar
             // 
             this.picEliminarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("picEliminarEjemplar.Image")));
-            this.picEliminarEjemplar.Location = new System.Drawing.Point(17, 613);
+            this.picEliminarEjemplar.Location = new System.Drawing.Point(351, 612);
             this.picEliminarEjemplar.Name = "picEliminarEjemplar";
             this.picEliminarEjemplar.Size = new System.Drawing.Size(113, 35);
             this.picEliminarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -312,27 +319,48 @@ namespace proyectoVdufferx
             // 
             // txtIdEjemplarEliminar
             // 
-            this.txtIdEjemplarEliminar.Location = new System.Drawing.Point(289, 613);
+            this.txtIdEjemplarEliminar.Location = new System.Drawing.Point(685, 12);
             this.txtIdEjemplarEliminar.Name = "txtIdEjemplarEliminar";
             this.txtIdEjemplarEliminar.Size = new System.Drawing.Size(83, 20);
             this.txtIdEjemplarEliminar.TabIndex = 94;
             // 
             // txtEliminarEJemplar
             // 
-            this.txtEliminarEJemplar.Location = new System.Drawing.Point(188, 613);
+            this.txtEliminarEJemplar.Location = new System.Drawing.Point(548, 12);
             this.txtEliminarEJemplar.Name = "txtEliminarEJemplar";
             this.txtEliminarEJemplar.Size = new System.Drawing.Size(83, 20);
             this.txtEliminarEJemplar.TabIndex = 93;
             // 
-            // btnNuevColec
+            // pbEditarEjemplar
             // 
-            this.btnNuevColec.Location = new System.Drawing.Point(499, 613);
-            this.btnNuevColec.Name = "btnNuevColec";
-            this.btnNuevColec.Size = new System.Drawing.Size(128, 30);
-            this.btnNuevColec.TabIndex = 95;
-            this.btnNuevColec.Text = "Nueva Coleccion";
-            this.btnNuevColec.UseVisualStyleBackColor = true;
-            this.btnNuevColec.Click += new System.EventHandler(this.btnNuevColec_Click);
+            this.pbEditarEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("pbEditarEjemplar.Image")));
+            this.pbEditarEjemplar.Location = new System.Drawing.Point(184, 614);
+            this.pbEditarEjemplar.Name = "pbEditarEjemplar";
+            this.pbEditarEjemplar.Size = new System.Drawing.Size(113, 35);
+            this.pbEditarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEditarEjemplar.TabIndex = 96;
+            this.pbEditarEjemplar.TabStop = false;
+            // 
+            // pbNuevoEjemplar
+            // 
+            this.pbNuevoEjemplar.Image = ((System.Drawing.Image) (resources.GetObject("pbNuevoEjemplar.Image")));
+            this.pbNuevoEjemplar.Location = new System.Drawing.Point(38, 614);
+            this.pbNuevoEjemplar.Name = "pbNuevoEjemplar";
+            this.pbNuevoEjemplar.Size = new System.Drawing.Size(120, 34);
+            this.pbNuevoEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbNuevoEjemplar.TabIndex = 97;
+            this.pbNuevoEjemplar.TabStop = false;
+            // 
+            // pbColecciones
+            // 
+            this.pbColecciones.Image = ((System.Drawing.Image) (resources.GetObject("pbColecciones.Image")));
+            this.pbColecciones.Location = new System.Drawing.Point(685, 613);
+            this.pbColecciones.Name = "pbColecciones";
+            this.pbColecciones.Size = new System.Drawing.Size(93, 34);
+            this.pbColecciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbColecciones.TabIndex = 99;
+            this.pbColecciones.TabStop = false;
+            this.pbColecciones.Click += new System.EventHandler(this.pbColecciones_Click);
             // 
             // frmEjemplares
             // 
@@ -340,7 +368,9 @@ namespace proyectoVdufferx
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 654);
-            this.Controls.Add(this.btnNuevColec);
+            this.Controls.Add(this.pbColecciones);
+            this.Controls.Add(this.pbNuevoEjemplar);
+            this.Controls.Add(this.pbEditarEjemplar);
             this.Controls.Add(this.txtIdEjemplarEliminar);
             this.Controls.Add(this.txtEliminarEJemplar);
             this.Controls.Add(this.txtCorreoEj);
@@ -386,11 +416,18 @@ namespace proyectoVdufferx
             ((System.ComponentModel.ISupportInitialize) (this.picFiltrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.picEliminarEjemplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbEditarEjemplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbNuevoEjemplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pbColecciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        public System.Windows.Forms.Button btnNuevColec;
+        private System.Windows.Forms.PictureBox pbColecciones;
+
+        private System.Windows.Forms.PictureBox pbNuevoEjemplar;
+
+        private System.Windows.Forms.PictureBox pbEditarEjemplar;
 
         public System.Windows.Forms.TextBox txtIdEjemplarEliminar;
         public System.Windows.Forms.TextBox txtEliminarEJemplar;

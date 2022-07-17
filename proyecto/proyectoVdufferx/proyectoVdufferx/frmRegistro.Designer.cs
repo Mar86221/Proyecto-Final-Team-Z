@@ -185,6 +185,7 @@ namespace proyectoVdufferx
             // 
             this.cmbInstitucion.BackColor = System.Drawing.Color.White;
             this.cmbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInstitucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbInstitucion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbInstitucion.FormattingEnabled = true;
             this.cmbInstitucion.Items.AddRange(new object[] {"Instituto", "Empresa", "Otros"});
@@ -236,6 +237,7 @@ namespace proyectoVdufferx
             // 
             this.cmbOcupacion.BackColor = System.Drawing.Color.White;
             this.cmbOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOcupacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbOcupacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbOcupacion.FormattingEnabled = true;
             this.cmbOcupacion.Items.AddRange(new object[] {"Estudiante", "Empleado", "Otros"});

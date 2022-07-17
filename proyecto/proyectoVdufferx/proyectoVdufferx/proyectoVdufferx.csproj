@@ -62,6 +62,13 @@
         <Compile Include="autor.cs" />
         <Compile Include="Coleccion.cs" />
         <Compile Include="coleccionDAO.cs" />
+        <Compile Include="Colecciones.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Colecciones.Designer.cs">
+          <DependentUpon>Colecciones.cs</DependentUpon>
+        </Compile>
+        <Compile Include="coleccionmain.cs" />
         <Compile Include="Editorial.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
@@ -77,6 +84,12 @@
         </Compile>
         <Compile Include="frmCarnetU.Designer.cs">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEditarColeccion.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEditarColeccion.Designer.cs">
+          <DependentUpon>frmEditarColeccion.cs</DependentUpon>
         </Compile>
         <Compile Include="frmEditarEventos.cs">
           <SubType>Form</SubType>
@@ -168,8 +181,14 @@
         <Compile Include="tipoDAO.cs" />
         <Compile Include="usuario.cs" />
         <Compile Include="usuarioDAO.cs" />
+        <EmbeddedResource Include="Colecciones.resx">
+          <DependentUpon>Colecciones.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="frmCarnetU.resx">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmEditarColeccion.resx">
+          <DependentUpon>frmEditarColeccion.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEditarEventos.resx">
           <DependentUpon>frmEditarEventos.cs</DependentUpon>

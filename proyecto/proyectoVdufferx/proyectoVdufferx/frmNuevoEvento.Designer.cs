@@ -83,6 +83,7 @@ partial class frmNuevoEvento
         // 
         this.cmbArea.BackColor = System.Drawing.Color.White;
         this.cmbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbArea.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.cmbArea.FormattingEnabled = true;
         this.cmbArea.Location = new System.Drawing.Point(30, 98);
@@ -244,8 +245,9 @@ partial class frmNuevoEvento
         // cmbMinInicio
         // 
         this.cmbMinInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinInicio.FormattingEnabled = true;
-        this.cmbMinInicio.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinInicio.Items.AddRange(new object[] {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
         this.cmbMinInicio.Location = new System.Drawing.Point(229, 211);
         this.cmbMinInicio.Name = "cmbMinInicio";
         this.cmbMinInicio.Size = new System.Drawing.Size(68, 21);
@@ -254,6 +256,7 @@ partial class frmNuevoEvento
         // cmbHoraInicio
         // 
         this.cmbHoraInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoraInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoraInicio.FormattingEnabled = true;
         this.cmbHoraInicio.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
         this.cmbHoraInicio.Location = new System.Drawing.Point(156, 211);
@@ -312,8 +315,9 @@ partial class frmNuevoEvento
         // cmbMinFinal
         // 
         this.cmbMinFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinFinal.FormattingEnabled = true;
-        this.cmbMinFinal.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinFinal.Items.AddRange(new object[] {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
         this.cmbMinFinal.Location = new System.Drawing.Point(229, 270);
         this.cmbMinFinal.Name = "cmbMinFinal";
         this.cmbMinFinal.Size = new System.Drawing.Size(68, 21);
@@ -322,6 +326,7 @@ partial class frmNuevoEvento
         // cmbHoraFinal
         // 
         this.cmbHoraFinal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoraFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoraFinal.FormattingEnabled = true;
         this.cmbHoraFinal.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
         this.cmbHoraFinal.Location = new System.Drawing.Point(156, 270);

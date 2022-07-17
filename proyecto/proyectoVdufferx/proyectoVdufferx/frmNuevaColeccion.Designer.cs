@@ -67,6 +67,7 @@ partial class frmNuevaColeccion
         // cmbGenero
         // 
         this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbGenero.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbGenero.FormattingEnabled = true;
         this.cmbGenero.Location = new System.Drawing.Point(21, 113);
@@ -77,6 +78,7 @@ partial class frmNuevaColeccion
         // cmbTipo
         // 
         this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbTipo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbTipo.FormattingEnabled = true;
         this.cmbTipo.Location = new System.Drawing.Point(23, 175);

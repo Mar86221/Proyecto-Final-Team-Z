@@ -44,7 +44,7 @@ CREATE TABLE TIPO (
 );
 
 CREATE TABLE COLECCION (
-    id int primary key NOT NULL,
+    id int IDENTITY (1,1) primary key NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     id_genero INT NOT NULL FOREIGN KEY (id_genero) REFERENCES GENERO (id),
     id_tipo INT NOT NULL FOREIGN KEY (id_tipo) REFERENCES TIPO (id),
@@ -260,27 +260,27 @@ INSERT INTO GENERO (id, genero)
             (12, 'LITERTURA'),
             (13, 'POLITICO');
             
-INSERT INTO COLECCION (id, nombre, id_tipo, id_genero)
-    VALUES  (1, 'DIARIO DE GREG',1,1),
-            (2, 'STEPHEN KING COLLECTION',1,2),
-            (3, 'STEPHEN HAWKING THE COLLECTION',1,8),
-            (4, 'DE BOLSILLO ROMANCE',1,4),
-            (5, 'PERCY JACKSON',1,1),
-            (6, 'HARRY POTTER',1,1),
-            (7, 'CINCUENTA SOMBRAS',1,10),
-            (8, 'HOLMES COLLECTION',1,7),
-            (9, 'GREEK COLLECTION',1,5),
-            (10, 'LOS ESENCIALES DE LA FILOSOFIA',1,3),
-            (11, 'ALICIA',1,9),
-            (12, 'OTROS CUENTOS',1,2),
-            (13, 'COMMUNIST ESSENTIAL',1,13),
-            (14, 'WIGETTA',1,1),
-            (15, 'ROBLE PLUS',1,12),
-            (16, 'CLASICOS POPULARES',1,5),
-            (17, 'TERROR CLASICO',1,2),
-            (18, 'MAZE RUNNER',1,6),
-            (19, 'HUNGER GAMES',1,6),
-            (20, 'DE BOLSILLA FICCION',1,6);
+INSERT INTO COLECCION (nombre, id_tipo, id_genero)
+    VALUES  ('DIARIO DE GREG',1,1),
+            ('STEPHEN KING COLLECTION',1,2),
+            ('STEPHEN HAWKING THE COLLECTION',1,8),
+            ('DE BOLSILLO ROMANCE',1,4),
+            ('PERCY JACKSON',1,1),
+            ('HARRY POTTER',1,1),
+            ('CINCUENTA SOMBRAS',1,10),
+            ('HOLMES COLLECTION',1,7),
+            ('GREEK COLLECTION',1,5),
+            ('LOS ESENCIALES DE LA FILOSOFIA',1,3),
+            ('ALICIA',1,9),
+            ('OTROS CUENTOS',1,2),
+            ('COMMUNIST ESSENTIAL',1,13),
+            ('WIGETTA',1,1),
+            ('ROBLE PLUS',1,12),
+            ('CLASICOS POPULARES',1,5),
+            ( 'TERROR CLASICO',1,2),
+            ('MAZE RUNNER',1,6),
+            ('HUNGER GAMES',1,6),
+            ('DE BOLSILLA FICCION',1,6);
 --------------------------------------------------------------------
 INSERT INTO HORARIO (id, hora_apertura, hora_cierre)
 	VALUES	(1, '09:00','05:00'),
@@ -542,3 +542,8 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('ANTIGONA.jpg',59),
            ('EL DIARIO DE ANNE FRANK.jpg',60),
            ('GRAN GATSBY.jpg',61);
+
+INSERT INTO COLECCION (nombre, id_genero, id_tipo) 
+        VALUES ('fernado',1,1)
+
+SELECT * FROM COLECCION;
