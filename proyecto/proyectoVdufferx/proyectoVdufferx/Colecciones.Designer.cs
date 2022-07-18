@@ -39,6 +39,7 @@ partial class Colecciones
         this.pbEditarColeccion = new System.Windows.Forms.PictureBox();
         this.picEliminarColeccion = new System.Windows.Forms.PictureBox();
         this.pbNuevacoleccion = new System.Windows.Forms.PictureBox();
+        this.txtColectEliminar = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.DgvColecciones)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pbEditarColeccion)).BeginInit();
@@ -76,6 +77,7 @@ partial class Colecciones
         this.DgvColecciones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
         this.DgvColecciones.Size = new System.Drawing.Size(390, 325);
         this.DgvColecciones.TabIndex = 1;
+        this.DgvColecciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvColecciones_CellClick_1);
         // 
         // pictureBox2
         // 
@@ -107,6 +109,7 @@ partial class Colecciones
         this.picEliminarColeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
         this.picEliminarColeccion.TabIndex = 98;
         this.picEliminarColeccion.TabStop = false;
+        this.picEliminarColeccion.Click += new System.EventHandler(this.picEliminarColeccion_Click);
         // 
         // pbNuevacoleccion
         // 
@@ -119,12 +122,20 @@ partial class Colecciones
         this.pbNuevacoleccion.TabStop = false;
         this.pbNuevacoleccion.Click += new System.EventHandler(this.pbNuevacoleccion_Click);
         // 
+        // txtColectEliminar
+        // 
+        this.txtColectEliminar.Location = new System.Drawing.Point(186, 12);
+        this.txtColectEliminar.Name = "txtColectEliminar";
+        this.txtColectEliminar.Size = new System.Drawing.Size(161, 20);
+        this.txtColectEliminar.TabIndex = 100;
+        // 
         // Colecciones
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
         this.ClientSize = new System.Drawing.Size(456, 444);
+        this.Controls.Add(this.txtColectEliminar);
         this.Controls.Add(this.pbNuevacoleccion);
         this.Controls.Add(this.picEliminarColeccion);
         this.Controls.Add(this.pbEditarColeccion);
@@ -141,6 +152,8 @@ partial class Colecciones
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.TextBox txtColectEliminar;
 
     private System.Windows.Forms.PictureBox pbNuevacoleccion;
 
