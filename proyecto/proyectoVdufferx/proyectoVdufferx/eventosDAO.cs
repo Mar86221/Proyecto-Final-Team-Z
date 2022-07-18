@@ -76,7 +76,8 @@ public class eventosDAO
         bool exito = true;
         try {
             string cadena = Resources.cadena_conexion;
-            using (SqlConnection connection = new SqlConnection(cadena)){
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
                 string query = "UPDATE EVENTO SET imagen = @imagen, titulo = @titulo, cant_asistentes = @cant_asistentes, fecha_inicio = @fecha_inicio, fecha_final = @fecha_final WHERE titulo = @titulobuscado";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("imagen", e.imagen);

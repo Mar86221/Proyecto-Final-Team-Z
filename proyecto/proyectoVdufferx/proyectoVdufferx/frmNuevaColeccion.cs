@@ -26,8 +26,8 @@ public partial class frmNuevaColeccion : Form
         cmbTipo.ValueMember = "id";
         cmbTipo.DisplayMember = "tipe";
         cmbTipo.DataSource = tipoDAO.ObtenerTodos();
-      //  textBox1.Hide();
-        //textBox2.Hide();
+        textBox1.Hide();
+        textBox2.Hide();
     }
     
 

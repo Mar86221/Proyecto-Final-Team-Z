@@ -68,4 +68,34 @@ public class coleccionDAO
 
         return exito;
     }
+
+
+    public static bool Actualizar(Coleccion c)
+    {
+        bool exito = true;
+        try
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "UPDATE COLECCION SET nombre = @nombre, id_genero = @id_genero, id_tipo = @id_tipo WHERE nombre = @nombrebuscado";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", c.nombre);
+                command.Parameters.AddWithValue("@id_genero", c.id_genero);
+                command.Parameters.AddWithValue("@id_tipo", c.id_tipo);
+                command.Parameters.AddWithValue("@nombrebuscado", c.nombrebuscado);
+                
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+        }
+        catch (Exception)
+        {
+            exito = false;
+        }
+
+        return exito;
+    }
 }

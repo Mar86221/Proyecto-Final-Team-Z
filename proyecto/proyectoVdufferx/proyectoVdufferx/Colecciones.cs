@@ -36,6 +36,7 @@ public partial class Colecciones : Form
     private void pbEditarColeccion_Click(object sender, EventArgs e)
     {
         frmEditarColeccion editcollect = new frmEditarColeccion();
+        editcollect.txtNombre.Text = txtColectEliminar.Text;
         editcollect.Show();
         this.Close();
     }

@@ -47,6 +47,7 @@ partial class frmEditarColeccion
         this.pictureBox2 = new System.Windows.Forms.PictureBox();
         this.textBox2edit = new System.Windows.Forms.TextBox();
         this.textBox1edit = new System.Windows.Forms.TextBox();
+        this.txtNombre = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.pbOKedit)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
@@ -65,6 +66,7 @@ partial class frmEditarColeccion
         this.pbOKedit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
         this.pbOKedit.TabIndex = 107;
         this.pbOKedit.TabStop = false;
+        this.pbOKedit.Click += new System.EventHandler(this.pbOKedit_Click);
         // 
         // cmbTipoEdit
         // 
@@ -182,17 +184,24 @@ partial class frmEditarColeccion
         // 
         // textBox2edit
         // 
-        this.textBox2edit.Location = new System.Drawing.Point(142, 233);
+        this.textBox2edit.Location = new System.Drawing.Point(127, 218);
         this.textBox2edit.Name = "textBox2edit";
         this.textBox2edit.Size = new System.Drawing.Size(59, 20);
         this.textBox2edit.TabIndex = 97;
         // 
         // textBox1edit
         // 
-        this.textBox1edit.Location = new System.Drawing.Point(58, 233);
+        this.textBox1edit.Location = new System.Drawing.Point(30, 218);
         this.textBox1edit.Name = "textBox1edit";
         this.textBox1edit.Size = new System.Drawing.Size(61, 20);
         this.textBox1edit.TabIndex = 96;
+        // 
+        // txtNombre
+        // 
+        this.txtNombre.Location = new System.Drawing.Point(47, 246);
+        this.txtNombre.Name = "txtNombre";
+        this.txtNombre.Size = new System.Drawing.Size(138, 20);
+        this.txtNombre.TabIndex = 108;
         // 
         // frmEditarColeccion
         // 
@@ -200,6 +209,7 @@ partial class frmEditarColeccion
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
         this.ClientSize = new System.Drawing.Size(317, 275);
+        this.Controls.Add(this.txtNombre);
         this.Controls.Add(this.pbOKedit);
         this.Controls.Add(this.cmbTipoEdit);
         this.Controls.Add(this.label1);
@@ -217,6 +227,7 @@ partial class frmEditarColeccion
         this.Controls.Add(this.textBox1edit);
         this.Name = "frmEditarColeccion";
         this.Text = "frmEditarColeccion";
+        this.Load += new System.EventHandler(this.frmEditarColeccion_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbOKedit)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
@@ -227,6 +238,8 @@ partial class frmEditarColeccion
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    public System.Windows.Forms.TextBox txtNombre;
 
     private System.Windows.Forms.PictureBox pbOKedit;
     public System.Windows.Forms.ComboBox cmbTipoEdit;

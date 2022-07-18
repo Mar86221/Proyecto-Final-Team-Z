@@ -331,9 +331,9 @@ partial class frmEditarEventos
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(201, 240);
+        this.txtNombre.Location = new System.Drawing.Point(56, 240);
         this.txtNombre.Name = "txtNombre";
-        this.txtNombre.Size = new System.Drawing.Size(13, 20);
+        this.txtNombre.Size = new System.Drawing.Size(158, 20);
         this.txtNombre.TabIndex = 137;
         // 
         // openFileDialog1
