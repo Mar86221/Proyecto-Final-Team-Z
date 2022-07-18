@@ -98,4 +98,32 @@ public class coleccionDAO
 
         return exito;
     }
+    
+    
+    public static List<coleccionmain> ObtenerNombre()
+    {
+        string cadena = Resources.cadena_conexion;
+        List<coleccionmain> Lista = new List<coleccionmain>();
+
+        using (SqlConnection connection = new SqlConnection(cadena))
+        {
+            string query =
+                "SELECT COLECCION.nombre FROM COLECCION";
+            SqlCommand command = new SqlCommand(query, connection);
+            connection.Open();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    coleccionmain collect = new coleccionmain();
+                    collect.nombre = reader["nombre"].ToString();
+
+                    Lista.Add(collect);
+                }
+            }
+            connection.Close();
+        }
+
+        return Lista;
+    }
 }

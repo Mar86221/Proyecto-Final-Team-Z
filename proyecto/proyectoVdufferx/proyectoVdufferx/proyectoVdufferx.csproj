@@ -70,6 +70,7 @@
         </Compile>
         <Compile Include="coleccionmain.cs" />
         <Compile Include="Editorial.cs" />
+        <Compile Include="editorialDAO.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
         <Compile Include="ejemplarmain.cs" />
@@ -79,6 +80,7 @@
         <Compile Include="eventos.cs" />
         <Compile Include="eventosDAO.cs" />
         <Compile Include="formato.cs" />
+        <Compile Include="formatoDAO.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -160,6 +162,7 @@
         <Compile Include="genero.cs" />
         <Compile Include="generoDAO.cs" />
         <Compile Include="Idioma.cs" />
+        <Compile Include="idiomaDAO.cs" />
         <Compile Include="Imagen_ejemplar.cs" />
         <Compile Include="Imagen_ejemplarDAO.cs" />
         <Compile Include="institucion.cs" />
