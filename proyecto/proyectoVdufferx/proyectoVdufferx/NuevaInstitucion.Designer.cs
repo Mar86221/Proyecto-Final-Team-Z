@@ -108,6 +108,7 @@ namespace proyectoVdufferx
             // cmbOcupacion2
             // 
             this.cmbOcupacion2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbOcupacion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbOcupacion2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cmbOcupacion2.FormattingEnabled = true;
             this.cmbOcupacion2.Items.AddRange(new object[] {"Estudiante", "Trabajador", "Desempleado"});

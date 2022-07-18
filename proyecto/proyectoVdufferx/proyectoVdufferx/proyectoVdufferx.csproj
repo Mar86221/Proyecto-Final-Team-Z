@@ -62,7 +62,15 @@
         <Compile Include="autor.cs" />
         <Compile Include="Coleccion.cs" />
         <Compile Include="coleccionDAO.cs" />
+        <Compile Include="Colecciones.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Colecciones.Designer.cs">
+          <DependentUpon>Colecciones.cs</DependentUpon>
+        </Compile>
+        <Compile Include="coleccionmain.cs" />
         <Compile Include="Editorial.cs" />
+        <Compile Include="editorialDAO.cs" />
         <Compile Include="ejemplar.cs" />
         <Compile Include="ejemplarDAO.cs" />
         <Compile Include="ejemplarmain.cs" />
@@ -72,23 +80,30 @@
         <Compile Include="eventos.cs" />
         <Compile Include="eventosDAO.cs" />
         <Compile Include="formato.cs" />
+        <Compile Include="formatoDAO.cs" />
         <Compile Include="frmCarnetU.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="frmCarnetU.Designer.cs">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
         </Compile>
+        <Compile Include="frmEditarColeccion.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEditarColeccion.Designer.cs">
+          <DependentUpon>frmEditarColeccion.cs</DependentUpon>
+        </Compile>
+        <Compile Include="frmEditarEjemplar.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmEditarEjemplar.Designer.cs">
+          <DependentUpon>frmEditarEjemplar.cs</DependentUpon>
+        </Compile>
         <Compile Include="frmEditarEventos.cs">
           <SubType>Form</SubType>
         </Compile>
         <Compile Include="frmEditarEventos.Designer.cs">
           <DependentUpon>frmEditarEventos.cs</DependentUpon>
-        </Compile>
-        <Compile Include="frmEjemplarEditar.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="frmEjemplarEditar.Designer.cs">
-          <DependentUpon>frmEjemplarEditar.cs</DependentUpon>
         </Compile>
         <Compile Include="frmEjemplares.cs">
           <SubType>Form</SubType>
@@ -120,6 +135,12 @@
         <Compile Include="frmNuevaColeccion.Designer.cs">
           <DependentUpon>frmNuevaColeccion.cs</DependentUpon>
         </Compile>
+        <Compile Include="frmNuevoEjemplar.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="frmNuevoEjemplar.Designer.cs">
+          <DependentUpon>frmNuevoEjemplar.cs</DependentUpon>
+        </Compile>
         <Compile Include="frmNuevoEvento.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -141,6 +162,7 @@
         <Compile Include="genero.cs" />
         <Compile Include="generoDAO.cs" />
         <Compile Include="Idioma.cs" />
+        <Compile Include="idiomaDAO.cs" />
         <Compile Include="Imagen_ejemplar.cs" />
         <Compile Include="Imagen_ejemplarDAO.cs" />
         <Compile Include="institucion.cs" />
@@ -168,14 +190,20 @@
         <Compile Include="tipoDAO.cs" />
         <Compile Include="usuario.cs" />
         <Compile Include="usuarioDAO.cs" />
+        <EmbeddedResource Include="Colecciones.resx">
+          <DependentUpon>Colecciones.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="frmCarnetU.resx">
           <DependentUpon>frmCarnetU.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="frmEditarColeccion.resx">
+          <DependentUpon>frmEditarColeccion.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmEditarEjemplar.resx">
+          <DependentUpon>frmEditarEjemplar.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="frmEditarEventos.resx">
           <DependentUpon>frmEditarEventos.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="frmEjemplarEditar.resx">
-          <DependentUpon>frmEjemplarEditar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmEjemplares.resx">
           <DependentUpon>frmEjemplares.cs</DependentUpon>
@@ -191,6 +219,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="frmNuevaColeccion.resx">
           <DependentUpon>frmNuevaColeccion.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="frmNuevoEjemplar.resx">
+          <DependentUpon>frmNuevoEjemplar.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="frmNuevoEvento.resx">
           <DependentUpon>frmNuevoEvento.cs</DependentUpon>

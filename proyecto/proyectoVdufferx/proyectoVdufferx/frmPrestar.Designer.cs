@@ -186,8 +186,9 @@ partial class frmPrestar
         // cmbMinDevPrest
         // 
         this.cmbMinDevPrest.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinDevPrest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinDevPrest.FormattingEnabled = true;
-        this.cmbMinDevPrest.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinDevPrest.Items.AddRange(new object[] {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"});
         this.cmbMinDevPrest.Location = new System.Drawing.Point(405, 20);
         this.cmbMinDevPrest.Name = "cmbMinDevPrest";
         this.cmbMinDevPrest.Size = new System.Drawing.Size(55, 21);
@@ -196,6 +197,7 @@ partial class frmPrestar
         // cmbHorDevPrestamo
         // 
         this.cmbHorDevPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHorDevPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHorDevPrestamo.FormattingEnabled = true;
         this.cmbHorDevPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHorDevPrestamo.Location = new System.Drawing.Point(344, 20);
@@ -216,8 +218,9 @@ partial class frmPrestar
         // cmbMinPrestamo
         // 
         this.cmbMinPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinPrestamo.FormattingEnabled = true;
-        this.cmbMinPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinPrestamo.Items.AddRange(new object[] {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"});
         this.cmbMinPrestamo.Location = new System.Drawing.Point(175, 21);
         this.cmbMinPrestamo.Name = "cmbMinPrestamo";
         this.cmbMinPrestamo.Size = new System.Drawing.Size(55, 21);
@@ -226,6 +229,7 @@ partial class frmPrestar
         // cmbHorasPrestamo
         // 
         this.cmbHorasPrestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHorasPrestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHorasPrestamo.FormattingEnabled = true;
         this.cmbHorasPrestamo.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHorasPrestamo.Location = new System.Drawing.Point(116, 21);
@@ -333,8 +337,9 @@ partial class frmPrestar
         // cmbMinDevReserva
         // 
         this.cmbMinDevReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinDevReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinDevReserva.FormattingEnabled = true;
-        this.cmbMinDevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinDevReserva.Items.AddRange(new object[] {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"});
         this.cmbMinDevReserva.Location = new System.Drawing.Point(403, 23);
         this.cmbMinDevReserva.Name = "cmbMinDevReserva";
         this.cmbMinDevReserva.Size = new System.Drawing.Size(55, 21);
@@ -343,6 +348,7 @@ partial class frmPrestar
         // cmbHoradevReserva
         // 
         this.cmbHoradevReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoradevReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoradevReserva.FormattingEnabled = true;
         this.cmbHoradevReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHoradevReserva.Location = new System.Drawing.Point(342, 23);
@@ -363,8 +369,9 @@ partial class frmPrestar
         // cmbMinReserva
         // 
         this.cmbMinReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinReserva.FormattingEnabled = true;
-        this.cmbMinReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
+        this.cmbMinReserva.Items.AddRange(new object[] {"00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"});
         this.cmbMinReserva.Location = new System.Drawing.Point(176, 24);
         this.cmbMinReserva.Name = "cmbMinReserva";
         this.cmbMinReserva.Size = new System.Drawing.Size(55, 21);
@@ -373,6 +380,7 @@ partial class frmPrestar
         // cmbHoraReserva
         // 
         this.cmbHoraReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoraReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoraReserva.FormattingEnabled = true;
         this.cmbHoraReserva.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00"});
         this.cmbHoraReserva.Location = new System.Drawing.Point(116, 24);

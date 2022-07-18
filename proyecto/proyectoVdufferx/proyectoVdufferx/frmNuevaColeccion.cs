@@ -29,10 +29,11 @@ public partial class frmNuevaColeccion : Form
         textBox1.Hide();
         textBox2.Hide();
     }
+    
 
-    private void button1_Click(object sender, EventArgs e)
+    private void pbOK_Click(object sender, EventArgs e)
     {
-        if (textBox1.Text.Length > 0 )
+       if (textBox1.Text.Length > 0 )
         {
         
         }
@@ -96,7 +97,9 @@ public partial class frmNuevaColeccion : Form
                 {
                     MessageBox.Show("Coleccion creada existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                     this.Close();  
-                }else
+                }
+                
+                else
                 {
                     MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }

@@ -312,13 +312,28 @@ namespace proyectoVdufferx
             
             this.Close();
         }
+        
 
-
-        private void btnNuevColec_Click(object sender, EventArgs e)
+        private void pbColecciones_Click(object sender, EventArgs e)
         {
-            frmNuevaColeccion ne = new frmNuevaColeccion();
-            ne.ShowDialog();
+            Colecciones viewcolect = new Colecciones();
+            viewcolect.Show();
             this.Close();
         }
+
+        private void pbNuevoEjemplar_Click(object sender, EventArgs e)
+        {
+            frmNuevoEjemplar nej = new frmNuevoEjemplar();
+            nej.Show();
+            this.Close();
+        }
+
+        private void pbEditarEjemplar_Click(object sender, EventArgs e)
+        {
+            frmEditarEjemplar editej = new frmEditarEjemplar();
+            editej.Show();
+            this.Close();
+        }
+        
     }
 }

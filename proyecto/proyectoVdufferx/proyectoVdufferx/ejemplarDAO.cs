@@ -8,6 +8,42 @@ namespace proyectoVdufferx
 {
     public class ejemplarDAO
     {
+
+        public static bool CrearNuevo(ejemplar ej)
+        {
+            bool exito = true;
+            try
+            {
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "INSERT INTO EJEMPLAR (nombre, Palabras_claves, fecha_publicacion, id_coleccion, id_editorial, id_idioma, id_formato, etiqueta)  VALUES  (@nombre,@Palabras_claves, @fecha_publicacion,@id_coleccion,@id_editorial,@id_idioma,@id_formato,@etiqueta)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@nombre", ej.nombre);
+                    command.Parameters.AddWithValue("@Palabras_claves", ej.Palabras_claves);
+                    command.Parameters.AddWithValue("@fecha_publicacion", ej.fecha_publicacion);
+                    command.Parameters.AddWithValue("@id_coleccion", ej.id_coleccion);
+                    command.Parameters.AddWithValue("@id_editorial", ej.id_editorial);
+                    command.Parameters.AddWithValue("@id_idioma", ej.id_idioma);
+                    command.Parameters.AddWithValue("@id_formato", ej.id_formato);
+                    command.Parameters.AddWithValue("@etiqueta", ej.etiqueta);
+                    
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
+        
+        
         public static List<ejemplarmain> ObtenerTodos()
         {
             string cadena = Resources.cadena_conexion;
@@ -97,88 +133,7 @@ namespace proyectoVdufferx
             return lista;
 
         }
-        /*
-        public static List<Coleccion> ObtenerColecciones()
-        {
-            string cadena = Resources.cadena_conexion;
-            List<Coleccion> lista = new List<Coleccion>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT id,nombre  FROM COLECCION";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Coleccion coleccion = new Coleccion();
-                        coleccion.id = Convert.ToInt32(reader["id"].ToString());
-                        coleccion.nombre = reader["nombre"].ToString();
-                        lista.Add(coleccion);
-                    }
-                }
-
-                connection.Close();
-            }
-            return lista;
-        }
-        
-        public static List<Editorial> ObtenerEditoriales()
-        {
-            string cadena = Resources.cadena_conexion;
-            List<Editorial> lista = new List<Editorial>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT id,editorial  FROM EDITORIAL";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Editorial editorial = new Editorial();
-                        editorial.id = Convert.ToInt32(reader["id"].ToString());
-                        editorial.editorial = reader["editorial"].ToString();
-                        lista.Add(editorial);
-                    }
-                }
-
-                connection.Close();
-            }
-            return lista;
-        }
-        
-        public static List<Idioma> ObtenerIdiomas()
-        {
-            string cadena = Resources.cadena_conexion;
-            List<Idioma> lista = new List<Idioma>();
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT id,idioma  FROM IDIOMA";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Idioma idioma = new Idioma();
-                        idioma.id = Convert.ToInt32(reader["id"].ToString());
-                        idioma.idioma = reader["idioma"].ToString();
-                        lista.Add(idioma);
-                    }
-                }
-
-                connection.Close();
-            }
-            return lista;
-        }
-        */
+       
        
 
     }

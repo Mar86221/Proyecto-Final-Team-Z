@@ -99,6 +99,7 @@ partial class frmEditarEventos
         // cmbMinFinaled
         // 
         this.cmbMinFinaled.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinFinaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinFinaled.FormattingEnabled = true;
         this.cmbMinFinaled.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
         this.cmbMinFinaled.Location = new System.Drawing.Point(218, 205);
@@ -109,6 +110,7 @@ partial class frmEditarEventos
         // cmbHoraFinaled
         // 
         this.cmbHoraFinaled.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoraFinaled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoraFinaled.FormattingEnabled = true;
         this.cmbHoraFinaled.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
         this.cmbHoraFinaled.Location = new System.Drawing.Point(145, 205);
@@ -157,6 +159,7 @@ partial class frmEditarEventos
         // cmbMinInicioed
         // 
         this.cmbMinInicioed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbMinInicioed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbMinInicioed.FormattingEnabled = true;
         this.cmbMinInicioed.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"});
         this.cmbMinInicioed.Location = new System.Drawing.Point(218, 146);
@@ -167,6 +170,7 @@ partial class frmEditarEventos
         // cmbHoraInicioed
         // 
         this.cmbHoraInicioed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbHoraInicioed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbHoraInicioed.FormattingEnabled = true;
         this.cmbHoraInicioed.Items.AddRange(new object[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"});
         this.cmbHoraInicioed.Location = new System.Drawing.Point(145, 146);
@@ -327,9 +331,9 @@ partial class frmEditarEventos
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(201, 240);
+        this.txtNombre.Location = new System.Drawing.Point(56, 240);
         this.txtNombre.Name = "txtNombre";
-        this.txtNombre.Size = new System.Drawing.Size(13, 20);
+        this.txtNombre.Size = new System.Drawing.Size(158, 20);
         this.txtNombre.TabIndex = 137;
         // 
         // openFileDialog1
