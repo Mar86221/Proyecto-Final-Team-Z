@@ -340,6 +340,7 @@ namespace proyectoVdufferx
             this.pbEditarEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbEditarEjemplar.TabIndex = 96;
             this.pbEditarEjemplar.TabStop = false;
+            this.pbEditarEjemplar.Click += new System.EventHandler(this.pbEditarEjemplar_Click);
             // 
             // pbNuevoEjemplar
             // 
@@ -350,6 +351,7 @@ namespace proyectoVdufferx
             this.pbNuevoEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbNuevoEjemplar.TabIndex = 97;
             this.pbNuevoEjemplar.TabStop = false;
+            this.pbNuevoEjemplar.Click += new System.EventHandler(this.pbNuevoEjemplar_Click);
             // 
             // pbColecciones
             // 

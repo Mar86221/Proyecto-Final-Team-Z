@@ -320,6 +320,19 @@ namespace proyectoVdufferx
             viewcolect.Show();
             this.Close();
         }
-        
+
+        private void pbNuevoEjemplar_Click(object sender, EventArgs e)
+        {
+            frmNuevoEjemplar nej = new frmNuevoEjemplar();
+            nej.Show();
+            this.Close();
+        }
+
+        private void pbEditarEjemplar_Click(object sender, EventArgs e)
+        {
+            frmEditarEjemplar editej = new frmEditarEjemplar();
+            editej.Show();
+            this.Close();
+        }
     }
 }

@@ -62,6 +62,6 @@ public partial class frmEditarEventos : Form
 
     private void frmEditarEventos_Load_1(object sender, EventArgs e)
     {
-        //txtNombre.Hide();
+        txtNombre.Hide();
     }
 }
