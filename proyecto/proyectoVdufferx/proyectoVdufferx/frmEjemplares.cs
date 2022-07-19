@@ -331,6 +331,7 @@ namespace proyectoVdufferx
         private void pbEditarEjemplar_Click(object sender, EventArgs e)
         {
             frmEditarEjemplar editej = new frmEditarEjemplar();
+            editej.txtNombre.Text = txtEliminarEJemplar.Text;
             editej.Show();
             this.Close();
         }

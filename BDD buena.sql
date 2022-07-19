@@ -545,9 +545,3 @@ INSERT INTO IMAGEN_EJEMPLAR (imagen, id_ejemplar)
            ('GRAN GATSBY.jpg',61);
 
 
-
-    SELECT * FROM EJEMPLARXAUTOR;
-
-    SELECT * FROM EJEMPLAR;
-
-    SELECT * FROM AUTOR

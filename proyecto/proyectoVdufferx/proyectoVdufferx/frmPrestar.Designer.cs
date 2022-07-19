@@ -737,7 +737,7 @@ partial class frmPrestar
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(697, 556);
+        this.ClientSize = new System.Drawing.Size(593, 556);
         this.Controls.Add(this.panelcorreo);
         this.Controls.Add(this.txtCorreoU);
         this.Controls.Add(this.txtIDu);

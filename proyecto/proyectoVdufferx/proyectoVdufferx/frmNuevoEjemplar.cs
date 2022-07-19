@@ -44,6 +44,14 @@ public partial class frmNuevoEjemplar : Form
         cmbAutor.DataSource = autorDAO.ObtenerTodos();
         
         gbAutoryPortada.Hide();
+        txtID_autor.Hide();
+        txtID_coleccion.Hide();
+        txtID_editorial.Hide();
+        txtID_ejemplar.Hide();
+        txtID_idioma.Hide();
+        txtID_Formato.Hide();
+        txtNombre.Hide();
+        txtfecha.Hide();
     }
 
     private void pbOk_Click(object sender, EventArgs e)
@@ -161,38 +169,9 @@ public partial class frmNuevoEjemplar : Form
                 }
             }
         }
-/*
-        if (txtID_autor.Text.Length > 0)
-        {
-            
-        }
-        else
-        {
-            string cadena = Resources.cadena_conexion;
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT AUTOR.id FROM AUTOR WHERE AUTOR.nombre_autor = @nombre_autor";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@nombre_autor", cmbAutor.Text);
-                
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        int a = Convert.ToInt32(reader["id"].ToString());
-                        txtID_autor.AppendText(a.ToString());
-                    }
-                    
-                    connection.Close();
-                }
-            }
-        }
-*/
         string ruta = System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + txtPortada.Text;
 
-
-        txtfecha.Text = dtpFecha.Text;
+        
         
         
         if (txtNombreEjemplar.Text.Length > 0 &&
@@ -212,7 +191,7 @@ public partial class frmNuevoEjemplar : Form
 
             if (ejemplarDAO.CrearNuevo(ejm))
             {
-                MessageBox.Show("Ejemplar creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+               // MessageBox.Show("Ejemplar creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 gbAutoryPortada.Show();
             }
             else
@@ -227,54 +206,7 @@ public partial class frmNuevoEjemplar : Form
             MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         
-        /*
-
-        if (txtID_ejemplar.Text.Length > 0)
-        {
-            
-        }
-        else
-        {
-            string cadena = Resources.cadena_conexion;
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query = "SELECT EJEMPLAR.id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @nombre";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@nombre", txtNombreEjemplar.Text);
-                
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        int a = Convert.ToInt32(reader["id"].ToString());
-                        txtID_ejemplar.AppendText(a.ToString());
-                    }
-                    
-                    connection.Close();
-                }
-            }
-        }
-
-        if (txtID_autor.Text.Length > 0 &&
-            txtID_ejemplar.Text.Length > 0)
-        {
-            ejemplarxautor ejxa = new ejemplarxautor();
-
-            ejxa.id_ejemplar = Convert.ToInt32(txtID_ejemplar.Text);
-            ejxa.id_autor = Convert.ToInt32(txtID_autor.Text);
-            
-            if (ejemplarxautorDAO.CrearNuevo(ejxa))
-            {
-                MessageBox.Show("Creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-                this.Close(); 
-            }
-            else
-            {
-                MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-*/
+        
     }
     
 
@@ -351,10 +283,16 @@ public partial class frmNuevoEjemplar : Form
 
             ejxa.id_ejemplar = Convert.ToInt32(txtID_ejemplar.Text);
             ejxa.id_autor = Convert.ToInt32(txtID_autor.Text);
+
+
+            Imagen_ejemplar port = new Imagen_ejemplar();
             
-            if (ejemplarxautorDAO.CrearNuevo(ejxa))
+            port.id_ejemplar = Convert.ToInt32(txtID_ejemplar.Text);
+            port.imagen = txtPortada.Text;
+            
+            if (ejemplarxautorDAO.CrearNuevo(ejxa) && Imagen_ejemplarDAO.CrearNuevo(port))
             {
-                MessageBox.Show("Creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                MessageBox.Show("Ejemplar creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 this.Close(); 
             }
             else

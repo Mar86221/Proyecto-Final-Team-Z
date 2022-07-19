@@ -13,5 +13,6 @@ namespace proyectoVdufferx
         public int id_editorial { get; set; }
         public int id_idioma { get; set; }
         public int id_formato { get; set; }
+        public string nombrebuscado { get; set; }
     }
 }

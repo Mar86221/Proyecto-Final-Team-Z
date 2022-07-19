@@ -133,6 +133,44 @@ namespace proyectoVdufferx
             return lista;
 
         }
+
+        public static bool Actualizar(ejemplar e)
+        {
+            bool exito = true;
+            try
+            {
+                
+                string cadena = Resources.cadena_conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query =
+                        "UPDATE EJEMPLAR SET etiqueta = @etiqueta, nombre = @nombre, Palabras_claves = @Palabras_claves, fecha_publicacion = @fecha_publicacion, id_coleccion = @id_coleccion, id_editorial = @id_editorial, id_idioma = @id_idioma, id_formato = @id_formato WHERE nombre = @nombrebuscado";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@etiqueta", e.etiqueta);
+                    command.Parameters.AddWithValue("nombre", e.nombre);
+                    command.Parameters.AddWithValue("@Palabras_claves", e.Palabras_claves);
+                    command.Parameters.AddWithValue("@fecha_publicacion", e.fecha_publicacion);
+                    command.Parameters.AddWithValue("@id_coleccion", e.id_coleccion);
+                    command.Parameters.AddWithValue("@id_editorial", e.id_editorial);
+                    command.Parameters.AddWithValue("@id_idioma", e.id_idioma);
+                    command.Parameters.AddWithValue("@id_formato", e.id_formato);
+                    command.Parameters.AddWithValue("@nombrebuscado", e.nombrebuscado);
+                    
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
+        
+        
        
        
 

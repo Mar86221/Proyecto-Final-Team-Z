@@ -183,7 +183,7 @@ partial class frmNuevoEjemplar
         // 
         this.lblFotografia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.lblFotografia.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.lblFotografia.Location = new System.Drawing.Point(302, 12);
+        this.lblFotografia.Location = new System.Drawing.Point(305, 11);
         this.lblFotografia.Name = "lblFotografia";
         this.lblFotografia.Size = new System.Drawing.Size(79, 20);
         this.lblFotografia.TabIndex = 121;
@@ -191,18 +191,18 @@ partial class frmNuevoEjemplar
         // 
         // pictureBox8
         // 
-        this.pictureBox8.Location = new System.Drawing.Point(296, 26);
+        this.pictureBox8.Location = new System.Drawing.Point(296, 22);
         this.pictureBox8.Name = "pictureBox8";
-        this.pictureBox8.Size = new System.Drawing.Size(262, 36);
+        this.pictureBox8.Size = new System.Drawing.Size(262, 40);
         this.pictureBox8.TabIndex = 118;
         this.pictureBox8.TabStop = false;
         // 
         // pictureBox9
         // 
         this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox9.Location = new System.Drawing.Point(294, 24);
+        this.pictureBox9.Location = new System.Drawing.Point(294, 20);
         this.pictureBox9.Name = "pictureBox9";
-        this.pictureBox9.Size = new System.Drawing.Size(266, 40);
+        this.pictureBox9.Size = new System.Drawing.Size(266, 44);
         this.pictureBox9.TabIndex = 119;
         this.pictureBox9.TabStop = false;
         // 
@@ -321,7 +321,7 @@ partial class frmNuevoEjemplar
         this.pictureBox10.BackColor = System.Drawing.Color.White;
         this.pictureBox10.Location = new System.Drawing.Point(488, 90);
         this.pictureBox10.Name = "pictureBox10";
-        this.pictureBox10.Size = new System.Drawing.Size(133, 40);
+        this.pictureBox10.Size = new System.Drawing.Size(129, 40);
         this.pictureBox10.TabIndex = 139;
         this.pictureBox10.TabStop = false;
         // 
@@ -330,7 +330,7 @@ partial class frmNuevoEjemplar
         this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.pictureBox11.Location = new System.Drawing.Point(486, 88);
         this.pictureBox11.Name = "pictureBox11";
-        this.pictureBox11.Size = new System.Drawing.Size(137, 44);
+        this.pictureBox11.Size = new System.Drawing.Size(133, 44);
         this.pictureBox11.TabIndex = 140;
         this.pictureBox11.TabStop = false;
         // 
@@ -560,9 +560,10 @@ partial class frmNuevoEjemplar
         // 
         // txtPortada
         // 
-        this.txtPortada.Location = new System.Drawing.Point(302, 35);
+        this.txtPortada.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+        this.txtPortada.Location = new System.Drawing.Point(305, 32);
         this.txtPortada.Name = "txtPortada";
-        this.txtPortada.Size = new System.Drawing.Size(211, 20);
+        this.txtPortada.Size = new System.Drawing.Size(211, 26);
         this.txtPortada.TabIndex = 167;
         // 
         // pictureBox20
@@ -589,7 +590,7 @@ partial class frmNuevoEjemplar
         this.gbAutoryPortada.Controls.Add(this.picBuscaPortada);
         this.gbAutoryPortada.Controls.Add(this.pictureBox8);
         this.gbAutoryPortada.Controls.Add(this.pictureBox9);
-        this.gbAutoryPortada.Location = new System.Drawing.Point(20, 248);
+        this.gbAutoryPortada.Location = new System.Drawing.Point(20, 251);
         this.gbAutoryPortada.Name = "gbAutoryPortada";
         this.gbAutoryPortada.Size = new System.Drawing.Size(616, 115);
         this.gbAutoryPortada.TabIndex = 169;
@@ -600,7 +601,7 @@ partial class frmNuevoEjemplar
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(640, 382);
+        this.ClientSize = new System.Drawing.Size(640, 371);
         this.Controls.Add(this.gbAutoryPortada);
         this.Controls.Add(this.txtID_ejemplar);
         this.Controls.Add(this.txtID_autor);
@@ -645,6 +646,7 @@ partial class frmNuevoEjemplar
         this.Controls.Add(this.pbInsti);
         this.Location = new System.Drawing.Point(15, 15);
         this.Name = "frmNuevoEjemplar";
+        this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         this.Load += new System.EventHandler(this.frmNuevoEjemplar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbOk)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();

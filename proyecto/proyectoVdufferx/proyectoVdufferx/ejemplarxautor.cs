@@ -4,6 +4,7 @@ namespace proyectoVdufferx
     {
         public int id_ejemplar { get; set; }
         public int id_autor { get; set; }
+        public int id_ejemplarbuscado { get; set; }
         
     }
 }

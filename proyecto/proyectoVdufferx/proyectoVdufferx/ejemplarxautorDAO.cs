@@ -33,4 +33,33 @@ public class ejemplarxautorDAO
 
         return exito;
     }
+
+    public static bool Actualizar(ejemplarxautor exja)
+    {
+        bool exito = true;
+        try
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "UPDATE EJEMPLARXAUTOR SET  id_autor = @id_autor WHERE id_ejemplar = @id_ejemplarbuscado";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id_autor", exja.id_autor);
+                command.Parameters.AddWithValue("@id_ejemplarbuscado", exja.id_ejemplarbuscado);
+                
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+
+        }
+        catch (Exception)
+        {
+            exito = false;
+        }
+        
+        return exito;
+    }
+    
 }

@@ -4,5 +4,6 @@ namespace proyectoVdufferx
     {
         public string imagen { get; set; }
         public int id_ejemplar { get; set; }
+        public int id_ejemplarbuscado { get; set; }
     }
 }
