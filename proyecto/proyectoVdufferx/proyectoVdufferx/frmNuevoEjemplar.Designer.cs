@@ -76,6 +76,12 @@ partial class frmNuevoEjemplar
         this.pictureBox12 = new System.Windows.Forms.PictureBox();
         this.pictureBox17 = new System.Windows.Forms.PictureBox();
         this.txtfecha = new System.Windows.Forms.TextBox();
+        this.cmbAutor = new System.Windows.Forms.ComboBox();
+        this.label8 = new System.Windows.Forms.Label();
+        this.pictureBox18 = new System.Windows.Forms.PictureBox();
+        this.pictureBox19 = new System.Windows.Forms.PictureBox();
+        this.txtID_autor = new System.Windows.Forms.TextBox();
+        this.txtID_ejemplar = new System.Windows.Forms.TextBox();
         ((System.ComponentModel.ISupportInitialize) (this.pbOk)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
@@ -96,13 +102,15 @@ partial class frmNuevoEjemplar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox19)).BeginInit();
         this.SuspendLayout();
         // 
         // pbOk
         // 
         this.pbOk.Cursor = System.Windows.Forms.Cursors.Hand;
         this.pbOk.Image = ((System.Drawing.Image) (resources.GetObject("pbOk.Image")));
-        this.pbOk.Location = new System.Drawing.Point(199, 490);
+        this.pbOk.Location = new System.Drawing.Point(227, 559);
         this.pbOk.Name = "pbOk";
         this.pbOk.Size = new System.Drawing.Size(80, 35);
         this.pbOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -112,7 +120,7 @@ partial class frmNuevoEjemplar
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(30, 470);
+        this.txtNombre.Location = new System.Drawing.Point(227, 533);
         this.txtNombre.Name = "txtNombre";
         this.txtNombre.Size = new System.Drawing.Size(72, 20);
         this.txtNombre.TabIndex = 136;
@@ -182,7 +190,7 @@ partial class frmNuevoEjemplar
         this.txtPortada.BackColor = System.Drawing.Color.White;
         this.txtPortada.BorderStyle = System.Windows.Forms.BorderStyle.None;
         this.txtPortada.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-        this.txtPortada.Location = new System.Drawing.Point(22, 561);
+        this.txtPortada.Location = new System.Drawing.Point(13, 600);
         this.txtPortada.Name = "txtPortada";
         this.txtPortada.ReadOnly = true;
         this.txtPortada.Size = new System.Drawing.Size(274, 19);
@@ -436,28 +444,28 @@ partial class frmNuevoEjemplar
         // 
         // txtID_idioma
         // 
-        this.txtID_idioma.Location = new System.Drawing.Point(21, 503);
+        this.txtID_idioma.Location = new System.Drawing.Point(12, 542);
         this.txtID_idioma.Name = "txtID_idioma";
         this.txtID_idioma.Size = new System.Drawing.Size(28, 20);
         this.txtID_idioma.TabIndex = 152;
         // 
         // txtID_Formato
         // 
-        this.txtID_Formato.Location = new System.Drawing.Point(60, 503);
+        this.txtID_Formato.Location = new System.Drawing.Point(51, 542);
         this.txtID_Formato.Name = "txtID_Formato";
         this.txtID_Formato.Size = new System.Drawing.Size(28, 20);
         this.txtID_Formato.TabIndex = 153;
         // 
         // txtID_coleccion
         // 
-        this.txtID_coleccion.Location = new System.Drawing.Point(103, 503);
+        this.txtID_coleccion.Location = new System.Drawing.Point(94, 542);
         this.txtID_coleccion.Name = "txtID_coleccion";
         this.txtID_coleccion.Size = new System.Drawing.Size(28, 20);
         this.txtID_coleccion.TabIndex = 154;
         // 
         // txtID_editorial
         // 
-        this.txtID_editorial.Location = new System.Drawing.Point(151, 503);
+        this.txtID_editorial.Location = new System.Drawing.Point(128, 541);
         this.txtID_editorial.Name = "txtID_editorial";
         this.txtID_editorial.Size = new System.Drawing.Size(28, 20);
         this.txtID_editorial.TabIndex = 155;
@@ -500,10 +508,63 @@ partial class frmNuevoEjemplar
         // 
         // txtfecha
         // 
-        this.txtfecha.Location = new System.Drawing.Point(13, 529);
+        this.txtfecha.Location = new System.Drawing.Point(4, 568);
         this.txtfecha.Name = "txtfecha";
         this.txtfecha.Size = new System.Drawing.Size(189, 20);
         this.txtfecha.TabIndex = 160;
+        // 
+        // cmbAutor
+        // 
+        this.cmbAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.cmbAutor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+        this.cmbAutor.FormattingEnabled = true;
+        this.cmbAutor.Location = new System.Drawing.Point(49, 501);
+        this.cmbAutor.Name = "cmbAutor";
+        this.cmbAutor.Size = new System.Drawing.Size(210, 26);
+        this.cmbAutor.TabIndex = 164;
+        // 
+        // label8
+        // 
+        this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+        this.label8.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.label8.Location = new System.Drawing.Point(54, 482);
+        this.label8.Name = "label8";
+        this.label8.Size = new System.Drawing.Size(68, 16);
+        this.label8.TabIndex = 163;
+        this.label8.Text = "Autor :";
+        // 
+        // pictureBox18
+        // 
+        this.pictureBox18.BackColor = System.Drawing.Color.White;
+        this.pictureBox18.Location = new System.Drawing.Point(41, 493);
+        this.pictureBox18.Name = "pictureBox18";
+        this.pictureBox18.Size = new System.Drawing.Size(227, 40);
+        this.pictureBox18.TabIndex = 161;
+        this.pictureBox18.TabStop = false;
+        // 
+        // pictureBox19
+        // 
+        this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.pictureBox19.Location = new System.Drawing.Point(39, 491);
+        this.pictureBox19.Name = "pictureBox19";
+        this.pictureBox19.Size = new System.Drawing.Size(231, 44);
+        this.pictureBox19.TabIndex = 162;
+        this.pictureBox19.TabStop = false;
+        // 
+        // txtID_autor
+        // 
+        this.txtID_autor.Location = new System.Drawing.Point(162, 542);
+        this.txtID_autor.Name = "txtID_autor";
+        this.txtID_autor.Size = new System.Drawing.Size(28, 20);
+        this.txtID_autor.TabIndex = 165;
+        // 
+        // txtID_ejemplar
+        // 
+        this.txtID_ejemplar.Location = new System.Drawing.Point(199, 568);
+        this.txtID_ejemplar.Name = "txtID_ejemplar";
+        this.txtID_ejemplar.Size = new System.Drawing.Size(28, 20);
+        this.txtID_ejemplar.TabIndex = 166;
         // 
         // frmNuevoEjemplar
         // 
@@ -511,6 +572,12 @@ partial class frmNuevoEjemplar
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
         this.ClientSize = new System.Drawing.Size(317, 630);
+        this.Controls.Add(this.txtID_ejemplar);
+        this.Controls.Add(this.txtID_autor);
+        this.Controls.Add(this.cmbAutor);
+        this.Controls.Add(this.label8);
+        this.Controls.Add(this.pictureBox18);
+        this.Controls.Add(this.pictureBox19);
         this.Controls.Add(this.txtfecha);
         this.Controls.Add(this.txtEtiqueta);
         this.Controls.Add(this.label7);
@@ -578,9 +645,20 @@ partial class frmNuevoEjemplar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox19)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.TextBox txtID_ejemplar;
+
+    private System.Windows.Forms.TextBox txtID_autor;
+
+    private System.Windows.Forms.ComboBox cmbAutor;
+    private System.Windows.Forms.Label label8;
+    private System.Windows.Forms.PictureBox pictureBox18;
+    private System.Windows.Forms.PictureBox pictureBox19;
 
     private System.Windows.Forms.TextBox txtfecha;
 

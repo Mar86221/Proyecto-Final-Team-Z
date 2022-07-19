@@ -89,7 +89,7 @@ CREATE TABLE EJEMPLAR (
 );
 
 CREATE TABLE EJEMPLARXAUTOR (
-    id int primary key NOT NULL,
+    id int IDENTITY (1,1) primary key NOT NULL,
 	id_ejemplar int NOT NULL FOREIGN KEY (id_ejemplar) REFERENCES EJEMPLAR (id),
 	id_autor int NOT NULL FOREIGN KEY (id_autor) REFERENCES AUTOR (id)
 );
@@ -111,10 +111,6 @@ CREATE TABLE INSTITUCION(
     id_ocupacion int NOT NULL FOREIGN KEY (id_ocupacion) REFERENCES OCUPACION (id),
     
 );
-
-
-
-        
 
 
 CREATE TABLE USUARIO (
@@ -414,69 +410,69 @@ INSERT INTO EJEMPLAR ( nombre, Palabras_claves, fecha_publicacion, id_coleccion,
             ('EL DIARIO DE ANNE FRANK','DIARIO, ANNE, FRANK',CONVERT(DATE,'25/6/1947',103),16,3,1,1,'9788466340564'),
             ('GRAN GATSBY','GRAN, GATSBY',CONVERT(DATE,'10/4/1925',103),16,10,1,2,'9788418395185');
 
-INSERT INTO EJEMPLARXAUTOR(id,id_ejemplar, id_autor)
-    VALUES (1,1,1),
-           (2,2,1),
-           (3,3,1),
-           (4,4,2),
-           (5,5,3),
-           (6,6,2),
-           (7,7,2),
-           (8,8,3),
-           (9,9,2),
-           (10,10,2),
-           (11,11,2),
-           (12,12,4),
-           (13,13,7),
-           (14,14,5),
-           (15,15,5),
-           (16,16,6),
-           (17,17,8),
-           (18,18,9),
-           (19,19,11),
-           (20,20,10),
-           (21,21,10),
-           (22,22,12),
-           (23,23,10),
-           (24,24,15),
-           (25,25,12),
-           (26,26,12),
-           (27,27,13),
-           (28,28,12),
-           (29,29,15),
-           (30,30,14),
-           (31,31,15),
-           (32,32,16),
-           (33,33,15),
-           (34,34,17),
-           (35,35,18),
-           (36,36,15),
-           (37,37,15),
-           (38,38,15),
-           (39,39,15),
-           (40,40,19),
-           (41,41,15),
-           (42,42,15),
-           (43,43,20),
-           (44,44,22),
-           (45,45,21),
-           (46,46,22),
-           (47,47,22),
-           (48,48,23),
-           (49,49,24),
-           (50,50,25),
-           (51,51,26),
-           (52,52,27),
-           (53,53,27),
-           (54,54,26),
-           (55,55,28),
-           (56,56,29),
-           (57,57,30),
-           (58,58,31),
-           (59,59,9),
-           (60,60,32),
-           (61,61,33);
-
+INSERT INTO EJEMPLARXAUTOR(id_ejemplar, id_autor)
+    VALUES (1,1),
+           (2,1),
+           (3,1),
+           (4,2),
+           (5,3),
+           (6,2),
+           (7,2),
+           (8,3),
+           (9,2),
+           (10,2),
+           (11,2),
+           (12,4),
+           (13,7),
+           (14,5),
+           (15,5),
+           (16,6),
+           (17,8),
+           (18,9),
+           (19,11),
+           (20,10),
+           (21,10),
+           (22,12),
+           (23,10),
+           (24,15),
+           (25,12),
+           (26,12),
+           (27,13),
+           (28,12),
+           (29,15),
+           (30,14),
+           (31,15),
+           (32,16),
+           (33,15),
+           (34,17),
+           (35,18),
+           (36,15),
+           (37,15),
+           (38,15),
+           (39,15),
+           (40,19),
+           (41,15),
+           (42,15),
+           (43,20),
+           (44,22),
+           (45,21),
+           (46,22),
+           (47,22),
+           (48,23),
+           (49,24),
+           (50,25),
+           (51,26),
+           (52,27),
+           (53,27),
+           (54,26),
+           (55,28),
+           (56,29),
+           (57,30),
+           (58,31),
+           (59,9),
+           (60,32),
+           (61,33);
+		   
 
 INSERT INTO USUARIO (nombre,direccion,telefono,correo,id_institucion,fotografia)
     VALUES ('ADMIN','ADMIN','12345678','MHRSbz5meUQ@admin.com', '5','admin.jpg')
@@ -567,9 +563,17 @@ SELECT EDITORIAL.id FROM EDITORIAL WHERE EDITORIAL.editorial ='ALMA'
 
 
 INSERT INTO EJEMPLAR ( nombre, Palabras_claves, fecha_publicacion, id_coleccion, id_editorial, id_idioma, id_formato, etiqueta)
-    VALUES  ('EJEMPLAR PRUEBA','PRUEBA, EJEMPLAR',,1,1,1,1,'123456789')
+    VALUES  ('EJEMPLAR PRUEBA','PRUEBA, EJEMPLAR',1,1,1,1,'123456789')
 
     SELECT * FROM IMAGEN_EJEMPLAR;
 
 
     INSERT INTO IMAGEN_EJEMPLAR 
+
+
+SELECT * FROM EJEMPLAR
+
+SELECT AUTOR.nombre_autor FROM AUTOR
+
+SELECT * FROM EJEMPLARXAUTOR
+

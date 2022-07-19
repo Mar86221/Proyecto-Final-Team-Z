@@ -37,6 +37,11 @@ public partial class frmNuevoEjemplar : Form
         cmbEditorial.ValueMember = "id";
         cmbEditorial.DisplayMember = "editorial";
         cmbEditorial.DataSource = editorialDAO.ObtenerEditorial();
+
+        cmbAutor.DataSource = null;
+        cmbAutor.ValueMember = "id";
+        cmbAutor.DisplayMember = "nombre_autor";
+        cmbAutor.DataSource = autorDAO.ObtenerTodos();
     }
 
     private void pbOk_Click(object sender, EventArgs e)
@@ -155,6 +160,33 @@ public partial class frmNuevoEjemplar : Form
             }
         }
 
+        if (txtID_autor.Text.Length > 0)
+        {
+            
+        }
+        else
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT AUTOR.id FROM AUTOR WHERE AUTOR.nombre_autor = @nombre_autor";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre_autor", cmbAutor.Text);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int a = Convert.ToInt32(reader["id"].ToString());
+                        txtID_autor.AppendText(a.ToString());
+                    }
+                    
+                    connection.Close();
+                }
+            }
+        }
+
         string ruta = System.AppDomain.CurrentDomain.BaseDirectory + @"Libros\" + txtPortada.Text;
 
 
@@ -181,11 +213,10 @@ public partial class frmNuevoEjemplar : Form
                 MessageBox.Show("Ejemplar creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 this.Close(); 
             }
-/*
             else
             {
                 MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }*/
+            }
             
         }
 
@@ -194,8 +225,54 @@ public partial class frmNuevoEjemplar : Form
             MessageBox.Show("Datos invalidos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
+        if (txtID_ejemplar.Text.Length > 0)
+        {
+            
+        }
+        else
+        {
+            string cadena = Resources.cadena_conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT EJEMPLAR.id FROM EJEMPLAR WHERE EJEMPLAR.nombre = @nombre";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", txtNombreEjemplar.Text);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int a = Convert.ToInt32(reader["id"].ToString());
+                        txtID_ejemplar.AppendText(a.ToString());
+                    }
+                    
+                    connection.Close();
+                }
+            }
+        }
+
+        if (txtID_autor.Text.Length > 0 &&
+            txtID_ejemplar.Text.Length > 0)
+        {
+            ejemplarxautor ejxa = new ejemplarxautor();
+
+            ejxa.id_ejemplar = Convert.ToInt32(txtID_ejemplar.Text);
+            ejxa.id_autor = Convert.ToInt32(txtID_autor.Text);
+            
+            if (ejemplarxautorDAO.CrearNuevo(ejxa))
+            {
+                MessageBox.Show("Creado existosamente!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                this.Close(); 
+            }
+            else
+            {
+                MessageBox.Show("Error en la base de Datos!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
 
     }
+    
 
     private void picBuscaPortada_Click(object sender, EventArgs e)
     {
