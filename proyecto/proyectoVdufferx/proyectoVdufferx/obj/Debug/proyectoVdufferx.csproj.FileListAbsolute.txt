@@ -245,7 +245,6 @@ C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\pro
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources
 C:\Users\DELL\Desktop\Monkey\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
-C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEvento.resources
 C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
 C:\Users\Groot\Desktop\PROYECTO POO BDD -\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
@@ -305,7 +304,6 @@ C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\p
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.csproj.SuggestedBindingRedirects.cache
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmCarnetU.resources
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEventos.resources
-C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplarEditar.resources
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEjemplares.resources
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEventos.resources
 C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmInicio.resources
@@ -333,3 +331,11 @@ C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\p
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarColeccion.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEjemplar.resources
 C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Dufferx\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEjemplar.resources
+C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.Colecciones.resources
+C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarColeccion.resources
+C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEjemplar.resources
+C:\Users\DELL\Desktop\pROYECTO\Proyecto-Final-Team-Z\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEjemplar.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.Colecciones.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarColeccion.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmEditarEjemplar.resources
+C:\Users\ferbi\Desktop\Proyecto-Final-Team-Z-Mario\proyecto\proyectoVdufferx\proyectoVdufferx\obj\Debug\proyectoVdufferx.frmNuevoEjemplar.resources

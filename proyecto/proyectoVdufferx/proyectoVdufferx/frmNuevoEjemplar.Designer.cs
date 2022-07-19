@@ -40,7 +40,6 @@ partial class frmNuevoEjemplar
         this.pictureBox7 = new System.Windows.Forms.PictureBox();
         this.picBuscaPortada = new System.Windows.Forms.PictureBox();
         this.lblFotografia = new System.Windows.Forms.Label();
-        this.txtPortada = new System.Windows.Forms.TextBox();
         this.pictureBox8 = new System.Windows.Forms.PictureBox();
         this.pictureBox9 = new System.Windows.Forms.PictureBox();
         this.label2 = new System.Windows.Forms.Label();
@@ -76,6 +75,15 @@ partial class frmNuevoEjemplar
         this.pictureBox12 = new System.Windows.Forms.PictureBox();
         this.pictureBox17 = new System.Windows.Forms.PictureBox();
         this.txtfecha = new System.Windows.Forms.TextBox();
+        this.cmbAutor = new System.Windows.Forms.ComboBox();
+        this.label8 = new System.Windows.Forms.Label();
+        this.pictureBox18 = new System.Windows.Forms.PictureBox();
+        this.pictureBox19 = new System.Windows.Forms.PictureBox();
+        this.txtID_autor = new System.Windows.Forms.TextBox();
+        this.txtID_ejemplar = new System.Windows.Forms.TextBox();
+        this.txtPortada = new System.Windows.Forms.TextBox();
+        this.pictureBox20 = new System.Windows.Forms.PictureBox();
+        this.gbAutoryPortada = new System.Windows.Forms.GroupBox();
         ((System.ComponentModel.ISupportInitialize) (this.pbOk)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox7)).BeginInit();
@@ -96,13 +104,17 @@ partial class frmNuevoEjemplar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).BeginInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox19)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox20)).BeginInit();
+        this.gbAutoryPortada.SuspendLayout();
         this.SuspendLayout();
         // 
         // pbOk
         // 
         this.pbOk.Cursor = System.Windows.Forms.Cursors.Hand;
         this.pbOk.Image = ((System.Drawing.Image) (resources.GetObject("pbOk.Image")));
-        this.pbOk.Location = new System.Drawing.Point(199, 490);
+        this.pbOk.Location = new System.Drawing.Point(547, 210);
         this.pbOk.Name = "pbOk";
         this.pbOk.Size = new System.Drawing.Size(80, 35);
         this.pbOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -112,7 +124,7 @@ partial class frmNuevoEjemplar
         // 
         // txtNombre
         // 
-        this.txtNombre.Location = new System.Drawing.Point(30, 470);
+        this.txtNombre.Location = new System.Drawing.Point(250, 215);
         this.txtNombre.Name = "txtNombre";
         this.txtNombre.Size = new System.Drawing.Size(72, 20);
         this.txtNombre.TabIndex = 136;
@@ -121,7 +133,7 @@ partial class frmNuevoEjemplar
         // 
         this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label3.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label3.Location = new System.Drawing.Point(14, 194);
+        this.label3.Location = new System.Drawing.Point(509, 156);
         this.label3.Name = "label3";
         this.label3.Size = new System.Drawing.Size(62, 20);
         this.label3.TabIndex = 129;
@@ -131,7 +143,7 @@ partial class frmNuevoEjemplar
         // 
         this.dtpFecha.CustomFormat = "";
         this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-        this.dtpFecha.Location = new System.Drawing.Point(19, 214);
+        this.dtpFecha.Location = new System.Drawing.Point(514, 176);
         this.dtpFecha.Name = "dtpFecha";
         this.dtpFecha.Size = new System.Drawing.Size(103, 20);
         this.dtpFecha.TabIndex = 126;
@@ -140,7 +152,7 @@ partial class frmNuevoEjemplar
         // pictureBox6
         // 
         this.pictureBox6.BackColor = System.Drawing.Color.White;
-        this.pictureBox6.Location = new System.Drawing.Point(10, 205);
+        this.pictureBox6.Location = new System.Drawing.Point(505, 167);
         this.pictureBox6.Name = "pictureBox6";
         this.pictureBox6.Size = new System.Drawing.Size(121, 36);
         this.pictureBox6.TabIndex = 125;
@@ -149,7 +161,7 @@ partial class frmNuevoEjemplar
         // pictureBox7
         // 
         this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox7.Location = new System.Drawing.Point(8, 203);
+        this.pictureBox7.Location = new System.Drawing.Point(503, 165);
         this.pictureBox7.Name = "pictureBox7";
         this.pictureBox7.Size = new System.Drawing.Size(125, 40);
         this.pictureBox7.TabIndex = 124;
@@ -159,7 +171,7 @@ partial class frmNuevoEjemplar
         // 
         this.picBuscaPortada.Cursor = System.Windows.Forms.Cursors.Hand;
         this.picBuscaPortada.Image = ((System.Drawing.Image) (resources.GetObject("picBuscaPortada.Image")));
-        this.picBuscaPortada.Location = new System.Drawing.Point(270, 209);
+        this.picBuscaPortada.Location = new System.Drawing.Point(522, 30);
         this.picBuscaPortada.Name = "picBuscaPortada";
         this.picBuscaPortada.Size = new System.Drawing.Size(30, 29);
         this.picBuscaPortada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,38 +183,26 @@ partial class frmNuevoEjemplar
         // 
         this.lblFotografia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.lblFotografia.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.lblFotografia.Location = new System.Drawing.Point(156, 196);
+        this.lblFotografia.Location = new System.Drawing.Point(302, 12);
         this.lblFotografia.Name = "lblFotografia";
         this.lblFotografia.Size = new System.Drawing.Size(79, 20);
         this.lblFotografia.TabIndex = 121;
         this.lblFotografia.Text = "Portada:";
         // 
-        // txtPortada
-        // 
-        this.txtPortada.BackColor = System.Drawing.Color.White;
-        this.txtPortada.BorderStyle = System.Windows.Forms.BorderStyle.None;
-        this.txtPortada.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-        this.txtPortada.Location = new System.Drawing.Point(22, 561);
-        this.txtPortada.Name = "txtPortada";
-        this.txtPortada.ReadOnly = true;
-        this.txtPortada.Size = new System.Drawing.Size(274, 19);
-        this.txtPortada.TabIndex = 120;
-        this.txtPortada.Tag = "Fot";
-        // 
         // pictureBox8
         // 
-        this.pictureBox8.Location = new System.Drawing.Point(153, 210);
+        this.pictureBox8.Location = new System.Drawing.Point(296, 26);
         this.pictureBox8.Name = "pictureBox8";
-        this.pictureBox8.Size = new System.Drawing.Size(149, 29);
+        this.pictureBox8.Size = new System.Drawing.Size(262, 36);
         this.pictureBox8.TabIndex = 118;
         this.pictureBox8.TabStop = false;
         // 
         // pictureBox9
         // 
         this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox9.Location = new System.Drawing.Point(151, 208);
+        this.pictureBox9.Location = new System.Drawing.Point(294, 24);
         this.pictureBox9.Name = "pictureBox9";
-        this.pictureBox9.Size = new System.Drawing.Size(154, 33);
+        this.pictureBox9.Size = new System.Drawing.Size(266, 40);
         this.pictureBox9.TabIndex = 119;
         this.pictureBox9.TabStop = false;
         // 
@@ -210,7 +210,7 @@ partial class frmNuevoEjemplar
         // 
         this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label2.Location = new System.Drawing.Point(14, 265);
+        this.label2.Location = new System.Drawing.Point(333, 79);
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(74, 16);
         this.label2.TabIndex = 117;
@@ -219,7 +219,7 @@ partial class frmNuevoEjemplar
         // pictureBox3
         // 
         this.pictureBox3.BackColor = System.Drawing.Color.White;
-        this.pictureBox3.Location = new System.Drawing.Point(11, 278);
+        this.pictureBox3.Location = new System.Drawing.Point(330, 92);
         this.pictureBox3.Name = "pictureBox3";
         this.pictureBox3.Size = new System.Drawing.Size(133, 40);
         this.pictureBox3.TabIndex = 115;
@@ -228,7 +228,7 @@ partial class frmNuevoEjemplar
         // pictureBox4
         // 
         this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox4.Location = new System.Drawing.Point(9, 276);
+        this.pictureBox4.Location = new System.Drawing.Point(328, 90);
         this.pictureBox4.Name = "pictureBox4";
         this.pictureBox4.Size = new System.Drawing.Size(137, 44);
         this.pictureBox4.TabIndex = 116;
@@ -274,7 +274,7 @@ partial class frmNuevoEjemplar
         // 
         this.lblInsti.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.lblInsti.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.lblInsti.Location = new System.Drawing.Point(10, 121);
+        this.lblInsti.Location = new System.Drawing.Point(14, 71);
         this.lblInsti.Name = "lblInsti";
         this.lblInsti.Size = new System.Drawing.Size(178, 16);
         this.lblInsti.TabIndex = 109;
@@ -283,7 +283,7 @@ partial class frmNuevoEjemplar
         // pictureBox5
         // 
         this.pictureBox5.BackColor = System.Drawing.Color.White;
-        this.pictureBox5.Location = new System.Drawing.Point(12, 142);
+        this.pictureBox5.Location = new System.Drawing.Point(16, 92);
         this.pictureBox5.Name = "pictureBox5";
         this.pictureBox5.Size = new System.Drawing.Size(290, 40);
         this.pictureBox5.TabIndex = 107;
@@ -292,7 +292,7 @@ partial class frmNuevoEjemplar
         // pbInsti
         // 
         this.pbInsti.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pbInsti.Location = new System.Drawing.Point(10, 140);
+        this.pbInsti.Location = new System.Drawing.Point(14, 90);
         this.pbInsti.Name = "pbInsti";
         this.pbInsti.Size = new System.Drawing.Size(294, 44);
         this.pbInsti.TabIndex = 108;
@@ -301,7 +301,7 @@ partial class frmNuevoEjemplar
         // txtPalabrasclave
         // 
         this.txtPalabrasclave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-        this.txtPalabrasclave.Location = new System.Drawing.Point(20, 149);
+        this.txtPalabrasclave.Location = new System.Drawing.Point(24, 99);
         this.txtPalabrasclave.Name = "txtPalabrasclave";
         this.txtPalabrasclave.Size = new System.Drawing.Size(276, 26);
         this.txtPalabrasclave.TabIndex = 138;
@@ -310,7 +310,7 @@ partial class frmNuevoEjemplar
         // 
         this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label4.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label4.Location = new System.Drawing.Point(175, 265);
+        this.label4.Location = new System.Drawing.Point(494, 79);
         this.label4.Name = "label4";
         this.label4.Size = new System.Drawing.Size(84, 16);
         this.label4.TabIndex = 141;
@@ -319,7 +319,7 @@ partial class frmNuevoEjemplar
         // pictureBox10
         // 
         this.pictureBox10.BackColor = System.Drawing.Color.White;
-        this.pictureBox10.Location = new System.Drawing.Point(169, 276);
+        this.pictureBox10.Location = new System.Drawing.Point(488, 90);
         this.pictureBox10.Name = "pictureBox10";
         this.pictureBox10.Size = new System.Drawing.Size(133, 40);
         this.pictureBox10.TabIndex = 139;
@@ -328,7 +328,7 @@ partial class frmNuevoEjemplar
         // pictureBox11
         // 
         this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox11.Location = new System.Drawing.Point(167, 274);
+        this.pictureBox11.Location = new System.Drawing.Point(486, 88);
         this.pictureBox11.Name = "pictureBox11";
         this.pictureBox11.Size = new System.Drawing.Size(137, 44);
         this.pictureBox11.TabIndex = 140;
@@ -340,7 +340,7 @@ partial class frmNuevoEjemplar
         this.cmbIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbIdioma.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbIdioma.FormattingEnabled = true;
-        this.cmbIdioma.Location = new System.Drawing.Point(19, 286);
+        this.cmbIdioma.Location = new System.Drawing.Point(338, 100);
         this.cmbIdioma.Name = "cmbIdioma";
         this.cmbIdioma.Size = new System.Drawing.Size(116, 26);
         this.cmbIdioma.TabIndex = 142;
@@ -351,7 +351,7 @@ partial class frmNuevoEjemplar
         this.cmbFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbFormato.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbFormato.FormattingEnabled = true;
-        this.cmbFormato.Location = new System.Drawing.Point(177, 285);
+        this.cmbFormato.Location = new System.Drawing.Point(496, 99);
         this.cmbFormato.Name = "cmbFormato";
         this.cmbFormato.Size = new System.Drawing.Size(116, 26);
         this.cmbFormato.TabIndex = 143;
@@ -362,7 +362,7 @@ partial class frmNuevoEjemplar
         this.cmbColeccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbColeccion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbColeccion.FormattingEnabled = true;
-        this.cmbColeccion.Location = new System.Drawing.Point(49, 363);
+        this.cmbColeccion.Location = new System.Drawing.Point(24, 175);
         this.cmbColeccion.Name = "cmbColeccion";
         this.cmbColeccion.Size = new System.Drawing.Size(210, 26);
         this.cmbColeccion.TabIndex = 147;
@@ -371,7 +371,7 @@ partial class frmNuevoEjemplar
         // 
         this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label5.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label5.Location = new System.Drawing.Point(54, 344);
+        this.label5.Location = new System.Drawing.Point(29, 156);
         this.label5.Name = "label5";
         this.label5.Size = new System.Drawing.Size(102, 16);
         this.label5.TabIndex = 146;
@@ -380,7 +380,7 @@ partial class frmNuevoEjemplar
         // pictureBox13
         // 
         this.pictureBox13.BackColor = System.Drawing.Color.White;
-        this.pictureBox13.Location = new System.Drawing.Point(41, 355);
+        this.pictureBox13.Location = new System.Drawing.Point(16, 167);
         this.pictureBox13.Name = "pictureBox13";
         this.pictureBox13.Size = new System.Drawing.Size(227, 40);
         this.pictureBox13.TabIndex = 144;
@@ -389,7 +389,7 @@ partial class frmNuevoEjemplar
         // pictureBox14
         // 
         this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox14.Location = new System.Drawing.Point(39, 353);
+        this.pictureBox14.Location = new System.Drawing.Point(14, 165);
         this.pictureBox14.Name = "pictureBox14";
         this.pictureBox14.Size = new System.Drawing.Size(231, 44);
         this.pictureBox14.TabIndex = 145;
@@ -401,7 +401,7 @@ partial class frmNuevoEjemplar
         this.cmbEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         this.cmbEditorial.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
         this.cmbEditorial.FormattingEnabled = true;
-        this.cmbEditorial.Location = new System.Drawing.Point(49, 430);
+        this.cmbEditorial.Location = new System.Drawing.Point(270, 175);
         this.cmbEditorial.Name = "cmbEditorial";
         this.cmbEditorial.Size = new System.Drawing.Size(210, 26);
         this.cmbEditorial.TabIndex = 151;
@@ -410,7 +410,7 @@ partial class frmNuevoEjemplar
         // 
         this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label6.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label6.Location = new System.Drawing.Point(54, 411);
+        this.label6.Location = new System.Drawing.Point(275, 156);
         this.label6.Name = "label6";
         this.label6.Size = new System.Drawing.Size(90, 16);
         this.label6.TabIndex = 150;
@@ -419,7 +419,7 @@ partial class frmNuevoEjemplar
         // pictureBox15
         // 
         this.pictureBox15.BackColor = System.Drawing.Color.White;
-        this.pictureBox15.Location = new System.Drawing.Point(41, 422);
+        this.pictureBox15.Location = new System.Drawing.Point(262, 167);
         this.pictureBox15.Name = "pictureBox15";
         this.pictureBox15.Size = new System.Drawing.Size(227, 40);
         this.pictureBox15.TabIndex = 148;
@@ -428,7 +428,7 @@ partial class frmNuevoEjemplar
         // pictureBox16
         // 
         this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox16.Location = new System.Drawing.Point(39, 420);
+        this.pictureBox16.Location = new System.Drawing.Point(260, 165);
         this.pictureBox16.Name = "pictureBox16";
         this.pictureBox16.Size = new System.Drawing.Size(231, 44);
         this.pictureBox16.TabIndex = 149;
@@ -436,28 +436,28 @@ partial class frmNuevoEjemplar
         // 
         // txtID_idioma
         // 
-        this.txtID_idioma.Location = new System.Drawing.Point(21, 503);
+        this.txtID_idioma.Location = new System.Drawing.Point(20, 215);
         this.txtID_idioma.Name = "txtID_idioma";
         this.txtID_idioma.Size = new System.Drawing.Size(28, 20);
         this.txtID_idioma.TabIndex = 152;
         // 
         // txtID_Formato
         // 
-        this.txtID_Formato.Location = new System.Drawing.Point(60, 503);
+        this.txtID_Formato.Location = new System.Drawing.Point(54, 214);
         this.txtID_Formato.Name = "txtID_Formato";
         this.txtID_Formato.Size = new System.Drawing.Size(28, 20);
         this.txtID_Formato.TabIndex = 153;
         // 
         // txtID_coleccion
         // 
-        this.txtID_coleccion.Location = new System.Drawing.Point(103, 503);
+        this.txtID_coleccion.Location = new System.Drawing.Point(88, 215);
         this.txtID_coleccion.Name = "txtID_coleccion";
         this.txtID_coleccion.Size = new System.Drawing.Size(28, 20);
         this.txtID_coleccion.TabIndex = 154;
         // 
         // txtID_editorial
         // 
-        this.txtID_editorial.Location = new System.Drawing.Point(151, 503);
+        this.txtID_editorial.Location = new System.Drawing.Point(122, 213);
         this.txtID_editorial.Name = "txtID_editorial";
         this.txtID_editorial.Size = new System.Drawing.Size(28, 20);
         this.txtID_editorial.TabIndex = 155;
@@ -465,7 +465,7 @@ partial class frmNuevoEjemplar
         // txtEtiqueta
         // 
         this.txtEtiqueta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-        this.txtEtiqueta.Location = new System.Drawing.Point(22, 82);
+        this.txtEtiqueta.Location = new System.Drawing.Point(334, 26);
         this.txtEtiqueta.Name = "txtEtiqueta";
         this.txtEtiqueta.Size = new System.Drawing.Size(278, 26);
         this.txtEtiqueta.TabIndex = 159;
@@ -474,7 +474,7 @@ partial class frmNuevoEjemplar
         // 
         this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label7.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.label7.Location = new System.Drawing.Point(22, 63);
+        this.label7.Location = new System.Drawing.Point(334, 7);
         this.label7.Name = "label7";
         this.label7.Size = new System.Drawing.Size(80, 16);
         this.label7.TabIndex = 158;
@@ -483,7 +483,7 @@ partial class frmNuevoEjemplar
         // pictureBox12
         // 
         this.pictureBox12.BackColor = System.Drawing.Color.White;
-        this.pictureBox12.Location = new System.Drawing.Point(17, 73);
+        this.pictureBox12.Location = new System.Drawing.Point(329, 17);
         this.pictureBox12.Name = "pictureBox12";
         this.pictureBox12.Size = new System.Drawing.Size(288, 40);
         this.pictureBox12.TabIndex = 156;
@@ -492,7 +492,7 @@ partial class frmNuevoEjemplar
         // pictureBox17
         // 
         this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
-        this.pictureBox17.Location = new System.Drawing.Point(15, 71);
+        this.pictureBox17.Location = new System.Drawing.Point(327, 15);
         this.pictureBox17.Name = "pictureBox17";
         this.pictureBox17.Size = new System.Drawing.Size(292, 44);
         this.pictureBox17.TabIndex = 157;
@@ -500,17 +500,110 @@ partial class frmNuevoEjemplar
         // 
         // txtfecha
         // 
-        this.txtfecha.Location = new System.Drawing.Point(49, 562);
+        this.txtfecha.Location = new System.Drawing.Point(338, 214);
         this.txtfecha.Name = "txtfecha";
         this.txtfecha.Size = new System.Drawing.Size(189, 20);
         this.txtfecha.TabIndex = 160;
+        // 
+        // cmbAutor
+        // 
+        this.cmbAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+        this.cmbAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        this.cmbAutor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+        this.cmbAutor.FormattingEnabled = true;
+        this.cmbAutor.Location = new System.Drawing.Point(42, 32);
+        this.cmbAutor.Name = "cmbAutor";
+        this.cmbAutor.Size = new System.Drawing.Size(210, 26);
+        this.cmbAutor.TabIndex = 164;
+        // 
+        // label8
+        // 
+        this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+        this.label8.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.label8.Location = new System.Drawing.Point(39, 11);
+        this.label8.Name = "label8";
+        this.label8.Size = new System.Drawing.Size(68, 16);
+        this.label8.TabIndex = 163;
+        this.label8.Text = "Autor :";
+        // 
+        // pictureBox18
+        // 
+        this.pictureBox18.BackColor = System.Drawing.Color.White;
+        this.pictureBox18.Location = new System.Drawing.Point(33, 22);
+        this.pictureBox18.Name = "pictureBox18";
+        this.pictureBox18.Size = new System.Drawing.Size(227, 40);
+        this.pictureBox18.TabIndex = 161;
+        this.pictureBox18.TabStop = false;
+        // 
+        // pictureBox19
+        // 
+        this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
+        this.pictureBox19.Location = new System.Drawing.Point(31, 20);
+        this.pictureBox19.Name = "pictureBox19";
+        this.pictureBox19.Size = new System.Drawing.Size(231, 44);
+        this.pictureBox19.TabIndex = 162;
+        this.pictureBox19.TabStop = false;
+        // 
+        // txtID_autor
+        // 
+        this.txtID_autor.Location = new System.Drawing.Point(156, 214);
+        this.txtID_autor.Name = "txtID_autor";
+        this.txtID_autor.Size = new System.Drawing.Size(28, 20);
+        this.txtID_autor.TabIndex = 165;
+        // 
+        // txtID_ejemplar
+        // 
+        this.txtID_ejemplar.Location = new System.Drawing.Point(206, 215);
+        this.txtID_ejemplar.Name = "txtID_ejemplar";
+        this.txtID_ejemplar.Size = new System.Drawing.Size(28, 20);
+        this.txtID_ejemplar.TabIndex = 166;
+        // 
+        // txtPortada
+        // 
+        this.txtPortada.Location = new System.Drawing.Point(302, 35);
+        this.txtPortada.Name = "txtPortada";
+        this.txtPortada.Size = new System.Drawing.Size(211, 20);
+        this.txtPortada.TabIndex = 167;
+        // 
+        // pictureBox20
+        // 
+        this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
+        this.pictureBox20.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox20.Image")));
+        this.pictureBox20.Location = new System.Drawing.Point(525, 74);
+        this.pictureBox20.Name = "pictureBox20";
+        this.pictureBox20.Size = new System.Drawing.Size(80, 35);
+        this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+        this.pictureBox20.TabIndex = 168;
+        this.pictureBox20.TabStop = false;
+        this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
+        // 
+        // gbAutoryPortada
+        // 
+        this.gbAutoryPortada.Controls.Add(this.label8);
+        this.gbAutoryPortada.Controls.Add(this.pictureBox20);
+        this.gbAutoryPortada.Controls.Add(this.cmbAutor);
+        this.gbAutoryPortada.Controls.Add(this.txtPortada);
+        this.gbAutoryPortada.Controls.Add(this.pictureBox18);
+        this.gbAutoryPortada.Controls.Add(this.pictureBox19);
+        this.gbAutoryPortada.Controls.Add(this.lblFotografia);
+        this.gbAutoryPortada.Controls.Add(this.picBuscaPortada);
+        this.gbAutoryPortada.Controls.Add(this.pictureBox8);
+        this.gbAutoryPortada.Controls.Add(this.pictureBox9);
+        this.gbAutoryPortada.Location = new System.Drawing.Point(20, 248);
+        this.gbAutoryPortada.Name = "gbAutoryPortada";
+        this.gbAutoryPortada.Size = new System.Drawing.Size(616, 115);
+        this.gbAutoryPortada.TabIndex = 169;
+        this.gbAutoryPortada.TabStop = false;
         // 
         // frmNuevoEjemplar
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.Color.White;
-        this.ClientSize = new System.Drawing.Size(317, 630);
+        this.ClientSize = new System.Drawing.Size(640, 382);
+        this.Controls.Add(this.gbAutoryPortada);
+        this.Controls.Add(this.txtID_ejemplar);
+        this.Controls.Add(this.txtID_autor);
         this.Controls.Add(this.txtfecha);
         this.Controls.Add(this.txtEtiqueta);
         this.Controls.Add(this.label7);
@@ -540,11 +633,6 @@ partial class frmNuevoEjemplar
         this.Controls.Add(this.dtpFecha);
         this.Controls.Add(this.pictureBox6);
         this.Controls.Add(this.pictureBox7);
-        this.Controls.Add(this.picBuscaPortada);
-        this.Controls.Add(this.lblFotografia);
-        this.Controls.Add(this.txtPortada);
-        this.Controls.Add(this.pictureBox8);
-        this.Controls.Add(this.pictureBox9);
         this.Controls.Add(this.label2);
         this.Controls.Add(this.pictureBox3);
         this.Controls.Add(this.pictureBox4);
@@ -555,8 +643,8 @@ partial class frmNuevoEjemplar
         this.Controls.Add(this.lblInsti);
         this.Controls.Add(this.pictureBox5);
         this.Controls.Add(this.pbInsti);
+        this.Location = new System.Drawing.Point(15, 15);
         this.Name = "frmNuevoEjemplar";
-        this.Text = "frmNuevoEjemplar";
         this.Load += new System.EventHandler(this.frmNuevoEjemplar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbOk)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox6)).EndInit();
@@ -578,9 +666,28 @@ partial class frmNuevoEjemplar
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox12)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox17)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox18)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox19)).EndInit();
+        ((System.ComponentModel.ISupportInitialize) (this.pictureBox20)).EndInit();
+        this.gbAutoryPortada.ResumeLayout(false);
+        this.gbAutoryPortada.PerformLayout();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
+
+    private System.Windows.Forms.GroupBox gbAutoryPortada;
+
+    private System.Windows.Forms.TextBox txtPortada;
+    private System.Windows.Forms.PictureBox pictureBox20;
+
+    private System.Windows.Forms.TextBox txtID_ejemplar;
+
+    private System.Windows.Forms.TextBox txtID_autor;
+
+    private System.Windows.Forms.ComboBox cmbAutor;
+    private System.Windows.Forms.Label label8;
+    private System.Windows.Forms.PictureBox pictureBox18;
+    private System.Windows.Forms.PictureBox pictureBox19;
 
     private System.Windows.Forms.TextBox txtfecha;
 
@@ -621,7 +728,6 @@ partial class frmNuevoEjemplar
     private System.Windows.Forms.PictureBox pictureBox7;
     public System.Windows.Forms.PictureBox picBuscaPortada;
     private System.Windows.Forms.Label lblFotografia;
-    private System.Windows.Forms.TextBox txtPortada;
     private System.Windows.Forms.PictureBox pictureBox8;
     private System.Windows.Forms.PictureBox pictureBox9;
     private System.Windows.Forms.Label label2;

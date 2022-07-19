@@ -60,6 +60,7 @@
         <Compile Include="area.cs" />
         <Compile Include="areaDAO.cs" />
         <Compile Include="autor.cs" />
+        <Compile Include="autorDAO.cs" />
         <Compile Include="Coleccion.cs" />
         <Compile Include="coleccionDAO.cs" />
         <Compile Include="Colecciones.cs">
@@ -76,6 +77,7 @@
         <Compile Include="ejemplarmain.cs" />
         <Compile Include="ejemplarprestar.cs" />
         <Compile Include="ejemplarxautor.cs" />
+        <Compile Include="ejemplarxautorDAO.cs" />
         <Compile Include="eventomain.cs" />
         <Compile Include="eventos.cs" />
         <Compile Include="eventosDAO.cs" />

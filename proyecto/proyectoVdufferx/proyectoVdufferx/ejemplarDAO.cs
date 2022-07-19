@@ -21,6 +21,7 @@ namespace proyectoVdufferx
                         "INSERT INTO EJEMPLAR (nombre, Palabras_claves, fecha_publicacion, id_coleccion, id_editorial, id_idioma, id_formato, etiqueta)  VALUES  (@nombre,@Palabras_claves, @fecha_publicacion,@id_coleccion,@id_editorial,@id_idioma,@id_formato,@etiqueta)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@nombre", ej.nombre);
+                    command.Parameters.AddWithValue("@Palabras_claves", ej.Palabras_claves);
                     command.Parameters.AddWithValue("@fecha_publicacion", ej.fecha_publicacion);
                     command.Parameters.AddWithValue("@id_coleccion", ej.id_coleccion);
                     command.Parameters.AddWithValue("@id_editorial", ej.id_editorial);
