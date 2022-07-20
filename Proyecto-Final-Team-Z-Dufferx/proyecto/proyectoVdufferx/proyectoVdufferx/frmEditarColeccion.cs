@@ -23,6 +23,10 @@ public partial class frmEditarColeccion : Form
         cmbTipoEdit.ValueMember = "id";
         cmbTipoEdit.DisplayMember = "tipe";
         cmbTipoEdit.DataSource = tipoDAO.ObtenerTodos();
+        
+        textBox1edit.Hide();
+        textBox2edit.Hide();
+        txtNombre.Hide();
     }
 
 
