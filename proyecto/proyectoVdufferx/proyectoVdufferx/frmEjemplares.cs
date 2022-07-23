@@ -93,6 +93,9 @@ namespace proyectoVdufferx
               picEliminarEjemplar.Hide();
               txtEliminarEJemplar.Hide();
               txtIdEjemplarEliminar.Hide();
+              pbEditarEjemplar.Hide();
+              pbNuevoEjemplar.Hide();
+              pbColecciones.Hide();
           }
             txtCorreoEj.Hide();
             txtPrestar.Hide();

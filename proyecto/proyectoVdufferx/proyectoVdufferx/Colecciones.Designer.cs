@@ -141,6 +141,7 @@ partial class Colecciones
         this.Controls.Add(this.pbEditarColeccion);
         this.Controls.Add(this.pictureBox2);
         this.Controls.Add(this.DgvColecciones);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Location = new System.Drawing.Point(15, 15);
         this.Name = "Colecciones";
         this.Load += new System.EventHandler(this.Colecciones_Load);

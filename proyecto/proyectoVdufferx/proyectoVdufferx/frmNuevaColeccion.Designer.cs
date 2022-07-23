@@ -216,8 +216,8 @@ partial class frmNuevaColeccion
         this.Controls.Add(this.pictureBox2);
         this.Controls.Add(this.textBox2);
         this.Controls.Add(this.textBox1);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Name = "frmNuevaColeccion";
-        this.Text = "frmNuevaColeccion";
         this.Load += new System.EventHandler(this.frmNuevaColeccion_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox2)).EndInit();

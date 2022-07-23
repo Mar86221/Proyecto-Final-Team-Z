@@ -81,13 +81,13 @@ partial class frmEventos
         this.dgvEventos.DefaultCellStyle = dataGridViewCellStyle2;
         this.dgvEventos.Location = new System.Drawing.Point(12, 26);
         this.dgvEventos.Name = "dgvEventos";
-        this.dgvEventos.Size = new System.Drawing.Size(525, 373);
+        this.dgvEventos.Size = new System.Drawing.Size(637, 373);
         this.dgvEventos.TabIndex = 0;
         this.dgvEventos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEventos_CellClick);
         // 
         // picImagen
         // 
-        this.picImagen.Location = new System.Drawing.Point(559, 26);
+        this.picImagen.Location = new System.Drawing.Point(665, 26);
         this.picImagen.Name = "picImagen";
         this.picImagen.Size = new System.Drawing.Size(259, 373);
         this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@ partial class frmEventos
         this.label2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label2.ForeColor = System.Drawing.Color.White;
-        this.label2.Location = new System.Drawing.Point(150, 26);
+        this.label2.Location = new System.Drawing.Point(222, 26);
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(92, 19);
         this.label2.TabIndex = 90;
@@ -151,7 +151,7 @@ partial class frmEventos
         this.label1.ForeColor = System.Drawing.Color.White;
         this.label1.Location = new System.Drawing.Point(50, 26);
         this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(104, 19);
+        this.label1.Size = new System.Drawing.Size(173, 19);
         this.label1.TabIndex = 89;
         this.label1.Text = "TÍTULO";
         this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,9 +170,9 @@ partial class frmEventos
         this.label3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label3.ForeColor = System.Drawing.Color.White;
-        this.label3.Location = new System.Drawing.Point(242, 26);
+        this.label3.Location = new System.Drawing.Point(314, 26);
         this.label3.Name = "label3";
-        this.label3.Size = new System.Drawing.Size(89, 19);
+        this.label3.Size = new System.Drawing.Size(102, 19);
         this.label3.TabIndex = 91;
         this.label3.Text = "INICIO";
         this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,9 +182,9 @@ partial class frmEventos
         this.label4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label4.ForeColor = System.Drawing.Color.White;
-        this.label4.Location = new System.Drawing.Point(331, 26);
+        this.label4.Location = new System.Drawing.Point(416, 26);
         this.label4.Name = "label4";
-        this.label4.Size = new System.Drawing.Size(89, 19);
+        this.label4.Size = new System.Drawing.Size(75, 19);
         this.label4.TabIndex = 92;
         this.label4.Text = "FINAL";
         this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,9 +194,9 @@ partial class frmEventos
         this.label5.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (33)))), ((int) (((byte) (62)))), ((int) (((byte) (153)))));
         this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
         this.label5.ForeColor = System.Drawing.Color.White;
-        this.label5.Location = new System.Drawing.Point(420, 26);
+        this.label5.Location = new System.Drawing.Point(487, 26);
         this.label5.Name = "label5";
-        this.label5.Size = new System.Drawing.Size(117, 19);
+        this.label5.Size = new System.Drawing.Size(162, 19);
         this.label5.TabIndex = 93;
         this.label5.Text = "AREA";
         this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,7 +225,7 @@ partial class frmEventos
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackColor = System.Drawing.SystemColors.Window;
-        this.ClientSize = new System.Drawing.Size(828, 480);
+        this.ClientSize = new System.Drawing.Size(948, 480);
         this.Controls.Add(this.picEditar);
         this.Controls.Add(this.txtCuentaU);
         this.Controls.Add(this.label5);

@@ -225,8 +225,8 @@ partial class frmEditarColeccion
         this.Controls.Add(this.pictureBox2);
         this.Controls.Add(this.textBox2edit);
         this.Controls.Add(this.textBox1edit);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Name = "frmEditarColeccion";
-        this.Text = "frmEditarColeccion";
         this.Load += new System.EventHandler(this.frmEditarColeccion_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pbOKedit)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox5)).EndInit();

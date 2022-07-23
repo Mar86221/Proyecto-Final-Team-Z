@@ -644,8 +644,8 @@ partial class frmEditarEjemplar
         this.Controls.Add(this.lblInsti);
         this.Controls.Add(this.pictureBox5);
         this.Controls.Add(this.pbInsti);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Name = "frmEditarEjemplar";
-        this.Text = "frmEditarEjemplar";
         this.Load += new System.EventHandler(this.frmEditarEjemplar_Load);
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox15)).EndInit();
         ((System.ComponentModel.ISupportInitialize) (this.pictureBox16)).EndInit();

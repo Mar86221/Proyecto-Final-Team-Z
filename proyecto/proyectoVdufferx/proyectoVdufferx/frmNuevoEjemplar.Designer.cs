@@ -644,6 +644,7 @@ partial class frmNuevoEjemplar
         this.Controls.Add(this.lblInsti);
         this.Controls.Add(this.pictureBox5);
         this.Controls.Add(this.pbInsti);
+        this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
         this.Location = new System.Drawing.Point(15, 15);
         this.Name = "frmNuevoEjemplar";
         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
